@@ -9,17 +9,17 @@
 
             <div class="content-area__container">
                 <div class="content-area__header content-area__section">
-                    <select>
+                    <select class="select_picker">
                         <option value="">По актуальности</option>
                         <option value="">По актуальности</option>
                         <option value="">По актуальности</option>
                         <option value="">По актуальности</option>
                         <option value="">По актуальности</option>
                     </select>
-                    <select>
+                    <select class="select_picker">
                         <option value="">За все время</option>
                     </select>
-                    <select>
+                    <select class="select_picker">
                         <option value=""><span class="rouble">&#x20bd;</span></option>
                         <option value="">$</option>
                         <option value=""><span class="rouble">&#x20bd;</span></option>
@@ -28,12 +28,31 @@
                 </div>
                 <div class="content-area__section adv-grid__wrapper">
                     <div class="row adv-grid">
+                        {% set Counter = 1 %}
+                        {% set CounterSM = 1 %}
                         {% for i in 1..12 %}
                             {% include "widgets/adv-item.twig" %}
 
-                            {% if i ==  %}
+                            {% if CounterSM == 2 %}
+                                <div class="clearfix visible-sm"></div>
+                            {% endif %}
+
+                            {% if Counter == 3 %}
+                                <div class="clearfix visible-md visible-lg"></div>
+                            {% endif %}
+                            {% if CounterSM == 2 %}
+                                {% set CounterSM = 1 %}
+                            {% else %}
+                                {% set CounterSM = CounterSM + 1 %}
+                            {% endif %}
+                            {% if Counter == 3 %}
+                                {% set Counter = 1 %}
+                            {% else %}
+                                {% set Counter = Counter + 1 %}
+                            {% endif %}
                         {% endfor %}
                     </div>
+                    {% include "widgets/pagination.twig" %}
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 var doc = $(document);
 
 doc.ready(function(){
-   $('select').selectpicker();
+   $('select.select_picker').selectpicker();
 });
