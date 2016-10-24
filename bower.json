@@ -5,6 +5,6 @@
   "author": "Yuriy Bogatyrenko",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "owl.carousel": "^2.1.6"
+    "bootstrap-select": "^1.11.2"
   }
 }

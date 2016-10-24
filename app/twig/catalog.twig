@@ -1,5 +1,44 @@
 {% extends "layouts/app.twig" %}
 
 {% block content %}
+    {% include "widgets/breadcrumbs.twig" %}
 
+    <div class="content-area container">
+        <div class="content-area__left-side">
+            <div class="section-title text-uppercase">Объявления</div>
+
+            <div class="content-area__container">
+                <div class="content-area__header content-area__section">
+                    <select>
+                        <option value="">По актуальности</option>
+                        <option value="">По актуальности</option>
+                        <option value="">По актуальности</option>
+                        <option value="">По актуальности</option>
+                        <option value="">По актуальности</option>
+                    </select>
+                    <select>
+                        <option value="">За все время</option>
+                    </select>
+                    <select>
+                        <option value=""><span class="rouble">&#x20bd;</span></option>
+                        <option value="">$</option>
+                        <option value=""><span class="rouble">&#x20bd;</span></option>
+                        <option value="">$</option>
+                    </select>
+                </div>
+                <div class="content-area__section adv-grid__wrapper">
+                    <div class="row adv-grid">
+                        {% for i in 1..12 %}
+                            {% include "widgets/adv-item.twig" %}
+
+                            {% if i ==  %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-area__right-side">
+            <div class="block-title text-uppercase">Фильтр</div>
+        </div>
+    </div>
 {% endblock %}
