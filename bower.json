@@ -1,0 +1,10 @@
+{
+  "name": "gulp_project",
+  "version": "0.0.1",
+  "description": "Gulp first application",
+  "author": "Yuriy Bogatyrenko",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "owl.carousel": "^2.1.6"
+  }
+}
