@@ -1,0 +1,16 @@
+.container {
+  max-width: 1200px;
+}
+
+.rouble {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-double_arrow.prev-arrow {
+  transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+}

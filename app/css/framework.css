@@ -1,0 +1,28 @@
+.dib {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[class*="--text-grey"] {
+  color: #999999;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.white-color {
+  color: #fff;
+}
+
+.fz0 {
+  font-size: 0;
+}

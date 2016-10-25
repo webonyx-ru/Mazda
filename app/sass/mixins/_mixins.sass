@@ -1,0 +1,98 @@
+//@import _retina_sprites
+
+=plh
+	&:-ms-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&::-webkit-input-placeholder
+		@content
+	&::placeholder
+		@content
+
+=trans($property:all,$duration:0.5s,$effect:ease,$delay:0s)
+	-webkit-transition: $property $duration $effect $delay
+	-moz-transition: $property $duration $effect $delay
+	-o-transition: $property $duration $effect $delay
+	transition: $property $duration $effect $delay
+
+=transform($transform)
+	transform: $transform
+	-ms-transform: $transform
+	-webkit-transform: $transform
+	-moz-transform: $transform
+	-o-transform: $transform
+
+=rotate($deg)
+	+transform(rotate($deg))
+
+=origin($origin)
+	-webkit-transform-origin: $origin
+	-moz-transform-origin: $origin
+	-o-transform-origin: $origin
+	-ms-transform-origin: $origin
+	transform-origin: $origin
+
+=trans($trans: all 0.3s ease 0s)
+	transition: $trans
+	-moz-transition: $trans
+	-webkit-transition: $trans
+	-o-transition: $trans
+	-ms-transition: $trans
+
+=pos($var)
+	@if $var == tm
+		+transform(translateY(-50%))
+		top: 50%
+	@if $var == lm
+		+transform(translateX(-50%))
+		left: 50%
+	@if $var == m
+		+transform(translate3d(-50%, -50%, 0))
+		top: 50%
+		left: 50%
+
+=phc($color)
+	&::-webkit-input-placeholder
+		color: $color !important
+		opacity: 1 !important
+	&::-moz-placeholder
+		color: $color !important
+		opacity: 1 !important
+	&:-moz-placeholder
+		color: $color !important
+		opacity: 1 !important
+	&:-ms-input-placeholder
+		color: $color !important
+		opacity: 1 !important
+
+=arr($width, $height, $bg, $direction)
+	width: 0px
+	height: 0px
+	border-style: solid
+	@if $direction == t
+		border-width: 0 $width / 2 + px $height + px $width / 2 + px
+		border-color: transparent transparent $bg transparent
+	@if $direction == r
+		border-width: $height / 2 + px 0 $height / 2 + px $width + px
+		border-color: transparent transparent transparent $bg
+	@if $direction == b
+		border-width: $height + px $width / 2 + px 0 $width / 2 + px
+		border-color: $bg transparent transparent transparent
+	@if $direction == lf
+		border-width: $height / 2 + px $width + px $height / 2 + px 0
+		border-color: transparent $bg transparent transparent
+	@if $direction == tl
+		border-width: $height + px $width + px 0 0
+		border-color: $bg transparent transparent transparent
+	@if $direction == tr
+		border-width: 0 $width + px $height + px 0
+		border-color: transparent $bg transparent transparent
+	@if $direction == br
+		border-width: 0 0 $height + px $width + px
+		border-color: transparent transparent $bg transparent
+	@if $direction == bl
+		border-width: $width + px 0 0 $height + px
+		border-color: transparent transparent transparent $bg

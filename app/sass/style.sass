@@ -1,4 +1,5 @@
-@import "_vars"
+@import "vars"
+@import "mixins/mixins"
 
 .container
     max-width: 1200px
@@ -9,4 +10,7 @@
     //height: 10px
     //background: #000
     vertical-align: middle
-    
+
+.icon-double_arrow
+    &.prev-arrow
+        +rotate(-180deg)
