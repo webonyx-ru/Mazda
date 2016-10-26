@@ -6,14 +6,14 @@
   font-weight: normal;
 }
 @font-face {
-  font-family: "SFUIText";
+  font-family: "SFUIText-Bold";
   src: url("../fonts/SFUIText-Bold.eot");
   src: url("../fonts/SFUIText-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIText-Bold.woff") format("woff"), url("../fonts/SFUIText-Bold.otf") format("opentype"), url("../fonts/SFUIText-Bold.svg#SFUIText-Bold") format("svg");
   font-style: normal;
   font-weight: 600;
 }
 @font-face {
-  font-family: "SFUIText";
+  font-family: "SFUIText-Heavy";
   src: url("../fonts/SFUIText-Heavy.eot");
   src: url("../fonts/SFUIText-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIText-Heavy.woff") format("woff"), url("../fonts/SFUIText-Heavy.otf") format("opentype"), url("../fonts/SFUIText-Heavy.svg#SFUIText-Bold") format("svg");
   font-style: normal;

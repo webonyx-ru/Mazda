@@ -1,3 +1,13 @@
+@import "mixins/mixins"
+@import "vars"
+
+a
+    &:hover, &:active, &:focus
+        text-decoration: none
+
+.custom-hidden
+    display: none
+
 .dib
     display: inline-block
     vertical-align: middle
@@ -7,6 +17,9 @@
 
 .full-width
     width: 100%
+
+.lhn
+    line-height: normal
 
 .display-flex
     display: flex
@@ -19,3 +32,94 @@
 
 .fz0
     font-size: 0
+
+.fz10
+    font-size: 10px
+
+.fz12
+    font-size: 12px
+
+.fz14
+    font-size: 14px
+
+.fz16
+    font-size: 16px
+
+.fz20
+    font-size: 20px
+    
+.white-bg
+    background: #fff
+
+.ff-os
+    font-family: $os
+
+.ff-sf
+    font-family: $sf
+
+.ff-sfb
+    font-family: $sfb
+
+.ff-sfh
+    font-family: $sfh
+
+.vab
+    vertical-align: baseline
+
+.empty-button
+    padding: 0 15px
+    line-height: 26px
+    border: 2px solid $semidark-grey
+    color: $semidark-grey
+    border-radius: 3px
+    font-family: $sfb
+    display: inline-block
+    text-decoration: none
+    vertical-align: middle
+    +trans
+
+    &.thin
+        border-width: 1px
+
+    &.db
+        display: block
+        width: 100%
+    
+    &:hover
+        background: $semidark-grey
+        color: $white
+
+    &.white
+        color: $white
+        border-color: $white
+
+    &.big-button
+        line-height: 32px
+        padding: 0 25px
+
+.grey-color
+    color: $semidark-grey
+
+.lts1
+    letter-spacing: 1px
+
+.mr10
+    margin-right: 10px
+
+.mr15
+    margin-right: 15px
+
+.mr40
+    margin-right: 40px
+
+.mb10
+    margin-bottom: 10px
+
+.mb15
+    margin-bottom: 15px
+
+.mb20
+    margin-bottom: 20px
+
+.posr
+    position: relative

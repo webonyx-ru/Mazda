@@ -1,3 +1,11 @@
+a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
+.custom-hidden {
+  display: none;
+}
+
 .dib {
   display: inline-block;
   vertical-align: middle;
@@ -9,6 +17,10 @@
 
 .full-width {
   width: 100%;
+}
+
+.lhn {
+  line-height: normal;
 }
 
 .display-flex {
@@ -25,4 +37,120 @@
 
 .fz0 {
   font-size: 0;
+}
+
+.fz10 {
+  font-size: 10px;
+}
+
+.fz12 {
+  font-size: 12px;
+}
+
+.fz14 {
+  font-size: 14px;
+}
+
+.fz16 {
+  font-size: 16px;
+}
+
+.fz20 {
+  font-size: 20px;
+}
+
+.white-bg {
+  background: #fff;
+}
+
+.ff-os {
+  font-family: OpenSans, sans-serif, arial;
+}
+
+.ff-sf {
+  font-family: SFUIText, sans-serif, arial;
+}
+
+.ff-sfb {
+  font-family: SFUIText-Bold, sans-serif, arial;
+}
+
+.ff-sfh {
+  font-family: SFUIText-Heavy, sans-serif, arial;
+}
+
+.vab {
+  vertical-align: baseline;
+}
+
+.empty-button {
+  padding: 0 15px;
+  line-height: 26px;
+  border: 2px solid #999999;
+  color: #999999;
+  border-radius: 3px;
+  font-family: SFUIText-Bold, sans-serif, arial;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+.empty-button.thin {
+  border-width: 1px;
+}
+.empty-button.db {
+  display: block;
+  width: 100%;
+}
+.empty-button:hover {
+  background: #999999;
+  color: #fff;
+}
+.empty-button.white {
+  color: #fff;
+  border-color: #fff;
+}
+.empty-button.big-button {
+  line-height: 32px;
+  padding: 0 25px;
+}
+
+.grey-color {
+  color: #999999;
+}
+
+.lts1 {
+  letter-spacing: 1px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mr15 {
+  margin-right: 15px;
+}
+
+.mr40 {
+  margin-right: 40px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.posr {
+  position: relative;
 }

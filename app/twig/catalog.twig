@@ -6,21 +6,21 @@
     <div class="content-area container">
         <div class="row">
             <div class="content-area__left-side col-md-9">
-                <div class="section-title text-uppercase">Объявления</div>
+                <div class="block-title text-uppercase">Объявления</div>
 
-                <div class="content-area__container">
-                    <form action="#" class="content-area__header content-area__section">
-                        <select class="selectpicker">
+                <div class="content-area__container white-bg">
+                    <form action="#" class="content-area__header content-area__section has-border-bottom">
+                        <select class="selectpicker mr15" data-width="auto">
                             <option value="">По актуальности</option>
                             <option value="">По актуальности</option>
                             <option value="">По актуальности</option>
                             <option value="">По актуальности</option>
                             <option value="">По актуальности</option>
                         </select>
-                        <select class="selectpicker">
+                        <select class="selectpicker mr15" data-width="auto">
                             <option value="">За все время</option>
                         </select>
-                        <select class="selectpicker">
+                        <select class="selectpicker" data-width="auto">
                             <option value=""><span class="rouble">&#x20bd;</span></option>
                             <option value="">$</option>
                             <option value=""><span class="rouble">&#x20bd;</span></option>
@@ -31,7 +31,7 @@
                         <div class="row adv-grid">
                             {% set Counter = 1 %}
                             {% set CounterSM = 1 %}
-                            {% for i in 1..12 %}
+                            {% for i in 1..21 %}
                                 {% include "elements/adv-item.twig" %}
 
                                 {% if CounterSM == 2 %}
@@ -60,10 +60,10 @@
             <div class="content-area__right-side col-md-3">
                 <div class="content-area__right-side-item">
                     <div class="block-title text-uppercase">Фильтр</div>
-                    <div class="right-side__filter content-area__container">
+                    <div class="right-side__filter content-area__container white-bg">
                         <form action="#" class="content-area__section">
-                            <div class="form-line">
-                                <select class="selectpicker">
+                            <div class="form-line mb20">
+                                <select class="selectpicker" data-width="100%">
                                     <option value="">Категория (все)</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
@@ -71,8 +71,8 @@
                                     <option value="">Значение</option>
                                 </select>
                             </div>
-                            <div class="form-line">
-                                <select class="selectpicker">
+                            <div class="form-line mb20">
+                                <select class="selectpicker" data-width="100%">
                                     <option value="">Модель</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
@@ -80,8 +80,8 @@
                                     <option value="">Значение</option>
                                 </select>
                             </div>
-                            <div class="form-line">
-                                <select class="selectpicker" disabled>
+                            <div class="form-line mb20">
+                                <select class="selectpicker" data-width="100%" disabled>
                                     <option value="">Поколение</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
@@ -89,8 +89,8 @@
                                     <option value="">Значение</option>
                                 </select>
                             </div>
-                            <div class="form-line">
-                                <select class="selectpicker" disabled>
+                            <div class="form-line mb20">
+                                <select class="selectpicker" data-width="100%" disabled>
                                     <option value="">Кузов</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
@@ -98,8 +98,8 @@
                                     <option value="">Значение</option>
                                 </select>
                             </div>
-                            <div class="form-line">
-                                <select class="selectpicker" disabled>
+                            <div class="form-line mb20">
+                                <select class="selectpicker" data-width="100%" disabled>
                                     <option value="">Коробка</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
@@ -107,8 +107,8 @@
                                     <option value="">Значение</option>
                                 </select>
                             </div>
-                            <div class="form-line">
-                                <select class="selectpicker" disabled>
+                            <div class="form-line mb20">
+                                <select class="selectpicker" data-width="100%" disabled>
                                     <option value="">Привод</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
@@ -116,8 +116,8 @@
                                     <option value="">Значение</option>
                                 </select>
                             </div>
-                            <div class="form-line">
-                                <select class="selectpicker" disabled>
+                            <div class="form-line mb20">
+                                <select class="selectpicker" data-width="100%" disabled>
                                     <option value="">Двигатель</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
@@ -125,15 +125,15 @@
                                     <option value="">Значение</option>
                                 </select>
                             </div>
-                            <div class="form-line double-selectors">
-                                <select class="selectpicker" disabled>
+                            <div class="form-line mb20 double-selectors fz0">
+                                <select class="selectpicker dib" data-width="50%" disabled>
                                     <option value="">Объем от</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
                                 </select>
-                                <select class="selectpicker" disabled>
+                                <select class="selectpicker dib" data-width="50%" disabled>
                                     <option value="">до</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
@@ -141,23 +141,31 @@
                                     <option value="">Значение</option>
                                 </select>
                             </div>
-                            <div class="form-line double-inputs">
-                                <input class="col-xs-6" type="number" placeholder="Цена от (&#x20bd;)">
-                                <input class="col-xs-6" type="number" placeholder="до (&#x20bd;)">
+                            <div class="form-line mb20 double-inputs form-group clearfix">
+                                <div class="col-xs-6">
+                                    <input class="form-control" type="tel" placeholder="Цена от (&#x20bd;)">
+                                </div>
+                                <div class="col-xs-6">
+                                    <input class="form-control" type="tel" placeholder="до (&#x20bd;)">
+                                </div>
                             </div>
-                            <div class="form-line double-inputs">
-                                <input class="col-xs-6" type="number" placeholder="Пробег от (км)">
-                                <input class="col-xs-6" type="number" placeholder="до (км)">
+                            <div class="form-line mb20 double-inputs form-group clearfix">
+                                <div class="col-xs-6">
+                                    <input class="form-control" type="tel" placeholder="Пробег от (км)">
+                                </div>
+                                <div class="col-xs-6">
+                                    <input class="form-control" type="tel" placeholder="до (км)">
+                                </div>
                             </div>
-                            <div class="form-line double-selectors">
-                                <select class="selectpicker" disabled>
+                            <div class="form-line mb20 double-selectors fz0">
+                                <select class="selectpicker dib" data-width="50%">
                                     <option value="">Год от</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
                                 </select>
-                                <select class="selectpicker" disabled>
+                                <select class="selectpicker dib" data-width="50%">
                                     <option value="">до</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
@@ -165,8 +173,8 @@
                                     <option value="">Значение</option>
                                 </select>
                             </div>
-                            <div class="form-line">
-                                <select class="selectpicker" disabled>
+                            <div class="form-line mb20">
+                                <select class="selectpicker" data-width="100%" disabled>
                                     <option value="">Регион (все)</option>
                                     <option value="">Значение</option>
                                     <option value="">Значение</option>
@@ -174,14 +182,14 @@
                                     <option value="">Значение</option>
                                 </select>
                             </div>
-                            <div class="form-line right-form__found">
+                            <div class="form-line mb20 right-form__found">
                                 Найдено объявлений <span class="--text-grey ffb">104</span>
                             </div>
-                            <div class="form-line">
+                            <div class="form-line mb20">
                                 <button type="reset" class="right-form__reset-button text-uppercase">Сбросить все
                                     найстройки <i class="icon-cross"></i></button>
                             </div>
-                            <div class="form-line text-right">
+                            <div class="form-line mb20 text-right">
                                 <span class="js-show-all-params text-uppercase">все параментры <i
                                             class="icon-arrow-down"></i></span>
                             </div>
@@ -190,7 +198,7 @@
                 </div>
                 <div class="content-area__right-side-item">
                     <div class="block-title text-uppercase">Новости компаний</div>
-                    <div class="right-side__news content-area__container">
+                    <div class="right-side__news content-area__container white-bg">
                         <ul class="right-side__news-listing">
                             {% for i in 1..3 %}
                                 {% include "elements/right-news__item.twig" %}

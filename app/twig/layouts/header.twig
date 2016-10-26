@@ -1,49 +1,65 @@
-<header class="top-line text-right">
-    <div class="grey-plate">
+<header class="main-header posr clearfix">
+    <div class="header__white-plate white-bg fz0 clearfix text-right">
         <div class="container">
-            <div class="dib">
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Dropdown
-                        <span class="caret"></span>
+            <div class="dib mr40">
+                <div class="dropdown cities-dropdown lts1 fz14">
+                    <span class="grey-color ff-sfb dib"><i class="icon-location_pin dib"></i>  Ваш город:</span>
+                    <button class="dropdown-toggle cities-dropdown-button ff-sfb dib lts1" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Москва
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Питер</a></li>
+                        <li><a href="#">Тамбов</a></li>
+                        <li><a href="#">Астана</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="dib">
-                <a href="#" class="empty-button text-uppercase">Вход</a>
-            </div>
+            <a href="#" class="empty-button text-uppercase fz14">Вход</a>
         </div>
     </div>
-    <div class="black-plate">
+    <div class="header__black-plate clearfix">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo-area">
-                        <a href="#" class="b-logo__club text-uppercase">
-                            АВТОКЛУБ ЛЮБИТЕЛЕЙ МАЗДА
+                        <a href="#" class="logo-square b-logo__club text-uppercase ff-sfb white-color text-center">
+                            <span class="dib fz14">АВТОКЛУБ ЛЮБИТЕЛЕЙ МАЗДА</span>
                         </a>
-                        <a href="#" class="b-logo__mazda">
+                        <a href="#" class="logo-square b-logo__mazda text-center">
                             <img src="images/logo-mazda.png" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="col-sm-8 text-right">
-                    <nav class="header-menu text-uppercase dib">
-                        <a href="#" class="header-menu__link">Компании</a>
-                        <a href="#" class="header-menu__link">Социум</a>
-                        <a href="#" class="header-menu__link">Автомобили</a>
+                    <nav class="header-menu text-uppercase dib ff-sfb mr40">
+                        <ul class="header-menu__listing">
+                            <li class="header-menu__item dib">
+                                <a href="#" class="header-menu__link">Компании</a>
+                            </li>
+                            <li class="header-menu__item dib">
+                                <a href="#" class="header-menu__link">Социум</a>
+                            </li>
+                            <li class="header-menu__item dib" data-call-submenu="automobile">
+                                <a href="#" class="header-menu__link">Автомобили</a>
+                            </li>
+                        </ul>
                     </nav>
                     <div class="dib header-forum-link">
-                        <a href="#" class="empty-button white text-uppercase">Форму</a>
+                        <a href="#" class="empty-button white text-uppercase big-button">Форму</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-submenu white-bg ff-os fz16 custom-hidden" data-submenu="automobile">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-4 col-sm-offset-2 submenu-section__border-right">
+                    <a href="#" class="header-submenu__link">Каталог авто</a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="#" class="header-submenu__link">Объявления</a>
                 </div>
             </div>
         </div>
