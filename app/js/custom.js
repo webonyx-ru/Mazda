@@ -19,4 +19,19 @@ doc.ready(function(){
       menu_activated = true;
       e.preventDefault();
    });
+
+   doc.on('click', '.js-show-all-params', function (e) {
+      var $this = $(this),
+          filter = $('.full-filter-hidden');
+
+      if($this.hasClass('active')) {
+         filter.slideUp(300);
+         $this.removeClass('active');
+      } else {
+         filter.slideDown(300);
+         $this.addClass('active');
+      }
+
+      e.preventDefault()
+   });
 });

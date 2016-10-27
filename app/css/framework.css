@@ -1,6 +1,9 @@
 a:hover, a:active, a:focus {
   text-decoration: none;
 }
+a[class*="--text-grey"]:hover {
+  color: #fff;
+}
 
 .custom-hidden {
   display: none;
@@ -13,6 +16,10 @@ a:hover, a:active, a:focus {
 
 [class*="--text-grey"] {
   color: #999999;
+}
+
+[class*="--text-lightblack"] {
+  color: #191919;
 }
 
 .full-width {
@@ -59,8 +66,16 @@ a:hover, a:active, a:focus {
   font-size: 20px;
 }
 
+.fz24 {
+  font-size: 24px;
+}
+
 .white-bg {
   background: #fff;
+}
+
+.black-bg {
+  background: #000;
 }
 
 .ff-os {
@@ -99,6 +114,9 @@ a:hover, a:active, a:focus {
   -o-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
 }
+.empty-button.red-border {
+  border-color: #dd0000;
+}
 .empty-button.thin {
   border-width: 1px;
 }
@@ -114,6 +132,10 @@ a:hover, a:active, a:focus {
   color: #fff;
   border-color: #fff;
 }
+.empty-button.hover-red:hover {
+  background: #dd0000;
+  border-color: #dd0000;
+}
 .empty-button.big-button {
   line-height: 32px;
   padding: 0 25px;
@@ -125,6 +147,10 @@ a:hover, a:active, a:focus {
 
 .lts1 {
   letter-spacing: 1px;
+}
+
+.lts2 {
+  letter-spacing: 2px;
 }
 
 .mr10 {
@@ -151,6 +177,39 @@ a:hover, a:active, a:focus {
   margin-bottom: 20px;
 }
 
+.mb35 {
+  margin-bottom: 35px;
+}
+
 .posr {
   position: relative;
+}
+
+.btn, .form-control {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 36px;
+  height: 38px;
+  font-family: SFUIText-Bold, sans-serif, arial;
+}
+
+.clean-element {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-top-minus-1 {
+  position: relative;
+  top: -1px;
+}
+
+.icon-top-minus-2 {
+  position: relative;
+  top: -2px;
+}
+
+.lh12 {
+  line-height: 1.2;
 }
