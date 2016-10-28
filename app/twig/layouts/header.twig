@@ -1,28 +1,23 @@
 <header class="main-header posr clearfix">
-    <div class="header__white-plate white-bg fz0 clearfix text-right">
+    <div class="header__white-plate white-bg fz0 clearfix text-right clearfix">
         <div class="container">
-            <div class="dib mr40">
-                <div class="dropdown cities-dropdown lts1 fz14">
-                    <span class="grey-color ff-sfb dib"><i class="icon-location_pin dib"></i>  Ваш город:</span>
-                    <button class="dropdown-toggle cities-dropdown-button ff-sfb dib lts1" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Москва
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">Москва</a></li>
-                        <li><a href="#">Питер</a></li>
-                        <li><a href="#">Тамбов</a></li>
-                        <li><a href="#">Астана</a></li>
-                    </ul>
+            <div class="mobile-display-flex space-between">
+                <div class="dib mr40">
+                    <div class="dropdown cities-dropdown lts1 fz14">
+                        <span class="grey-color ff-sfb dib"><i class="icon-location_pin dib"></i>  <span
+                                    class="hidden-xs">Ваш город:</span></span>
+                        <span class="cities-dropdown-button dib ff-sfb">Москва</span>
+                    </div>
                 </div>
+                <div class="dib"><a href="#" class="empty-button text-uppercase fz14">Вход</a></div>
             </div>
-            <a href="#" class="empty-button text-uppercase fz14">Вход</a>
         </div>
     </div>
-    <div class="header__black-plate clearfix">
+    <div class="header__black-plate posr clearfix">
         <div class="container">
             <div class="row">
-                <div class="header-logo__colomn col-sm-4">
-                    <div class="logo-area">
+                <div class="header-logo__colomn col-sm-4 col-xs-6">
+                    <div class="logo-area fz0">
                         <a href="#" class="logo-square b-logo__club text-uppercase ff-sfb white-color text-center">
                             <span class="dib fz14">АВТОКЛУБ ЛЮБИТЕЛЕЙ МАЗДА</span>
                         </a>
@@ -31,23 +26,34 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-8 text-right">
-                    <nav class="header-menu text-uppercase dib ff-sfb mr40">
-                        <ul class="header-menu__listing">
-                            <li class="header-menu__item dib">
-                                <a href="#" class="header-menu__link">Компании</a>
-                            </li>
-                            <li class="header-menu__item dib">
-                                <a href="#" class="header-menu__link">Социум</a>
-                            </li>
-                            <li class="header-menu__item dib" data-call-submenu="automobile">
-                                <a href="#" class="header-menu__link">Автомобили</a>
-                            </li>
-                        </ul>
+                <div class="col-sm-8 col-xs-6 not-relative-pos text-right">
+                    <nav class="navbar navbar-default not-relative-pos">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar first"></span>
+                            <span class="icon-bar middle"></span>
+                            <span class="icon-bar last"></span>
+                        </button>
+                        <div class="header-menu text-uppercase ff-sfb collapse navbar-collapse"
+                             id="bs-example-navbar-collapse-1">
+                            <ul class="header-menu__listing clean-element dib mr40">
+                                <li class="header-menu__item dib">
+                                    <a href="#" class="header-menu__link">Компании</a>
+                                </li>
+                                <li class="header-menu__item dib">
+                                    <a href="#" class="header-menu__link">Социум</a>
+                                </li>
+                                <li class="header-menu__item dib"
+                                    data-call-submenu="automobile">
+                                    <a href="#" class="header-menu__link">Автомобили</a>
+                                </li>
+                            </ul>
+                            <div class="dib header-forum-link">
+                                <a href="#" class="empty-button hover-red white text-uppercase big-button">Форум</a>
+                            </div>
+                        </div>
                     </nav>
-                    <div class="dib header-forum-link">
-                        <a href="#" class="empty-button hover-red white text-uppercase big-button">Форму</a>
-                    </div>
                 </div>
             </div>
         </div>

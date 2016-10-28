@@ -48,6 +48,11 @@ body
     height: 60px
     overflow: hidden
 
+.b-logo__mazda
+    img
+        max-width: 80%
+        max-height: 80%
+
 .logo-square
     font-size: 0
     height: 100px
@@ -81,12 +86,15 @@ body
     color: $semidark-grey
     position: relative
     letter-spacing: 1px
+
+    @media screen and (max-width: 768px)
+        display: inline-block
     
     &:hover
         color: $white
         
 .header-menu__listing
-    margin: 0
+    margin: 0 40px 0 0
     padding: 0
     display: inline-block
     vertical-align: middle
@@ -184,8 +192,16 @@ body
     letter-spacing: 2px
     margin-bottom: 2px
 
+.filter-header
+    .bootstrap-select
+        margin: 5px 15px 5px 0
+
 .content-area__section
     padding: 20px
+
+    &.filter-header
+        padding-top: 15px
+        padding-bottom: 15px
 
     .full-width__image-remove-paddings-banner
         margin-left: -20px
@@ -205,13 +221,6 @@ body
     &:hover
         background: #dd0000
         color: #fff
-        
-a.adv-grid__item-link
-    &:hover
-        color: $light-black
-
-        [class*='icon-']
-            color: #dd0000
 
 .adv-grid__activities
     .icon-favorite
@@ -288,6 +297,8 @@ a.adv-grid__item-link
 
 .b-pagination-item
     width: 35px
+    margin-top: 1px
+    margin-bottom: 1px
     text-align: center
     background: $light-black
     font-family: $sfb
@@ -344,8 +355,11 @@ a.adv-grid__item-link
                 border-radius: 0 2px 2px 0
 
 .right-form__reset-button
-    color: #d5d5d5
     letter-spacing: 1px
+    color: $semidark-grey
+
+    &.inactive
+        color: #d5d5d5
 
     [class*='icon-']
         position: relative

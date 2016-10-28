@@ -1,5 +1,5 @@
 @media screen and (max-width: 992px) {
-  nav.header-menu {
+  .header-menu__listing {
     margin-right: 20px;
   }
 
@@ -35,7 +35,7 @@
     text-align: center !important;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .right-side__filter .content-area__section {
     margin-left: 0;
     margin-right: 0;
@@ -46,5 +46,115 @@
     width: 100%;
     vertical-align: top;
     padding: 0;
+  }
+
+  .logo-square {
+    width: 65px;
+    height: 60px;
+    line-height: 58px;
+    margin-top: 0;
+  }
+  .logo-square span {
+    font-size: 8px;
+    line-height: 1.8;
+  }
+
+  .navbar .header-menu {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    z-index: 100;
+    background: #fff;
+  }
+
+  .header-menu__item {
+    line-height: normal;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .header-menu__link {
+    color: #999999;
+    padding: 25px 0;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #d5d5d5;
+  }
+  .header-menu__link:hover, .header-menu__link:active, .header-menu__link:focus {
+    color: #000;
+  }
+
+  .header-menu__listing {
+    display: block;
+    margin-right: 0;
+  }
+
+  .header-menu__item {
+    display: block;
+    text-align: left;
+  }
+  .header-menu__item:nth-child(n) {
+    margin: 0;
+  }
+  .header-menu__item:nth-child(n):after, .header-menu__item:nth-child(n):before {
+    display: none;
+  }
+
+  .header-forum-link {
+    text-align: center;
+    display: block;
+  }
+  .header-forum-link .empty-button {
+    border-color: #191919;
+    color: #191919;
+  }
+  .header-forum-link .empty-button:hover {
+    color: #fff;
+  }
+
+  .mobile-display-flex {
+    display: flex;
+  }
+
+  .footer-bottom__item {
+    margin: 5px 10px;
+  }
+  .footer-bottom__item:nth-child(n):before, .footer-bottom__item:nth-child(n):after {
+    display: none;
+  }
+
+  .footer-soc__wrapper {
+    text-align: center;
+  }
+
+  .footer-soc__item:not(:last-child) {
+    margin: 0;
+  }
+
+  .footer-menu__first-item {
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer-menu__first-link {
+    display: block;
+    padding: 25px 0;
+    border-bottom: 1px solid #999999;
+  }
+
+  .footer-menu__item {
+    display: none;
+  }
+
+  .footer-top {
+    padding-top: 0;
+    border-color: #999999;
+  }
+
+  .footer-soc__wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }

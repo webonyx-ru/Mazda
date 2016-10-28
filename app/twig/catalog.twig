@@ -3,10 +3,10 @@
 {% block content %}
     {% include "widgets/breadcrumbs.twig" %}
 
-    <div class="content-area">
+    <div class="content-area clearfix">
         <div class="container">
             <div class="row">
-                <div class="content-area__right-side col-md-3">
+                <div class="content-area__right-side col-md-3 col-xs-12">
                     <div class="content-area__right-side-item">
                         <div class="block-title text-uppercase">Фильтр</div>
                         <div class="right-side__filter content-area__container white-bg">
@@ -165,12 +165,12 @@
                                         Найдено объявлений <span class="--text-grey ff-sfb">104</span>
                                     </div>
                                     <div class="form-line mb10 text-center">
-                                        <button type="reset" class="right-form__reset-button text-uppercase clean-element ff-sfb">
+                                        <button type="reset" class="inactive hover-black__link-red-icon right-form__reset-button text-uppercase clean-element ff-sfb">
                                             Сбросить найстройки <i class="icon-remove fz10 dib vam"></i>
                                         </button>
                                     </div>
                                     <div class="form-line text-right">
-                                        <span class="js-show-all-params text-uppercase ff-sfb --text-grey">все параметры <i class="icon-down_arrow dib fz10"></i></span>
+                                        <span class="js-show-all-params text-uppercase ff-sfb --text-grey hover-black__link-red-icon">все параметры <i class="icon-down_arrow dib fz10"></i></span>
                                     </div>
                                 </div>
                             </form>
@@ -185,7 +185,7 @@
                                 {% endfor %}
                             </ul>
                             <div class="text-right right-side__news-show-all">
-                                <a href="#" class="text-uppercase ff-sfb --text-grey">все новости
+                                <a href="#" class="text-uppercase ff-sfb --text-grey hover-black__link-red-icon">все новости
                                     <span class="icon-double_arrow fz10 dib icon-top-minus-2"></span>
                                 </a>
                             </div>
@@ -214,8 +214,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="visible-sm clearfix"></div>
-                <div class="s col-md-9">
+                <div class="visible-sm visible-xs clearfix"></div>
+                <div class="content-area__left-side col-xs-12 col-md-9">
                     <div class="block-title text-uppercase">Объявления</div>
 
                     <div class="content-area__container white-bg">
