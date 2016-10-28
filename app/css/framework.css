@@ -195,6 +195,7 @@ a[class*="--text-grey"]:hover {
   line-height: 36px;
   height: 38px;
   font-family: SFUIText-Bold, sans-serif, arial;
+  box-shadow: none;
 }
 
 .clean-element {

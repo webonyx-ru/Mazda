@@ -1,11 +1,14 @@
-body {
+body, html {
   font-family: OpenSans, sans-serif, arial;
   font-size: 14px;
+  background: #191919;
 }
 
 .site-wrap {
   background: #191919;
   min-width: 320px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -223,6 +226,22 @@ body {
 
 .filter-header .bootstrap-select {
   margin: 5px 15px 5px 0;
+}
+
+.main-header {
+  order: 1;
+}
+
+.breadcrumbs {
+  order: 2;
+}
+
+.content-area {
+  order: 3;
+}
+
+.footer {
+  order: 4;
 }
 
 .content-area__section {
