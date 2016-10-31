@@ -1,3 +1,19 @@
+.main-header {
+  order: 1;
+}
+
+.breadcrumbs {
+  order: 2;
+}
+
+.content-area {
+  order: 3;
+}
+
+.footer {
+  order: 4;
+}
+
 body, html {
   font-family: OpenSans, sans-serif, arial;
   font-size: 14px;
@@ -114,13 +130,14 @@ body, html {
   vertical-align: middle;
 }
 
-.header-menu__item {
-  position: relative;
-}
 .header-menu__item:not(:last-child) {
   margin-right: 30px;
 }
-.header-menu__item:not(:last-child):before {
+.header-menu__item:not(:last-child) .header-menu__link {
+  display: block;
+  position: relative;
+}
+.header-menu__item:not(:last-child) .header-menu__link:before {
   display: block;
   content: "";
   width: 1px;
@@ -132,7 +149,7 @@ body, html {
   top: 50%;
   margin-top: -10px;
 }
-.header-menu__item:after {
+.header-menu__item .header-menu__link:after {
   display: block;
   content: "";
   width: 0;
@@ -141,17 +158,17 @@ body, html {
   left: 50%;
   position: absolute;
   top: 100%;
-  margin-top: -28px;
+  margin-top: 3px;
   transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
 }
-.header-menu__item.active .header-menu__link {
+.header-menu__item .header-menu__link.active {
   color: #fff;
 }
-.header-menu__item.active:after {
+.header-menu__item .header-menu__link.active:after {
   left: 0;
   width: 100%;
 }
@@ -173,7 +190,7 @@ body, html {
   left: 0;
   width: 100%;
   z-index: 4;
-  margin-top: -10px;
+  margin-top: 0;
 }
 
 .breadcrumbs {
@@ -226,22 +243,6 @@ body, html {
 
 .filter-header .bootstrap-select {
   margin: 5px 15px 5px 0;
-}
-
-.main-header {
-  order: 1;
-}
-
-.breadcrumbs {
-  order: 2;
-}
-
-.content-area {
-  order: 3;
-}
-
-.footer {
-  order: 4;
 }
 
 .content-area__section {
@@ -306,7 +307,10 @@ body, html {
   font-size: 16px;
 }
 
-.bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:active {
+.bootstrap-select > .dropdown-toggle.bs-placeholder,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:hover,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:active {
   color: #191919;
   font-family: SFUIText-Bold, sans-serif, arial;
 }

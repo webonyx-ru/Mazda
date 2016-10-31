@@ -213,9 +213,11 @@ gulp.task('build',["clean"], function(){
             // .pipe(notify('BUILD was ended'));
 
         gulp.src('app/fonts/**')
-            .pipe(gulp.dest('dist/fonts'))
+            .pipe(gulp.dest('dist/fonts'));
         gulp.src('app/images/**')
-            .pipe(gulp.dest('dist/images'))
+            .pipe(gulp.dest('dist/images'));
+        gulp.src('app/fonts/**')
+            .pipe(gulp.dest('dist/fonts'));
     }, 500);
 });
 

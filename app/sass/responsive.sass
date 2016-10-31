@@ -153,3 +153,24 @@
     .copy-text
         line-height: normal
         padding-top: 20px
+
+    .header-submenu
+        position: static
+        top: auto
+        left: auto
+        background: #eee
+        font-size: 14px
+        padding: 10px 0
+        line-height: 2
+
+    .header-submenu__link
+        display: block
+        
+    .header-menu__item
+        .header-menu__link
+            &:after
+                margin-top: 0
+            &.active
+                color: #000
+
+            

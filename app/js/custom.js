@@ -2,7 +2,11 @@ var doc = $(document);
 var menu_activated = false;
 
 doc.ready(function(){
-   $('select.selectpicker').selectpicker();
+   setTimeout(function () {
+      $('select.selectpicker').selectpicker();
+   }, 300);
+
+
    doc.on('click', '[data-call-submenu]', function (e) {
       var _this = $(this);
       var bl = $('[data-submenu="' + _this.attr("data-call-submenu") + '"]');
