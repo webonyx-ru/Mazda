@@ -98,7 +98,7 @@ a[class*="--text-grey"]:hover {
   vertical-align: baseline;
 }
 
-.empty-button {
+.empty-button, .filled-button {
   padding: 0 15px;
   line-height: 26px;
   border: 2px solid #999999;
@@ -118,31 +118,38 @@ a[class*="--text-grey"]:hover {
   -o-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
 }
-.empty-button.red-border {
+.empty-button.red-border, .red-border.filled-button {
   border-color: #dd0000;
 }
-.empty-button.thin {
+.empty-button.thin, .thin.filled-button {
   border-width: 1px;
 }
-.empty-button.db {
+.empty-button.db, .db.filled-button {
   display: block;
   width: 100%;
 }
-.empty-button:hover {
+.empty-button:hover, .filled-button:hover {
   background: #999999;
   color: #fff;
 }
-.empty-button.white {
+.empty-button.white, .white.filled-button {
   color: #fff;
   border-color: #fff;
 }
-.empty-button.hover-red:hover {
+.empty-button.hover-red:hover, .hover-red.filled-button:hover {
   background: #dd0000;
   border-color: #dd0000;
 }
-.empty-button.big-button {
+.empty-button.big-button, .big-button.filled-button {
   line-height: 32px;
   padding: 0 25px;
+}
+
+.filled-button {
+  text-align: center;
+  color: #fff;
+  background: #191919;
+  border-color: #191919;
 }
 
 .grey-color {
@@ -167,6 +174,14 @@ a[class*="--text-grey"]:hover {
 
 .mr40 {
   margin-right: 40px;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mb2 {
+  margin-bottom: 2px;
 }
 
 .mb10 {
@@ -350,4 +365,8 @@ a[class*="--text-grey"]:hover {
 
 .not-relative-pos {
   position: static;
+}
+
+.flex-middle {
+  align-items: center;
 }

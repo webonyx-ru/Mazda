@@ -240,6 +240,9 @@ body, html {
   letter-spacing: 2px;
   margin-bottom: 2px;
 }
+.block-title.mb0 {
+  margin-bottom: 0;
+}
 
 .filter-header .bootstrap-select {
   margin: 5px 15px 5px 0;
@@ -540,4 +543,47 @@ body, html {
   background: #999999;
   top: 50%;
   margin-top: -5px;
+}
+
+.right-side__buttons-wrapper.has-border-top {
+  border-top: 1px solid #d5d5d5;
+  padding-top: 15px;
+}
+
+.content-block__tab-menu-item {
+  margin-left: 30px;
+  position: relative;
+}
+.content-block__tab-menu-item:not(:last-child):after {
+  display: block;
+  content: "";
+  height: 80%;
+  width: 1px;
+  background: #999999;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  position: absolute;
+  left: 100%;
+  margin-left: 15px;
+}
+.content-block__tab-menu-item.active:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  margin-top: -5px;
+  width: 100%;
+  background: #dd0000;
+  height: 2px;
+}
+.content-block__tab-menu-item.active .content-block__tab-menu-link {
+  color: #fff;
+}
+
+.content-block__tab-menu-link {
+  line-height: 28px;
+  display: block;
 }

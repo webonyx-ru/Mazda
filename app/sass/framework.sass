@@ -121,6 +121,13 @@ a
     &.big-button
         line-height: 32px
         padding: 0 25px
+        
+.filled-button
+    @extend .empty-button
+    text-align: center
+    color: #fff
+    background: $light-black
+    border-color: $light-black
 
 .grey-color
     color: $semidark-grey
@@ -139,6 +146,12 @@ a
 
 .mr40
     margin-right: 40px
+
+.mb0
+    margin-bottom: 0
+
+.mb2
+    margin-bottom: 2px
 
 .mb10
     margin-bottom: 10px
@@ -254,12 +267,6 @@ a
             &.last
                 margin-top: 7px
 
-
-
-
-
-
-
 .navbar-collapse
     padding: 0
 
@@ -274,4 +281,5 @@ a
 .not-relative-pos
     position: static
 
-.navbar-collapse
+.flex-middle
+    align-items: center
