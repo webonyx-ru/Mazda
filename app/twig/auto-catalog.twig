@@ -22,28 +22,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="content-area__right-side-item black-bg hidden-sm hidden-xs">
-                        <div class="right-side__banner text-center content-area__section">
-                            <div class="right-side__banner-title ff-sfb fz24 white-color lts2 lh12 mb10">
-                                Mazda по <br>летним ценам
-                            </div>
-                            <div class="full-width__image-remove-paddings-banner mb20">
-                                <img src="images/offer_image.jpg" class="full-width" alt="">
-                            </div>
-                            <div class="right-side__banner-content mb20 --text-grey">
-                                До 31 августа в салонах
-                                официальных дилеров
-                                действуют специальные цены
-                                на модели Mazda 3 / 6 / CX-5
-                            </div>
-                            <div class="right-side__banner-info text-right">
-                                <a href="#" class="right-side__banner-more text-uppercase --text-grey ff-sfb">
-                                    <span class="dib">подробнее</span>
-                                    <i class="icon-plus fz10"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="visible-sm visible-xs clearfix"></div>
                 <div class="content-area__left-side col-xs-12 col-md-9">
@@ -51,19 +29,76 @@
                         <div class="block-title mb0 text-uppercase vab dib flex-middle">Объявления</div>
                         <div class="content-area__left-side__right-area text-uppercase ff-sfb dib flex-middle">
                             <ul class="clean-element content-block__tab-menu-listing fz0 lts1">
-                                <li class="content-block__tab-menu-item dib active"><a class="content-block__tab-menu-link fz14 --text-grey" href="#">Популярные</a></li>
-                                <li class="content-block__tab-menu-item dib"><a class="content-block__tab-menu-link fz14 --text-grey" href="#">все</a></li>
+                                <li class="content-block__tab-menu-item dib active">
+                                    <a class="content-block__tab-menu-link fz14 --text-grey" data-toggle="tab" href="#catalog-popular">Популярные</a>
+                                </li>
+                                <li class="content-block__tab-menu-item dib">
+                                    <a class="content-block__tab-menu-link fz14 --text-grey" data-toggle="tab" href="#catalog-all">все</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="content-area__container content-area__section white-bg">
-                        <div class="auto-catalog__listing row mb20">
-                            {% for i in 1..24 %}
-                                {% include 'elements/catalog-auto-item.twig' %}
-                            {% endfor %}
+                    <div class="content-area__container content-area__section white-bg tab-content">
+                        <div class="tab-pane fade" id="catalog-all">
+                            <div class="mb15">
+                                <div class="auto-catalog__listing row">
+                                    {% set Counter = 1 %}
+                                    {% set CounterSM = 1 %}
+                                    {% for i in 1..15 %}
+                                        {% include "elements/catalog-auto-item.twig" %}
+
+                                        {% if CounterSM == 2 %}
+                                            <div class="clearfix visible-xs"></div>
+                                        {% endif %}
+
+                                        {% if Counter == 3 %}
+                                            <div class="clearfix visible-sm visible-lg"></div>
+                                        {% endif %}
+                                        {% if CounterSM == 2 %}
+                                            {% set CounterSM = 1 %}
+                                        {% else %}
+                                            {% set CounterSM = CounterSM + 1 %}
+                                        {% endif %}
+                                        {% if Counter == 3 %}
+                                            {% set Counter = 1 %}
+                                        {% else %}
+                                            {% set Counter = Counter + 1 %}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% include 'widgets/pagination.twig' %}
                         </div>
-                        {% include 'widgets/pagination.twig' %}
+                        <div class="tab-pane active in fade" id="catalog-popular">
+                            <div class="mb15">
+                                <div class="auto-catalog__listing row">
+                                    {% set Counter = 1 %}
+                                    {% set CounterSM = 1 %}
+                                    {% for i in 1..12 %}
+                                        {% include "elements/catalog-auto-item.twig" %}
+
+                                        {% if CounterSM == 2 %}
+                                            <div class="clearfix visible-xs"></div>
+                                        {% endif %}
+
+                                        {% if Counter == 3 %}
+                                            <div class="clearfix visible-sm visible-lg"></div>
+                                        {% endif %}
+                                        {% if CounterSM == 2 %}
+                                            {% set CounterSM = 1 %}
+                                        {% else %}
+                                            {% set CounterSM = CounterSM + 1 %}
+                                        {% endif %}
+                                        {% if Counter == 3 %}
+                                            {% set Counter = 1 %}
+                                        {% else %}
+                                            {% set Counter = Counter + 1 %}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -587,3 +587,48 @@ body, html {
   line-height: 28px;
   display: block;
 }
+
+.auto-catalog__item {
+  margin-bottom: 2px;
+  padding: 1px;
+}
+
+.auto-catalog__item-link {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  right: 1px;
+  bottom: 0;
+  padding: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.5));
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), transparent, rgba(0, 0, 0, 0.5));
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.5), transparent, rgba(0, 0, 0, 0.5));
+  background: -ms-linear-gradient(rgba(0, 0, 0, 0.5), transparent, rgba(0, 0, 0, 0.5));
+  overflow: hidden;
+}
+.auto-catalog__item-link:hover .auto-catalog__bottom-bar {
+  bottom: 0;
+}
+
+.auto-catalog__listing {
+  margin: 0 -1px;
+}
+
+.auto-catalog__bottom-bar {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: #cccccc;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  border-bottom: 4px solid #dd0000;
+}
+
+.auto-catalog__bottom-bar, .auto-catalog__top-bar {
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+}
