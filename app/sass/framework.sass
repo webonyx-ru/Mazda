@@ -12,15 +12,25 @@ a
 .custom-hidden
     display: none
 
+p
+    &:last-child
+        margin-bottom: 0
+
 .dib
     display: inline-block
     vertical-align: middle
 
-[class*="--text-grey"]
+[class*="--text-grey"], .--text-grey
     color: $semidark-grey
 
-[class*="--text-lightblack"]
+[class*="--text-lightblack"], .--text-lightblack
     color: $light-black
+
+[class*="--text-green"], .--text-green
+    color: #3fb750
+
+[class*="--text-red"], .--text-red
+    color: #dd0000
 
 .full-width
     width: 100%
@@ -152,6 +162,9 @@ a
 
 .mb2
     margin-bottom: 2px
+
+.mb5
+    margin-bottom: 5px
 
 .mb10
     margin-bottom: 10px

@@ -1,0 +1,251 @@
+{% extends "layouts/app.twig" %}
+
+{% block content %}
+    {% include "widgets/breadcrumbs.twig" %}
+
+    <div class="content-area clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="content-area__right-side col-md-3 col-xs-12">
+                    <div class="content-area__right-side-item">
+                        {% include 'widgets/right-side__discussing-block.twig' %}
+                    </div>
+                    <div class="content-area__right-side-item hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__fuel-price.twig' %}
+                    </div>
+                    <div class="content-area__right-side-item black-bg hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__banner.twig' %}
+                    </div>
+                </div>
+                <div class="visible-sm visible-xs clearfix"></div>
+                <div class="content-area__left-side col-xs-12 col-md-9">
+                    <div class="content-area__item mb35">
+                        <div class="block-title text-uppercase">Продажа Mazda 3 в Москве</div>
+                        <div class="content-area__container display-flex">
+                            <div class="col-md-8">
+                                <img src="http://placehold.it/500x425" alt="">
+                            </div>
+                            <div class="col-md-4 white-bg catalog-item__right-image-side">
+                                <div class="row mb20">
+                                    <div class="col-xs-2">
+                                        <div class="catalog-item__rating dib --text-lightblack ff-sfb">
+                                            4.8
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-10 text-right">
+                                        <div class="catalog-item__right-image-side__price ff-sfb fz16">
+                                            <span class="dib">770 000 &#x20bd;</span> <i
+                                                    class="icon-down_arrow --text-grey fz10"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="--text-grey text-uppercase ff-sfb mb10">Автоспеццентр</p>
+                                <p class="mb10"><a href="#" class="--text-lightblack">+7 (495) 664 21 66</a></p>
+                                <p class="mb10 --text-lightblack">Москва, Севастопольский проспект, 56 А.</p>
+                                <div class="catalog-item__right-image-side__car-info">
+                                    <div class="row mb10">
+                                        <div class="col-xs-6 --text-grey">
+                                            Модификация
+                                        </div>
+                                        <div class="col-xs-6 --text-lightblack ff-sfb">
+                                            1.6 AT Active+
+                                        </div>
+                                    </div>
+                                    <div class="row mb10">
+                                        <div class="col-xs-6 --text-grey">
+                                            Год
+                                        </div>
+                                        <div class="col-xs-6 --text-lightblack">
+                                            2014
+                                        </div>
+                                    </div>
+                                    <div class="row mb10">
+                                        <div class="col-xs-6 --text-grey">
+                                            Пробег
+                                        </div>
+                                        <div class="col-xs-6 --text-lightblack">
+                                            68 000 км
+                                        </div>
+                                    </div>
+                                    <div class="row mb10">
+                                        <div class="col-xs-6 --text-grey">
+                                            Кузов
+                                        </div>
+                                        <div class="col-xs-6 --text-lightblack">
+                                            Седан
+                                        </div>
+                                    </div>
+                                    <div class="row mb10">
+                                        <div class="col-xs-6 --text-grey">
+                                            Цвет
+                                        </div>
+                                        <div class="col-xs-6 --text-lightblack">
+                                            Коричневый
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog-item__right-image-side__bottom-info display-flex space-between">
+                                    <div class="dib --text-grey">
+                                        7 ноября
+                                    </div>
+                                    <div class="dib --text-grey hover-black__icon">
+                                        <i class="icon-views fz24"></i> <span class="dib">186</span>
+                                    </div>
+                                    <div class="dib --text-grey hover-black__icon">
+                                        <i class="icon-share fz16"></i> <span class="dib">93</span>
+                                    </div>
+                                    <div class="dib --text-grey hover-black__icon">
+                                        <i class="icon-favorite fz16"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-area__item">
+                        <div class="content-area__container white-bg">
+                            <div class="content-area__section text-center">
+                                <div class="dib catalog-item__tabs-header mb35 ff-sfb">
+                                    <a href="#catalog-tab1" class="catalog-item__tabs-item dib --text-grey active" data-toggle="tab">Описание</a>
+                                    <a href="#catalog-tab2" class="catalog-item__tabs-item dib --text-grey" data-toggle="tab">Характеристики</a>
+                                    <a href="#catalog-tab3" class="catalog-item__tabs-item dib --text-grey" data-toggle="tab">Комментарии</a>
+                                    <a href="#catalog-tab4" class="catalog-item__tabs-item dib --text-grey" data-toggle="tab">Обзоры</a>
+                                </div>
+                                <div class="catalog-item__tabs-content tab-content text-left">
+                                    <div id="catalog-tab1" class="tab-pane active in">
+                                        <div class="catalog-item__seller-comment mb35">
+                                            <div class="catalog-item__seller-comment-title --text-lightblack ff-sfb mb10 text-uppercase lts1">Комментарий продавца</div>
+                                            <div class="catalog-item__seller-comment-content">
+                                                Мазда 3, 2014 модельного года, по птс 2013, мотор 1,6 (не Скайактив), 4х ступенчатый автомат с функцией ручного переключения передач. Комплектация Актив+, чехлы Dinas перфорированная кожа, защита двигателя, сигнализация Старлайн, автозапуск. В придачу Комплект зимних колес Нордман 4 на литых дисках. На гарантии, до декабря 2016г. Пройдено ТО, новые тормозные колодки в круг! Автомобиль полностью обслужен!Осмотр и диагностика в любом удобном для вас сервисе!
+                                            </div>
+                                        </div>
+                                        <div class="--text-lightblack ff-sfb mb10 text-uppercase lts1">Комплектация</div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="catalog-item__additional-car-info">
+                                                    <p class="--text-grey lts1 ff-sfb">Безопасность</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                </div>
+                                                <div class="catalog-item__additional-car-info">
+                                                    <p class="--text-grey lts1 ff-sfb">Безопасность</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                </div>
+                                                <div class="catalog-item__additional-car-info">
+                                                    <p class="--text-grey lts1 ff-sfb">Безопасность</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                </div>
+                                                <div class="catalog-item__additional-car-info">
+                                                    <p class="--text-grey lts1 ff-sfb">Безопасность</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                </div>
+                                                <div class="catalog-item__additional-car-info">
+                                                    <p class="--text-grey lts1 ff-sfb">Безопасность</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                </div>
+                                                <div class="catalog-item__additional-car-info">
+                                                    <p class="--text-grey lts1 ff-sfb">Безопасность</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="catalog-item__additional-car-info">
+                                                    <p class="--text-grey lts1 ff-sfb">Безопасность</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                </div>
+                                                <div class="catalog-item__additional-car-info">
+                                                    <p class="--text-grey lts1 ff-sfb">Безопасность</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                </div>
+                                                <div class="catalog-item__additional-car-info">
+                                                    <p class="--text-grey lts1 ff-sfb">Безопасность</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                </div>
+                                                <div class="catalog-item__additional-car-info">
+                                                    <p class="--text-grey lts1 ff-sfb">Безопасность</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                    <p>Антиблокировочная система (ABS)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="catalog-tab2" class="tab-pane">
+                                        <div class="row mb15">
+                                            <div class="col-md-3 ">
+                                                <div class="--text-grey lts1 ff-sfb text-uppercase">Модификация</div>
+                                            </div>
+                                            <div class="col-md-9 ">
+                                                <div class="--text-lightblack lts1 ff-sfb text-uppercase">1.6 AT Active+</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb15">
+                                            <div class="col-md-3">
+                                                <p class="--text-grey mb0">Модель</p>
+                                                <p class="lts1 --text-lightblack fz16">1.6 л</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p class="--text-grey mb0">Коробка</p>
+                                                <p class="lts1 --text-lightblack fz16">1.6 л</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p class="--text-grey mb0">Тип двигателя</p>
+                                                <p class="lts1 --text-lightblack fz16">1.6 л</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p class="--text-grey mb0">Разгон</p>
+                                                <p class="lts1 --text-lightblack fz16">1.6 л</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <p class="--text-grey mb0">Мощность</p>
+                                                <p class="lts1 --text-lightblack fz16">1.6 л</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p class="--text-grey mb0">Привод</p>
+                                                <p class="lts1 --text-lightblack fz16">1.6 л</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p class="--text-grey mb0">Топливо</p>
+                                                <p class="lts1 --text-lightblack fz16">1.6 л</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p class="--text-grey mb0">Расход</p>
+                                                <p class="lts1 --text-lightblack fz16">1.6 л</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="catalog-tab3" class="tab-pane">
+                                        1231231
+                                    </div>
+
+                                    <div id="catalog-tab4" class="tab-pane">
+                                        aaaa
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-area__item">
+                        <div class="block-title text-uppercase">Похожие автомобили</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
