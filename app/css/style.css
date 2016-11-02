@@ -458,11 +458,11 @@ body, html {
   margin-bottom: 30px;
 }
 
-.right-side__news-item {
+.right-side__news-item, .right-side__feedback-item {
   display: block;
   padding-bottom: 15px;
 }
-.right-side__news-item:not(:last-child) {
+.right-side__news-item:not(:last-child), .right-side__feedback-item:not(:last-child) {
   margin-bottom: 15px;
   border-bottom: 1px solid #d5d5d5;
 }
@@ -676,4 +676,134 @@ body, html {
 }
 .catalog-item__additional-car-info p {
   margin-bottom: 5px;
+}
+
+.catalog-item__tabs-header {
+  border-bottom: 1px solid #c5c5c5;
+}
+.catalog-item__tabs-header .catalog-item__tabs-link {
+  padding: 0 25px 10px;
+  position: relative;
+}
+.catalog-item__tabs-header .catalog-item__tabs-link:after {
+  display: block;
+  content: "";
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #dd0000;
+  position: absolute;
+  top: 100%;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  margin-top: -1px;
+}
+.catalog-item__tabs-header .catalog-item__tabs-link:hover, .catalog-item__tabs-header .catalog-item__tabs-link:active, .catalog-item__tabs-header .catalog-item__tabs-link:focus {
+  color: #191919;
+}
+.catalog-item__tabs-header .active > .catalog-item__tabs-link {
+  color: #191919;
+}
+.catalog-item__tabs-header .active > .catalog-item__tabs-link:after {
+  width: 100%;
+  left: 0;
+}
+
+.catalog-item__chars-tab-container .has-border-bottom {
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.catalog-item__comments-item {
+  padding: 15px 20px;
+  border: 1px solid #c5c5c5;
+}
+.catalog-item__comments-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.catalog-item__reviews-item {
+  padding: 15px;
+}
+.catalog-item__reviews-item:not(:last-child) {
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.right-side__news-sub-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.custom-carouse__prev, .custom-carouse__next {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #191919;
+  background: #fff;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+.custom-carouse__prev [class*="icon-"], .custom-carouse__next [class*="icon-"] {
+  position: relative;
+  top: -2px;
+}
+.custom-carouse__prev:hover, .custom-carouse__next:hover {
+  color: #dd0000;
+}
+
+.custom-carouse__next {
+  border-radius: 0 3px 3px 0;
+  margin-left: 1px;
+}
+
+.similar-cars-slider .display-flex {
+  align-items: center;
+}
+
+.auto-model__image-right-side__item {
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+.auto-model__image-right-side__item.active {
+  background: #f3f3f3;
+}
+.auto-model__image-right-side__item:not(:last-child) .auto-model__image-right-side__link:after {
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #c5c5c5;
+}
+
+.auto-model__image-right-side__link {
+  padding: 15px 10px;
+  position: relative;
+}
+
+.auto-model__image-right-side__units {
+  position: relative;
+  height: 100%;
+  overflow: auto;
 }

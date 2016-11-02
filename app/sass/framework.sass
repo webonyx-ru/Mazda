@@ -1,6 +1,15 @@
 @import "mixins/mixins"
 @import "vars"
 
+
+
+.clean-element
+    border: none
+    background: none
+    padding: 0
+    margin: 0
+    list-style: none
+
 a
     &:hover, &:active, &:focus
         text-decoration: none
@@ -15,6 +24,8 @@ a
 p
     &:last-child
         margin-bottom: 0
+.db
+    display: block
 
 .dib
     display: inline-block
@@ -188,12 +199,6 @@ p
     height: 38px
     font-family: $sfb
     box-shadow: none
-
-.clean-element
-    border: none
-    background: none
-    padding: 0
-    margin: 0
 
 .icon-top-minus-1
     position: relative

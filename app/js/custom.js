@@ -36,6 +36,29 @@ doc.ready(function(){
          $this.addClass('active');
       }
 
+      e.preventDefault();
+   });
+
+   var similar_slider = $('.similar-cars-slider .owl-carousel');
+
+   similar_slider.owlCarousel({
+      items: 3,
+      responsive: {
+         0: {
+            items: 3
+         }
+      }
+   });
+
+   var similar_next = $('.similar-cars-slider .custom-carouse__next');
+   var similar_prev = $('.similar-cars-slider .custom-carouse__prev');
+
+   similar_next.on('click', function(e){
+      similar_slider.trigger('next.owl.carousel');
+      e.preventDefault()
+   });
+   similar_prev.on('click', function(e){
+      similar_slider.trigger('prev.owl.carousel');
       e.preventDefault()
    });
 });

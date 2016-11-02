@@ -409,7 +409,7 @@ body, html
     &:not(:last-child)
         margin-bottom: 30px
 
-.right-side__news-item
+.right-side__news-item, .right-side__feedback-item
     display: block
     padding-bottom: 15px
 
@@ -594,3 +594,108 @@ body, html
 
     p
         margin-bottom: 5px
+
+.catalog-item__tabs-header
+    border-bottom: 1px solid #c5c5c5
+
+    .catalog-item__tabs-link
+        padding: 0 25px 10px
+        position: relative
+
+        &:after
+            display: block
+            content: ''
+            left: 50%
+            width: 0
+            height: 3px
+            background: #dd0000
+            position: absolute
+            top: 100%
+            +trans
+            margin-top: -1px
+
+        &:hover, &:active, &:focus
+            color: $light-black
+
+    .active
+        > .catalog-item__tabs-link
+            color: $light-black
+
+            &:after
+                width: 100%
+                left: 0
+
+.catalog-item__chars-tab-container
+    .has-border-bottom
+        border-bottom: 1px solid #c5c5c5
+
+.catalog-item__comments-item
+    padding: 15px 20px
+    border: 1px solid #c5c5c5
+    &:not(:last-child)
+        margin-bottom: 20px
+
+.catalog-item__reviews-item
+    padding: 15px
+
+    &:not(:last-child)
+        border-bottom: 1px solid #c5c5c5
+
+.right-side__news-sub-title
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+
+.custom-carouse__prev, .custom-carouse__next
+    width: 40px
+    height: 40px
+    line-height: 40px
+    text-align: center
+    color: $light-black
+    background: #fff
+    border-radius: 3px 0 0 3px
+    cursor: pointer
+    font-size: 14px
+    +trans
+
+    [class*="icon-"]
+        position: relative
+        top: -2px
+        
+    &:hover
+        color: #dd0000
+
+.custom-carouse__next
+    border-radius: 0 3px 3px 0
+    margin-left: 1px
+
+.similar-cars-slider
+    .display-flex
+        align-items: center
+
+.auto-model__image-right-side__item
+    +trans
+    &.active
+        background: #f3f3f3
+    &:not(:last-child)
+        .auto-model__image-right-side__link
+            &:after
+                +trans
+                display: block
+                content: ''
+                position: absolute
+                top: 100%
+                left: 0
+                right: 0
+                bottom: 0
+                height: 1px
+                background: #c5c5c5
+
+.auto-model__image-right-side__link
+    padding: 15px 10px
+    position: relative
+
+.auto-model__image-right-side__units
+    position: relative
+    height: 100%
+    overflow: auto
