@@ -658,6 +658,9 @@ body, html {
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
+.catalog-item__rating.ml-minus-20 {
+  margin-left: -20px;
+}
 
 .catalog-item__right-image-side {
   padding: 15px 10px 40px;
@@ -684,6 +687,8 @@ body, html {
 .catalog-item__tabs-header .catalog-item__tabs-link {
   padding: 0 25px 10px;
   position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;

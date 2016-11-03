@@ -17,7 +17,7 @@ a
         text-decoration: none
         
     &[class*="--text-grey"]
-        &:hover
+        &:not([class*='hover']):hover
             color: #fff
 
 .custom-hidden
@@ -44,6 +44,10 @@ p
 
 [class*="--text-red"], .--text-red
     color: #dd0000
+    
+[class*="--hover-text-black"], .--hover-text-black
+    &:hover, &:active, &:focus
+        color: $light-black
 
 .full-width
     width: 100%
@@ -140,10 +144,16 @@ p
         &:hover
             background: #dd0000
             border-color: #dd0000
+            color: #fff
 
     &.big-button
         line-height: 32px
         padding: 0 25px
+
+    &.black-border
+        border-color: $light-black
+        color: $light-black
+
         
 .filled-button
     @extend .empty-button
@@ -307,5 +317,30 @@ p
 .flex-middle
     align-items: center
 
+.flex-end
+    align-items: flex-end
+
 .cursor-pointer
     cursor: pointer
+
+.semi-title
+    @extend .--text-lightblack
+    @extend .fz14
+    text-transform: uppercase
+    @extend .ff-sfb
+    @extend .lts1
+    
+    &.grey
+        color: $semidark-grey
+
+.absolute-icon
+    position: relative
+    padding-left: 40px !important
+    & > [class*="icon-"].absolute
+        position: absolute
+        top: 50%
+        +transform(translateY(-50%))
+        left: 10px
+
+        &.left0
+            left: 0

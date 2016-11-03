@@ -13,7 +13,7 @@
 a:hover, a:active, a:focus {
   text-decoration: none;
 }
-a[class*="--text-grey"]:hover {
+a[class*="--text-grey"]:not([class*='hover']):hover {
   color: #fff;
 }
 
@@ -38,7 +38,7 @@ p:last-child {
   color: #999999;
 }
 
-[class*="--text-lightblack"], .--text-lightblack {
+[class*="--text-lightblack"], .--text-lightblack, .semi-title {
   color: #191919;
 }
 
@@ -48,6 +48,10 @@ p:last-child {
 
 [class*="--text-red"], .--text-red {
   color: #dd0000;
+}
+
+[class*="--hover-text-black"]:hover, [class*="--hover-text-black"]:active, [class*="--hover-text-black"]:focus, .--hover-text-black:hover, .--hover-text-black:active, .--hover-text-black:focus {
+  color: #191919;
 }
 
 .full-width {
@@ -82,7 +86,7 @@ p:last-child {
   font-size: 12px;
 }
 
-.fz14 {
+.fz14, .semi-title {
   font-size: 14px;
 }
 
@@ -114,7 +118,7 @@ p:last-child {
   font-family: SFUIText, sans-serif, arial;
 }
 
-.ff-sfb {
+.ff-sfb, .semi-title {
   font-family: SFUIText-Bold, sans-serif, arial;
 }
 
@@ -167,10 +171,15 @@ p:last-child {
 .empty-button.hover-red:hover, .hover-red.filled-button:hover {
   background: #dd0000;
   border-color: #dd0000;
+  color: #fff;
 }
 .empty-button.big-button, .big-button.filled-button {
   line-height: 32px;
   padding: 0 25px;
+}
+.empty-button.black-border, .black-border.filled-button {
+  border-color: #191919;
+  color: #191919;
 }
 
 .filled-button {
@@ -184,7 +193,7 @@ p:last-child {
   color: #999999;
 }
 
-.lts1 {
+.lts1, .semi-title {
   letter-spacing: 1px;
 }
 
@@ -400,6 +409,35 @@ p:last-child {
   align-items: center;
 }
 
+.flex-end {
+  align-items: flex-end;
+}
+
 .cursor-pointer {
   cursor: pointer;
+}
+
+.semi-title {
+  text-transform: uppercase;
+}
+.semi-title.grey {
+  color: #999999;
+}
+
+.absolute-icon {
+  position: relative;
+  padding-left: 40px !important;
+}
+.absolute-icon > [class*="icon-"].absolute {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: 10px;
+}
+.absolute-icon > [class*="icon-"].absolute.left0 {
+  left: 0;
 }
