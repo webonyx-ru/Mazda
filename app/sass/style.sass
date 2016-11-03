@@ -28,7 +28,7 @@ body, html
     max-width: 1200px
     width: auto
     box-sizing: content-box
-    
+
 .rouble
     display: inline-block
     //width: 10px
@@ -53,7 +53,7 @@ body, html
 
 .header__white-plate
     line-height: 37px
-    
+
 .header__black-plate
     background: $black
     line-height: 80px
@@ -90,7 +90,7 @@ body, html
         content: ''
         line-height: normal
         width: auto
-        
+
     &:hover
         color: #fff
 
@@ -104,10 +104,10 @@ body, html
 
     @media screen and (max-width: 768px)
         display: inline-block
-    
+
     &:hover
         color: $white
-        
+
 .header-menu__listing
     margin: 0 40px 0 0
     padding: 0
@@ -156,7 +156,7 @@ body, html
 
 .submenu-section__border-right
     border-right: 1px solid #c5c5c5
-    
+
 .header-submenu__link
     color: $light-black
 
@@ -198,7 +198,7 @@ body, html
 
 .breadcrumbs__link
     color: $semidark-grey
-    
+
     &:hover
         color: #fff
 
@@ -303,7 +303,7 @@ body, html
 
     [class*="col-"]
         padding: 0 5px
-        
+
     .empty-button
         color: $light-black
         padding: 0 5px
@@ -429,7 +429,7 @@ body, html
 
 .content-area
     margin-bottom: 80px
-    
+
 .footer
     background: $black
 
@@ -442,10 +442,10 @@ body, html
 
 .footer-menu__item
     margin-bottom: 10px
-    
+
 .footer-menu__first-link, .footer-menu__link
     color: $semidark-grey
-    
+
     &:hover
         color: #fff
 
@@ -490,7 +490,7 @@ body, html
 .content-block__tab-menu-item
     margin-left: 30px
     position: relative
-    
+
     &:not(:last-child)
         &:after
             display: block
@@ -503,7 +503,7 @@ body, html
             position: absolute
             left: 100%
             margin-left: 15px
-        
+
     &.active
         &:before
             position: absolute
@@ -560,7 +560,7 @@ body, html
 
 .right-side__fuel-prices
     border-bottom: 1px solid #d5d5d5
-    
+
 .catalog-item__rating
     background: #dd0000
     padding: 0 8px
@@ -601,6 +601,7 @@ body, html
     .catalog-item__tabs-link
         padding: 0 25px 10px
         position: relative
+        +trans
 
         &:after
             display: block
@@ -636,7 +637,7 @@ body, html
         margin-bottom: 20px
 
 .catalog-item__reviews-item
-    padding: 15px
+    padding: 15px 0
 
     &:not(:last-child)
         border-bottom: 1px solid #c5c5c5
@@ -661,7 +662,7 @@ body, html
     [class*="icon-"]
         position: relative
         top: -2px
-        
+
     &:hover
         color: #dd0000
 
@@ -699,3 +700,42 @@ body, html
     position: relative
     height: 100%
     overflow: auto
+
+.content-area__item
+    &:last-child
+        margin-bottom: 0
+
+.auto-model__modification-element
+    padding-left: 10px
+    &.active
+        .auto-model__modification-element-link
+            background: #f3f3f3
+
+.auto-model__modification-element-link
+    padding: 5px 10px
+    border-radius: 3px
+
+    &:hover, &:active, &:focus
+        color: $light-black
+
+.auto-model__modification-item
+    padding: 10px 0
+
+    &:not(:last-child)
+        border-bottom: 1px solid #c5c5c5
+
+.access-company-controll
+    background: #dd0000
+    padding: 8px 15px
+
+.access-to-controll-link
+    text-decoration: underline
+    
+    &:hover
+        color: #fff
+        text-decoration: underline
+        
+.access-company-controll
+    [data-js-hide]
+        &:hover
+            color: #fff

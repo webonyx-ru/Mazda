@@ -60,5 +60,10 @@ doc.ready(function(){
    similar_prev.on('click', function(e){
       similar_slider.trigger('prev.owl.carousel');
       e.preventDefault()
-   });
+   })
+
+   $('[data-js-hide]').on('click', function (e) {
+      $(this).closest('[data-js-hide-block]').hide();
+      e.preventDefault();
+   })
 });

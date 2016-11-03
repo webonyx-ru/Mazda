@@ -1,20 +1,20 @@
 <div class="content-area__item similar-cars-slider">
-    <div class="display-flex space-between mb5">
-        <div class="block-title text-uppercase dib vam">Похожие автомобили</div>
-        <div class="dib vam fz0">
-            <div class="custom-carouse__prev dib"><i class="icon-left_arrow"></i></div>
-            <div class="custom-carouse__next dib"><i class="icon-right_arrow"></i></div>
-        </div>
-    </div>
-    <div class="content-area__container">
-        <div class="content-area__section white-bg">
-            <div class="row">
-                <div class="owl-carousel">
-                    {% for i in 1..12 %}
-                        {% include '../elements/car-item.twig' with { "full_width": "true", "no_margin": "true" } %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="display-flex space-between mb5">
+		<div class="block-title text-uppercase dib vam">Похожие автомобили</div>
+		<div class="dib vam fz0">
+			<div class="custom-carouse__prev dib"><i class="icon-left_arrow"></i></div>
+			<div class="custom-carouse__next dib"><i class="icon-right_arrow"></i></div>
+		</div>
+	</div>
+	<div class="content-area__container">
+		<div class="content-area__section white-bg">
+			<div class="row">
+				<div class="owl-carousel">
+					{% for i in 1..12 %}
+						{% include '../elements/car-item.twig' with { "full_width": "true", "no_margin": "true" } %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

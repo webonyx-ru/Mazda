@@ -1,8 +1,23 @@
 <div class="breadcrumbs">
-    <div class="container">
-        <ul class="breadcrumbs__listing">
-            <li class="breadcrumbs__item has-separator dib"><a href="#" class="breadcrumbs__link">Главная</a></li>
-            <li class="breadcrumbs__item dib">Объявления</li>
-        </ul>
-    </div>
+	<div class="container">
+		{% if page == 'dealers' %}
+			<div class="display-flex space-between flex-middle">
+				<ul class="breadcrumbs__listing">
+					<li class="breadcrumbs__item has-separator dib"><a href="#" class="breadcrumbs__link">Главная</a></li>
+					<li class="breadcrumbs__item dib">Объявления</li>
+				</ul>
+				<div class="access-company-controll" data-js-hide-block>
+					<div class="white-color dib mr15">Это ваша компания?</div>
+					<a href="#" class="dib mr5 access-to-controll-link --text-lightblack text-uppercase">Подать запрос на
+						управление</a>
+					<i class="icon-remove --text-lightblack cursor-pointer" data-js-hide></i>
+				</div>
+			</div>
+		{% else %}
+			<ul class="breadcrumbs__listing">
+				<li class="breadcrumbs__item has-separator dib"><a href="#" class="breadcrumbs__link">Главная</a></li>
+				<li class="breadcrumbs__item dib">Объявления</li>
+			</ul>
+		{% endif %}
+	</div>
 </div>

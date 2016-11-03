@@ -1,7 +1,9 @@
 @import "mixins/mixins"
 @import "vars"
 
-
+*
+    &, &:active, &:focus, &:hover
+        outline: none
 
 .clean-element
     border: none
@@ -159,6 +161,9 @@ p
 .lts2
     letter-spacing: 2px
 
+.mr5
+    margin-right: 5px
+
 .mr10
     margin-right: 10px
 
@@ -301,3 +306,6 @@ p
 
 .flex-middle
     align-items: center
+
+.cursor-pointer
+    cursor: pointer

@@ -1,3 +1,7 @@
+*, *:active, *:focus, *:hover {
+  outline: none;
+}
+
 .clean-element {
   border: none;
   background: none;
@@ -186,6 +190,10 @@ p:last-child {
 
 .lts2 {
   letter-spacing: 2px;
+}
+
+.mr5 {
+  margin-right: 5px;
 }
 
 .mr10 {
@@ -390,4 +398,8 @@ p:last-child {
 
 .flex-middle {
   align-items: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

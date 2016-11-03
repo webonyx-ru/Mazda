@@ -684,6 +684,11 @@ body, html {
 .catalog-item__tabs-header .catalog-item__tabs-link {
   padding: 0 25px 10px;
   position: relative;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
 }
 .catalog-item__tabs-header .catalog-item__tabs-link:after {
   display: block;
@@ -725,7 +730,7 @@ body, html {
 }
 
 .catalog-item__reviews-item {
-  padding: 15px;
+  padding: 15px 0;
 }
 .catalog-item__reviews-item:not(:last-child) {
   border-bottom: 1px solid #c5c5c5;
@@ -806,4 +811,47 @@ body, html {
   position: relative;
   height: 100%;
   overflow: auto;
+}
+
+.content-area__item:last-child {
+  margin-bottom: 0;
+}
+
+.auto-model__modification-element {
+  padding-left: 10px;
+}
+.auto-model__modification-element.active .auto-model__modification-element-link {
+  background: #f3f3f3;
+}
+
+.auto-model__modification-element-link {
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+.auto-model__modification-element-link:hover, .auto-model__modification-element-link:active, .auto-model__modification-element-link:focus {
+  color: #191919;
+}
+
+.auto-model__modification-item {
+  padding: 10px 0;
+}
+.auto-model__modification-item:not(:last-child) {
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.access-company-controll {
+  background: #dd0000;
+  padding: 8px 15px;
+}
+
+.access-to-controll-link {
+  text-decoration: underline;
+}
+.access-to-controll-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.access-company-controll [data-js-hide]:hover {
+  color: #fff;
 }
