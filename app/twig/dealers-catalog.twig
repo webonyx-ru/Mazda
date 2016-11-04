@@ -1,0 +1,45 @@
+{% extends "layouts/app.twig" %}
+
+{% block content %}
+	{% include "widgets/breadcrumbs.twig" with {'page': 'dealers'} %}
+
+	<div class="content-area clearfix">
+		<div class="container">
+			<div class="row">
+				<div class="content-area__right-side col-md-3 col-xs-12">
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/dealers-filter.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__news-block.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__discussing-block.twig' %}
+					</div>
+				</div>
+				<div class="visible-sm visible-xs clearfix"></div>
+				<div class="content-area__left-side col-xs-12 col-md-9">
+					<div class="display-flex space-between mb2">
+						<div class="block-title mb0 text-uppercase vab dib flex-middle">Каталог диллеров</div>
+						<div class="content-area__left-side__right-area text-uppercase ff-sfb dib flex-middle">
+							<ul class="clean-element content-block__tab-menu-listing fz0 lts1">
+								<li class="content-block__tab-menu-item dib active">
+									<a class="content-block__tab-menu-link fz14 --text-grey" href="#">Списком</a>
+								</li>
+								<li class="content-block__tab-menu-item dib">
+									<a class="content-block__tab-menu-link fz14 --text-grey" href="#">На карте</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content-area__container last-child-no-mb">
+						{% for i in 1..10 %}
+							{% include 'elements/dealers-catalog__item.twig' %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+{% endblock %}
