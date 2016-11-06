@@ -1,0 +1,395 @@
+{% extends "layouts/app.twig" %}
+
+{% block header_scripts %}
+    <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
+    <script src="js/YaMap.js"></script>
+{% endblock %}
+
+{% block content %}
+    {% include "widgets/breadcrumbs.twig" with {'page': 'dealers'} %}
+
+    <div class="content-area clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="content-area__right-side col-md-3 col-xs-12">
+                    <div class="content-area__right-side-item hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__news-block.twig' with { "block_title": "Новости холдинга" } %}
+                    </div>
+                    <div class="content-area__right-side-item hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__discussing-block.twig' %}
+                    </div>
+                </div>
+                <div class="visible-sm visible-xs clearfix"></div>
+                <div class="content-area__left-side col-xs-12 col-md-9 last-child-no-mb">
+                    <div class="content-area__left-side-item mb35">
+                        <div class="block-title text-uppercase vab dib flex-middle">Профиль холдинга</div>
+                        <div class="content-area__container content-area__section white-bg">
+                            <div class="row display-flex flex-middle mb20">
+                                <div class="col-md-6">
+                                    <div class="dib semi-title fz16">независимость</div>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="#" class="--text-grey --hover-text-black trans">
+                                        <i class="icon-favorite mr5"></i>
+                                        <span class="dib">Добавить в избранное</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="display-flex space-between flex-end mb35">
+                                <div>
+                                    <p class="absolute-icon mb15 --text-lightblack">
+                                        <i class="icon-location_pin fz16 absolute left0 --text-grey"></i>
+                                        Москва,
+                                        Ярославское шоссе, 27
+                                    </p>
+                                    <p class="absolute-icon mb15 --text-lightblack">
+                                        <i class="icon-phone fz16 absolute left0 --text-grey"></i> +7 (495) 721
+                                        88 44
+                                    </p>
+                                    <p class="absolute-icon mb15 --text-lightblack">
+                                        <i class="icon-email fz16 absolute left0 --text-grey"></i>
+                                        info@mazdacenter.ru
+                                    </p>
+                                    <p class="absolute-icon mb15 --text-lightblack">
+                                        <i class="icon-email fz16 absolute left0 --text-grey"></i>
+                                        {# TODO заменить иконку#}
+                                        <a class="--hover-text-black --text-lightblack"
+                                           href="http://www.mazdacenter.ru"
+                                           target="_blank">www.mazdacenter.ru</a>
+                                    </p>
+                                </div>
+                                <div>
+                                    <a href="#"
+                                       class="empty-button filled-button big-button text-uppercase lts1 hover-red">
+                                        Обратная связь
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mb35">
+                                <p class="semi-title mb10">График работы</p>
+                                <div class="row mb10">
+                                    <div class="col-md-3 --text-grey">
+                                        Понедельник - Пятница
+                                    </div>
+                                    <div class="col-md-9 --text-lightblack">9:00 - 22:00</div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col-md-3 --text-grey">
+                                        Суббота - Воскресенье
+                                    </div>
+                                    <div class="col-md-9 --text-lightblack">Выходной</div>
+                                </div>
+                            </div>
+
+                            <div class="--text-grey last-child-no-mb mb35">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusantium blanditiis
+                                    commodi delectus error ex excepturi fugiat impedit magnam maxime minima neque nobis
+                                    odit
+                                    omnis praesentium provident quae ratione, rem repudiandae similique sunt suscipit
+                                    tempora tenetur ullam ut voluptates. Ab blanditiis consequatur illo iusto modi quia,
+                                    sed
+                                    tempore ullam voluptatibus voluptatum. Asperiores autem debitis dicta ipsa magnam
+                                    nam
+                                    praesentium repudiandae tempora ullam. Dicta nisi quos ratione. Aliquid asperiores
+                                    commodi debitis ducimus enim natus nihil quisquam! Enim, laudantium, neque.
+                                    Accusamus
+                                    aspernatur atque consectetur deleniti distinctio eos fugiat hic impedit iste itaque,
+                                    mollitia nam quam, quidem quis repudiandae tenetur voluptatibus, voluptatum.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusantium blanditiis
+                                    commodi delectus error ex excepturi fugiat impedit magnam maxime minima neque nobis
+                                    odit
+                                    omnis praesentium provident quae ratione, rem repudiandae similique sunt suscipit
+                                    tempora tenetur ullam ut voluptates. Ab blanditiis consequatur illo iusto modi quia,
+                                    sed
+                                    tempore ullam voluptatibus voluptatum. Asperiores autem debitis dicta ipsa magnam
+                                    nam
+                                    praesentium repudiandae tempora ullam. Dicta nisi quos ratione. Aliquid asperiores
+                                    commodi debitis ducimus enim natus nihil quisquam! Enim, laudantium, neque.
+                                    Accusamus
+                                    aspernatur atque consectetur deleniti distinctio eos fugiat hic impedit iste itaque,
+                                    mollitia nam quam, quidem quis repudiandae tenetur voluptatibus, voluptatum.</p>
+                            </div>
+
+                            <div class="content-area__tabs text-center">
+                                <ul class="catalog-item__tabs-header dib ff-sfb clean-element mb35">
+                                    <li class="catalog-item__tabs-item dib">
+                                        <a href="#dealers-tab1"
+                                           class="catalog-item__tabs-link dib --text-grey --hover-text-black"
+                                           data-toggle="tab" aria-expanded="true">Компании</a>
+                                    </li>
+                                    <li class="catalog-item__tabs-item dib">
+                                        <a href="#dealers-tab2"
+                                           class="catalog-item__tabs-link dib --text-grey --hover-text-black"
+                                           data-toggle="tab" aria-expanded="false">Акции</a>
+                                    </li>
+                                    <li class="catalog-item__tabs-item dib">
+                                        <a href="#dealers-tab3"
+                                           class="catalog-item__tabs-link dib --text-grey --hover-text-black"
+                                           data-toggle="tab">Услуги</a>
+                                    </li>
+                                    <li class="catalog-item__tabs-item dib">
+                                        <a href="#dealers-tab4"
+                                           class="catalog-item__tabs-link dib --text-grey --hover-text-black"
+                                           data-toggle="tab">Марки</a>
+                                    </li>
+                                    <li class="catalog-item__tabs-item dib active">
+                                        <a href="#dealers-tab5"
+                                           class="catalog-item__tabs-link dib --text-grey --hover-text-black"
+                                           data-toggle="tab">Вакансии</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade text-left" id="dealers-tab1">
+                                        <div class="map-container">
+                                            <div id="dealers-map"></div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade text-left owl-carousel__parent-element" id="dealers-tab2">
+                                        <div class="display-flex space-between flex-middle mb10">
+                                            <div class="semi-title">Акции холдинга</div>
+                                            <div class="dib vam fz0">
+                                                <div class="custom-carouse__prev black-style dib"><i
+                                                            class="icon-left_arrow"></i></div>
+                                                <div class="custom-carouse__next black-style dib"><i
+                                                            class="icon-right_arrow"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="dealers-sliders">
+                                            <div class="row mb15">
+                                                <div class="owl-carousel">
+                                                    {% for i in 1..12 %}
+                                                        {% include 'elements/car-item__short.twig' with { "full_width": "true", "no_margin": "true" } %}
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                            <p class="text-right">
+                                                <a href="#" class="semi-title grey hover-black__link-red-icon">
+                                                    <span class="dib">Все акции</span>
+                                                    <i class="icon-right_arrow icon-top-minus-1"></i>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade text-left" id="dealers-tab3">
+                                        {% include 'widgets/b-services.twig' %}
+                                    </div>
+                                    <div class="tab-pane fade text-left" id="dealers-tab4">
+                                        <div class="models-logo__units row display-flex space-between">
+                                            <div class="models-logo__item col-sm-6 mb30">
+                                                <img class="models-logo__image dib mr15" src="images/models-logo.png"
+                                                     alt="">
+                                                <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
+                                            </div>
+                                            <div class="models-logo__item col-sm-6 mb30">
+                                                <img class="models-logo__image dib mr15" src="images/models-logo.png"
+                                                     alt="">
+                                                <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
+                                            </div>
+                                            <div class="models-logo__item col-sm-6 mb30">
+                                                <img class="models-logo__image dib mr15" src="images/models-logo.png"
+                                                     alt="">
+                                                <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
+                                            </div>
+                                            <div class="models-logo__item col-sm-6 mb30">
+                                                <img class="models-logo__image dib mr15" src="images/models-logo.png"
+                                                     alt="">
+                                                <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
+                                            </div>
+                                            <div class="models-logo__item col-sm-6 mb30">
+                                                <img class="models-logo__image dib mr15" src="images/models-logo.png"
+                                                     alt="">
+                                                <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
+                                            </div>
+                                            <div class="models-logo__item col-sm-6 mb30">
+                                                <img class="models-logo__image dib mr15" src="images/models-logo.png"
+                                                     alt="">
+                                                <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
+                                            </div>
+                                            <div class="models-logo__item col-sm-6 mb30">
+                                                <img class="models-logo__image dib mr15" src="images/models-logo.png"
+                                                     alt="">
+                                                <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade text-left active in" id="dealers-tab5">
+                                        <form class="mb20" action="#">
+                                            <div class="row holding-vacancy">
+                                                <div class="col-md-4">
+                                                    <p class="holding-vacancy__field-title --text-lightblack">
+                                                        Регион:</p>
+                                                    <div>
+                                                        <select class="selectpicker" data-width="100%">
+                                                            <option value="">Элемент 1</option>
+                                                            <option value="">Элемент 2</option>
+                                                            <option value="">Элемент 3</option>
+                                                            <option value="">Элемент 4</option>
+                                                            <option value="">Элемент 5</option>
+                                                            <option value="">Элемент 6</option>
+                                                            <option value="">Элемент 7</option>
+                                                            <option value="">Элемент 8</option>
+                                                            <option value="">Элемент 9</option>
+                                                            <option value="">Элемент 10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <p class="holding-vacancy__field-title --text-lightblack">
+                                                        Категория:</p>
+                                                    <div>
+                                                        <select class="selectpicker" data-width="100%">
+                                                            <option value="">Элемент 1</option>
+                                                            <option value="">Элемент 2</option>
+                                                            <option value="">Элемент 3</option>
+                                                            <option value="">Элемент 4</option>
+                                                            <option value="">Элемент 5</option>
+                                                            <option value="">Элемент 6</option>
+                                                            <option value="">Элемент 7</option>
+                                                            <option value="">Элемент 8</option>
+                                                            <option value="">Элемент 9</option>
+                                                            <option value="">Элемент 10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <p class="holding-vacancy__field-title --text-lightblack">Зарплата (&#x20bd;):</p>
+                                                    <div class="double-inputs">
+                                                        <div class="col-xs-6">
+                                                            <input type="text" placeholder="От" class="form-control">
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <input type="text" placeholder="До" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <p class="holding-vacancy__field-title --text-lightblack">Опыт
+                                                        работы:</p>
+                                                    <div class="double-inputs">
+                                                        <label class="col-xs-6">
+                                                            <input type="radio" name="vacancy"
+                                                                   class="no-style custom-hidden">
+                                                            <span class="holding-vacancy__check-quality trans form-control --text-grey db  text-center text-uppercase">Да</span>
+                                                        </label>
+                                                        <label class="col-xs-6">
+                                                            <input type="radio" name="vacancy"
+                                                                   class="no-style custom-hidden">
+                                                            <span class="holding-vacancy__check-quality trans form-control --text-grey db  text-center text-uppercase">Нет</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="holding-vacancy__form-result">
+                                            <p class="semi-title grey mb35">доступно вакансий: 281</p>
+                                            <p class="text-center text-uppercase lts2">Выберите категорию в фильтре</p>
+
+                                            <div class="holding-vacancy__results-content">
+                                                <p>
+                                                    <a data-toggle="collapse" href="#collapseVacancyResult"
+                                                       class="--text-grey --hover-text-black ff-sfb collapsing-link collapsed">
+                                                        <span class="dib mr5">Продажи</span>
+                                                        <span class="--text-lightblack dib mr5">114</span>
+                                                        <i class="icon-down_arrow fz10 trans"></i>
+                                                    </a>
+                                                </p>
+                                                <div class="panel-collapse collapse" id="collapseVacancyResult">
+                                                    <div class="holding-vacancy__result-listing last-child-no-mb mb15">
+                                                        {% for i in 1..10 %}
+                                                            {% include 'elements/holding-vacancy__result-item.twig' %}
+                                                        {% endfor %}
+                                                    </div>
+                                                    {% include 'widgets/pagination.twig' %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-area__left-side-item">
+                        <div class="text-left owl-carousel__parent-element">
+                            <div class="display-flex space-between flex-middle mb10">
+                                <div class="block-title">объявления холдинга</div>
+                                <div>
+                                    <ul class="clean-element content-block__tab-menu-listing dib fz0 lts1 mr30">
+                                        <li class="content-block__tab-menu-item dib">
+                                            <a data-toggle="tab"
+                                               class="content-block__tab-menu-link fz14 --text-grey semi-title grey"
+                                               href="#adv-bl1">Новые</a>
+                                        </li>
+                                        <li class="content-block__tab-menu-item dib">
+                                            <a data-toggle="tab"
+                                               class="content-block__tab-menu-link fz14 --text-grey semi-title grey"
+                                               href="#adv-bl2">С пробегом</a>
+                                        </li>
+                                        <li class="content-block__tab-menu-item dib active">
+                                            <a data-toggle="tab"
+                                               class="content-block__tab-menu-link fz14 --text-grey semi-title grey"
+                                               href="#adv-bl3">Все</a>
+                                        </li>
+                                    </ul>
+                                    <div class="dib vam fz0">
+                                        <div class="custom-carouse__prev dib"><i
+                                                    class="icon-left_arrow"></i></div>
+                                        <div class="custom-carouse__next dib"><i
+                                                    class="icon-right_arrow"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dealers-sliders tab-content content-area__section white-bg">
+                                <div class="tab-pane fade" id="adv-bl1">
+                                    <div class="row mb15">
+                                        <div class="owl-carousel">
+                                            {% for i in 1..12 %}
+                                                {% include 'elements/car-item.twig' with { "full_width": "true", "no_margin": "true" } %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <p class="text-right">
+                                        <a href="#" class="semi-title grey hover-black__link-red-icon">
+                                            <span class="dib">Все объявления</span>
+                                            <i class="icon-right_arrow icon-top-minus-1"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="adv-bl2">
+                                    <div class="row mb15">
+                                        <div class="owl-carousel">
+                                            {% for i in 1..12 %}
+                                                {% include 'elements/car-item.twig' with { "full_width": "true", "no_margin": "true" } %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <p class="text-right">
+                                        <a href="#" class="semi-title grey hover-black__link-red-icon">
+                                            <span class="dib">Все объявления</span>
+                                            <i class="icon-right_arrow icon-top-minus-1"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade in active" id="adv-bl3">
+                                    <div class="row mb15">
+                                        <div class="owl-carousel">
+                                            {% for i in 1..12 %}
+                                                {% include 'elements/car-item.twig' with { "full_width": "true", "no_margin": "true" } %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <p class="text-right">
+                                        <a href="#" class="semi-title grey hover-black__link-red-icon">
+                                            <span class="dib">Все объявления</span>
+                                            <i class="icon-right_arrow icon-top-minus-1"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

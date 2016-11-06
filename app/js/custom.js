@@ -69,5 +69,5 @@ doc.ready(function () {
     $('[data-js-hide]').on('click', function (e) {
         $(this).closest('[data-js-hide-block]').hide();
         e.preventDefault();
-    })
+    });
 });

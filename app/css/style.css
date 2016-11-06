@@ -473,6 +473,11 @@ body, html {
 
 .right-side__news-title {
   color: #191919;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .form-line:last-child {
@@ -916,4 +921,42 @@ a.content-block__tab-menu-link.active-black:hover {
 .dealers-catalog__item-border-section {
   padding-bottom: 20px;
   border-bottom: 1px solid #c5c5c5;
+}
+
+.dealers-filter__elements-listing {
+  padding-left: 10px;
+}
+
+.models-logo__units {
+  flex-flow: row wrap;
+  margin-bottom: -30px;
+}
+
+input:checked + .holding-vacancy__check-quality {
+  background: #d3d3d3;
+  color: #fff;
+}
+
+.holding-vacancy {
+  background: #f3f3f3;
+  padding: 20px 5px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.collapsing-link:not(.collapsed) > .icon-down_arrow {
+  transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+}
+
+.holding-vacancy__result-item {
+  padding: 15px;
+  border: 1px solid #c5c5c5;
+}
+
+.holding-vacancy__result-listing {
+  padding-top: 20px;
 }

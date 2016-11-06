@@ -1,19 +1,5 @@
 @charset "UTF-8";
-.icon-arrow-down {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
-  transform: translateY(-50%) rotate(45deg);
-  -ms-transform: translateY(-50%) rotate(45deg);
-  -webkit-transform: translateY(-50%) rotate(45deg);
-  -moz-transform: translateY(-50%) rotate(45deg);
-  -o-transform: translateY(-50%) rotate(45deg);
-  border-right: 2px solid #cccccc;
-  border-bottom: 2px solid #cccccc;
-}
-
-[class*="icon-"] {
+[class*="icon-"]:not([class*="glyphicon"]), .jq-checkbox__div {
   font-family: "mazda-icons";
   font-weight: normal;
   font-style: normal;
@@ -30,7 +16,7 @@
   content: "";
 }
 
-.icon-checked-mark:before {
+.icon-checked-mark:before, .jq-checkbox__div:before {
   content: "";
 }
 
@@ -164,4 +150,15 @@
 
 .icon-facebook:before {
   content: "";
+}
+
+.icon-metro_indicator {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+}
+.icon-metro_indicator.green {
+  background: #39b54a;
 }

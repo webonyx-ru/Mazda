@@ -1,4 +1,4 @@
-<div class="block-title text-uppercase">Новости компаний</div>
+<div class="block-title text-uppercase">{% if block_title %}{{ block_title }}{% else %}Новости компаний{% endif %}</div>
 <div class="right-side__news content-area__section white-bg">
 	<ul class="right-side__news-listing clean-element">
 		{% for i in 1..3 %}

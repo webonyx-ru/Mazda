@@ -1,5 +1,7 @@
-*, *:active, *:focus, *:hover {
+*, *:active, *:focus, *:hover, input, input:active, input:focus, input:hover, textarea, textarea:active, textarea:focus, textarea:hover, .form-control, .form-control:active, .form-control:focus, .form-control:hover {
   outline: none;
+  box-shadow: none;
+  border-color: #ccc;
 }
 
 .clean-element {
@@ -10,11 +12,54 @@
   list-style: none;
 }
 
+.trans {
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+
+label {
+  font-weight: normal;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
 a:hover, a:active, a:focus {
   text-decoration: none;
 }
 a[class*="--text-grey"]:not([class*='hover']):hover {
   color: #fff;
+}
+
+.jq-checkbox, .jq-radio {
+  position: relative;
+}
+.jq-checkbox > input, .jq-radio > input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+input + .jq-checkbox__div, input input + .jq-radio__div {
+  text-align: center;
+  line-height: 12px;
+  height: 14px;
+  width: 14px;
+  border: 1px solid #c5c5c5;
+  border-radius: 3px;
+  font-size: 8px;
+  color: transparent;
+  cursor: pointer;
+}
+
+input:checked + .jq-checkbox__div, input:checked + .jq-radio__div {
+  color: #999999;
 }
 
 .custom-hidden {
@@ -243,6 +288,10 @@ p:last-child {
 
 .mb20 {
   margin-bottom: 20px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
 }
 
 .mb35 {

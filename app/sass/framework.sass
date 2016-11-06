@@ -1,9 +1,11 @@
 @import "mixins/mixins"
 @import "vars"
 
-*
+*, input, textarea, .form-control
     &, &:active, &:focus, &:hover
         outline: none
+        box-shadow: none
+        border-color: #ccc
 
 .clean-element
     border: none
@@ -12,6 +14,15 @@
     margin: 0
     list-style: none
 
+.trans
+    +trans
+
+label
+    font-weight: normal
+    cursor: pointer
+    margin: 0
+    padding: 0
+
 a
     &:hover, &:active, &:focus
         text-decoration: none
@@ -19,6 +30,32 @@ a
     &[class*="--text-grey"]
         &:not([class*='hover']):hover
             color: #fff
+
+.jq-checkbox, .jq-radio
+    position: relative
+    & > input
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        opacity: 0
+input
+    & + .jq-checkbox__div, input + .jq-radio__div
+        text-align: center
+        line-height: 12px
+        height: 14px
+        width: 14px
+        border: 1px solid #c5c5c5
+        border-radius: 3px
+        font-size: 8px
+        color: transparent
+        cursor: pointer
+
+input
+    &:checked
+        & + .jq-checkbox__div, & + .jq-radio__div
+            color: $semidark-grey
 
 .custom-hidden
     display: none
@@ -203,6 +240,9 @@ p
 
 .mb20
     margin-bottom: 20px
+
+.mb30
+    margin-bottom: 30px
 
 .mb35
     margin-bottom: 35px

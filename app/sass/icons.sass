@@ -1,15 +1,6 @@
 @import mixins/mixins
 
-.icon-arrow-down
-    display: inline-block
-    vertical-align: middle
-    position: relative
-    top: -1px
-    +transform(translateY(-50%) rotate(45deg))
-    border-right: 2px solid #cccccc
-    border-bottom: 2px solid #cccccc
-
-[class*="icon-"]
+[class*="icon-"]:not([class*="glyphicon"]), .jq-checkbox__div
     font-family: "mazda-icons"
     font-weight: normal
     font-style: normal
@@ -26,7 +17,7 @@
     &:before
         content: "\e901"
 
-.icon-checked-mark
+.icon-checked-mark, .jq-checkbox__div
     &:before
         content: "\e902"
 
@@ -161,3 +152,13 @@
 .icon-facebook
     &:before
         content: "\e922"
+
+.icon-metro_indicator
+    display: inline-block
+    vertical-align: middle
+    border-radius: 100%
+    width: 5px
+    height: 5px
+    
+    &.green
+        background: #39b54a
