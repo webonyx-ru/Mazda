@@ -7,6 +7,10 @@
         box-shadow: none
         border-color: #ccc
 
+h1, h2, h3, h4, h5, h6
+    margin: 0
+    padding: 0
+
 .clean-element
     border: none
     background: none
@@ -30,6 +34,11 @@ a
     &[class*="--text-grey"]
         &:not([class*='hover']):hover
             color: #fff
+
+        &.hover-tdu
+            &:hover, &:active, &:hover
+                text-decoration: underline
+                color: $semidark-grey
 
 .jq-checkbox, .jq-radio
     position: relative
@@ -72,6 +81,9 @@ p
 
 [class*="--text-grey"], .--text-grey
     color: $semidark-grey
+
+[class*="--text-lightgrey"], .--text-lightgrey
+    color: $light-grey
 
 [class*="--text-lightblack"], .--text-lightblack
     color: $light-black
@@ -191,7 +203,11 @@ p
         border-color: $light-black
         color: $light-black
 
-        
+    &.small-paddings
+        padding-left: 10px
+        padding-right: 10px
+
+
 .filled-button
     @extend .empty-button
     text-align: center
@@ -207,6 +223,9 @@ p
 
 .lts2
     letter-spacing: 2px
+
+.mr3
+    margin-right: 3px
 
 .mr5
     margin-right: 5px
@@ -241,11 +260,17 @@ p
 .mb20
     margin-bottom: 20px
 
+.mb25
+    margin-bottom: 25px
+
 .mb30
     margin-bottom: 30px
 
 .mb35
     margin-bottom: 35px
+
+.mb40
+    margin-bottom: 40px
 
 .posr
     position: relative
@@ -395,3 +420,11 @@ p
 .last-child-no-mr
     & > *:last-child
         margin-right: 0
+        
+.dot-separator
+    display: inline-block
+    vertical-align: middle
+    width: 5px
+    height: 5px
+    border-radius: 100%
+    background: #d5d5d5

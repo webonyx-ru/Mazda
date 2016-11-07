@@ -1,0 +1,145 @@
+{% extends "layouts/app.twig" %}
+
+{% block content %}
+	{% include "widgets/breadcrumbs.twig" %}
+
+	<div class="content-area clearfix">
+		<div class="container">
+			<div class="row">
+				<div class="content-area__right-side col-md-3 col-xs-12">
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__discussing-block.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__fuel-price.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__banner.twig' %}
+					</div>
+				</div>
+				<div class="visible-sm visible-xs clearfix"></div>
+				<div class="content-area__left-side col-xs-12 col-md-9">
+					<h1 class="block-title text-uppercase vab dib flex-middle">Новости</h1>
+					<div class="content-area__container">
+						<div class="content-area__section white-bg">
+							<div class="news-container mb35">
+								<div class="news-header mb30 display-flex flex-middle space-between">
+									<div class="--text-grey last-child-no-mr">
+										<div class="news-date dib mr15">
+											сегодня, 12:47
+										</div>
+										<div class="news-views dib mr15">
+											<i class="icon-views dib fz20"></i>
+											<span class="dib">918</span>
+										</div>
+										<div class="news-comments dib mr15">
+											<i class="icon-comment dib"></i>
+											<span class="dib">918</span>
+										</div>
+										<div class="news-likes dib mr15">
+											<i class="icon-like dib"></i>
+											<span class="dib">918</span>
+										</div>
+										<div class="news-shares dib mr15">
+											<i class="icon-share dib"></i>
+											<span class="dib">918</span>
+										</div>
+									</div>
+									<div class="--text-grey">
+										<a href="#" class="hover-black__icon --text-grey"><i class="icon-favorite"></i></a>
+									</div>
+								</div>
+								<div class="news-content --text-lightblack mb25">
+									<p>
+										Компания Mazda представила новую версию популярной на российском рынке модели Mazda3. Автомобиль
+										получил ряд визуальных изменений, в том числе новую решётку радиатора, видоизменённый задний бампер,
+										светодиодную оптику и противотуманные фары. Заметно снизился уровень шума и вибраций. Mazda3 в
+										кузове
+										седан теперь доступна в комплектации Exclusive, созданной для поклонников марки, которые стремятся к
+										новому уровню комфорта и премиальности.
+									</p>
+									<div class="text-center mb25">
+										<div class="dib text-left">
+											<img alt="" src="http://placehold.it/700x450" class="mb5"/>
+											<p class="--text-grey">Фото новой Mazda 3 от производителя</p>
+										</div>
+									</div>
+									<p>Новая Mazda3 получила оборудование, в котором акцент делается на повышение динамичности,
+										управляемости и
+										активной безопасности — систему G-Vectoring Control.</p>
+
+									<p>G-Vectoring Control каждые пять миллисекунд анализирует данные о скорости и положении рулевого
+										колеса и
+										корректирует крутящий момент двигателя для улучшения сцепления колёс при прохождении поворотов.
+										Благодаря GVC даже начинающий водитель сможет почувствовать себя за рулём автомобиля
+										профессиональным
+										автогонщиком — система делает реакции автомобиля более естественными и плавными. Кроме улучшения
+										управляемости, G-Vectoring Control повышает комфорт при движении: уменьшается раскачка,
+										компенсируется
+										влияние бокового ветра на трассе, водителю требуется меньше усилий при рулении.</p>
+
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam mauris, euismod iaculis
+										nunc
+										nec, ullamcorper tempor diam. Nulla facilisi. Sed auctor odio vitae mi porttitor eleifend id id
+										eros.
+										Etiam sapien quam, hendrerit vitae odio et, interdum placerat nibh. Donec nec nisl posuere, rhoncus
+										est
+										eget, maximus augue. Nulla lobortis facilisis massa, aliquam hendrerit arcu accumsan vel. Aenean nec
+										imperdiet metus, eget iaculis enim.</p>
+
+									<p>Aenean rhoncus erat eget varius venenatis. Cras et augue vel massa pretium fermentum sit amet sed
+										arcu.
+										Morbi efficitur nunc in lectus sodales, at venenatis dolor malesuada. Quisque vehicula, libero sed
+										tempor iaculis, risus tellus gravida leo, non bibendum sem augue non nibh. Quisque pulvinar eget
+										odio
+										vitae tristique. Mauris varius sapien porttitor nunc elementum cursus. Nunc sodales diam id
+										vestibulum
+										scelerisque. Suspendisse sollicitudin felis sed porta ullamcorper. Nulla tincidunt condimentum enim
+										non
+										semper. Donec porttitor dapibus tellus eu ullamcorper. Quisque pretium metus quis nulla vestibulum,
+										in
+										sagittis massa auctor. Nulla sollicitudin metus at volutpat pellentesque.</p>
+
+									<p>Fusce id velit sapien. Vestibulum vel erat ut lectus tristique pellentesque. Praesent maximus urna
+										lacinia, tincidunt mauris suscipit, congue enim. In hendrerit vitae felis non pretium. Nam pulvinar
+										tincidunt eros. Duis iaculis libero at nisl vehicula iaculis vitae eget mi. Praesent urna lacus,
+										commodo
+										eget lobortis non, mattis nec nibh. Phasellus feugiat iaculis orci eu vehicula.</p>
+								</div>
+								<div class="news-available__model mb35">
+									<p class="mb20">Новая Mazda3 уже доступна для заказа в следующих комплектациях:</p>
+									<ul class="news-available__model-listing last-child-no-mb clean-element">
+										<li class="news-available__model-item mb20">
+											<a class="news-available__model-link semi-title grey" href="#">Mazda 3 Active+ седан - 1 249
+												000</a>
+										</li>
+										<li class="news-available__model-item mb20">
+											<a class="news-available__model-link semi-title grey" href="#">Mazda 3 Active+ седан - 1 249
+												000</a>
+										</li>
+										<li class="news-available__model-item mb20">
+											<a class="news-available__model-link semi-title grey" href="#">Mazda 3 Active+ седан - 1 249
+												000</a>
+										</li>
+									</ul>
+								</div>
+								<p class="--text-lightblack mb40">Подробности в салонах официальных дилеров.</p>
+								<div class="display-flex flex-middle space-between">
+									<a href="#" class="filled-button lts1 text-uppercase small-paddings big-button hover-red">
+										<i class="icon-left_arrow"></i>
+										<span class="dib">предыдущая новость</span>
+									</a>
+									<a href="#" class="filled-button lts1 text-uppercase small-paddings big-button hover-red">
+										<span class="dib">следующая новость</span>
+										<i class="icon-right_arrow"></i>
+									</a>
+								</div>
+							</div>
+							{% include 'widgets/comments.twig' %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

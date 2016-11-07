@@ -8,6 +8,14 @@
   line-height: 1;
 }
 
+[class*="glyphicon-"] {
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
 .icon-actions:before {
   content: "";
 }

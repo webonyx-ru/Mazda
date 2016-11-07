@@ -4,6 +4,11 @@
   border-color: #ccc;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 .clean-element {
   border: none;
   background: none;
@@ -32,6 +37,10 @@ a:hover, a:active, a:focus {
 }
 a[class*="--text-grey"]:not([class*='hover']):hover {
   color: #fff;
+}
+a[class*="--text-grey"].hover-tdu:hover, a[class*="--text-grey"].hover-tdu:active, a[class*="--text-grey"].hover-tdu:hover {
+  text-decoration: underline;
+  color: #999999;
 }
 
 .jq-checkbox, .jq-radio {
@@ -81,6 +90,10 @@ p:last-child {
 
 [class*="--text-grey"], .--text-grey {
   color: #999999;
+}
+
+[class*="--text-lightgrey"], .--text-lightgrey {
+  color: #c5c5c5;
 }
 
 [class*="--text-lightblack"], .--text-lightblack, .semi-title {
@@ -226,6 +239,10 @@ p:last-child {
   border-color: #191919;
   color: #191919;
 }
+.empty-button.small-paddings, .small-paddings.filled-button {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 .filled-button {
   text-align: center;
@@ -244,6 +261,10 @@ p:last-child {
 
 .lts2 {
   letter-spacing: 2px;
+}
+
+.mr3 {
+  margin-right: 3px;
 }
 
 .mr5 {
@@ -290,12 +311,20 @@ p:last-child {
   margin-bottom: 20px;
 }
 
+.mb25 {
+  margin-bottom: 25px;
+}
+
 .mb30 {
   margin-bottom: 30px;
 }
 
 .mb35 {
   margin-bottom: 35px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
 }
 
 .posr {
@@ -501,4 +530,13 @@ p:last-child {
 
 .last-child-no-mr > *:last-child {
   margin-right: 0;
+}
+
+.dot-separator {
+  display: inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #d5d5d5;
 }
