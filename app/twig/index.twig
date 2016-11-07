@@ -1,0 +1,89 @@
+{% extends "layouts/app.twig" %}
+
+{% block content %}
+	{% include "widgets/breadcrumbs.twig" %}
+
+	<div class="content-area clearfix">
+		<div class="container">
+			<div class="row">
+				<div class="content-area__right-side col-md-3 col-xs-12">
+					<div class="content-area__right-side-item">
+						{% include 'widgets/right-side__discussing-block.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__new-faces.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__fuel-price.twig' %}
+					</div>
+					<div class="content-area__right-side-item black-bg hidden-sm hidden-xs">
+						{% include 'widgets/right-side__banner.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__questionary.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__road-rules.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__media.twig' %}
+					</div>
+					<a href="#" class="filled-button big-button white-bg db lts1 text-uppercase --text-lightblack hover-red">Создать обсуждение</a>
+				</div>
+				<div class="visible-sm visible-xs clearfix"></div>
+				<div class="content-area__left-side col-xs-12 col-md-9">
+					<div class="block-title text-uppercase">Объявления</div>
+
+					<div class="content-area__container white-bg">
+						<form action="#" class="content-area__header content-area__section has-border-bottom filter-header">
+							<select class="selectpicker mr15" data-width="auto">
+								<option value="">По актуальности</option>
+								<option value="">По актуальности</option>
+								<option value="">По актуальности</option>
+								<option value="">По актуальности</option>
+								<option value="">По актуальности</option>
+							</select>
+							<select class="selectpicker mr15" data-width="auto">
+								<option value="">За все время</option>
+							</select>
+							<select class="selectpicker" data-width="auto">
+								<option value=""><span class="rouble">&#x20bd;</span></option>
+								<option value="">$</option>
+								<option value=""><span class="rouble">&#x20bd;</span></option>
+								<option value="">$</option>
+							</select>
+						</form>
+						<div class="content-area__section adv-grid__wrapper">
+							<div class="row adv-grid">
+								{% set Counter = 1 %}
+								{% set CounterSM = 1 %}
+								{% for i in 1..21 %}
+									{% include "elements/car-item.twig" %}
+
+									{% if CounterSM == 2 %}
+										<div class="clearfix visible-xs"></div>
+									{% endif %}
+
+									{% if Counter == 3 %}
+										<div class="clearfix visible-sm visible-lg"></div>
+									{% endif %}
+									{% if CounterSM == 2 %}
+										{% set CounterSM = 1 %}
+									{% else %}
+										{% set CounterSM = CounterSM + 1 %}
+									{% endif %}
+									{% if Counter == 3 %}
+										{% set Counter = 1 %}
+									{% else %}
+										{% set Counter = Counter + 1 %}
+									{% endif %}
+								{% endfor %}
+							</div>
+							{% include "widgets/pagination.twig" %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -250,6 +250,11 @@ p:last-child {
   background: #191919;
   border-color: #191919;
 }
+.filled-button.white-bg {
+  background: #fff;
+  color: #191919;
+  border-color: #fff;
+}
 
 .grey-color {
   color: #999999;
