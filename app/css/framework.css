@@ -498,3 +498,7 @@ p:last-child {
 .last-child-no-mb > *:last-child {
   margin-bottom: 0;
 }
+
+.last-child-no-mr > *:last-child {
+  margin-right: 0;
+}

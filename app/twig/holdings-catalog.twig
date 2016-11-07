@@ -1,0 +1,29 @@
+{% extends "layouts/app.twig" %}
+
+{% block content %}
+	{% include "widgets/breadcrumbs.twig" %}
+
+	<div class="content-area clearfix">
+		<div class="container">
+			<div class="row">
+				<div class="content-area__right-side col-md-3 col-xs-12">
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__news-block.twig' with { "block_title": "Новости холдингов" } %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__discussing-block.twig' %}
+					</div>
+				</div>
+				<div class="visible-sm visible-xs clearfix"></div>
+				<div class="content-area__left-side col-xs-12 col-md-9">
+					<div class="block-title text-uppercase vab dib flex-middle">Холдинги</div>
+					<div class="content-area__container last-child-no-mb">
+						{% for i in 1..10 %}
+							{% include 'elements/holdings-catalog__item.twig' %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
