@@ -431,7 +431,6 @@ body, html
     color: $light-black
     white-space: nowrap
     text-overflow: ellipsis
-    display: inline-block
     overflow: hidden
     max-width: 100%
 
@@ -531,14 +530,14 @@ body, html
 
         .content-block__tab-menu-link
             color: #fff
-            
+
             &.active-black
                 color: $light-black
 
 a.content-block__tab-menu-link
     line-height: 28px
     display: block
-    
+
     &.active-black
         &:hover
             color: $light-black
@@ -696,7 +695,7 @@ a.content-block__tab-menu-link
     &.black-style
         background: $light-black
         color: #fff
-        
+
         &:hover
             color: #dd0000
 
@@ -764,11 +763,11 @@ a.content-block__tab-menu-link
 
 .access-to-controll-link
     text-decoration: underline
-    
+
     &:hover
         color: #fff
         text-decoration: underline
-        
+
 .access-company-controll
     [data-js-hide]
         &:hover
@@ -815,13 +814,13 @@ a.content-block__tab-menu-link
 .models-logo__units
     flex-flow: row wrap
     margin-bottom: -30px
-    
+
 input
     &:checked
         & + .holding-vacancy__check-quality
             background: #d3d3d3
             color: #fff
-            
+
 .holding-vacancy
     background: #f3f3f3
     padding: 20px 5px
@@ -865,7 +864,7 @@ input
 .comments-header
     padding-bottom: 15px
     border-bottom: 1px solid #c5c5c5
-    
+
 .comments__avatar-wrapper
     width: 48px
     height: 48px
@@ -875,7 +874,7 @@ input
 
 .comments__avatar
     border-radius: 100%
-    
+
 .comments__textarea-wrapper
     background: #f3f3f3
     border-radius: 3px
@@ -929,3 +928,74 @@ input
         max-height: 1000px
         color: $semidark-grey
         font-family: $os
+
+.new-faces__units
+    border-bottom: 1px solid $light-grey
+
+.grey-border-bottom
+    border-bottom: 1px solid $light-grey
+
+.media-widget__image-wrapper
+    display: block
+    position: relative
+
+    &:after
+        display: block
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        opacity: 0
+        background: rgba(#000, 0.5)
+        z-index: 10
+        +trans
+
+    &:not(.media-widget__video)
+        &:before
+            font-family: "mazda-icons"
+            font-weight: normal
+            font-style: normal
+            display: inline-block
+            vertical-align: middle
+            line-height: 1
+            content: "\e91a"
+            position: absolute
+            top: 50%
+            +transform(translateY(-50%))
+            width: 100%
+            text-align: center
+            z-index: 11
+            font-size: 20px
+            color: #fff
+            opacity: 0
+            +trans
+
+    &:hover
+        &:after
+            opacity: 1
+        &:not(.media-widget__video)
+            &:before
+                opacity: 1
+
+.media-widget__video
+    .icon-youtube
+        position: absolute
+        top: 50%
+        left: 0
+        font-size: 50px
+        color: #dd0000
+        opacity: 0.7
+        width: 100%
+        text-align: center
+        line-height: 50px
+        margin-top: -25px
+        z-index: 11
+
+.media-widget__video-bottom-text
+    bottom: 10px
+    left: 0
+    right: 0
+    position: absolute
+    z-index: 11

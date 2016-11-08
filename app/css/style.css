@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main-header {
   order: 1;
 }
@@ -481,7 +482,6 @@ body, html {
   color: #191919;
   white-space: nowrap;
   text-overflow: ellipsis;
-  display: inline-block;
   overflow: hidden;
   max-width: 100%;
 }
@@ -1070,4 +1070,89 @@ input:checked + .holding-vacancy__check-quality {
   max-height: 1000px;
   color: #999999;
   font-family: OpenSans, sans-serif, arial;
+}
+
+.new-faces__units {
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.grey-border-bottom {
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.media-widget__image-wrapper {
+  display: block;
+  position: relative;
+}
+.media-widget__image-wrapper:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+.media-widget__image-wrapper:not(.media-widget__video):before {
+  font-family: "mazda-icons";
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 11;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+.media-widget__image-wrapper:hover:after {
+  opacity: 1;
+}
+.media-widget__image-wrapper:hover:not(.media-widget__video):before {
+  opacity: 1;
+}
+
+.media-widget__video .icon-youtube {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 50px;
+  color: #dd0000;
+  opacity: 0.7;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  margin-top: -25px;
+  z-index: 11;
+}
+
+.media-widget__video-bottom-text {
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 11;
 }

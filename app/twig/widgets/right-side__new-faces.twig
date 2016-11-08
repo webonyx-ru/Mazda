@@ -1,1 +1,14 @@
-Новые лица
+<div class="block-title text-uppercase">Новые лица</div>
+<div class="content-area__container white-bg">
+	<div class="content-area__section">
+		<div class="new-faces__units display-flex space-between flex-middle flex-wrap mb20">
+			{% for i in 1..9 %}
+				{% include '../elements/new-faces__item.twig' %}
+			{% endfor %}
+		</div>
+		<div class="display-flex space-between flex-middle">
+			<a href="#" class="filled-button big-button small-paddings text-uppercase lts1 hover-red">Вход</a>
+			<a href="#" class="empty-button black-border big-button small-paddings text-uppercase lts1 hover-red">Регистрация</a>
+		</div>
+	</div>
+</div>

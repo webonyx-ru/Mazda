@@ -42,6 +42,8 @@ a
 
 .jq-checkbox, .jq-radio
     position: relative
+    display: inline-block
+    vertical-align: middle
     & > input
         position: absolute
         top: 0
@@ -50,7 +52,7 @@ a
         right: 0
         opacity: 0
 input
-    & + .jq-checkbox__div, input + .jq-radio__div
+    & + .jq-checkbox__div
         text-align: center
         line-height: 12px
         height: 14px
@@ -61,10 +63,39 @@ input
         color: transparent
         cursor: pointer
 
+    & + .jq-radio__div
+        width: 14px
+        height: 14px
+        border: 1px solid $light-grey
+        border-radius: 50%
+        text-align: center
+        line-height: 12px
+        font-size: 0
+
+        &:after
+            display: inline-block
+            vertical-align: middle
+            position: absolute
+            top: 50%
+            margin-top: -4px
+            left: 50%
+            margin-left: -4px
+            content: ''
+            width: 8px
+            height: 8px
+            border-radius: 100%
+            background: $light-black
+            +transform(scale(0))
+            +trans
+
 input
     &:checked
-        & + .jq-checkbox__div, & + .jq-radio__div
+        & + .jq-checkbox__div
             color: $semidark-grey
+
+        & + .jq-radio__div
+            &:after
+                +transform(scale(1))
 
 .custom-hidden
     display: none
@@ -206,7 +237,6 @@ p
     &.small-paddings
         padding-left: 10px
         padding-right: 10px
-
 
 .filled-button
     @extend .empty-button
@@ -433,3 +463,9 @@ p
     height: 5px
     border-radius: 100%
     background: #d5d5d5
+
+.flex-wrap
+    flex-wrap: wrap
+
+.round-image
+    border-radius: 100%
