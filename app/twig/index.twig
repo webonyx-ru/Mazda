@@ -1,89 +1,503 @@
 {% extends "layouts/app.twig" %}
 
 {% block content %}
-	{% include "widgets/breadcrumbs.twig" %}
+    {% include "widgets/breadcrumbs.twig" %}
 
-	<div class="content-area clearfix">
-		<div class="container">
-			<div class="row">
-				<div class="content-area__right-side col-md-3 col-xs-12">
-					<div class="content-area__right-side-item">
-						{% include 'widgets/right-side__discussing-block.twig' %}
-					</div>
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__new-faces.twig' %}
-					</div>
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__fuel-price.twig' %}
-					</div>
-					<div class="content-area__right-side-item black-bg hidden-sm hidden-xs">
-						{% include 'widgets/right-side__banner.twig' %}
-					</div>
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__questionary.twig' %}
-					</div>
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__road-rules.twig' %}
-					</div>
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__media.twig' %}
-					</div>
-					<a href="#" class="filled-button big-button white-bg db lts1 text-uppercase --text-lightblack hover-red">Создать обсуждение</a>
-				</div>
-				<div class="visible-sm visible-xs clearfix"></div>
-				<div class="content-area__left-side col-xs-12 col-md-9">
-					<div class="block-title text-uppercase">Объявления</div>
+    <div class="content-area clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="content-area__right-side col-md-3 col-xs-12">
+                    <div class="content-area__right-side-item">
+                        {% include 'widgets/right-side__discussing-block.twig' %}
+                    </div>
+                    <div class="content-area__right-side-item hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__new-faces.twig' %}
+                    </div>
+                    <div class="content-area__right-side-item hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__fuel-price.twig' %}
+                    </div>
+                    <div class="content-area__right-side-item black-bg hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__banner.twig' %}
+                    </div>
+                    <div class="content-area__right-side-item hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__questionary.twig' %}
+                    </div>
+                    <div class="content-area__right-side-item hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__road-rules.twig' %}
+                    </div>
+                    <div class="content-area__right-side-item hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__media.twig' %}
+                    </div>
+                    <a href="#"
+                       class="filled-button big-button white-bg db lts1 text-uppercase --text-lightblack hover-red">Создать
+                        обсуждение</a>
+                </div>
+                <div class="visible-sm visible-xs clearfix"></div>
+                <div class="content-area__left-side col-xs-12 col-md-9">
+                    <div class="content-area__item mb35">
+                        <div class="display-flex space-between mb2 flex-middle">
+                            <div>
+                                <div class="block-title mb0 text-uppercase dib mr15">новости</div>
+                                <div class="dib">
+                                    <a href="#" class="semi-title --text-grey grey trans">
+                                        <span class="dib">Все новости</span>
+                                        <i class="icon-right_arrow fz10"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="content-area__left-side__right-area text-uppercase ff-sfb dib flex-middle">
+                                <ul class="clean-element content-block__tab-menu-listing fz0 lts1">
+                                    <li class="content-block__tab-menu-item dib active">
+                                        <a class="content-block__tab-menu-link fz14 --text-grey" href="#">авто</a>
+                                    </li>
+                                    <li class="content-block__tab-menu-item dib">
+                                        <a class="content-block__tab-menu-link fz14 --text-grey" href="#">марка</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
-					<div class="content-area__container white-bg">
-						<form action="#" class="content-area__header content-area__section has-border-bottom filter-header">
-							<select class="selectpicker mr15" data-width="auto">
-								<option value="">По актуальности</option>
-								<option value="">По актуальности</option>
-								<option value="">По актуальности</option>
-								<option value="">По актуальности</option>
-								<option value="">По актуальности</option>
-							</select>
-							<select class="selectpicker mr15" data-width="auto">
-								<option value="">За все время</option>
-							</select>
-							<select class="selectpicker" data-width="auto">
-								<option value=""><span class="rouble">&#x20bd;</span></option>
-								<option value="">$</option>
-								<option value=""><span class="rouble">&#x20bd;</span></option>
-								<option value="">$</option>
-							</select>
-						</form>
-						<div class="content-area__section adv-grid__wrapper">
-							<div class="row adv-grid">
-								{% set Counter = 1 %}
-								{% set CounterSM = 1 %}
-								{% for i in 1..21 %}
-									{% include "elements/car-item.twig" %}
+                        <div class="content-area__container white-bg">
+                            <div class="main-page__news-grid fz0">
+                                <div class="row">
+                                    <div class="col-md-8 main-page__news-grid-item">
+                                        <img src="static-images/poster.jpg"
+                                             class="full-width main-page__news-grid-image" alt="">
+                                        <div class="main-page__news-grid-top-line fz22 white-color text-uppercase ff-sfb">
+                                            Представляем новую mazda3
+                                        </div>
+                                        <div class="main-page__news-grid-bottom-line white-color text-uppercase ff-sfb">
+                                            <p class="main-page__news-grid-date ff-sfb fz16 white-color mb25">
+                                                14 августа, 14:52
+                                            </p>
+                                            <div class="display-flex flex-middle space-between">
+                                                <div class="main-page__news-grid-icons-info col-md-9">
+                                                    <div class="white-color display-flex space-between flex-middle">
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-views trans fz41 mr10"></i>
+                                                            <div class="dib fz16 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-comment trans fz24 mr10"></i>
+                                                            <div class="dib fz16 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-like trans fz24 mr10"></i>
+                                                            <div class="dib fz16 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-share trans fz24 mr10"></i>
+                                                            <div class="dib fz16 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-favorite trans fz24"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 text-right">
+                                                    <a href="#" class="white-color">
+                                                        <i class="icon-more trans fz35"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 main-page__news-grid-item small-grid-item">
+                                        <img src="static-images/poster.jpg"
+                                             class="full-width main-page__news-grid-image" alt="">
+                                        <div class="main-page__news-grid-top-line fz14 white-color text-uppercase ff-sfb">
+                                            Представляем новую mazda3
+                                        </div>
+                                        <div class="main-page__news-grid-bottom-line white-color text-uppercase ff-sfb">
+                                            <p class="main-page__news-grid-date ff-sfb fz12 white-color mb10">
+                                                14 августа, 14:52
+                                            </p>
+                                            <div class="display-flex flex-middle space-between">
+                                                <div class="main-page__news-grid-icons-info col-md-10">
+                                                    <div class="white-color display-flex space-between flex-middle">
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-views trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-comment trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-like trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-share trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-favorite trans fz16"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-right">
+                                                    <a href="#" class="white-color">
+                                                        <i class="icon-more trans fz16"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 main-page__news-grid-item small-grid-item">
+                                        <img src="static-images/poster.jpg"
+                                             class="full-width main-page__news-grid-image" alt="">
+                                        <div class="main-page__news-grid-top-line fz14 white-color text-uppercase ff-sfb">
+                                            Представляем новую mazda3
+                                        </div>
+                                        <div class="main-page__news-grid-bottom-line white-color text-uppercase ff-sfb">
+                                            <p class="main-page__news-grid-date ff-sfb fz12 white-color mb10">
+                                                14 августа, 14:52
+                                            </p>
+                                            <div class="display-flex flex-middle space-between">
+                                                <div class="main-page__news-grid-icons-info col-md-10">
+                                                    <div class="white-color display-flex space-between flex-middle">
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-views trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-comment trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-like trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-share trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-favorite trans fz16"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-right">
+                                                    <a href="#" class="white-color">
+                                                        <i class="icon-more trans fz16"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 main-page__news-grid-item small-grid-item">
+                                        <img src="static-images/poster.jpg"
+                                             class="full-width main-page__news-grid-image" alt="">
+                                        <div class="main-page__news-grid-top-line fz14 white-color text-uppercase ff-sfb">
+                                            Представляем новую mazda3
+                                        </div>
+                                        <div class="main-page__news-grid-bottom-line white-color text-uppercase ff-sfb">
+                                            <p class="main-page__news-grid-date ff-sfb fz12 white-color mb10">
+                                                14 августа, 14:52
+                                            </p>
+                                            <div class="display-flex flex-middle space-between">
+                                                <div class="main-page__news-grid-icons-info col-md-10">
+                                                    <div class="white-color display-flex space-between flex-middle">
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-views trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-comment trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-like trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-share trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-favorite trans fz16"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-right">
+                                                    <a href="#" class="white-color">
+                                                        <i class="icon-more trans fz16"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 main-page__news-grid-item small-grid-item">
+                                        <img src="static-images/poster.jpg"
+                                             class="full-width main-page__news-grid-image" alt="">
+                                        <div class="main-page__news-grid-top-line fz14 white-color text-uppercase ff-sfb">
+                                            Представляем новую mazda3
+                                        </div>
+                                        <div class="main-page__news-grid-bottom-line white-color text-uppercase ff-sfb">
+                                            <p class="main-page__news-grid-date ff-sfb fz12 white-color mb10">
+                                                14 августа, 14:52
+                                            </p>
+                                            <div class="display-flex flex-middle space-between">
+                                                <div class="main-page__news-grid-icons-info col-md-10">
+                                                    <div class="white-color display-flex space-between flex-middle">
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-views trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-comment trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-like trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-share trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-favorite trans fz16"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-right">
+                                                    <a href="#" class="white-color">
+                                                        <i class="icon-more trans fz16"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 main-page__news-grid-item small-grid-item">
+                                        <img src="static-images/poster.jpg"
+                                             class="full-width main-page__news-grid-image" alt="">
+                                        <div class="main-page__news-grid-top-line fz14 white-color text-uppercase ff-sfb">
+                                            Представляем новую mazda3
+                                        </div>
+                                        <div class="main-page__news-grid-bottom-line white-color text-uppercase ff-sfb">
+                                            <p class="main-page__news-grid-date ff-sfb fz12 white-color mb10">
+                                                14 августа, 14:52
+                                            </p>
+                                            <div class="display-flex flex-middle space-between">
+                                                <div class="main-page__news-grid-icons-info col-md-10">
+                                                    <div class="white-color display-flex space-between flex-middle">
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-views trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-comment trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-like trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-share trans fz16 mr3"></i>
+                                                            <div class="dib fz12 ff-os">186</div>
+                                                        </div>
+                                                        <div class="right-side__news-bottom-item dib">
+                                                            <i class="icon-favorite trans fz16"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-right">
+                                                    <a href="#" class="white-color">
+                                                        <i class="icon-more trans fz16"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-									{% if CounterSM == 2 %}
-										<div class="clearfix visible-xs"></div>
-									{% endif %}
+                    <div class="content-area__item mb35">
+                        <div class="display-flex space-between mb10 flex-middle">
+                            <div>
+                                <div class="block-title mb0 text-uppercase dib mr15">Превью каталога</div>
+                            </div>
+                            <div>
+                                <select class="selectpicker" title="Выберите марку">
+                                    <option value="">Мазда 3</option>
+                                    <option value="">Мазда 3</option>
+                                    <option value="">Мазда 3</option>
+                                    <option value="">Мазда 3</option>
+                                    <option value="">Мазда 3</option>
+                                    <option value="">Мазда 3</option>
+                                    <option value="">Мазда 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="content-area__container white-bg">
+                            <div class="content-area__section">
+                                <div class="grey-border-bottom mb20">
+                                    <div class="row">
+                                        <div class="col-md-6 mb20">
+                                            <img src="http://placehold.it/410x250" alt="" class="full-width">
+                                        </div>
+                                        <div class="col-md-6 mb20">
+                                            <p class="semi-title">Mazda</p>
+                                            <div class="main-page__car-params mb15 last-child-no-mb">
+                                                <div class="display-flex space-between row">
+                                                    <div class="--text-grey col-xs-6">
+                                                        Кузов:
+                                                    </div>
+                                                    <div class="--text-lightblack col-xs-6 text-right">
+                                                        Внедорожник, 5 дв.
+                                                    </div>
+                                                </div>
+                                                <div class="display-flex space-between row">
+                                                    <div class="--text-grey col-xs-6">
+                                                        Двигатель:
+                                                    </div>
+                                                    <div class="--text-lightblack col-xs-6 text-right">
+                                                        2.5 л / бензин
+                                                    </div>
+                                                </div>
+                                                <div class="display-flex space-between row">
+                                                    <div class="--text-grey col-xs-6">
+                                                        Мощность:
+                                                    </div>
+                                                    <div class="--text-lightblack col-xs-6 text-right">
+                                                        250 л.с.
+                                                    </div>
+                                                </div>
+                                                <div class="display-flex space-between row">
+                                                    <div class="--text-grey col-xs-6">
+                                                        Коробка:
+                                                    </div>
+                                                    <div class="--text-lightblack col-xs-6 text-right">
+                                                        Автоматическая
+                                                    </div>
+                                                </div>
+                                                <div class="display-flex space-between row">
+                                                    <div class="--text-grey col-xs-6">
+                                                        Привод:
+                                                    </div>
+                                                    <div class="--text-lightblack col-xs-6 text-right">
+                                                        Полный
+                                                    </div>
+                                                </div>
+                                                <div class="display-flex space-between row">
+                                                    <div class="--text-grey col-xs-6">
+                                                        Разгон до 100 км:
+                                                    </div>
+                                                    <div class="--text-lightblack col-xs-6 text-right">
+                                                        10.1 с
+                                                    </div>
+                                                </div>
+                                                <div class="display-flex space-between row">
+                                                    <div class="--text-grey col-xs-6">
+                                                        Макс. скорость:
+                                                    </div>
+                                                    <div class="--text-lightblack col-xs-6 text-right">
+                                                        198 км/ч
+                                                    </div>
+                                                </div>
+                                                <div class="display-flex space-between row">
+                                                    <div class="--text-grey col-xs-6">
+                                                        <span class="dib">Расход топлива</span>
+                                                        <span class="dib">город / шоссе / микс:</span>
+                                                    </div>
+                                                    <div class="--text-lightblack col-xs-6 text-right">
+                                                        15.4 / 9 / 11.3 л.
+                                                    </div>
+                                                </div>
+                                            </div>
 
-									{% if Counter == 3 %}
-										<div class="clearfix visible-sm visible-lg"></div>
-									{% endif %}
-									{% if CounterSM == 2 %}
-										{% set CounterSM = 1 %}
-									{% else %}
-										{% set CounterSM = CounterSM + 1 %}
-									{% endif %}
-									{% if Counter == 3 %}
-										{% set Counter = 1 %}
-									{% else %}
-										{% set Counter = Counter + 1 %}
-									{% endif %}
-								{% endfor %}
-							</div>
-							{% include "widgets/pagination.twig" %}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                                            <div class="text-right">
+                                                <a href="#"
+                                                   class="text-uppercase ff-sfb --text-grey hover-black__link-red-icon">
+                                                    <span class="dib">Все характеристики</span>
+                                                    <span class="icon-plus fz10 dib"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb35">
+                                    <div class="col-md-6">
+                                        <div class="row mb10">
+                                            <div class="col-xs-6 --text-lightblack text-uppercase ff-sfb">
+                                                Обзоры
+                                            </div>
+                                            <div class="col-xs-6 text-right">
+                                                <a href="#" class="--text-grey text-uppercase ff-sfb grey-underline-text">все Обзоры</a> (61)
+                                            </div>
+                                        </div>
+                                        <p class="--text-lightblack text-uppercase ff-sfb">Антон воронков</p>
+                                        <p class="--text-grey text-right">20 июля 2016</p>
+                                        <div class="main-page__user-activity-content --text-lightblack mb10">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae cumque dicta dolorem, dolores ea enim eos, eum facilis laudantium, nemo neque obcaecati officiis perspiciatis quo sit tempora voluptatem.</p>
+                                        </div>
+                                        <div class="text-right mb10">
+                                            <a href="#" class="text-uppercase --text-grey lts1 ff-sfb hover-black__link-red-icon">
+                                                <span class="dib fz14 mr10">подробнее</span> <i class="icon-plus fz12"></i>
+                                            </a>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="#" class="empty-button black-border text-uppercase lts2 big-button hover-red">Добавить отзыв</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row mb10">
+                                            <div class="col-xs-6 --text-lightblack text-uppercase ff-sfb">
+                                                Обзоры
+                                            </div>
+                                            <div class="col-xs-6 text-right">
+                                                <a href="#" class="--text-grey text-uppercase ff-sfb grey-underline-text">все Обзоры</a> (61)
+                                            </div>
+                                        </div>
+                                        <p class="--text-lightblack text-uppercase ff-sfb">Антон воронков</p>
+                                        <p class="--text-grey text-right">20 июля 2016</p>
+                                        <div class="main-page__user-activity-content --text-lightblack mb10">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut beatae cumque dicta dolorem, dolores ea enim eos, eum facilis laudantium, nemo neque obcaecati officiis perspiciatis quo sit tempora voluptatem.</p>
+                                        </div>
+                                        <div class="text-right mb10">
+                                            <a href="#" class="text-uppercase --text-grey lts1 ff-sfb hover-black__link-red-icon">
+                                                <span class="dib fz14 mr10">подробнее</span> <i class="icon-plus fz12"></i>
+                                            </a>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="#" class="empty-button black-border text-uppercase lts2 big-button hover-red">Добавить отзыв</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb20">
+                                    <a href="#" class="col-md-4 db">
+                                        <img src="http://placehold.it/300x200" class="full-width mb10" alt="">
+                                        <p class="--text-lightblack ff-sfb">Lorem ipsum dolor sit amet.</p>
+                                    </a>
+                                    <a href="#" class="col-md-4 db">
+                                        <img src="http://placehold.it/300x200" class="full-width mb10" alt="">
+                                        <p class="--text-lightblack ff-sfb">Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+                                    </a>
+                                    <a href="#" class="col-md-4 db">
+                                        <img src="http://placehold.it/300x200" class="full-width mb10" alt="">
+                                        <p class="--text-lightblack ff-sfb">Lorem ipsum dolor sit amet.</p>
+                                    </a>
+                                </div>
+                                <div class="text-center">
+                                    <a href="#" class="filled-button lts1 hover-red text-uppercase big-button">Больше акций</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-area__item">
+                        <div class="content-area__container text-justify white-color">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquam aspernatur cum, deleniti et facilis omnis quae sed sit temporibus veniam vitae voluptas voluptate? Accusamus amet assumenda at corporis debitis earum ex excepturi, exercitationem iste laborum molestias necessitatibus nemo nostrum odit pariatur vel voluptatem. Adipisci alias amet blanditiis deserunt eaque est et explicabo id illo in ipsam, laudantium non odit omnis optio perferendis quia quis quos reiciendis, rerum, vel vero voluptate! Accusantium dignissimos, dolor dolorem eligendi, enim excepturi expedita facere id impedit labore necessitatibus nihil obcaecati perspiciatis possimus quasi quisquam quo reiciendis repellat repellendus repudiandae unde ut voluptates. Ab, asperiores.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

@@ -198,8 +198,24 @@ p:last-child {
   font-size: 20px;
 }
 
+.fz22 {
+  font-size: 22px;
+}
+
 .fz24 {
   font-size: 24px;
+}
+
+.fz28 {
+  font-size: 28px;
+}
+
+.fz35 {
+  font-size: 35px;
+}
+
+.fz41 {
+  font-size: 41px;
 }
 
 .white-bg {
@@ -594,4 +610,29 @@ p:last-child {
 
 .round-image {
   border-radius: 100%;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+  display: block;
+  border: none;
+  width: 8px;
+  height: 8px;
+  margin-top: -5px;
+  right: 10px;
+  top: 50%;
+  border-right: 2px solid #c5c5c5;
+  border-bottom: 2px solid #c5c5c5;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.tdu {
+  text-decoration: underline;
+}
+
+.grey-underline-text {
+  border-bottom: 2px solid #999999;
 }
