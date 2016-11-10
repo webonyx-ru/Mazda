@@ -1,0 +1,44 @@
+{% block header_scripts %}
+	<script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
+	<script src="js/YaMap.js"></script>
+{% endblock %}
+
+<div class="map-container posr">
+	<div id="dealers-map" {% if height == "height500" %} class="{{ height }}"{% endif %}></div>
+
+	<div class="dealers-map__listing">
+		<div class="dealers-map__listing-header">
+			<div class="text-center mb15">
+				<a href="#" class="filled-button big-button hover-red small-paddings text-uppercase lts1">Добавить дилера</a>
+			</div>
+			<div class="dealers-map__current-dealer-name text-center text-uppercase --text-lightblack ff-sfb ovh">
+				Независимость Мазда
+			</div>
+		</div>
+
+		<div class="dealers-map__units" data-jsp>
+			{% for i in 1..10 %}
+				<div class="dealers-map__item mb15">
+					<div class="display-flex flex-wrap space-between flex-end mb10">
+						<div class="--text-lightblack ff-sfb text-uppercase">
+							дмитрий
+						</div>
+						<div class="fz12 --text-grey">
+							20 июля 2016
+						</div>
+					</div>
+					<div class="--text-grey text-center">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto atque, commodi cupiditate delectus
+						dolorum earum est eveniet hic iure magnam molestiae nesciunt numquam odit, placeat porro quam quisquam ut.
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+		<div class="dealers-map__bottom text-right">
+			<a href="#" class="text-uppercase --text-grey lts2 ff-sfb hover-black__link-red-icon">
+				<span class="dib fz14 mr5">Все отзывы</span> <i class="icon-plus fz12"></i>
+			</a>
+		</div>
+	</div>
+</div>

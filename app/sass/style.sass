@@ -457,7 +457,13 @@ body, html
 .footer-menu__item
   margin-bottom: 10px
 
-.footer-menu__first-link, .footer-menu__link
+.footer-menu__first-link
+  color: #fff
+
+  &:hover
+    color: #fff
+
+.footer-menu__link
   color: $semidark-grey
 
   &:hover
@@ -777,6 +783,9 @@ a.content-block__tab-menu-link
   width: 100%
   height: 300px
 
+  &.height500
+    height: 500px
+
 .dealers-feedbacks__item-image-wrapper
   width: 80px
   margin-right: 20px
@@ -979,6 +988,10 @@ input
       &:before
         opacity: 1
 
+.adv-grid__image-wrapper
+  overflow: hidden
+  font-size: 0
+
 .media-widget__video
   .icon-youtube
     position: absolute
@@ -1065,3 +1078,57 @@ input
   right: 0
   padding: 0 20px
   z-index: 3
+
+.main-page__rated-delers-item
+  +trans
+  box-shadow: inset 0 0 0 2px transparent
+
+  &:hover
+    box-shadow: inset 0 0 0 2px #dd0000
+
+.main-page__rated-delers-item
+  padding-bottom: 40px
+
+.main-page__rated-delers-item__bottom
+  position: absolute
+  bottom: 15px
+  right: 0
+  left: 0
+  padding: 0 20px
+
+.dealers-map__listing
+  position: absolute
+  width: 260px
+  top: 0
+  bottom: 0
+  right: 0
+  background: rgba(#fff, 0.9)
+  padding: 20px
+  padding-bottom: 50px
+
+.dealers-map__bottom
+  position: absolute
+  bottom: 15px
+  left: 0
+  right: 0
+  padding: 0 20px
+
+.dealers-map__item
+  &:not(:last-child)
+    padding-bottom: 15px
+    @extend .grey-border-bottom
+
+.dealers-map__units
+  bottom: 50px
+  position: absolute
+  top: 110px
+  left: 20px
+  right: 10px
+  overflow: auto
+
+.dealers-map__listing-header
+  padding-bottom: 15px
+
+.jspContainer
+  .dealers-map__item
+    margin-right: 10px

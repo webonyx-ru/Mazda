@@ -515,10 +515,17 @@ body, html {
   margin-bottom: 10px;
 }
 
-.footer-menu__first-link, .footer-menu__link {
+.footer-menu__first-link {
+  color: #fff;
+}
+.footer-menu__first-link:hover {
+  color: #fff;
+}
+
+.footer-menu__link {
   color: #999999;
 }
-.footer-menu__first-link:hover, .footer-menu__link:hover {
+.footer-menu__link:hover {
   color: #fff;
 }
 
@@ -893,6 +900,9 @@ a.content-block__tab-menu-link.active-black:hover {
   width: 100%;
   height: 300px;
 }
+#dealers-map.height500 {
+  height: 500px;
+}
 
 .dealers-feedbacks__item-image-wrapper {
   width: 80px;
@@ -1076,7 +1086,7 @@ input:checked + .holding-vacancy__check-quality {
   border-bottom: 1px solid #c5c5c5;
 }
 
-.grey-border-bottom {
+.grey-border-bottom, .dealers-map__item:not(:last-child) {
   border-bottom: 1px solid #c5c5c5;
 }
 
@@ -1133,6 +1143,11 @@ input:checked + .holding-vacancy__check-quality {
 }
 .media-widget__image-wrapper:hover:not(.media-widget__video):before {
   opacity: 1;
+}
+
+.adv-grid__image-wrapper {
+  overflow: hidden;
+  font-size: 0;
 }
 
 .media-widget__video .icon-youtube {
@@ -1228,4 +1243,68 @@ input:checked + .holding-vacancy__check-quality {
   right: 0;
   padding: 0 20px;
   z-index: 3;
+}
+
+.main-page__rated-delers-item {
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  box-shadow: inset 0 0 0 2px transparent;
+}
+.main-page__rated-delers-item:hover {
+  box-shadow: inset 0 0 0 2px #dd0000;
+}
+
+.main-page__rated-delers-item {
+  padding-bottom: 40px;
+}
+
+.main-page__rated-delers-item__bottom {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  left: 0;
+  padding: 0 20px;
+}
+
+.dealers-map__listing {
+  position: absolute;
+  width: 260px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  padding-bottom: 50px;
+}
+
+.dealers-map__bottom {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+}
+
+.dealers-map__item:not(:last-child) {
+  padding-bottom: 15px;
+}
+
+.dealers-map__units {
+  bottom: 50px;
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  right: 10px;
+  overflow: auto;
+}
+
+.dealers-map__listing-header {
+  padding-bottom: 15px;
+}
+
+.jspContainer .dealers-map__item {
+  margin-right: 10px;
 }

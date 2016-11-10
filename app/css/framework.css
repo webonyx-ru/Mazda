@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transition: all 0.3s ease 0s;
 }
 
+.ovh {
+  overflow: hidden;
+}
+
 label {
   font-weight: normal;
   cursor: pointer;
@@ -132,6 +136,10 @@ p:last-child {
 
 [class*="--text-grey"], .--text-grey {
   color: #999999;
+}
+
+[class*="--text-red"], .--text-red {
+  color: #dd0000;
 }
 
 [class*="--text-lightgrey"], .--text-lightgrey {
@@ -284,6 +292,9 @@ p:last-child {
   color: #fff;
   border-color: #fff;
 }
+.empty-button.white-color, .white-color.filled-button {
+  color: #fff;
+}
 .empty-button.hover-red:hover, .hover-red.filled-button:hover {
   background: #dd0000;
   border-color: #dd0000;
@@ -318,7 +329,7 @@ p:last-child {
   color: #999999;
 }
 
-.lts1, .semi-title {
+.lts1, .semi-title:not(.no-lts) {
   letter-spacing: 1px;
 }
 
@@ -562,6 +573,10 @@ p:last-child {
   cursor: pointer;
 }
 
+.no-lts {
+  letter-spacing: 0;
+}
+
 .semi-title {
   text-transform: uppercase;
 }
@@ -635,4 +650,26 @@ p:last-child {
 
 .grey-underline-text {
   border-bottom: 2px solid #999999;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.height500 {
+  height: 500px;
+}
+
+.jspVerticalBar {
+  width: 2px;
+  background-color: transparent;
+}
+
+.jspTrack {
+  background-color: transparent;
+}
+
+.jspDrag {
+  background: #c5c5c5;
+  right: -10px;
 }

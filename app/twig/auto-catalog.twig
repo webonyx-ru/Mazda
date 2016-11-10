@@ -30,29 +30,9 @@
 					<div class="content-area__container content-area__section white-bg tab-content">
 						<div class="tab-pane fade" id="catalog-all">
 							<div class="mb15">
-								<div class="auto-catalog__listing row">
-									{% set Counter = 1 %}
-									{% set CounterSM = 1 %}
+								<div class="auto-catalog__listing row display-flex flex-wrap">
 									{% for i in 1..15 %}
 										{% include "elements/catalog-auto-item.twig" %}
-
-										{% if CounterSM == 2 %}
-											<div class="clearfix visible-xs"></div>
-										{% endif %}
-
-										{% if Counter == 3 %}
-											<div class="clearfix visible-sm visible-lg"></div>
-										{% endif %}
-										{% if CounterSM == 2 %}
-											{% set CounterSM = 1 %}
-										{% else %}
-											{% set CounterSM = CounterSM + 1 %}
-										{% endif %}
-										{% if Counter == 3 %}
-											{% set Counter = 1 %}
-										{% else %}
-											{% set Counter = Counter + 1 %}
-										{% endif %}
 									{% endfor %}
 								</div>
 							</div>

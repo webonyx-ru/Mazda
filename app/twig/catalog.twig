@@ -41,29 +41,9 @@
 							</select>
 						</form>
 						<div class="content-area__section adv-grid__wrapper">
-							<div class="row adv-grid">
-								{% set Counter = 1 %}
-								{% set CounterSM = 1 %}
+							<div class="row adv-grid display-flex flex-wrap">
 								{% for i in 1..21 %}
 									{% include "elements/car-item.twig" %}
-
-									{% if CounterSM == 2 %}
-										<div class="clearfix visible-xs"></div>
-									{% endif %}
-
-									{% if Counter == 3 %}
-										<div class="clearfix visible-sm visible-lg"></div>
-									{% endif %}
-									{% if CounterSM == 2 %}
-										{% set CounterSM = 1 %}
-									{% else %}
-										{% set CounterSM = CounterSM + 1 %}
-									{% endif %}
-									{% if Counter == 3 %}
-										{% set Counter = 1 %}
-									{% else %}
-										{% set Counter = Counter + 1 %}
-									{% endif %}
 								{% endfor %}
 							</div>
 							{% include "widgets/pagination.twig" %}

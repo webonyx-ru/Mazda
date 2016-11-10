@@ -1,9 +1,9 @@
 <div
-		class="{% if full_width == "true" %}col-xs-12 {% else %}col-md-4 col-sm-4 col-sm-6{% endif %} adv-grid__item {% if no_margin != "true" %}mb15 {% endif %} white-bg">
+		class="{% if full_width == "true" %}col-xs-12 {% else %}col-md-4 col-sm-4 col-sm-6{% endif %} adv-grid__item {% if no_margin != "true" %}mb15 {% endif %} {% if white_inside != "true" %} white-bg{% endif %}">
 	<div class="adv-grid__image-wrapper">
 		<img alt="" src="http://placehold.it/275x200" class="adv-grid__image full-width"/>
 	</div>
-	<div class="adv-gird__content">
+	<div class="adv-gird__content {% if white_inside == "true" %} white-bg{% endif %}">
 		<div class="adv-grid__logo text-center mb10">
 			<div class="dib posr">
 				<img alt="" src="http://placehold.it/140x30"/>

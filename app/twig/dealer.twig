@@ -1,10 +1,5 @@
 {% extends "layouts/app.twig" %}
 
-{% block header_scripts %}
-	<script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
-	<script src="js/YaMap.js"></script>
-{% endblock %}
-
 {% block content %}
 	{% include "widgets/breadcrumbs.twig" with {'page': 'dealers'} %}
 
@@ -209,9 +204,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="map-container">
-										<div id="dealers-map"></div>
-									</div>
+									{% include 'widgets/map-widget.twig' %}
 								</div>
 								<div class="tab-pane fade text-left" id="dealers-tab2">
 									{% include 'widgets/b-services.twig' %}
