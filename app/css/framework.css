@@ -254,6 +254,11 @@ p:last-child {
   vertical-align: baseline;
 }
 
+.db {
+  display: block;
+  width: 100%;
+}
+
 .empty-button, .filled-button {
   padding: 0 15px;
   line-height: 26px;
@@ -279,10 +284,6 @@ p:last-child {
 }
 .empty-button.thin, .thin.filled-button {
   border-width: 1px;
-}
-.empty-button.db, .db.filled-button {
-  display: block;
-  width: 100%;
 }
 .empty-button:hover, .filled-button:hover {
   background: #999999;
@@ -672,4 +673,33 @@ p:last-child {
 .jspDrag {
   background: #c5c5c5;
   right: -10px;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-display-block {
+    display: block;
+  }
+
+  .mobile-display-inline-block {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .mobile-wa {
+    width: auto;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .tab-display-block {
+    display: block;
+  }
+
+  .tab-display-inline-block {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .tab-wa {
+    width: auto;
+  }
 }

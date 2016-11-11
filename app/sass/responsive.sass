@@ -2,15 +2,25 @@
 @import mixins/mixins
 
 @media screen and (max-width: 992px)
+    .main-page__news-grid-item
+        &.main-page__news-grid-item__big
+            border-right: none
+
+        &.mobile-border-right
+            border-right: 1px solid $light-black
+
+        &.mobile-no-border-right
+            border-right: none
+
     .header-menu__listing
         margin-right: 20px
 
     .header-menu__item
         &:not(:last-child)
             margin-right: 20px
-
-            &:before
-                margin-left: 10px
+            .header-menu__link
+                &:before
+                    margin-left: 10px
 
     .right-side__filter
         .content-area__section
@@ -34,6 +44,28 @@
 
     .copy-text
         text-align: center !important
+
+    .right-side__news-item, .right-side__feedback-item
+        &:nth-child(n)
+            border: none
+        &:not(:last-child)
+            border-right: 1px solid $light-grey
+
+    .right-side__buttons-wrapper
+        &.has-border-top.mobile-no-border
+            border: none
+
+    .new-faces__buttons
+        justify-content: end
+
+        &>*:not(:last-child)
+            margin-right: 10px
+
+    .new-faces__units
+        justify-content: space-around
+
+    .right-side__fuel-prices
+        letter-spacing: 0
 
 @media screen and (max-width: 767px)
     .adv-gird__content
@@ -109,7 +141,7 @@
         .empty-button
             border-color: $light-black
             color: $light-black
-            
+
             &:hover
                 color: #fff
 
@@ -165,7 +197,7 @@
 
     .header-submenu__link
         display: block
-        
+
     .header-menu__item
         .header-menu__link
             &:after

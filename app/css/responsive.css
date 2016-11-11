@@ -1,4 +1,14 @@
 @media screen and (max-width: 992px) {
+  .main-page__news-grid-item.main-page__news-grid-item__big {
+    border-right: none;
+  }
+  .main-page__news-grid-item.mobile-border-right {
+    border-right: 1px solid #191919;
+  }
+  .main-page__news-grid-item.mobile-no-border-right {
+    border-right: none;
+  }
+
   .header-menu__listing {
     margin-right: 20px;
   }
@@ -6,7 +16,7 @@
   .header-menu__item:not(:last-child) {
     margin-right: 20px;
   }
-  .header-menu__item:not(:last-child):before {
+  .header-menu__item:not(:last-child) .header-menu__link:before {
     margin-left: 10px;
   }
 
@@ -33,6 +43,32 @@
 
   .copy-text {
     text-align: center !important;
+  }
+
+  .right-side__news-item:nth-child(n), .right-side__feedback-item:nth-child(n) {
+    border: none;
+  }
+  .right-side__news-item:not(:last-child), .right-side__feedback-item:not(:last-child) {
+    border-right: 1px solid #c5c5c5;
+  }
+
+  .right-side__buttons-wrapper.has-border-top.mobile-no-border {
+    border: none;
+  }
+
+  .new-faces__buttons {
+    justify-content: end;
+  }
+  .new-faces__buttons > *:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .new-faces__units {
+    justify-content: space-around;
+  }
+
+  .right-side__fuel-prices {
+    letter-spacing: 0;
   }
 }
 @media screen and (max-width: 767px) {

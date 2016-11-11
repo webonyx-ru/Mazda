@@ -205,6 +205,10 @@ p
 .vab
     vertical-align: baseline
 
+.db
+    display: block
+    width: 100%
+
 .empty-button
     padding: 0 15px
     line-height: 26px
@@ -226,10 +230,6 @@ p
 
     &.thin
         border-width: 1px
-
-    &.db
-        display: block
-        width: 100%
     
     &:hover
         background: $semidark-grey
@@ -531,3 +531,25 @@ p
 .jspDrag
     background: $light-grey
     right: -10px
+
+@media screen and (max-width: 767px)
+    .mobile-display-block
+        display: block
+
+    .mobile-display-inline-block
+        display: inline-block
+        vertical-align: middle
+
+    .mobile-wa
+        width: auto
+
+@media screen and (max-width: 992px) and (min-width: 768px)
+    .tab-display-block
+        display: block
+
+    .tab-display-inline-block
+        display: inline-block
+        vertical-align: middle
+
+    .tab-wa
+        width: auto
