@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ошибка 404!</title>
+
+    <!-- Stylesheets -->
+    {% include "layouts/stylesheets.twig" %}
+
+    {% block header_scripts %}{% endblock %}
+</head>
+
+{% block content %}
+<section class="pt40 mb67">
+    <div class="container">
+        <div class="text-center">
+            <a href="#" class="logo-square b-logo__club text-uppercase ff-sfb white-color text-center mt0">
+                <span class="dib fz14">АВТОКЛУБ ЛЮБИТЕЛЕЙ МАЗДА</span>
+            </a>
+            <a href="#" class="logo-square b-logo__mazda text-center mt0">
+                <img src="images/logo-mazda.png" alt="" title="">
+            </a>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container text-center">
+        <div class="b-error-message white-bg">
+            <div class="text-center">
+                <div class="fz80 --text-red lhn mb25"><i class="icon-like"></i></div>
+                <p class="ff-sfb fz48 --text-red lhn lts2 mb15">404</p>
+                <p class="text-uppercase ff-sfb fz24 lhn lts2 mb35">Ошибка</p>
+                <p class="text-uppercase ff-sfb fz18 lhn lts2 mb15">Страница не найдена</p>
+                <p class="text-uppercase text-gray ff-os lhn mb35">Неправильно набран адрес, или эта страница больше не существует</p>
+                <a href="#" class="filled-button lts1 hover-red text-uppercase big-button">Перейти на главную</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
