@@ -420,8 +420,9 @@ body, html
             +rotate(-180deg)
 
 .content-area
-    .content-area__right-side, .content-area__left-side
-        float: right
+    &:not(.left-direction)
+        .content-area__right-side, .content-area__left-side
+            float: right
 
 .content-area__right-side-item
     &:not(:last-child)
@@ -547,6 +548,7 @@ body, html
             width: 100%
             background: #dd0000
             height: 2px
+            left: 0
 
         .content-block__tab-menu-link
             color: #fff
@@ -957,7 +959,8 @@ input
 
 .content-area__right-side-item
     &.full-white-bg
-        padding-bottom: 50px
+        &:not(.no-buttons)
+            padding-bottom: 50px
         overflow: hidden
         .content-area__container
             position: relative
@@ -973,9 +976,6 @@ input
         .content-area__section
             position: relative
             z-index: 1
-
-.new-faces__units
-    border-bottom: 1px solid $light-grey
 
 .grey-border-bottom
     border-bottom: 1px solid $light-grey
@@ -1178,6 +1178,14 @@ input
         margin-right: 10px
 
 .new-faces__item
-    margin-left: 10px
-    margin-right: 10px
+    width: 33.3333%
 
+.right-side__media
+    .content-area__section
+        padding: 0
+
+    .row
+        margin: 0
+
+    [class*="col-"]
+        padding: 0

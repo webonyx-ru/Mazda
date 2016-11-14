@@ -62,6 +62,9 @@ doc.ready(function () {
                 items: 3,
                 responsive: {
                     0: {
+                        items: 1
+                    },
+                    768: {
                         items: 3
                     }
                 }
@@ -107,5 +110,16 @@ doc.ready(function () {
                 50
             );
         }
+    });
+
+    $(function () {
+        var news_grid = {};
+
+        news_grid.container = $('.main-page__news-grid, .main-page__rated-dealers');
+        news_grid.owl = news_grid.container.find('>.row');
+
+        news_grid.owl.css({margin:0}).addClass('owl-carousel').owlCarousel({
+            items: 1
+        });
     });
 });

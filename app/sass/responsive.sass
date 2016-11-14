@@ -67,7 +67,50 @@
     .right-side__fuel-prices
         letter-spacing: 0
 
+    .new-faces__item
+        width: 20%
+
 @media screen and (max-width: 767px)
+    .dealers-map__listing
+        position: static
+        width: auto
+        background: #fff
+
+    .dealers-map__units
+        height: 500px
+        position: static
+
+    .main-page__rated-dealers
+        .owl-item
+            & > [class*="col-"]
+                padding: 0
+    .content-block__tab-menu-listing
+        margin-right: 0
+    .main-page__catalog-preview
+        .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn)
+            width: 100%
+    .main-page__news-grid-date
+        font-size: 12px
+        margin-bottom: 10px
+
+    .main-page__news-grid-bottom-line
+        padding: 0 10px
+        bottom: 10px
+        [class*="icon-"]
+            font-size: 12px
+            margin-right: 5px
+
+    .main-page__news-grid-top-line
+        font-size: 14px
+        padding: 0 10px
+        top: 10px
+
+    .main-page__news-grid-icons-values
+        font-size: 12px
+
+    .block-title
+        font-size: 16px
+
     .adv-gird__content
         padding: 10px
 
@@ -205,4 +248,6 @@
             &.active
                 color: #000
 
-            
+
+    .mobile--mb10
+        margin-bottom: 10px

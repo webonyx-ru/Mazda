@@ -269,6 +269,11 @@ p
         padding-left: 10px
         padding-right: 10px
 
+    &.mobile-small-paddings
+        @media screen and (max-width: 767px)
+            padding-left: 10px
+            padding-right: 10px
+
 .filled-button
     @extend .empty-button
     text-align: center
@@ -541,6 +546,18 @@ p
     background: $light-grey
     right: -10px
 
+@media screen and (max-width: 992px) and (min-width: 768px)
+    .tab-display-block
+        display: block
+
+    .tab-display-inline-block
+        display: inline-block
+        vertical-align: middle
+
+    .tab-wa
+        width: auto
+
+
 @media screen and (max-width: 767px)
     .mobile-display-block
         display: block
@@ -552,13 +569,8 @@ p
     .mobile-wa
         width: auto
 
-@media screen and (max-width: 992px) and (min-width: 768px)
-    .tab-display-block
-        display: block
+    .mobile-no-mr
+        margin-right: 0
 
-    .tab-display-inline-block
-        display: inline-block
-        vertical-align: middle
-
-    .tab-wa
-        width: auto
+    .mobile-no-lts
+        letter-spacing: 0

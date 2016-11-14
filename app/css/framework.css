@@ -325,6 +325,12 @@ p:last-child {
   padding-left: 10px;
   padding-right: 10px;
 }
+@media screen and (max-width: 767px) {
+  .empty-button.mobile-small-paddings, .mobile-small-paddings.filled-button {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 
 .filled-button {
   text-align: center;
@@ -687,6 +693,20 @@ p:last-child {
   right: -10px;
 }
 
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .tab-display-block {
+    display: block;
+  }
+
+  .tab-display-inline-block {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .tab-wa {
+    width: auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .mobile-display-block {
     display: block;
@@ -700,18 +720,12 @@ p:last-child {
   .mobile-wa {
     width: auto;
   }
-}
-@media screen and (max-width: 992px) and (min-width: 768px) {
-  .tab-display-block {
-    display: block;
+
+  .mobile-no-mr {
+    margin-right: 0;
   }
 
-  .tab-display-inline-block {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .tab-wa {
-    width: auto;
+  .mobile-no-lts {
+    letter-spacing: 0;
   }
 }
