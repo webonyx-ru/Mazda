@@ -117,6 +117,10 @@ input:checked + .jq-radio__div:after {
   -o-transform: scale(1);
 }
 
+input[type="radio"], input[type="checkbox"] {
+  margin-top: 0;
+}
+
 .custom-hidden {
   display: none;
 }
@@ -140,6 +144,10 @@ p:last-child {
 
 [class*="--text-red"], .--text-red {
   color: #dd0000;
+}
+
+[class*="--text-lime"], .--text-lime {
+  color: #5fbd37;
 }
 
 [class*="--text-lightgrey"], .--text-lightgrey {
@@ -192,6 +200,10 @@ p:last-child {
 
 .fz12 {
   font-size: 12px;
+}
+
+.fz13 {
+  font-size: 13px;
 }
 
 .fz14, .semi-title {
@@ -269,6 +281,10 @@ p:last-child {
 .db {
   display: block;
   width: 100%;
+}
+
+button {
+  background: none;
 }
 
 .empty-button, .filled-button {
@@ -412,6 +428,18 @@ p:last-child {
 
 .mb40 {
   margin-bottom: 40px;
+}
+
+.mb70 {
+  margin-bottom: 70px;
+}
+
+.mb90 {
+  margin-bottom: 90px;
+}
+
+.w100 {
+  width: 100%;
 }
 
 .posr {

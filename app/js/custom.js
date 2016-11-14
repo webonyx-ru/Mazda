@@ -108,4 +108,15 @@ doc.ready(function () {
             );
         }
     });
+
+    $('.toggle-show-pass__checkbox').on('change', function() {
+        var $el = $(this);
+        if ($el.is(':checked')) {
+            $el.closest('.entry-field').find('.input-password').attr('type', 'text')
+        }
+        else {
+            $el.closest('.entry-field').find('.input-password').attr('type', 'password')
+        }
+    });
+
 });
