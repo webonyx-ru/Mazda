@@ -1,0 +1,49 @@
+.pt15 {
+  padding-top: 15px;
+}
+
+.pt40 {
+  padding-top: 40px;
+}
+
+.plr30 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.mb3 {
+  margin-bottom: 3px;
+}
+
+.mb52 {
+  margin-bottom: 52px;
+}
+
+.lh38 {
+  line-height: 38px;
+}
+
+.b-error-message {
+  width: 600px;
+  padding: 25px 17px 50px 17px;
+  margin: 0 auto;
+}
+
+.logo-square.mt0 {
+  margin-top: 0;
+}
+
+.popup {
+  width: 500px;
+  padding: 50px 60px 30px 60px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .b-error-message {
+    width: 290px;
+  }
+  .b-error-message > .filled-button {
+    width: 100%;
+  }
+}
