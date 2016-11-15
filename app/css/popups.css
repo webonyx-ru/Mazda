@@ -253,8 +253,14 @@
 .border-red {
   border-color: #dd0000;
 }
+.border-red:hover, .border-red:focus, .border-red:active {
+  border-color: #dd0000;
+}
 
 .border-green {
+  border-color: #5fbd37;
+}
+.border-green:hover, .border-green:focus, .border-green:active {
   border-color: #5fbd37;
 }
 

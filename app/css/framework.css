@@ -286,6 +286,9 @@ p:last-child {
 button {
   background: none;
 }
+button:hover, button:focus, button:active {
+  background: none;
+}
 
 .empty-button, .filled-button {
   padding: 0 15px;
