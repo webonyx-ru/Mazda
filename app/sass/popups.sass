@@ -50,6 +50,12 @@
   padding: 50px 60px 30px 60px
   position: relative
 
+.modal-footer
+  padding: 25px 60px 30px 60px
+  border-top: 1px solid #d5d5d5
+  background: #fff
+  text-align: left
+
 .modal-content
   background: none
   border: none
@@ -195,6 +201,28 @@
   z-index: 10
   opacity: 0
 
+.square-gray-link
+  display: inline-block
+  width: 30px
+  height: 30px
+  background: #999999
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  border-radius: 5px
+  margin-right: 20px
+  color: #fff
+  +trans()
+  &:hover, &:focus, &:active
+    background: #777777
+    color: #fff
+    &:visited
+      &:hover, &:focus, &:active
+        background: #777777
+        color: #fff
+  &:last-child
+    margin-right: 0
+
+
 .entry-field
   height: 40px
   padding: 0 10px
@@ -242,9 +270,6 @@
 
 
 
-.b-inline-inputs
-  font-size: 0
-
 .b-inline-inputs__b-left
   display: inline-block
   vertical-align: top
@@ -261,6 +286,20 @@
 .b-notification-message
   min-height: 30px
   padding: 5px 0
+
+.b-inline-btn__b-left
+  display: inline-block
+  vertical-align: top
+  width: 45%
+  padding-right: 10px
+  font-size: 14px
+
+.b-inline-btn__b-right
+  display: inline-block
+  vertical-align: top
+  width: 55%
+  padding-left: 10px
+  font-size: 14px
 
 .b-delivery
   display: flex

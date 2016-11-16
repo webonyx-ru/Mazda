@@ -27,301 +27,343 @@
 <section class="pt15 mb-15">
 
     <!-- Button trigger modal -->
-    <button class="empty-button hover-red big-button text-uppercase lts1" data-toggle="modal" data-target="#modal-registry">
-        Регистрация
-    </button>
-    <button class="empty-button hover-red big-button text-uppercase lts1" data-toggle="modal" data-target="#modal-registry-perfectly">
-        Регистрация-всё ок
-    </button>
-    <button class="empty-button hover-red big-button text-uppercase lts1" data-toggle="modal" data-target="#modal-registry-errors">
-        Регистрация-ошибки
-    </button>
-    <button class="empty-button hover-red big-button text-uppercase lts1" data-toggle="modal" data-target="#modal-pass-recovery">
-        Восстановление
-    </button>
-    <button class="empty-button hover-red big-button text-uppercase lts1" data-toggle="modal" data-target="#modal-pass-recovery-error">
-        Восстановление-ошибка
-    </button>
-    <button class="empty-button hover-red big-button text-uppercase lts1" data-toggle="modal" data-target="#modal-pass-recovery-back">
-        Восстановление-назад
-    </button>
+    <div class="mb30">
+        <button class="empty-button hover-red big-button text-uppercase lts1" data-toggle="modal" data-target="#modal-window">
+            Открыть попап
+        </button>
+    </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="modal-registry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
-                <div class="modal-body white-bg">
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                        <span class="line-gray-first"></span>
-                        <span class="line-gray-second"></span>
-                    </button>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="entry-field ff-os w100" title="login" placeholder="Придумайте логин">
-                            <div class="b-notification-message ff-os"></div>
-                            <input type="text" class="entry-field ff-os w100" title="email" placeholder="Введите email адрес">
-                            <div class="b-notification-message ff-os"></div>
-                            <div class="entry-field posr">
-                                <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
-                                <div class="toggle-show-pass">
-                                    <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                    <i class="icon-views fz20"></i>
+    <div class="modal fade" id="modal-window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="tab-content">
+            <div class="tab-pane active" id="modal-authorisation">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header block-title text-uppercase hidden-xs">Авторизация пользователя</div>
+                        <div class="modal-body white-bg">
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+                                <span class="line-gray-first"></span>
+                                <span class="line-gray-second"></span>
+                            </button>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="entry-field ff-os w100" title="login" placeholder="Придумайте логин">
+                                    <div class="b-notification-message ff-os"></div>
+                                    <input type="text" class="entry-field ff-os w100" title="login-or-email" placeholder="Логин или email">
+                                    <div class="b-notification-message ff-os"></div>
+                                    <input type="text" class="entry-field ff-os w100" title="password" placeholder="Пароль">
+                                    <div class="b-notification-message text-right">
+                                        <a class="--text-grey hover-tdu ff-os fz14" href="#modal-pass-recovery" data-toggle="tab">Забыли пароль?</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="b-notification-message ff-os"></div>
-                            <div class="entry-field posr">
-                                <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
-                                <div class="toggle-show-pass">
-                                    <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                    <i class="icon-views fz20"></i>
+                                <div class="fz0 mb40">
+                                    <div class="b-inline-btn__b-left">
+                                        <button type="submit" class="filled-button big-button text-uppercase hover-red full-width lts1">Войти</button>
+                                    </div>
+                                    <div class="b-inline-btn__b-right">
+                                        <a class="empty-button black-border text-uppercase lts2 big-button hover-red full-width text-center lts1" href="#modal-registry" data-toggle="tab">Регистрация</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="b-notification-message ff-os"></div>
-                            <div class="b-inline-inputs">
-                                <div class="b-inline-inputs__b-left">
-                                    <div class="entry-field w100" style="background: url('images/captcha.jpg'); background-size: contain;"></div>
-                                </div>
-                                <div class="b-inline-inputs__b-right">
-                                    <input type="text" class="entry-field ff-os w100" title="code" placeholder="Введите код с картинки">
-                                </div>
-                            </div>
-                            <div class="b-notification-message ff-os text-right mb20"></div>
+                            </form>
                         </div>
-                        <div class="b-delivery mb25">
-                            <div class="ff-os --text-grey">
-                                Получать интересную рассылку на email?
-                            </div>
-                            <div class="toggle-runner text-uppercase ff-os fz14">
-                                <input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
-                                <div class="toggle-runner__circle"></div>
-                                <div class="toggle-runner__bg"></div>
-                                <span class="toggle-runner__select-first">Нет</span>
-                                <span class="toggle-runner__select-second">Да</span>
-                            </div>
-                        </div>
-                        <div class="mb30">
-                            <input type="checkbox" id="checkbox-agreement" class="clean-element dib">
-                            <label for="checkbox-agreement" class="--text-grey fz13">Я принимаю условия</label>
-                            <span class="fz13">пользовательского соглашения</span>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="filled-button big-button btn-inactive text-uppercase lts1">Зарегистрироваться</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-registry-perfectly" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
-                <div class="modal-body white-bg">
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                        <span class="line-gray-first"></span>
-                        <span class="line-gray-second"></span>
-                    </button>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="entry-field border-green ff-os w100" title="login" placeholder="Придумайте логин">
-                            <div class="b-notification-message ff-os"></div>
-                            <input type="text" class="entry-field border-green ff-os w100" title="email" placeholder="Введите email адрес">
-                            <div class="b-notification-message ff-os"></div>
-                            <div class="entry-field border-green posr">
-                                <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
-                                <div class="toggle-show-pass">
-                                    <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                    <i class="icon-views fz20"></i>
-                                </div>
-                            </div>
-                            <div class="b-notification-message ff-os --text-lime">пароль надежный</div>
-                            <div class="entry-field border-green posr">
-                                <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
-                                <div class="toggle-show-pass">
-                                    <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                    <i class="icon-views fz20"></i>
-                                </div>
-                            </div>
-                            <div class="b-notification-message ff-os --text-lime">пароль совпадает</div>
-                            <div class="b-inline-inputs">
-                                <div class="b-inline-inputs__b-left">
-                                    <div class="entry-field w100" style="background: url('images/captcha.jpg'); background-size: contain;"></div>
-                                </div>
-                                <div class="b-inline-inputs__b-right">
-                                    <input type="text" class="entry-field border-green ff-os w100" title="code" placeholder="Введите код с картинки">
-                                </div>
-                            </div>
-                            <div class="b-notification-message ff-os text-right mb20"></div>
-                        </div>
-                        <div class="b-delivery mb25">
-                            <div class="ff-os --text-grey">
-                                Получать интересную рассылку на email?
-                            </div>
-                            <div class="toggle-runner text-uppercase ff-os fz14">
-                                <input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
-                                <div class="toggle-runner__circle"></div>
-                                <div class="toggle-runner__bg"></div>
-                                <span class="toggle-runner__select-first">Нет</span>
-                                <span class="toggle-runner__select-second">Да</span>
+                        <div class="modal-footer">
+                            <p class="ff-os fz14 mb15">Вход через</p>
+                            <div class="text-center">
+                                <a class="square-gray-link text-center fz18 white-color" href="#">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                                <a class="square-gray-link text-center fz18 white-color" href="#">
+                                    <i class="icon-google_plus"></i>
+                                </a>
+                                <a class="square-gray-link text-center fz18 white-color" href="#">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                                <a class="square-gray-link text-center fz18 white-color" href="#">
+                                    <i class="icon-pinterest"></i>
+                                </a>
+                                <a class="square-gray-link text-center fz18 white-color" href="#">
+                                    <i class="icon-instagram"></i>
+                                </a>
+                                <a class="square-gray-link text-center fz18 white-color" href="#">
+                                    <i class="icon-twitter"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="mb30">
-                            <input type="checkbox" id="checkbox-agreement-2" class="clean-element dib">
-                            <label for="checkbox-agreement-2" class="--text-grey fz13">Я принимаю условия</label>
-                            <span class="fz13">пользовательского соглашения</span>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="filled-button big-button hover-red text-uppercase lts1">Зарегистрироваться</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-registry-errors" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
-                <div class="modal-body white-bg">
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                        <span class="line-gray-first"></span>
-                        <span class="line-gray-second"></span>
-                    </button>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="entry-field border-red ff-os w100" title="login" placeholder="Придумайте логин">
-                            <div class="b-notification-message ff-os --text-red">такой логин уже зарегистрирован</div>
-                            <input type="text" class="entry-field border-red ff-os w100" title="email" placeholder="Введите email адрес">
-                            <div class="b-notification-message ff-os --text-red">такой email уже зарегистрирован</div>
-                            <div class="entry-field border-red posr">
-                                <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
-                                <div class="toggle-show-pass">
-                                    <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                    <i class="icon-views fz20"></i>
-                                </div>
-                            </div>
-                            <div class="b-notification-message ff-os --text-red">недопустимый пароль</div>
-                            <div class="entry-field border-red posr">
-                                <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
-                                <div class="toggle-show-pass">
-                                    <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                    <i class="icon-views fz20"></i>
-                                </div>
-                            </div>
-                            <div class="b-notification-message ff-os --text-red">пароль не совпадает</div>
-                            <div class="b-inline-inputs">
-                                <div class="b-inline-inputs__b-left">
-                                    <div class="entry-field w100" style="background: url('images/captcha.jpg'); background-size: contain;"></div>
-                                </div>
-                                <div class="b-inline-inputs__b-right">
-                                    <input type="text" class="entry-field border-red ff-os w100" title="code" placeholder="Введите код с картинки">
-                                </div>
-                            </div>
-                            <div class="b-notification-message ff-os text-right --text-red mb20">неверный код безопасности</div>
-                        </div>
-                        <div class="b-delivery mb25">
-                            <div class="ff-os --text-grey">
-                                Получать интересную рассылку на email?
-                            </div>
-                            <div class="toggle-runner text-uppercase ff-os fz14">
-                                <input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
-                                <div class="toggle-runner__circle"></div>
-                                <div class="toggle-runner__bg"></div>
-                                <span class="toggle-runner__select-first">Нет</span>
-                                <span class="toggle-runner__select-second">Да</span>
-                            </div>
-                        </div>
-                        <div class="mb30">
-                            <input type="checkbox" id="checkbox-agreement-3" class="clean-element dib">
-                            <label for="checkbox-agreement-3" class="--text-grey fz13">Я принимаю условия</label>
-                            <span class="fz13">пользовательского соглашения</span>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="filled-button big-button hover-red text-uppercase lts1">Зарегистрироваться</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-pass-recovery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
-                <div class="modal-body white-bg text-center">
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                        <span class="line-gray-first"></span>
-                        <span class="line-gray-second"></span>
-                    </button>
-                    <form>
-                        <div class="form-group mb25">
-                            <input type="text" class="entry-field ff-os w100 mb30" title="login" placeholder="Логин или email">
-                            <div class="b-inline-inputs">
-                                <div class="b-inline-inputs__b-left">
-                                    <div class="entry-field captcha w100" style="background: url('images/captcha.jpg'); background-size: contain;"></div>
-                                </div>
-                                <div class="b-inline-inputs__b-right">
-                                    <input type="text" class="entry-field ff-os w100" title="code" placeholder="Введите код с картинки">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="b-notification-message ff-os --text-red mb15"></div>
-                        <button type="submit" class="filled-button big-button btn-inactive text-uppercase lts1">Восстановить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-pass-recovery-error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
-                <div class="modal-body white-bg text-center">
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                        <span class="line-gray-first"></span>
-                        <span class="line-gray-second"></span>
-                    </button>
-                    <form>
-                        <div class="form-group mb25">
-                            <input type="text" class="entry-field border-red ff-os w100 mb30" title="login" placeholder="Логин или email">
-                            <div class="b-inline-inputs">
-                                <div class="b-inline-inputs__b-left">
-                                    <div class="entry-field captcha w100" style="background: url('images/captcha.jpg'); background-size: contain;"></div>
-                                </div>
-                                <div class="b-inline-inputs__b-right">
-                                    <input type="text" class="entry-field border-red ff-os w100" title="code" placeholder="Введите код с картинки">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="b-notification-message ff-os --text-red mb15">
-                            Неверный код безопасности
-                        </div>
-                        <button type="submit" class="filled-button big-button hover-red text-uppercase lts1">Восстановить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-pass-recovery-back" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
-                <div class="modal-body white-bg text-center">
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                        <span class="line-gray-first"></span>
-                        <span class="line-gray-second"></span>
-                    </button>
-                    <div class="pt30 mb90">
-                        <p class="mb0">Ссылка для восстановления пароля отправлена на указаный адрес электронной почты:</p>
-                        <a class="--text-grey hover-tdu" href="mailto:street_racer7@yandex.ru">street_racer7@yandex.ru</a>
                     </div>
-                    <a href="#" class="empty-button big-button black-border hover-red text-uppercase lts1">Назад к авторизации</a>
+                </div>
+            </div>
+            <div class="tab-pane" id="modal-pass-recovery">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
+                        <div class="modal-body white-bg text-center">
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+                                <span class="line-gray-first"></span>
+                                <span class="line-gray-second"></span>
+                            </button>
+                            <form>
+                                <div class="form-group mb25">
+                                    <input type="text" class="entry-field ff-os w100 mb30" title="login" placeholder="Логин или email">
+                                    <div class="fz0">
+                                        <div class="b-inline-inputs__b-left">
+                                            <div class="entry-field captcha w100" style="background: url('images/captcha.jpg'); background-size: contain;"></div>
+                                        </div>
+                                        <div class="b-inline-inputs__b-right">
+                                            <input type="text" class="entry-field ff-os w100" title="code" placeholder="Введите код с картинки">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-notification-message ff-os --text-red mb15"></div>
+                                <button type="submit" class="filled-button big-button btn-inactive text-uppercase lts1">Восстановить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="modal-pass-recovery-error">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
+                        <div class="modal-body white-bg text-center">
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+                                <span class="line-gray-first"></span>
+                                <span class="line-gray-second"></span>
+                            </button>
+                            <form>
+                                <div class="form-group mb25">
+                                    <input type="text" class="entry-field border-red ff-os w100 mb30" title="login" placeholder="Логин или email">
+                                    <div class="fz0">
+                                        <div class="b-inline-inputs__b-left">
+                                            <div class="entry-field captcha w100" style="background: url('images/captcha.jpg'); background-size: contain;"></div>
+                                        </div>
+                                        <div class="b-inline-inputs__b-right">
+                                            <input type="text" class="entry-field border-red ff-os w100" title="code" placeholder="Введите код с картинки">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-notification-message ff-os --text-red mb15">
+                                    Неверный код безопасности
+                                </div>
+                                <button type="submit" class="filled-button big-button hover-red text-uppercase lts1">Восстановить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="modal-pass-recovery-back">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
+                        <div class="modal-body white-bg text-center">
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+                                <span class="line-gray-first"></span>
+                                <span class="line-gray-second"></span>
+                            </button>
+                            <div class="pt30 mb90">
+                                <p class="mb0">Ссылка для восстановления пароля отправлена на указаный адрес электронной почты:</p>
+                                <a class="--text-grey hover-tdu" href="mailto:street_racer7@yandex.ru">street_racer7@yandex.ru</a>
+                            </div>
+                            <a href="#" class="empty-button big-button black-border hover-red text-uppercase lts1">Назад к авторизации</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="modal-registry">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
+                        <div class="modal-body white-bg">
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+                                <span class="line-gray-first"></span>
+                                <span class="line-gray-second"></span>
+                            </button>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="entry-field ff-os w100" title="login" placeholder="Придумайте логин">
+                                    <div class="b-notification-message ff-os"></div>
+                                    <input type="text" class="entry-field ff-os w100" title="email" placeholder="Введите email адрес">
+                                    <div class="b-notification-message ff-os"></div>
+                                    <div class="entry-field posr">
+                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
+                                        <div class="toggle-show-pass">
+                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+                                            <i class="icon-views fz20"></i>
+                                        </div>
+                                    </div>
+                                    <div class="b-notification-message ff-os"></div>
+                                    <div class="entry-field posr">
+                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
+                                        <div class="toggle-show-pass">
+                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+                                            <i class="icon-views fz20"></i>
+                                        </div>
+                                    </div>
+                                    <div class="b-notification-message ff-os"></div>
+                                    <div class="fz0">
+                                        <div class="b-inline-inputs__b-left">
+                                            <div class="entry-field w100" style="background: url('images/captcha.jpg'); background-size: contain;"></div>
+                                        </div>
+                                        <div class="b-inline-inputs__b-right">
+                                            <input type="text" class="entry-field ff-os w100" title="code" placeholder="Введите код с картинки">
+                                        </div>
+                                    </div>
+                                    <div class="b-notification-message ff-os text-right mb20"></div>
+                                </div>
+                                <div class="b-delivery mb25">
+                                    <div class="ff-os --text-grey">
+                                        Получать интересную рассылку на email?
+                                    </div>
+                                    <div class="toggle-runner text-uppercase ff-os fz14">
+                                        <input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
+                                        <div class="toggle-runner__circle"></div>
+                                        <div class="toggle-runner__bg"></div>
+                                        <span class="toggle-runner__select-first">Нет</span>
+                                        <span class="toggle-runner__select-second">Да</span>
+                                    </div>
+                                </div>
+                                <div class="mb30">
+                                    <input type="checkbox" id="checkbox-agreement" class="clean-element dib">
+                                    <label for="checkbox-agreement" class="--text-grey fz13">Я принимаю условия</label>
+                                    <span class="fz13">пользовательского соглашения</span>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="filled-button big-button btn-inactive text-uppercase lts1">Зарегистрироваться</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="modal-registry-perfectly">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
+                        <div class="modal-body white-bg">
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+                                <span class="line-gray-first"></span>
+                                <span class="line-gray-second"></span>
+                            </button>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="entry-field border-green ff-os w100" title="login" placeholder="Придумайте логин">
+                                    <div class="b-notification-message ff-os"></div>
+                                    <input type="text" class="entry-field border-green ff-os w100" title="email" placeholder="Введите email адрес">
+                                    <div class="b-notification-message ff-os"></div>
+                                    <div class="entry-field border-green posr">
+                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
+                                        <div class="toggle-show-pass">
+                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+                                            <i class="icon-views fz20"></i>
+                                        </div>
+                                    </div>
+                                    <div class="b-notification-message ff-os --text-lime">пароль надежный</div>
+                                    <div class="entry-field border-green posr">
+                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
+                                        <div class="toggle-show-pass">
+                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+                                            <i class="icon-views fz20"></i>
+                                        </div>
+                                    </div>
+                                    <div class="b-notification-message ff-os --text-lime">пароль совпадает</div>
+                                    <div class="fz0">
+                                        <div class="b-inline-inputs__b-left">
+                                            <div class="entry-field w100" style="background: url('images/captcha.jpg'); background-size: contain;"></div>
+                                        </div>
+                                        <div class="b-inline-inputs__b-right">
+                                            <input type="text" class="entry-field border-green ff-os w100" title="code" placeholder="Введите код с картинки">
+                                        </div>
+                                    </div>
+                                    <div class="b-notification-message ff-os text-right mb20"></div>
+                                </div>
+                                <div class="b-delivery mb25">
+                                    <div class="ff-os --text-grey">
+                                        Получать интересную рассылку на email?
+                                    </div>
+                                    <div class="toggle-runner text-uppercase ff-os fz14">
+                                        <input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
+                                        <div class="toggle-runner__circle"></div>
+                                        <div class="toggle-runner__bg"></div>
+                                        <span class="toggle-runner__select-first">Нет</span>
+                                        <span class="toggle-runner__select-second">Да</span>
+                                    </div>
+                                </div>
+                                <div class="mb30">
+                                    <input type="checkbox" id="checkbox-agreement-2" class="clean-element dib">
+                                    <label for="checkbox-agreement-2" class="--text-grey fz13">Я принимаю условия</label>
+                                    <span class="fz13">пользовательского соглашения</span>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="filled-button big-button hover-red text-uppercase lts1">Зарегистрироваться</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="modal-registry-errors">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
+                        <div class="modal-body white-bg">
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+                                <span class="line-gray-first"></span>
+                                <span class="line-gray-second"></span>
+                            </button>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="entry-field border-red ff-os w100" title="login" placeholder="Придумайте логин">
+                                    <div class="b-notification-message ff-os --text-red">такой логин уже зарегистрирован</div>
+                                    <input type="text" class="entry-field border-red ff-os w100" title="email" placeholder="Введите email адрес">
+                                    <div class="b-notification-message ff-os --text-red">такой email уже зарегистрирован</div>
+                                    <div class="entry-field border-red posr">
+                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
+                                        <div class="toggle-show-pass">
+                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+                                            <i class="icon-views fz20"></i>
+                                        </div>
+                                    </div>
+                                    <div class="b-notification-message ff-os --text-red">недопустимый пароль</div>
+                                    <div class="entry-field border-red posr">
+                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
+                                        <div class="toggle-show-pass">
+                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+                                            <i class="icon-views fz20"></i>
+                                        </div>
+                                    </div>
+                                    <div class="b-notification-message ff-os --text-red">пароль не совпадает</div>
+                                    <div class="fz0">
+                                        <div class="b-inline-inputs__b-left">
+                                            <div class="entry-field w100" style="background: url('images/captcha.jpg'); background-size: contain;"></div>
+                                        </div>
+                                        <div class="b-inline-inputs__b-right">
+                                            <input type="text" class="entry-field border-red ff-os w100" title="code" placeholder="Введите код с картинки">
+                                        </div>
+                                    </div>
+                                    <div class="b-notification-message ff-os text-right --text-red mb20">неверный код безопасности</div>
+                                </div>
+                                <div class="b-delivery mb25">
+                                    <div class="ff-os --text-grey">
+                                        Получать интересную рассылку на email?
+                                    </div>
+                                    <div class="toggle-runner text-uppercase ff-os fz14">
+                                        <input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
+                                        <div class="toggle-runner__circle"></div>
+                                        <div class="toggle-runner__bg"></div>
+                                        <span class="toggle-runner__select-first">Нет</span>
+                                        <span class="toggle-runner__select-second">Да</span>
+                                    </div>
+                                </div>
+                                <div class="mb30">
+                                    <input type="checkbox" id="checkbox-agreement-3" class="clean-element dib">
+                                    <label for="checkbox-agreement-3" class="--text-grey fz13">Я принимаю условия</label>
+                                    <span class="fz13">пользовательского соглашения</span>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="filled-button big-button hover-red text-uppercase lts1">Зарегистрироваться</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
