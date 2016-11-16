@@ -383,6 +383,16 @@ body, html {
   padding-top: 5px;
 }
 
+.white-pagination .b-pagination-item {
+  background: #fff;
+}
+.white-pagination .b-pagination-item .b-pagination-link {
+  color: #999999;
+}
+.white-pagination .b-pagination-item.inactive .b-pagination-link {
+  color: #c5c5c5;
+}
+
 .b-pagination-item {
   width: 35px;
   margin-top: 1px;
@@ -950,8 +960,8 @@ a.content-block__tab-menu-link.active-black:hover {
   text-align: center;
   font-size: 18px;
 }
-.dealers-catalog__item-icon:not(.no-margin) {
-  margin-left: 15px;
+.dealers-catalog__item-icon:not(.no-margin), .dealers-catalog__item-icon:not(:last-child) {
+  margin-right: 15px;
 }
 
 .dealers-catalog__item-border-section {
