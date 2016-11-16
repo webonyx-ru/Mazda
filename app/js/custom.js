@@ -89,6 +89,22 @@ doc.ready(function () {
 
     $('[data-jsp]').jScrollPane();
 
+    $(window).resize(function () {
+        var throttleTimeout;
+        $('[data-jsp]').each(function () {
+            var api = $(this).data('jsp');
+            if (!throttleTimeout) {
+                throttleTimeout = setTimeout(
+                    function () {
+                        api.reinitialise();
+                        throttleTimeout = null;
+                    },
+                    100
+                );
+            }
+        })
+    });
+
     $('.dealers-map__current-dealer-name').bind("DOMSubtreeModified", function () {
         var header = $('.dealers-map__listing-header'),
             listing = $('.dealers-map__listing'),
@@ -96,8 +112,8 @@ doc.ready(function () {
             throttleTimeout,
             api = block.data('jsp'),
             top = -(listing.offset().top -
-                (header.offset().top
-                + header.outerHeight()));
+            (header.offset().top
+            + header.outerHeight()));
 
         block.css({top: top});
 
@@ -118,8 +134,75 @@ doc.ready(function () {
         news_grid.container = $('.main-page__news-grid, .main-page__rated-dealers');
         news_grid.owl = news_grid.container.find('>.row');
 
-        news_grid.owl.css({margin:0}).addClass('owl-carousel').owlCarousel({
+        news_grid.owl.css({margin: 0}).addClass('owl-carousel').owlCarousel({
             items: 1
         });
     });
 });
+
+$(function () {
+    var char = {};
+    var ww = $(window).width();
+
+    char.models_wrapper = '.auto-model__characters-tab__pags-wrapper';
+    char.models_link = '.auto-model__modification-element-link';
+    char.back_link = '[data-modification-go-back]';
+    char.content_wrapper = '.auto-model__characters-tab__wrapper';
+
+
+    // открываем полные характеристики
+    char.open = function () {
+        // console.log('open');
+
+        $(char.models_wrapper).fadeOut(300, function () {
+            // тут можем сделать ajax на доставание информации о моделях
+            $(char.content_wrapper).fadeIn(300);
+        });
+    };
+
+    // закрываем полные характеристики
+    char.close = function () {
+        console.log('close');
+        $(char.content_wrapper).fadeOut(300, function () {
+            $(char.models_wrapper).fadeIn(300);
+        });
+    };
+
+    // отчищаем полные характеристики
+    char.clear = function () {
+        $(char.content_wrapper).removeAttr('style');
+        $(char.models_wrapper).removeAttr('style');
+    };
+
+    doc.on('click', char.back_link, function (e) {
+        if (ww >= 768)
+            return;
+        e.preventDefault();
+
+        char.close();
+    });
+
+    doc.on('click', char.models_link, function (e) {
+        if (ww >= 768)
+            return;
+        e.preventDefault();
+
+        char.open();
+    });
+
+    $(window).bind('resize', function () {
+        ww = viewport().width;
+        if(ww >= 768) {
+            char.clear();
+        }
+    });
+});
+
+function viewport() {
+    var e = window, a = 'inner';
+    if (!('innerWidth' in window )) {
+        a = 'client';
+        e = document.documentElement || document.body;
+    }
+    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+}

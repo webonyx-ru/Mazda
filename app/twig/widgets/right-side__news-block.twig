@@ -1,10 +1,10 @@
 <div class="block-title text-uppercase">{% if block_title %}{{ block_title }}{% else %}Новости компаний{% endif %}</div>
 <div class="right-side__news content-area__section white-bg">
-	<ul class="right-side__news-listing clean-element">
+	<div class="right-side__news-listing row">
 		{% for i in 1..3 %}
 			{% include "../elements/right-news__item.twig" %}
 		{% endfor %}
-	</ul>
+	</div>
 	<div class="text-right right-side__news-show-all">
 		<a href="#" class="text-uppercase ff-sfb --text-grey hover-black__link-red-icon">все новости
 			<span class="icon-double_arrow fz10 dib icon-top-minus-2"></span>

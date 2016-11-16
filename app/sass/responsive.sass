@@ -58,7 +58,7 @@
     .new-faces__buttons
         justify-content: end
 
-        &>*:not(:last-child)
+        & > *:not(:last-child)
             margin-right: 10px
 
     .new-faces__units
@@ -70,7 +70,14 @@
     .new-faces__item
         width: 20%
 
+    .footer__error-reporting
+        margin-top: 20px
+        text-align: left
+
 @media screen and (max-width: 767px)
+    .footer__error-reporting
+        text-align: center
+        padding: 25px 0
     .dealers-map__listing
         position: static
         width: auto
@@ -110,12 +117,11 @@
 
     .block-title
         font-size: 16px
+        line-height: normal
+        margin-bottom: 5px
 
     .adv-gird__content
         padding: 10px
-
-    .block-title
-        font-size: 16px
 
     .breadcrumbs
         font-size: 12px
@@ -248,6 +254,51 @@
             &.active
                 color: #000
 
+    .catalog-item__comments-item
+        border: none
+        border-bottom: 1px solid #c5c5c5
+        padding-left: 0
+        padding-right: 0
+        padding-top: 0
 
-    .mobile--mb10
-        margin-bottom: 10px
+        &:last-child
+            border-bottom: none
+
+    .catalog-item__reviews-image-wrapper
+        text-align: center
+        margin-bottom: 15px
+
+    .catalog-item__reviews-title
+        text-align: center
+
+    .catalog-item__reviews-more
+        text-align: right
+
+    .auto-model__sliders-control-jsp
+        position: static
+        height: 500px
+
+    .auto-model__characters-tab__wrapper
+        display: none
+
+    .auto-model__modification-element-link
+        position: relative
+        background: #fff
+
+        &:after
+            position: absolute
+            content: ''
+            width: 8px
+            height: 8px
+            margin-top: -3px
+            +transform(rotate(45deg))
+            border-top: 2px solid #c5c5c5
+            border-right: 2px solid #c5c5c5
+            display: block
+            right: 10px
+            top: 50%
+
+    .auto-model__modification-element
+        &.active
+            .auto-model__modification-element-link
+                background: #fff

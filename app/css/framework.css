@@ -728,4 +728,16 @@ p:last-child {
   .mobile-no-lts {
     letter-spacing: 0;
   }
+
+  .mobile-fz-12 {
+    font-size: 12px;
+  }
+
+  .mobile-fz-14 {
+    font-size: 14px;
+  }
+
+  .mobile--mb10 {
+    margin-bottom: 10px;
+  }
 }

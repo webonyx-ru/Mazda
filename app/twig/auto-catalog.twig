@@ -3,19 +3,13 @@
 {% block content %}
 	{% include "widgets/breadcrumbs.twig" %}
 
-	<div class="content-area clearfix">
+	<div class="content-area left-direction clearfix">
 		<div class="container">
 			<div class="row">
-				<div class="content-area__right-side col-md-3 col-xs-12">
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__discussing-block.twig' %}
-					</div>
-				</div>
-				<div class="visible-sm visible-xs clearfix"></div>
 				<div class="content-area__left-side col-xs-12 col-md-9">
-					<div class="display-flex space-between mb2">
+					<div class="display-flex space-between mb2 mobile-display-block">
 						<div class="block-title mb0 text-uppercase vab dib flex-middle">Объявления</div>
-						<div class="content-area__left-side__right-area text-uppercase ff-sfb dib flex-middle">
+						<div class="content-area__left-side__right-area text-uppercase ff-sfb dib mobile-display-block text-right">
 							<ul class="clean-element content-block__tab-menu-listing fz0 lts1">
 								<li class="content-block__tab-menu-item dib active">
 									<a class="content-block__tab-menu-link fz14 --text-grey" data-toggle="tab" href="#catalog-popular">Популярные</a>
@@ -39,34 +33,18 @@
 							{% include 'widgets/pagination.twig' %}
 						</div>
 						<div class="tab-pane active in fade" id="catalog-popular">
-							<div class="mb15">
-								<div class="auto-catalog__listing row">
-									{% set Counter = 1 %}
-									{% set CounterSM = 1 %}
-									{% for i in 1..12 %}
-										{% include "elements/catalog-auto-item.twig" %}
-
-										{% if CounterSM == 2 %}
-											<div class="clearfix visible-xs"></div>
-										{% endif %}
-
-										{% if Counter == 3 %}
-											<div class="clearfix visible-sm visible-lg"></div>
-										{% endif %}
-										{% if CounterSM == 2 %}
-											{% set CounterSM = 1 %}
-										{% else %}
-											{% set CounterSM = CounterSM + 1 %}
-										{% endif %}
-										{% if Counter == 3 %}
-											{% set Counter = 1 %}
-										{% else %}
-											{% set Counter = Counter + 1 %}
-										{% endif %}
-									{% endfor %}
-								</div>
+							<div class="auto-catalog__listing display-flex flex-wrap row">
+								{% for i in 1..12 %}
+									{% include "elements/catalog-auto-item.twig" %}
+								{% endfor %}
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="visible-sm visible-xs clearfix mb30"></div>
+				<div class="content-area__right-side col-md-3 col-xs-12">
+					<div class="content-area__right-side-item hidden-xs">
+						{% include 'widgets/right-side__discussing-block.twig' %}
 					</div>
 				</div>
 			</div>

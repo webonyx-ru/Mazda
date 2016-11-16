@@ -1,12 +1,14 @@
 {% extends "layouts/app.twig" %}
 
+{# TODO сделать менюшку #}
+
 {% block content %}
 	{% include "widgets/breadcrumbs.twig" %}
 
 	<div class="content-area clearfix">
 		<div class="container">
 			<div class="row">
-				<div class="content-area__right-side col-md-3 col-xs-12">
+				<div class="content-area__right-side col-md-3 col-xs-12 hidden-sm hidden-xs">
 					<div class="content-area__right-side-item">
 						{% include 'widgets/right-side__discussing-block.twig' %}
 					</div>
@@ -21,11 +23,11 @@
 				<div class="content-area__left-side col-xs-12 col-md-9">
 					<div class="content-area__item mb35">
 						<div class="block-title text-uppercase">Продажа Mazda 3 в Москве</div>
-						<div class="content-area__container display-flex">
-							<div class="col-md-8">
+						<div class="content-area__container display-flex flex-wrap">
+							<div class="col-sm-8 col-xs-12 owl-carousel__parent-element">
 								{% include 'widgets/auto-slider.twig' %}
 							</div>
-							<div class="col-md-4 white-bg catalog-item__right-image-side">
+							<div class="col-sm-4 col-xs-12 white-bg catalog-item__right-image-side">
 								<div class="row mb20">
 									<div class="col-xs-2">
 										<div class="catalog-item__rating dib --text-lightblack ff-sfb">
@@ -106,19 +108,19 @@
 							<div class="content-area__section text-center">
 								<ul class="catalog-item__tabs-header dib ff-sfb clean-element mb35">
 									<li class="catalog-item__tabs-item dib active">
-										<a href="#catalog-tab1" class="catalog-item__tabs-link dib --text-grey"
+										<a href="#catalog-tab1" class="catalog-item__tabs-link dib --text-grey --hover-text-black"
 											 data-toggle="tab">Описание</a>
 									</li>
 									<li class="catalog-item__tabs-item dib">
-										<a href="#catalog-tab2" class="catalog-item__tabs-link dib --text-grey"
+										<a href="#catalog-tab2" class="catalog-item__tabs-link dib --text-grey --hover-text-black"
 											 data-toggle="tab">Характеристики</a>
 									</li>
 									<li class="catalog-item__tabs-item dib">
-										<a href="#catalog-tab3" class="catalog-item__tabs-link dib --text-grey"
+										<a href="#catalog-tab3" class="catalog-item__tabs-link dib --text-grey --hover-text-black"
 											 data-toggle="tab">Комментарии</a>
 									</li>
 									<li class="catalog-item__tabs-item dib">
-										<a href="#catalog-tab4" class="catalog-item__tabs-link dib --text-grey"
+										<a href="#catalog-tab4" class="catalog-item__tabs-link dib --text-grey --hover-text-black"
 											 data-toggle="tab">Обзоры</a>
 									</li>
 								</ul>
@@ -197,12 +199,10 @@
 										<div id="catalog-tab2" class="tab-pane fade">
 											{% include 'widgets/auto-model__characters-tab.twig' %}
 										</div>
-
 										<div id="catalog-tab3" class="tab-pane fade">
 											{% include 'widgets/auto-model__comments-tab.twig' %}
 											{% include 'widgets/pagination.twig' %}
 										</div>
-
 										<div id="catalog-tab4" class="tab-pane fade">
 											{% include 'widgets/auto-model__reviews-tab.twig' %}
 										</div>
@@ -211,7 +211,9 @@
 							</div>
 						</div>
 					</div>
-					{% include 'widgets/similar-cars.twig' %}
+					<div class="hidden-xs">
+						{% include 'widgets/similar-cars.twig' %}
+					</div>
 				</div>
 			</div>
 		</div>

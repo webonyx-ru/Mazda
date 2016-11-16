@@ -776,6 +776,9 @@ a.content-block__tab-menu-link
 .auto-model__modification-item
     padding: 10px 0
 
+    &:last-child
+        padding-bottom: 0
+
     &:not(:last-child)
         border-bottom: 1px solid #c5c5c5
 
@@ -1189,3 +1192,27 @@ input
 
     [class*="col-"]
         padding: 0
+
+.auto-model__sliders-control-jsp
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    overflow: auto
+
+    .jspVerticalBar
+        right: 3px
+        width: 5px
+
+    .jspDrag
+        border-radius: 3px
+
+    .jspPane
+        width: 100% !important
+
+.catalog-item__backto-modifications
+    margin-left: -20px
+    margin-right: -20px
+    padding: 0 20px 20px
+    margin-bottom: 20px

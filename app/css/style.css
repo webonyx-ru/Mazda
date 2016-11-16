@@ -890,6 +890,9 @@ a.content-block__tab-menu-link.active-black:hover {
 .auto-model__modification-item {
   padding: 10px 0;
 }
+.auto-model__modification-item:last-child {
+  padding-bottom: 0;
+}
 .auto-model__modification-item:not(:last-child) {
   border-bottom: 1px solid #c5c5c5;
 }
@@ -1366,4 +1369,30 @@ input:checked + .holding-vacancy__check-quality {
 }
 .right-side__media [class*="col-"] {
   padding: 0;
+}
+
+.auto-model__sliders-control-jsp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+.auto-model__sliders-control-jsp .jspVerticalBar {
+  right: 3px;
+  width: 5px;
+}
+.auto-model__sliders-control-jsp .jspDrag {
+  border-radius: 3px;
+}
+.auto-model__sliders-control-jsp .jspPane {
+  width: 100% !important;
+}
+
+.catalog-item__backto-modifications {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0 20px 20px;
+  margin-bottom: 20px;
 }
