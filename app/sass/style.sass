@@ -181,10 +181,6 @@ body, html
 .breadcrumbs
     padding: 20px 0 20px
 
-.breadcrumbs__listing
-    margin: 0
-    padding: 0
-
 .breadcrumbs__item
     color: #fff
 
@@ -534,10 +530,10 @@ body, html
         right: 35px
 
 .content-block__tab-menu-item
-    margin-left: 30px
     position: relative
 
     &:not(:last-child)
+        margin-right: 30px
         &:after
             display: block
             content: ''
@@ -902,6 +898,9 @@ input
 .news-content
     p:not(:last-child)
         margin-bottom: 25px
+
+    img
+        max-width: 100%
 
 .comments-header
     padding-bottom: 15px

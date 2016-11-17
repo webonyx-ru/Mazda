@@ -1,42 +1,28 @@
 {% extends "layouts/app.twig" %}
 
-{% block header_scripts %}
-    <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
-    <script src="js/YaMap.js"></script>
-{% endblock %}
-
 {% block content %}
     {% include "widgets/breadcrumbs.twig" with {'page': 'dealers'} %}
 
-    <div class="content-area clearfix">
+    <div class="content-area left-direction clearfix">
         <div class="container">
             <div class="row">
-                <div class="content-area__right-side col-md-3 col-xs-12">
-                    <div class="content-area__right-side-item hidden-sm hidden-xs">
-                        {% include 'widgets/right-side__news-block.twig' with { "block_title": "Новости холдинга" } %}
-                    </div>
-                    <div class="content-area__right-side-item hidden-sm hidden-xs">
-                        {% include 'widgets/right-side__discussing-block.twig' %}
-                    </div>
-                </div>
-                <div class="visible-sm visible-xs clearfix"></div>
                 <div class="content-area__left-side col-xs-12 col-md-9 last-child-no-mb">
-                    <div class="content-area__left-side-item mb35">
+                    <div class="content-area__left-side-item mb35 mobile--mb0">
                         <div class="block-title text-uppercase vab dib flex-middle">Профиль холдинга</div>
                         <div class="content-area__container content-area__section white-bg">
-                            <div class="row display-flex flex-middle mb20">
-                                <div class="col-md-6">
+                            <div class="row display-flex flex-middle mb20 mobile-display-block">
+                                <div class="col-sm-6 col-xs-12 mobile--mb10">
                                     <div class="dib semi-title fz16">независимость</div>
                                 </div>
-                                <div class="col-md-6 text-right">
+                                <div class="col-sm-6 col-xs-12 text-right">
                                     <a href="#" class="--text-grey --hover-text-black trans">
                                         <i class="icon-favorite mr5"></i>
                                         <span class="dib">Добавить в избранное</span>
                                     </a>
                                 </div>
                             </div>
-                            <div class="display-flex space-between flex-end mb35">
-                                <div>
+                            <div class="display-flex space-between flex-end mb35 mobile-display-block">
+                                <div class="mobile--mb20">
                                     <p class="absolute-icon mb15 --text-lightblack">
                                         <i class="icon-location_pin fz16 absolute left0 --text-grey"></i>
                                         Москва,
@@ -60,7 +46,7 @@
                                 </div>
                                 <div>
                                     <a href="#"
-                                       class="empty-button filled-button big-button text-uppercase lts1 hover-red">
+                                       class="empty-button filled-button big-button text-uppercase lts1 hover-red mobile-display-block">
                                         Обратная связь
                                     </a>
                                 </div>
@@ -140,9 +126,7 @@
                                 </ul>
                                 <div class="tab-content">
                                     <div class="tab-pane fade text-left" id="dealers-tab1">
-                                        <div class="map-container">
-                                            <div id="dealers-map"></div>
-                                        </div>
+                                        {% include 'widgets/map-widget.twig' with {"height": "height500"} %}
                                     </div>
                                     <div class="tab-pane fade text-left owl-carousel__parent-element" id="dealers-tab2">
                                         <div class="display-flex space-between flex-middle mb10">
@@ -175,37 +159,37 @@
                                     </div>
                                     <div class="tab-pane fade text-left" id="dealers-tab4">
                                         <div class="models-logo__units row display-flex space-between">
-                                            <div class="models-logo__item col-sm-6 mb30">
+                                            <div class="models-logo__item col-sm-6 col-xs-12 mb30">
                                                 <img class="models-logo__image dib mr15" src="images/models-logo.png"
                                                      alt="">
                                                 <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
                                             </div>
-                                            <div class="models-logo__item col-sm-6 mb30">
+                                            <div class="models-logo__item col-sm-6 col-xs-12 mb30">
                                                 <img class="models-logo__image dib mr15" src="images/models-logo.png"
                                                      alt="">
                                                 <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
                                             </div>
-                                            <div class="models-logo__item col-sm-6 mb30">
+                                            <div class="models-logo__item col-sm-6 col-xs-12 mb30">
                                                 <img class="models-logo__image dib mr15" src="images/models-logo.png"
                                                      alt="">
                                                 <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
                                             </div>
-                                            <div class="models-logo__item col-sm-6 mb30">
+                                            <div class="models-logo__item col-sm-6 col-xs-12 mb30">
                                                 <img class="models-logo__image dib mr15" src="images/models-logo.png"
                                                      alt="">
                                                 <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
                                             </div>
-                                            <div class="models-logo__item col-sm-6 mb30">
+                                            <div class="models-logo__item col-sm-6 col-xs-12 mb30">
                                                 <img class="models-logo__image dib mr15" src="images/models-logo.png"
                                                      alt="">
                                                 <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
                                             </div>
-                                            <div class="models-logo__item col-sm-6 mb30">
+                                            <div class="models-logo__item col-sm-6 col-xs-12 mb30">
                                                 <img class="models-logo__image dib mr15" src="images/models-logo.png"
                                                      alt="">
                                                 <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
                                             </div>
-                                            <div class="models-logo__item col-sm-6 mb30">
+                                            <div class="models-logo__item col-sm-6 col-xs-12 mb30">
                                                 <img class="models-logo__image dib mr15" src="images/models-logo.png"
                                                      alt="">
                                                 <span class="dib --text-grey lts1 ff-sfb text-uppercase">Mazda</span>
@@ -309,7 +293,7 @@
                         </div>
                     </div>
 
-                    <div class="content-area__left-side-item">
+                    <div class="content-area__left-side-item hidden-xs">
                         <div class="text-left owl-carousel__parent-element">
                             <div class="display-flex space-between flex-middle mb10">
                                 <div class="block-title">объявления холдинга</div>
@@ -387,6 +371,15 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="visible-sm visible-xs clearfix"></div>
+                <div class="content-area__right-side col-md-3 col-xs-12 hidden-xs">
+                    <div class="content-area__right-side-item hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__news-block.twig' with { "block_title": "Новости холдинга" } %}
+                    </div>
+                    <div class="content-area__right-side-item hidden-sm hidden-xs">
+                        {% include 'widgets/right-side__discussing-block.twig' %}
                     </div>
                 </div>
             </div>

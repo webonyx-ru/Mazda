@@ -3,21 +3,9 @@
 {% block content %}
 	{% include "widgets/breadcrumbs.twig" with {'page': 'dealers'} %}
 
-	<div class="content-area clearfix">
+	<div class="content-area left-direction clearfix">
 		<div class="container">
 			<div class="row">
-				<div class="content-area__right-side col-md-3 col-xs-12">
-					<div class="content-area__right-side-item">
-						{% include 'widgets/dealers-filter.twig' %}
-					</div>
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__news-block.twig' %}
-					</div>
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__discussing-block.twig' %}
-					</div>
-				</div>
-				<div class="visible-sm visible-xs clearfix"></div>
 				<div class="content-area__left-side col-xs-12 col-md-9">
 					<div class="display-flex space-between mb2">
 						<div class="block-title mb0 text-uppercase vab dib flex-middle">Каталог диллеров</div>
@@ -38,6 +26,18 @@
 						{% endfor %}
 					</div>
 					{% include 'widgets/pagination.twig' with {"type": "white"} %}
+				</div>
+				<div class="visible-sm clearfix mb35"></div>
+				<div class="content-area__right-side col-md-3 col-xs-12 hidden-xs">
+					<div class="content-area__right-side-item">
+						{% include 'widgets/dealers-filter.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__news-block.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__discussing-block.twig' %}
+					</div>
 				</div>
 			</div>
 		</div>

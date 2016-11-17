@@ -3,55 +3,46 @@
 {% block content %}
 	{% include "widgets/breadcrumbs.twig" with {'page': 'dealers'} %}
 
-	<div class="content-area clearfix">
+	<div class="content-area left-direction clearfix">
 		<div class="container">
 			<div class="row">
-				<div class="content-area__right-side col-md-3 col-xs-12">
-					<div class="content-area__right-side-item hidden-xs">
-						{% include 'widgets/right-side__news-block.twig' %}
-					</div>
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__discussing-block.twig' %}
-					</div>
-				</div>
-				<div class="visible-sm visible-xs clearfix"></div>
 				<div class="content-area__left-side col-xs-12 col-md-9">
-					<div class="display-flex space-between mb2">
+					<div class="display-flex space-between mb2 mobile-display-block">
 						<div class="block-title mb0 text-uppercase vab dib flex-middle">Профиль компании</div>
-						<div class="content-area__left-side__right-area text-uppercase ff-sfb dib flex-middle">
+						<div class="content-area__left-side__right-area text-uppercase ff-sfb dib mobile-text-right mobile-display-block">
 							<ul class="clean-element content-block__tab-menu-listing fz0 lts1">
 								<li class="content-block__tab-menu-item dib active">
 									<a class="content-block__tab-menu-link fz14 --text-grey" href="#">Частным
-										клиентам</a>
+										<span class="hidden-xs">клиентам</span></a>
 								</li>
 								<li class="content-block__tab-menu-item dib">
 									<a class="content-block__tab-menu-link fz14 --text-grey" href="#">Компоративным
-										клиентам</a>
+										<span class="hidden-xs">клиентам</span></a>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="content-area__container content-area__section white-bg">
-						<div class="row display-flex flex-middle mb20">
-							<div class="col-md-6">
+						<div class="row display-flex flex-middle mb20 mobile-display-block mobile--mb10">
+							<div class="col-sm-6 col-xs-12 mobile--mb10">
 								<div class="catalog-item__rating ff-sfb dib --text-lightblack ml-minus-20 mr15">
 									5.0
 								</div>
 								<div class="dib semi-title">независимость Mazda</div>
 							</div>
-							<div class="col-md-6 text-right">
+							<div class="col-sm-6 col-xs-12 text-right mobile-text-left">
 								Входит в холдинг: <span class="semi-title grey">Независимость авто</span>
 							</div>
 						</div>
-						<div class="display-flex space-between flex-middle mb20">
-							<div>
-								<p class="mb20">
+						<div class="display-flex space-between flex-middle mb20 mobile-display-block">
+							<div class="mobile--mb20">
+								<p class="mb20 mobile--mb20">
 									<a href="#" class="hover-black__icon --text-grey --hover-text-black">
 										<i class="icon-favorite"></i> <span class="dib">Добавить в избранное</span>
 									</a>
 								</p>
 								<p>
-									<a href="#" class="empty-button black-border hover-red big-button absolute-icon">
+									<a href="#" class="empty-button black-border hover-red big-button absolute-icon mobile-display-block mobile-text-center button-spectial-suggestion">
 										<i class="icon-like absolute fz20"></i>
 										{# TODO заменить иконку#}
 										<span class="dib text-uppercase">Индивидуальное предложение</span>
@@ -72,7 +63,7 @@
 							</div>
 						</div>
 						<div class="row mb35">
-							<div class="col-md-4">
+							<div class="col-sm-4 col-xs-12 mobile--mb20">
 								<p class="mb20">
 									<a href="#" class="empty-button filled-button db absolute-icon big-button hover-red">
 										<i class="icon-test_drive absolute fz20"></i> <span
@@ -133,8 +124,8 @@
 							</ul>
 							<div class="tab-content">
 								<div class="tab-pane fade in active text-left" id="dealers-tab1">
-									<div class="display-flex space-between flex-end mb35">
-										<div>
+									<div class="display-flex space-between flex-end mb35 mobile-display-block">
+										<div class="mobile--mb20">
 											<p class="absolute-icon mb15 --text-lightblack">
 												<i class="icon-location_pin fz16 absolute left0 --text-grey"></i> Москва,
 												Ярославское шоссе, 27
@@ -154,53 +145,53 @@
 											</p>
 										</div>
 										<div>
-											<a href="#" class="empty-button filled-button big-button text-uppercase lts1 hover-red">
+											<a href="#" class="empty-button filled-button big-button text-uppercase lts1 hover-red mobile-display-block">
 												Обратная связь
 											</a>
 										</div>
 									</div>
 									<p class="semi-title grey">График работы</p>
 									<div class="row mb20">
-										<div class="col-md-6">
+										<div class="col-sm-6 col-xs-12 mobile--mb10">
 											<p class="semi-title mb10">Продажи</p>
 											<div class="row mb10">
-												<div class="col-md-6 --text-grey">
+												<div class="col-xs-6 --text-grey">
 													Понедельник - Пятница
 												</div>
-												<div class="col-md-6 --text-lightblack">9:00 - 22:00</div>
+												<div class="col-xs-6 --text-lightblack">9:00 - 22:00</div>
 											</div>
 											<div class="row mb10">
-												<div class="col-md-6 --text-grey">
+												<div class="col-xs-6 --text-grey">
 													Суббота
 												</div>
-												<div class="col-md-6 --text-lightblack">9:00 - 22:00</div>
+												<div class="col-xs-6 --text-lightblack">9:00 - 22:00</div>
 											</div>
 											<div class="row mb10">
-												<div class="col-md-6 --text-grey">
+												<div class="col-xs-6 --text-grey">
 													Воскресенье
 												</div>
-												<div class="col-md-6 --text-lightblack">9:00 - 22:00</div>
+												<div class="col-xs-6 --text-lightblack">9:00 - 22:00</div>
 											</div>
 										</div>
-										<div class="col-md-6">
+										<div class="col-sm-6 col-xs-12">
 											<p class="semi-title mb10">Сервисный центр</p>
 											<div class="row mb10">
-												<div class="col-md-6 --text-grey">
+												<div class="col-xs-6 --text-grey">
 													Понедельник - Пятница
 												</div>
-												<div class="col-md-6 --text-lightblack">8:00 - 22:00</div>
+												<div class="col-xs-6 --text-lightblack">8:00 - 22:00</div>
 											</div>
 											<div class="row mb10">
-												<div class="col-md-6 --text-grey">
+												<div class="col-xs-6 --text-grey">
 													Суббота
 												</div>
-												<div class="col-md-6 --text-lightblack">8:00 - 22:00</div>
+												<div class="col-xs-6 --text-lightblack">8:00 - 22:00</div>
 											</div>
 											<div class="row mb10">
-												<div class="col-md-6 --text-grey">
+												<div class="col-xs-6 --text-grey">
 													Воскресенье
 												</div>
-												<div class="col-md-6 --text-lightblack">8:00 - 22:00</div>
+												<div class="col-xs-6 --text-lightblack">8:00 - 22:00</div>
 											</div>
 										</div>
 									</div>
@@ -210,10 +201,10 @@
 									{% include 'widgets/b-services.twig' %}
 								</div>
 								<div class="tab-pane fade text-left owl-carousel__parent-element" id="dealers-tab3">
-									<div class="display-flex space-between flex-middle mb10">
-										<div class="semi-title">объявления компании</div>
+									<div class="display-flex space-between flex-middle mb10 mobile-display-block">
+										<div class="semi-title mobile--mb10">объявления компании</div>
 										<div>
-											<ul class="clean-element content-block__tab-menu-listing dib fz0 lts1 mr30">
+											<ul class="clean-element content-block__tab-menu-listing dib fz0 lts1 mr30 mobile-no-mr mobile-small-tab-selectors mobile-display-flex space-between flex-wrap">
 												<li class="content-block__tab-menu-item dib">
 													<a data-toggle="tab"
 														 class="content-block__tab-menu-link active-black fz14 --text-grey semi-title grey"
@@ -230,7 +221,7 @@
 														 href="#adv-bl3">Все</a>
 												</li>
 											</ul>
-											<div class="dib vam fz0">
+											<div class="dib vam fz0 hidden-xs">
 												<div class="custom-carouse__prev black-style dib"><i class="icon-left_arrow"></i></div>
 												<div class="custom-carouse__next black-style dib"><i class="icon-right_arrow"></i></div>
 											</div>
@@ -285,9 +276,9 @@
 									</div>
 								</div>
 								<div class="tab-pane fade text-left owl-carousel__parent-element" id="dealers-tab4">
-									<div class="display-flex space-between flex-middle mb10">
-										<div class="semi-title">объявления компании</div>
-										<div class="dib vam fz0">
+									<div class="display-flex space-between flex-middle mb10 mobile-display-block">
+										<div class="semi-title mobile--mb10">объявления компании</div>
+										<div class="dib vam fz0 mobile-display-block mobile-text-right">
 											<div class="custom-carouse__prev black-style dib"><i class="icon-left_arrow"></i></div>
 											<div class="custom-carouse__next black-style dib"><i class="icon-right_arrow"></i></div>
 										</div>
@@ -310,7 +301,7 @@
 								</div>
 								<div class="tab-pane fade text-left" id="dealers-tab5">
 									<div class="text-right mb15">
-										<a href="#" class="empty-button filled-button big-button hover-red lts1 text-uppercase">Добавить
+										<a href="#" class="empty-button filled-button big-button hover-red lts1 text-uppercase mobile-display-block">Добавить
 											отзыв</a>
 									</div>
 									<div class="dealers-feedbacks__units last-child-no-mb">
@@ -322,6 +313,15 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="visible-sm visible-xs clearfix mb35"></div>
+				<div class="content-area__right-side col-md-3 col-xs-12 hidden-xs">
+					<div class="content-area__right-side-item hidden-xs">
+						{% include 'widgets/right-side__news-block.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__discussing-block.twig' %}
 					</div>
 				</div>
 			</div>

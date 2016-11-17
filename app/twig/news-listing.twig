@@ -3,22 +3,10 @@
 {% block content %}
 	{% include "widgets/breadcrumbs.twig" %}
 
-	<div class="content-area clearfix">
+	<div class="content-area left-direction clearfix">
 		<div class="container">
 			<div class="row">
-				<div class="content-area__right-side col-md-3 col-xs-12">
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__discussing-block.twig' %}
-					</div>
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__fuel-price.twig' %}
-					</div>
-					<div class="content-area__right-side-item hidden-sm hidden-xs">
-						{% include 'widgets/right-side__banner.twig' %}
-					</div>
-				</div>
-				<div class="visible-sm visible-xs clearfix"></div>
-				<div class="content-area__left-side col-xs-12 col-md-9">
+				<div class="content-area__left-side col-xs-12 col-md-9 mb35">
 					<div class="block-title text-uppercase vab dib flex-middle">Новости</div>
 					<div class="content-area__container last-child-no-mb">
 						<div class="content-area__section white-bg">
@@ -29,6 +17,18 @@
 							</div>
 							{% include 'widgets/pagination.twig' %}
 						</div>
+					</div>
+				</div>
+				<div class="visible-sm visible-xs clearfix"></div>
+				<div class="content-area__right-side col-md-3 col-xs-12 hidden-xs">
+					<div class="content-area__right-side-item hidden-xs">
+						{% include 'widgets/right-side__discussing-block.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__fuel-price.twig' %}
+					</div>
+					<div class="content-area__right-side-item hidden-sm hidden-xs">
+						{% include 'widgets/right-side__banner.twig' %}
 					</div>
 				</div>
 			</div>

@@ -130,11 +130,14 @@ doc.ready(function () {
 
     $(function () {
         var news_grid = {};
+        var ww = viewport().width;
+        var initialized = false;
 
-        news_grid.container = $('.main-page__news-grid, .main-page__rated-dealers');
+        news_grid.container = $('.main-page__news-grid, .mobile-owl-carousel__single');
         news_grid.owl = news_grid.container.find('>.row');
+        news_grid.owl_delaers = $('.main-page__rated-dealers > .row');
 
-        news_grid.owl.css({margin: 0}).addClass('owl-carousel').owlCarousel({
+        news_grid.owl_delaers.css({margin: 0}).addClass('owl-carousel').owlCarousel({
             items: 3,
             margin: 30,
             responsive: {
@@ -144,6 +147,28 @@ doc.ready(function () {
                 768: {
                     items: 3
                 }
+            }
+        });
+
+        $(window).bind('resize', function () {
+            ww = viewport().width;
+
+            if(ww < 768 && initialized != true) {
+                news_grid.owl.css({margin: 0}).addClass('owl-carousel').owlCarousel({
+                    items: 1,
+                    margin: 0,
+                    responsive: {
+                        0: {
+                            items: 1
+                        }
+                    }
+                });
+
+                initialized = true;
+            } else if(ww >= 768 && initialized == true) {
+                initialized = false;
+
+                news_grid.owl.trigger('destroy.owl.carousel').removeClass('owl-carousel');
             }
         });
     });

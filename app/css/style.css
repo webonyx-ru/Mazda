@@ -203,11 +203,6 @@ body, html {
   padding: 20px 0 20px;
 }
 
-.breadcrumbs__listing {
-  margin: 0;
-  padding: 0;
-}
-
 .breadcrumbs__item {
   color: #fff;
 }
@@ -597,8 +592,10 @@ body, html {
 }
 
 .content-block__tab-menu-item {
-  margin-left: 30px;
   position: relative;
+}
+.content-block__tab-menu-item:not(:last-child) {
+  margin-right: 30px;
 }
 .content-block__tab-menu-item:not(:last-child):after {
   display: block;
@@ -1030,6 +1027,9 @@ input:checked + .holding-vacancy__check-quality {
 
 .news-content p:not(:last-child) {
   margin-bottom: 25px;
+}
+.news-content img {
+  max-width: 100%;
 }
 
 .comments-header {

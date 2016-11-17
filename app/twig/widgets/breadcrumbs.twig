@@ -1,8 +1,8 @@
 <div class="breadcrumbs">
 	<div class="container">
 		{% if page == 'dealers' %}
-			<div class="display-flex space-between flex-middle">
-				<ul class="breadcrumbs__listing">
+			<div class="display-flex space-between flex-middle mobile-display-block">
+				<ul class="breadcrumbs__listing clean-element mobile--mb10">
 					<li class="breadcrumbs__item has-separator dib"><a href="#" class="breadcrumbs__link">Главная</a></li>
 					<li class="breadcrumbs__item dib">Объявления</li>
 				</ul>
@@ -10,11 +10,11 @@
 					<div class="white-color dib mr15">Это ваша компания?</div>
 					<a href="#" class="dib mr5 access-to-controll-link --text-lightblack text-uppercase">Подать запрос на
 						управление</a>
-					<i class="icon-remove --text-lightblack cursor-pointer" data-js-hide></i>
+					<i class="access-company-controll__close icon-remove --text-lightblack cursor-pointer" data-js-hide></i>
 				</div>
 			</div>
 		{% else %}
-			<ul class="breadcrumbs__listing">
+			<ul class="breadcrumbs__listing clean-element">
 				<li class="breadcrumbs__item has-separator dib"><a href="#" class="breadcrumbs__link">Главная</a></li>
 				<li class="breadcrumbs__item dib">Объявления</li>
 			</ul>
