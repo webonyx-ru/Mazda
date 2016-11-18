@@ -28,13 +28,13 @@
 
     <!-- Button trigger modal -->
     <div class="text-center">
-        <button class="empty-button hover-red big-button text-uppercase lts1" data-toggle="modal" data-target="#modal-window-md">
+        <button class="empty-button hover-red big-button text-uppercase lts1 mb20" data-toggle="modal" data-target="#modal-window-md">
             Открыть средний попап
         </button>
-        <button class="empty-button hover-red big-button text-uppercase lts1" data-toggle="modal" data-target=".bs-example-modal-sm">
+        <button class="empty-button hover-red big-button text-uppercase lts1 mb20" data-toggle="modal" data-target=".bs-example-modal-sm">
             Открыть маленький попап
         </button>
-        <button class="empty-button hover-red big-button text-uppercase lts1" data-toggle="modal" data-target=".bs-example-modal-lg">
+        <button class="empty-button hover-red big-button text-uppercase lts1 mb20" data-toggle="modal" data-target=".bs-example-modal-lg">
             Открыть большой попап
         </button>
     </div>
@@ -76,7 +76,7 @@
                                         <a class="--text-grey hover-tdu ff-os fz14" href="#modal-pass-recovery" data-toggle="tab">Забыли пароль?</a>
                                     </div>
                                 </div>
-                                <div class="fz0 mb10">
+                                <div class="b-inline-btn">
                                     <div class="b-inline-btn__b-left">
                                         <button type="submit" class="filled-button big-button text-uppercase hover-red full-width lts1">Войти</button>
                                     </div>
@@ -84,7 +84,7 @@
                                         <a class="empty-button black-border text-uppercase lts2 big-button hover-red full-width text-center lts1" href="#modal-registry" data-toggle="tab">Регистрация</a>
                                     </div>
                                 </div>
-                                <div class="b-notification-message text-center --text-red"></div>
+                                <div class="b-notification-message text-center --text-red hidden-xs"></div>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -128,7 +128,7 @@
                                         <a class="--text-grey hover-tdu ff-os fz14" href="#modal-pass-recovery" data-toggle="tab">Забыли пароль?</a>
                                     </div>
                                 </div>
-                                <div class="fz0 mb10">
+                                <div class="b-inline-btn">
                                     <div class="b-inline-btn__b-left">
                                         <button type="submit" class="filled-button big-button text-uppercase hover-red full-width lts1">Войти</button>
                                     </div>
@@ -136,7 +136,7 @@
                                         <a class="empty-button black-border text-uppercase lts2 big-button hover-red full-width text-center lts1" href="#modal-registry" data-toggle="tab">Регистрация</a>
                                     </div>
                                 </div>
-                                <div class="b-notification-message text-center --text-red">Неверный логин или пароль</div>
+                                <div class="b-notification-message text-center --text-red hidden-xs">Неверный логин или пароль</div>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -195,7 +195,7 @@
                                     <div class="b-notification-message ff-os"></div>
                                     <div class="fz0">
                                         <div class="b-inline-inputs__b-left">
-                                            <div class="entry-field w100" style="background: url('images/popups/captcha.jpg'); background-size: contain;"></div>
+                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
                                         </div>
                                         <div class="b-inline-inputs__b-right">
                                             <input type="text" class="entry-field ff-os w100" title="code" placeholder="Введите код с картинки">
@@ -261,7 +261,7 @@
                                     <div class="b-notification-message ff-os --text-lime">пароль совпадает</div>
                                     <div class="fz0">
                                         <div class="b-inline-inputs__b-left">
-                                            <div class="entry-field w100" style="background: url('images/popups/captcha.jpg'); background-size: contain;"></div>
+                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
                                         </div>
                                         <div class="b-inline-inputs__b-right">
                                             <input type="text" class="entry-field border-green ff-os w100" title="code" placeholder="Введите код с картинки">
@@ -327,7 +327,7 @@
                                     <div class="b-notification-message ff-os --text-red">пароль не совпадает</div>
                                     <div class="fz0">
                                         <div class="b-inline-inputs__b-left">
-                                            <div class="entry-field w100" style="background: url('images/popups/captcha.jpg'); background-size: contain;"></div>
+                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
                                         </div>
                                         <div class="b-inline-inputs__b-right">
                                             <input type="text" class="entry-field border-red ff-os w100" title="code" placeholder="Введите код с картинки">
@@ -374,7 +374,7 @@
                                     <input type="text" class="entry-field ff-os w100 mb30" title="login" placeholder="Логин или email">
                                     <div class="fz0">
                                         <div class="b-inline-inputs__b-left">
-                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg'); background-size: contain;"></div>
+                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
                                         </div>
                                         <div class="b-inline-inputs__b-right">
                                             <input type="text" class="entry-field ff-os w100" title="code" placeholder="Введите код с картинки">
@@ -402,7 +402,7 @@
                                     <input type="text" class="entry-field border-red ff-os w100 mb30" title="login" placeholder="Логин или email">
                                     <div class="fz0">
                                         <div class="b-inline-inputs__b-left">
-                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg'); background-size: contain;"></div>
+                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
                                         </div>
                                         <div class="b-inline-inputs__b-right">
                                             <input type="text" class="entry-field border-red ff-os w100" title="code" placeholder="Введите код с картинки">
@@ -431,7 +431,9 @@
                                 <p class="mb0">Ссылка для восстановления пароля отправлена на указаный адрес электронной почты:</p>
                                 <a class="--text-grey hover-tdu" href="mailto:street_racer7@yandex.ru">street_racer7@yandex.ru</a>
                             </div>
-                            <a href="#" class="empty-button big-button black-border hover-red text-uppercase lts1">Назад к авторизации</a>
+                            <div class="popup-autorisation-back-btn-wrap">
+                                <a href="#" class="empty-button big-button black-border hover-red text-uppercase lts1">Назад к авторизации</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -456,7 +458,9 @@
                                 <p class="text-uppercase ff-sfb lts2">Ваши данные отправлены на обработку</p>
                                 <p class="text-uppercase ff-os">По завершении обработки данных вы получите оповещение</p>
                             </div>
-                            <a href="#" class="filled-button big-button hover-red text-uppercase lts1">Ок</a>
+                            <div class="popup-processing-btn-wrap">
+                                <a href="#" class="filled-button big-button hover-red text-uppercase lts1">Ок</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -523,130 +527,135 @@
                                 <span class="line-gray-first"></span>
                                 <span class="line-gray-second"></span>
                             </button>
-                            <div class="row popup-tab-wrap">
-                                <div class="col-sm-4 col-xs-12">
-                                    <ul class="popup-tab-nav">
-                                        <li class="popup-tab-nav__item active">
-                                            <a class="popup-tab-nav__link text-uppercase ff-sfb" href="#tried-auto" data-toggle="tab">
-                                                <div class="popup-tab-nav__circle">
-                                                    <img class="popup-tab-nav__icon" src="images/icons/check.png">
-                                                </div>
-                                                <div class="popup-tab-nav__link-text">Только проверенные автомобили</div>
-                                            </a>
-                                        </li>
-                                        <li class="popup-tab-nav__item">
-                                            <a class="popup-tab-nav__link text-uppercase ff-sfb" href="#complex-tech-training" data-toggle="tab">
-                                                <div class="popup-tab-nav__circle">
-                                                    <img class="popup-tab-nav__icon" src="images/icons/wrench.png">
-                                                </div>
-                                                <div class="popup-tab-nav__link-text">Комплексная техническая подготовка</div>
-                                            </a>
-                                        </li>
-                                        <li class="popup-tab-nav__item">
-                                            <a class="popup-tab-nav__link text-uppercase ff-sfb" href="#after-sales-support" data-toggle="tab">
-                                                <div class="popup-tab-nav__circle">
-                                                    <img class="popup-tab-nav__icon" src="images/icons/umbrella.png">
-                                                </div>
-                                                <div class="popup-tab-nav__link-text">Послегарантийная сервисная поддержка</div>
-                                            </a>
-                                        </li>
-                                        <li class="popup-tab-nav__item">
-                                            <a class="popup-tab-nav__link text-uppercase ff-sfb" href="#mobility-guarantee" data-toggle="tab">
-                                                <div class="popup-tab-nav__circle">
-                                                    <img class="popup-tab-nav__icon" src="images/icons/road.png">
-                                                </div>
-                                                <div class="popup-tab-nav__link-text">Гарантия мобильности</div>
-                                            </a>
-                                        </li>
-                                        <li class="popup-tab-nav__item">
-                                            <a class="popup-tab-nav__link text-uppercase ff-sfb" href="#credit-and-insurance" data-toggle="tab">
-                                                <div class="popup-tab-nav__circle">
-                                                    <img class="popup-tab-nav__icon" src="images/icons/rouble.png">
-                                                </div>
-                                                <div class="popup-tab-nav__link-text">Специальные условия: Кредит и Страхование</div>
-                                            </a>
-                                        </li>
-                                        <li class="popup-tab-nav__item">
-                                            <a class="popup-tab-nav__link text-uppercase ff-sfb" href="#mazda-trade-in" data-toggle="tab">
-                                                <div class="popup-tab-nav__circle">
-                                                    <img class="popup-tab-nav__icon" src="images/icons/arrows.png">
-                                                </div>
-                                                <div class="popup-tab-nav__link-text">Mazda Трейд-ин</div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-8 col-xs-12">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade in active" id="tried-auto">
-                                            <div class="popup-tab-b-header text-uppercase ff-sfb lts1">
-                                                Специальная программа Mazda Next
-                                            </div>
-                                            <div class="popup-tab-b-content">
-                                                <div class="mb35">
-                                                    <p class="ff-os fz14">Для участия в программе допускаются автомобили не старше 5 лет и с пробегом не более 100 000 км. Предлагаемые автомобили проходят тщательную проверку, что гарантирует прозрачность истории предыдущего владения и эксплуатации.</p>
-                                                </div>
-                                                <img  class="popup-tab-b-content-img" src="images/popups/mazda-next.jpg" alt="" title="">
-                                            </div>
+                            <div class="modal-lg__header text-uppercase ff-sfb lts1">
+                                Специальная<br> программа Mazda Next
+                            </div>
+                            <ul class="modal-lg-nav">
+                                <li class="modal-lg-nav__item">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb" href="#tried-auto" data-toggle="collapse" data-parent="#accordion">
+                                        <div class="modal-lg-nav__circle hidden-xs">
+                                            <img class="modal-lg-nav__icon" src="images/icons/check.png">
                                         </div>
-                                        <div class="tab-pane fade" id="complex-tech-training">
-                                            <div class="popup-tab-b-header text-uppercase ff-sfb lts1">
-                                                Специальная программа Mazda Next
+                                        <div class="modal-lg-nav__link-text">Только проверенные автомобили</div>
+                                        <div class="modal-lg-nav__arrow hidden-sm"></div>
+                                    </a>
+                                    <div class="panel-collapse collapse in" id="tried-auto">
+                                        <div class="modal-lg__b-content">
+                                            <div class="ff-os fz14 mb35">
+                                                <p class="mb0">Для участия в программе допускаются автомобили не старше 5 лет и с пробегом не более 100 000 км. Предлагаемые автомобили проходят тщательную проверку, что гарантирует прозрачность истории предыдущего владения и эксплуатации.</p>
                                             </div>
-                                            <div class="popup-tab-b-content">
-                                                <div class="mb35">
-                                                    <p class="ff-os fz14">Для участия в программе допускаются автомобили не старше 5 лет и с пробегом не более 100 000 км. Предлагаемые автомобили проходят тщательную проверку, что гарантирует прозрачность истории предыдущего владения и эксплуатации.</p>
-                                                </div>
-                                                <img  class="popup-tab-b-content-img" src="images/popups/mazda-next.jpg" alt="" title="">
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="after-sales-support">
-                                            <div class="popup-tab-b-header text-uppercase ff-sfb lts1">
-                                                Специальная программа Mazda Next
-                                            </div>
-                                            <div class="popup-tab-b-content">
-                                                <div class="mb35">
-                                                    <p class="ff-os fz14">Для участия в программе допускаются автомобили не старше 5 лет и с пробегом не более 100 000 км. Предлагаемые автомобили проходят тщательную проверку, что гарантирует прозрачность истории предыдущего владения и эксплуатации.</p>
-                                                </div>
-                                                <img  class="popup-tab-b-content-img" src="images/popups/mazda-next.jpg" alt="" title="">
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="mobility-guarantee">
-                                            <div class="popup-tab-b-header text-uppercase ff-sfb lts1">
-                                                Специальная программа Mazda Next
-                                            </div>
-                                            <div class="popup-tab-b-content">
-                                                <div class="mb35">
-                                                    <p class="ff-os fz14">Для участия в программе допускаются автомобили не старше 5 лет и с пробегом не более 100 000 км. Предлагаемые автомобили проходят тщательную проверку, что гарантирует прозрачность истории предыдущего владения и эксплуатации.</p>
-                                                </div>
-                                                <img  class="popup-tab-b-content-img" src="images/popups/mazda-next.jpg" alt="" title="">
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="credit-and-insurance">
-                                            <div class="popup-tab-b-header text-uppercase ff-sfb lts1">
-                                                Специальная программа Mazda Next
-                                            </div>
-                                            <div class="popup-tab-b-content">
-                                                <div class="mb35">
-                                                    <p class="ff-os fz14">Для участия в программе допускаются автомобили не старше 5 лет и с пробегом не более 100 000 км. Предлагаемые автомобили проходят тщательную проверку, что гарантирует прозрачность истории предыдущего владения и эксплуатации.</p>
-                                                </div>
-                                                <img  class="popup-tab-b-content-img" src="images/popups/mazda-next.jpg" alt="" title="">
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="mazda-trade-in">
-                                            <div class="popup-tab-b-header text-uppercase ff-sfb lts1">
-                                                Специальная программа Mazda Next
-                                            </div>
-                                            <div class="popup-tab-b-content">
-                                                <div class="mb35">
-                                                    <p class="ff-os fz14">Для участия в программе допускаются автомобили не старше 5 лет и с пробегом не более 100 000 км. Предлагаемые автомобили проходят тщательную проверку, что гарантирует прозрачность истории предыдущего владения и эксплуатации.</p>
-                                                </div>
-                                                <img  class="popup-tab-b-content-img" src="images/popups/mazda-next.jpg" alt="" title="">
-                                            </div>
+                                            <img  class="modal-lg__b-content-img" src="images/popups/tried-auto.jpg" alt="" title="">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                </li>
+                                <li class="modal-lg-nav__item">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#complex-tech-training" data-toggle="collapse" data-parent="#accordion">
+                                        <div class="modal-lg-nav__circle hidden-xs">
+                                            <img class="modal-lg-nav__icon" src="images/icons/wrench.png">
+                                        </div>
+                                        <div class="modal-lg-nav__link-text">Комплексная техническая подготовка</div>
+                                        <div class="modal-lg-nav__arrow hidden-sm"></div>
+                                    </a>
+                                    <div class="panel-collapse collapse" id="complex-tech-training">
+                                        <div class="modal-lg__b-content">
+                                            <div class="ff-os fz14 mb35">
+                                                <p class="mb25">Обязательное условие программы — полная диагностика предлагаемого автомобиля.</p>
+                                                <p class="mb0">Покупая автомобиль, вы можете быть уверены в работе всех узлов и агрегатов – официальные дилеры проводят тщательную предпродажную проверку и подготовку к эксплуатации по 70 пунктам. Автомобили программы проходят комплекс работ по восстановлению, в случае обнаружения неполадок используются только оригинальные запчасти и сертифицированное оборудование.</p>
+                                            </div>
+                                            <img  class="modal-lg__b-content-img" src="images/popups/complex-tech-training.jpg" alt="" title="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="modal-lg-nav__item">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#after-sales-support" data-toggle="collapse" data-parent="#accordion">
+                                        <div class="modal-lg-nav__circle hidden-xs">
+                                            <img class="modal-lg-nav__icon" src="images/icons/umbrella.png">
+                                        </div>
+                                        <div class="modal-lg-nav__link-text">Послегарантийная сервисная поддержка</div>
+                                        <div class="modal-lg-nav__arrow hidden-sm"></div>
+                                    </a>
+                                    <div class="panel-collapse collapse" id="after-sales-support">
+                                        <div class="modal-lg__b-content">
+                                            <div class="ff-os fz14 mb35">
+                                                <p class="mb0">С программой Mazda NEXT вы получаете не только качественный автомобиль, но и послегарантийную сервисную поддержку. Послегарантийная сервисная поддержка сроком на 1 год, либо 30 000 км пробега — максимальная надежность и уверенность при покупке автомобиля с пробегом, техническая поддержка автомобиля, ремонт и замена его неисправных деталей. Условия обслуживания уточняйте у вашего официального дилера.</p>
+                                            </div>
+                                            <img  class="modal-lg__b-content-img" src="images/popups/after-sales-support.jpg" alt="" title="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="modal-lg-nav__item">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#mobility-guarantee" data-toggle="collapse" data-parent="#accordion">
+                                        <div class="modal-lg-nav__circle hidden-xs">
+                                            <img class="modal-lg-nav__icon" src="images/icons/road.png">
+                                        </div>
+                                        <div class="modal-lg-nav__link-text">Гарантия мобильности</div>
+                                        <div class="modal-lg-nav__arrow hidden-sm"></div>
+                                    </a>
+                                    <div class="panel-collapse collapse" id="mobility-guarantee">
+                                        <div class="modal-lg__b-content">
+                                            <div class="ff-os fz14 mb35">
+                                                <p class="mb0">На дороге никто не застрахован, но мы позаботились о Вашем спокойствии. Клиент, купивший автомобиль по программе Mazda NEXT, 24 часа в сутки 365 дней в году может воспользоваться услугой по запуску двигателя от внешнего источника, замене колеса на запасное, подвозу топлива. В случае возникновения непредвиденной поломки на дороге или ДТП, автомобиль будет доставлен к ближайший дилерский центр Mazda. Во время ремонта Вам может быть предложен подменный автомобиль, такси до дома/работы, гостиница, либо билеты на поезд/самолет для продолжения путешествия, чтобы максимально сохранить Вашу мобильность.</p>
+                                            </div>
+                                            <img  class="modal-lg__b-content-img" src="images/popups/mobility-guarantee.jpg" alt="" title="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="modal-lg-nav__item">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#credit-and-insurance" data-toggle="collapse" data-parent="#accordion">
+                                        <div class="modal-lg-nav__circle hidden-xs">
+                                            <img class="modal-lg-nav__icon" src="images/icons/rouble.png">
+                                        </div>
+                                        <div class="modal-lg-nav__link-text">Специальные условия: Кредит и Страхование</div>
+                                        <div class="modal-lg-nav__arrow hidden-sm"></div>
+                                    </a>
+                                    <div class="panel-collapse collapse" id="credit-and-insurance">
+                                        <div class="modal-lg__b-content">
+                                            <div class="ff-os fz14 mb35">
+                                                <p class="mb0 mb25">C фирменной программой Mazda NEXT мечты о собственном автомобиле могут стать реальностью уже сегодня. Для этого мы максимально упростили условия кредитования для сертифицированных автомобилей Mazda с пробегом, а так же разработали выгодную программу страхования КАСКО.</p>
+                                                <p class="text-uppercase ff-sfb lts1 mb25">Mazda Кредит NEXT</p>
+                                                <p class="ff-sfb mb25">Это удобно</p>
+                                                <p class="mb25">Мы экономим ваше время, максимально упростив и сократив срок оформления кредита. </p>
+                                                <p class="mb25">- Срок рассмотрения кредитной заявки — 30 минут<br>
+                                                    - Для оформления кредита достаточно только двух документов</p>
+                                                <p class="ff-sfb mb25">Это понятно</p>
+                                                <p class="mb25">Условия кредитования по нашей программе максимально прозрачны и понятны клиентам.</p>
+                                                <p class="mb25">- Валюта кредита — рубли РФ<br>
+                                                - Первоначальный взнос — от 20%<br>
+                                                - Максимальный срок кредита — 60 месяцев<br>
+                                                - Отсутствует мораторий на досрочное погашение кредита</p>
+                                                <p class="text-uppercase ff-sfb lts1 mb25">Mazda Страхование NEXT</p>
+                                                <p class="ff-sfb mb25">Это выгодно</p>
+                                                <p class="mb25">Оформляя страховой полис по программе, вы подбираете максимально удобные для вас условия страхования КАСКО.</p>
+                                                <p class="mb25">- Минимальный тариф, полностью покрывающий основные риски<br>
+                                                - Тариф КАСКО не зависит от возраста и стажа водителя<br>
+                                                - Продукт может быть включен в кредит по программе Mazda Кредит NEXT</p>
+                                                <p class="ff-sfb mb25">Это безопасно</p>
+                                                <p class="mb25">Программа страхования предоставлена одним из лидеров страхового рынка – СПАО «Ингосстрах».</p>
+                                                <p class="mb25">- Полное покрытие в случае угона или тотальной гибели а/м<br>
+                                                - Возмещение по риску «Ущерб» — 50 тысяч рублей</p>
+                                            </div>
+                                            <img  class="modal-lg__b-content-img" src="images/popups/credit-and-insurance.jpg" alt="" title="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="modal-lg-nav__item">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#mazda-trade-in" data-toggle="collapse" data-parent="#accordion">
+                                        <div class="modal-lg-nav__circle hidden-xs">
+                                            <img class="modal-lg-nav__icon" src="images/icons/arrows.png">
+                                        </div>
+                                        <div class="modal-lg-nav__link-text">Mazda Трейд-ин</div>
+                                        <div class="modal-lg-nav__arrow hidden-sm"></div>
+                                    </a>
+                                    <div class="panel-collapse collapse" id="mazda-trade-in">
+                                        <div class="modal-lg__b-content">
+                                            <div class="ff-os fz14 mb35">
+                                                <p class="mb0">Все автомобили программы Mazda NEXT могут быть приобретены по схеме трейд-ин. Дилер-участник программы может принять ваш автомобиль в зачет стоимости приобретаемого автомобиля Mazda NEXT. Практика подобных обменов с доплатой популярна во всем мире. Трейд-ин — максимально быстрый и безопасный способ продажи и приобретения автомобиля.</p>
+                                            </div>
+                                            <img  class="modal-lg__b-content-img" src="images/popups/mazda-trade-in.jpg" alt="" title="">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

@@ -50,7 +50,7 @@
 .modal-lg
 	width: 800px
 	.modal-body
-		padding: 10px
+		padding: 10px 20px 10px 10px
 	.btn-close
 		top: 10px
 		right: 10px
@@ -160,10 +160,10 @@
 		+trans()
 
 .toggle-runner
-	display: inline-block
 	width: 65px
 	height: 28px
 	position: relative
+	flex: 1 0 auto
 
 .toggle-runner__bg
 	display: block
@@ -315,6 +315,10 @@
 		min-height: 20px
 		padding: 0
 
+.b-inline-btn
+	margin-bottom: 10px
+	font-size: 0
+
 .b-inline-btn__b-left
 	display: inline-block
 	vertical-align: top
@@ -362,19 +366,14 @@
 		top: -3px
 		left: -12px
 
-.popup-tab-wrap
-	margin: 0 -10px
-	> div
-		padding: 0 10px
-
-.popup-tab-nav
+.modal-lg-nav
+	width: 30%
 	padding-left: 0
 	margin-bottom: 0
 	list-style: none
 
-.popup-tab-nav__item
+.modal-lg-nav__item
 	display: block
-	position: relative
 	&:last-child
 		&:after
 			content: ""
@@ -385,17 +384,15 @@
 		width: calc(100% - 42px)
 		height: 1px
 		background: #d5d5d5
+		margin-left: 42px
+	> .panel-collapse
 		position: absolute
-		top: 100%
-		right: 0
+		left: 30%
+		top: 60px
+		padding-left: 20px
+		padding-right: 10px
 
-.popup-tab-nav__item.active
-	.popup-tab-nav__link
-		color: #191919
-		.popup-tab-nav__circle
-			background: #191919
-
-.popup-tab-nav__link
+.modal-lg-nav__link
 	display: flex
 	min-height: 65px
 	width: 100%
@@ -403,22 +400,27 @@
 	align-items: center
 	justify-content: flex-start
 	line-height: 16px
-	color: #999999
+	color: #191919
 	+trans()
 	&:hover, &:focus, &:active
 		color: #191919
-		.popup-tab-nav__circle
+		.modal-lg-nav__circle
 			background: #191919
 		&:visited
 			&:hover, &:focus, &:active
 				color: #191919
-			.popup-tab-nav__circle
+			.modal-lg-nav__circle
 				background: #191919
 
-.popup-tab-nav__circle
+.modal-lg-nav__link.collapsed
+	color: #999999
+	.modal-lg-nav__circle
+		background: #999999
+
+.modal-lg-nav__circle
 	width: 32px
 	height: 32px
-	background: #999999
+	background: #191919
 	margin-right: 10px
 	-webkit-border-radius: 50%
 	-moz-border-radius: 50%
@@ -426,61 +428,71 @@
 	position: relative
 	+trans()
 
-.popup-tab-nav__icon
+.modal-lg-nav__icon
 	position: absolute
 	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
 
-.popup-tab-nav__link-text
+.modal-lg-nav__link-text
 	width: calc(100% - 40px)
 	font-size: 14px
 
-.popup-tab-b-header
-	padding-top: 5px
-	padding-right: 30px
+.modal-lg__header
+	display: block
+	position: absolute
+	left: 30%
+	padding: 5px 30px 0 20px
 	margin-bottom: 30px
+	br
+		display: none
 
-.popup-tab-b-content
+.modal-lg__b-content
 	width: 100%
 	max-height: 345px
+	background: #fff
 	padding-right: 10px
 	overflow-x: hidden
 	overflow-y: scroll
 
-.popup-tab-b-content-img
+.modal-lg__b-content-img
 	width: 100%
 	height: auto
 
 
+.modal-dialog
+	::-webkit-scrollbar-button
+		width: 5px
+		height: 0
 
-::-webkit-scrollbar-button
-	background: url('') no-repeat
-	width: 5px
-	height: 0
+	::-webkit-scrollbar-track
+		background-color: transparent
 
-::-webkit-scrollbar-track
-	background-color: #fff
+	::-webkit-scrollbar-thumb
+		-webkit-border-radius: 1px
+		-moz-border-radius: 1px
+		border-radius: 1px
+		background-color: #d5d5d5
+		+trans()
 
-::-webkit-scrollbar-thumb
-	-webkit-border-radius: 1px
-	-moz-border-radius: 1px
-	border-radius: 1px
-	background-color: #d5d5d5
-	+trans()
+	::-webkit-scrollbar-thumb:hover
+		background-color: #a9a9a9
 
-::-webkit-scrollbar-thumb:hover
-	background-color: #a9a9a9
+	::-webkit-resizer
+		width: 3px
+		height: 0
 
-::-webkit-resizer
-	background: url('') no-repeat
-	width: 3px
-	height: 0
-
-::-webkit-scrollbar
-	width: 3px
+	::-webkit-scrollbar
+		width: 3px
 
 
+
+@media screen and (max-width: 992px)
+	.modal-lg
+		width: 750px
+		margin: 15px auto 15px auto
+		padding-left: 15px
+		padding-right: 15px
 
 @media screen and (max-width: 768px)
 	.b-error-message
@@ -488,8 +500,140 @@
 		> .filled-button
 			width: 100%
 
+	.modal-dialog, .modal-lg, .modal-sm
+		width: 320px
+		margin: 15px auto 15px auto
+		padding-left: 15px
+		padding-right: 15px
+
+	.modal-dialog
+		.modal-body
+			padding: 50px 20px 30px 20px
+		.modal-footer
+			padding: 25px 20px 20px 20px
+
+	.modal-sm
+		.modal-body
+			padding: 40px 20px 20px 20px
+
 	.modal-lg
+		.modal-body
+			padding: 20px 0 0 0
+
+	.b-inline-btn
+		margin-bottom: 0
+
+	.b-inline-btn__b-left
+		display: block
 		width: 100%
-		margin: 20px auto 20px auto
+		padding-right: 0
+
+	.b-inline-btn__b-right
+		display: block
+		width: 100%
+		padding-left: 0
+		padding-top: 20px
+		text-align: center
+		> .empty-button
+			width: auto
+			padding: 0
+			border-top: none
+			border-left: none
+			border-right: none
+			border-bottom: 2px solid transparent
+			-webkit-border-radius: 0
+			-moz-border-radius: 0
+			border-radius: 0
+			line-height: 16px
+			color: #a1a1a1
+			&:hover, &:focus, &:active
+				background: none
+				border-bottom: 2px solid #a1a1a1
+			&:visited
+				&:hover, &:focus, &:active
+					background: none
+					border-bottom: 2px solid #a1a1a1
+
+	.modal-body
+		.mb30 > .fz13
+			font-size: 14px
+		.mb90
+			margin-bottom: 50px
+
+	.b-inline-inputs__b-left
+		display: block
+		width: 100%
+		padding-right: 0
+		margin-bottom: 30px
+
+	.b-inline-inputs__b-right
+		display: block
+		width: 100%
+		padding-left: 0
+
+	.popup-autorisation-back-btn-wrap > .empty-button
 		padding-left: 20px
 		padding-right: 20px
+
+	.popup-processing-btn-wrap
+		margin-bottom: 20px
+
+	.modal-lg__header
+		padding-left: 0
+		padding-right: 0
+		margin-bottom: 20px
+		position: static
+		text-align: center
+		br
+			display: inline
+
+	.modal-lg-nav
+		width: 100%
+
+	.modal-lg-nav__item
+		padding: 0 20px
+		border-top: 1px solid #d5d5d5
+		&:after
+			display: none
+		> .panel-collapse
+			position: static
+			padding-left: 0
+			padding-right: 0
+
+	.modal-lg-nav__link-text
+		width: 100%
+
+	.modal-lg__b-content
+		max-height: none
+		padding-bottom: 20px
+		> .mb35
+			margin-bottom: 15px
+
+	.modal-lg-nav__arrow
+		margin-left: 10px
+		position: relative
+		&:before
+			content: ""
+			display: block
+			width: 7px
+			height: 7px
+			border-right: 2px solid #9c9c9c
+			border-bottom: 2px solid #9c9c9c
+			transform: rotate(45deg)
+
+	.modal-lg-nav__arrow
+		position: relative
+		&:before
+			content: ""
+			display: block
+			width: 7px
+			height: 7px
+			border-right: 2px solid #9c9c9c
+			border-bottom: 2px solid #9c9c9c
+			transform: rotate(225deg)
+			+trans()
+
+	.modal-lg-nav__link.collapsed
+		.modal-lg-nav__arrow
+			&:before
+				transform: rotate(45deg)
