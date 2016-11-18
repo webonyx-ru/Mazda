@@ -2,587 +2,594 @@
 @import "vars"
 
 *, input, textarea, .form-control
-    &, &:active, &:focus, &:hover
-        outline: none
-        box-shadow: none
-        border-color: #ccc
+	&, &:active, &:focus, &:hover
+		outline: none
+		box-shadow: none
+		border-color: #ccc
 
 h1, h2, h3, h4, h5, h6
-    margin: 0
-    padding: 0
+	margin: 0
+	padding: 0
 
 .clean-element
-    border: none
-    background: none
-    padding: 0
-    margin: 0
-    list-style: none
+	border: none
+	background: none
+	padding: 0
+	margin: 0
+	list-style: none
 
 .trans
-    +trans
+	+trans
 
 .ovh
-    overflow: hidden
+	overflow: hidden
 
 label
-    font-weight: normal
-    cursor: pointer
-    margin: 0
-    padding: 0
+	font-weight: normal
+	cursor: pointer
+	margin: 0
+	padding: 0
 
 a
-    &:hover, &:active, &:focus
-        text-decoration: none
-        
-    &[class*="--text-grey"]
-        &:not([class*='hover']):hover
-            color: #fff
+	&:hover, &:active, &:focus
+		text-decoration: none
 
-        &.hover-tdu
-            &:hover, &:active, &:hover
-                text-decoration: underline
-                color: $semidark-grey
+	&[class*="--text-grey"]
+		&:not([class*='hover']):hover
+			color: #fff
+
+		&.hover-tdu
+			&:hover, &:active, &:hover
+				text-decoration: underline
+				color: $semidark-grey
 
 .jq-checkbox, .jq-radio
-    position: relative
-    display: inline-block
-    vertical-align: middle
-    & > input
-        position: absolute
-        top: 0
-        bottom: 0
-        left: 0
-        right: 0
-        opacity: 0
-input
-    & + .jq-checkbox__div
-        text-align: center
-        line-height: 12px
-        height: 14px
-        width: 14px
-        border: 1px solid #c5c5c5
-        border-radius: 3px
-        font-size: 8px
-        color: transparent
-        cursor: pointer
-
-    & + .jq-radio__div
-        width: 14px
-        height: 14px
-        border: 1px solid $light-grey
-        border-radius: 50%
-        text-align: center
-        line-height: 12px
-        font-size: 0
-
-        &:after
-            display: inline-block
-            vertical-align: middle
-            position: absolute
-            top: 50%
-            margin-top: -4px
-            left: 50%
-            margin-left: -4px
-            content: ''
-            width: 8px
-            height: 8px
-            border-radius: 100%
-            background: $light-black
-            +transform(scale(0))
-            +trans
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	& > input
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		opacity: 0
 
 input
-    &:checked
-        & + .jq-checkbox__div
-            color: $semidark-grey
+	& + .jq-checkbox__div
+		text-align: center
+		line-height: 12px
+		height: 14px
+		width: 14px
+		border: 1px solid #c5c5c5
+		border-radius: 3px
+		font-size: 8px
+		color: transparent
+		cursor: pointer
 
-        & + .jq-radio__div
-            &:after
-                +transform(scale(1))
+	& + .jq-radio__div
+		width: 14px
+		height: 14px
+		border: 1px solid $light-grey
+		border-radius: 50%
+		text-align: center
+		line-height: 12px
+		font-size: 0
+
+		&:after
+			display: inline-block
+			vertical-align: middle
+			position: absolute
+			top: 50%
+			margin-top: -4px
+			left: 50%
+			margin-left: -4px
+			content: ''
+			width: 8px
+			height: 8px
+			border-radius: 100%
+			background: $light-black
+			+transform(scale(0))
+			+trans
+
+input
+	&:checked
+		& + .jq-checkbox__div
+			color: $semidark-grey
+
+		& + .jq-radio__div
+			&:after
+				+transform(scale(1))
 
 input[type="radio"], input[type="checkbox"]
-    margin-top: 0
+	margin-top: 0
 
 .custom-hidden
-    display: none
+	display: none
 
 p
-    &:last-child
-        margin-bottom: 0
+	&:last-child
+		margin-bottom: 0
+
 .db
-    display: block
+	display: block
 
 .dib
-    display: inline-block
-    vertical-align: middle
+	display: inline-block
+	vertical-align: middle
 
 [class*="--text-grey"], .--text-grey
-    color: $semidark-grey
+	color: $semidark-grey
 
 [class*="--text-red"], .--text-red
-    color: #dd0000
+	color: #dd0000
 
 [class*="--text-lime"], .--text-lime
-    color: #5fbd37
+	color: #5fbd37
 
 [class*="--text-lightgrey"], .--text-lightgrey
-    color: $light-grey
+	color: $light-grey
 
 [class*="--text-lightblack"], .--text-lightblack
-    color: $light-black
+	color: $light-black
 
 [class*="--text-green"], .--text-green
-    color: #3fb750
+	color: #3fb750
 
 [class*="--text-red"], .--text-red
-    color: #dd0000
-    
+	color: #dd0000
+
 [class*="--hover-text-black"], .--hover-text-black
-    &:hover, &:active, &:focus
-        color: $light-black
+	&:hover, &:active, &:focus
+		color: $light-black
 
 .full-width
-    width: 100%
+	width: 100%
 
 .lhn
-    line-height: normal
+	line-height: normal
 
 .display-flex
-    display: flex
+	display: flex
 
 .space-between
-    justify-content: space-between
+	justify-content: space-between
 
 .white-color
-    color: #fff
+	color: #fff
 
 .fz0
-    font-size: 0
+	font-size: 0
 
 .fz10
-    font-size: 10px
+	font-size: 10px
 
 .fz12
-    font-size: 12px
+	font-size: 12px
 
 .fz13
-    font-size: 13px
+	font-size: 13px
 
 .fz14
-    font-size: 14px
+	font-size: 14px
 
 .fz16
-    font-size: 16px
+	font-size: 16px
 
 .fz18
-    font-size: 18px
+	font-size: 18px
 
 .fz20
-    font-size: 20px
+	font-size: 20px
 
 .fz22
-    font-size: 22px
+	font-size: 22px
 
 .fz24
-    font-size: 24px
+	font-size: 24px
 
 .fz28
-    font-size: 28px
+	font-size: 28px
 
 .fz35
-    font-size: 35px
+	font-size: 35px
 
 .fz41
-    font-size: 41px
+	font-size: 41px
 
 .fz48
-    font-size: 48px
+	font-size: 48px
 
 .fz80
-    font-size: 80px
-    
+	font-size: 80px
+
 .white-bg
-    background: #fff
+	background: #fff
 
 .black-bg
-    background: #000
+	background: #000
 
 .ff-os
-    font-family: $os
+	font-family: $os
 
 .ff-sf
-    font-family: $sf
+	font-family: $sf
 
 .ff-sfb
-    font-family: $sfb
+	font-family: $sfb
 
 .ff-sfh
-    font-family: $sfh
+	font-family: $sfh
 
 .vab
-    vertical-align: baseline
+	vertical-align: baseline
 
 .db
-    display: block
-    width: 100%
+	display: block
+	width: 100%
 
 button
-    background: none
-    &:hover, &:focus, &:active
-        background: none
+	background: none
+	&:hover, &:focus, &:active
+		background: none
 
 .empty-button
-    padding: 0 15px
-    line-height: 26px
-    border: 2px solid $semidark-grey
-    color: $semidark-grey
-    border-radius: 3px
-    font-family: $sfb
-    display: inline-block
-    text-decoration: none
-    vertical-align: middle
-    white-space: nowrap
-    text-overflow: ellipsis
-    overflow: hidden
-    max-width: 100%
-    +trans
+	padding: 0 15px
+	line-height: 26px
+	border: 2px solid $semidark-grey
+	color: $semidark-grey
+	border-radius: 3px
+	font-family: $sfb
+	display: inline-block
+	text-decoration: none
+	vertical-align: middle
+	white-space: nowrap
+	text-overflow: ellipsis
+	overflow: hidden
+	max-width: 100%
+	+trans
 
-    &.red-border
-        border-color: #dd0000
+	&.red-border
+		border-color: #dd0000
 
-    &.thin
-        border-width: 1px
-    
-    &:hover
-        background: $semidark-grey
-        color: $white
+	&.thin
+		border-width: 1px
 
-    &.white
-        color: $white
-        border-color: $white
+	&:hover
+		background: $semidark-grey
+		color: $white
 
-    &.white-color
-        color: #fff
+	&.white
+		color: $white
+		border-color: $white
 
-    &.hover-red
-        &:hover
-            background: #dd0000
-            border-color: #dd0000
-            color: #fff
+	&.white-color
+		color: #fff
 
-    &.big-button
-        line-height: 32px
-        padding: 0 25px
+	&.hover-red
+		&:hover
+			background: #dd0000
+			border-color: #dd0000
+			color: #fff
 
-    &.black-border
-        border-color: $light-black
-        color: $light-black
+	&.big-button
+		line-height: 32px
+		padding: 0 25px
 
-    &.small-paddings
-        padding-left: 10px
-        padding-right: 10px
+	&.black-border
+		border-color: $light-black
+		color: $light-black
+
+	&.small-paddings
+		padding-left: 10px
+		padding-right: 10px
 
 .filled-button
-    @extend .empty-button
-    text-align: center
-    color: #fff
-    background: $light-black
-    border-color: $light-black
+	@extend .empty-button
+	text-align: center
+	color: #fff
+	background: $light-black
+	border-color: $light-black
 
-    &.white-bg
-        background: #fff
-        color: $light-black
-        border-color: #fff
+	&.white-bg
+		background: #fff
+		color: $light-black
+		border-color: #fff
 
 .grey-color
-    color: $semidark-grey
+	color: $semidark-grey
 
 .lts1
-    letter-spacing: 1px
+	letter-spacing: 1px
 
 .lts2
-    letter-spacing: 2px
+	letter-spacing: 2px
 
 .mr3
-    margin-right: 3px
+	margin-right: 3px
 
 .mr5
-    margin-right: 5px
+	margin-right: 5px
 
 .mr10
-    margin-right: 10px
+	margin-right: 10px
 
 .mr15
-    margin-right: 15px
+	margin-right: 15px
 
 .mr40
-    margin-right: 40px
+	margin-right: 40px
 
 .mr30
-    margin-right: 30px
+	margin-right: 30px
 
 .mb0
-    margin-bottom: 0
+	margin-bottom: 0
 
 .mb2
-    margin-bottom: 2px
+	margin-bottom: 2px
 
 .mb5
-    margin-bottom: 5px
+	margin-bottom: 5px
 
 .mb10
-    margin-bottom: 10px
+	margin-bottom: 10px
 
 .mb15
-    margin-bottom: 15px
+	margin-bottom: 15px
 
 .mb20
-    margin-bottom: 20px
+	margin-bottom: 20px
 
 .mb25
-    margin-bottom: 25px
+	margin-bottom: 25px
 
 .mb30
-    margin-bottom: 30px
+	margin-bottom: 30px
 
 .mb35
-    margin-bottom: 35px
+	margin-bottom: 35px
 
 .mb40
-    margin-bottom: 40px
+	margin-bottom: 40px
 
 .mb70
-    margin-bottom: 70px
+	margin-bottom: 70px
 
 .mb90
-    margin-bottom: 90px
+	margin-bottom: 90px
 
 .w100
-    width: 100%
+	width: 100%
 
 .posr
-    position: relative
+	position: relative
 
 .btn, .form-control
-    padding-top: 0
-    padding-bottom: 0
-    line-height: 36px
-    height: 38px
-    font-family: $sfb
-    box-shadow: none
+	padding-top: 0
+	padding-bottom: 0
+	line-height: 36px
+	height: 38px
+	font-family: $sfb
+	box-shadow: none
 
 .icon-top-minus-1
-    position: relative
-    top: -1px
+	position: relative
+	top: -1px
 
 .icon-top-minus-2
-    position: relative
-    top: -2px
+	position: relative
+	top: -2px
 
 .right-side__news-title
-    color: #000
-    &:hover
-        color: #000
+	color: #000
+	&:hover
+		color: #000
 
 .lh12
-    line-height: 1.2
-    
+	line-height: 1.2
+
 *.hover-black__link-red-icon
-    +trans
-    [class*="icon-"]
-        +trans
-    &:hover, &:active, &:focus
-        &:not(.inactive)
-            color: $light-black
-            [class*="icon-"]
-                color: #dd0000
+	+trans
+	[class*="icon-"]
+		+trans
+	&:hover, &:active, &:focus
+		&:not(.inactive)
+			color: $light-black
+			[class*="icon-"]
+				color: #dd0000
 
 *.hover-black__icon
-    [class*='icon-']
-        +trans
-    &:hover
-        [class*='icon-']
-            color: #000
-            
+	[class*='icon-']
+		+trans
+	&:hover
+		[class*='icon-']
+			color: #000
+
 .navbar-default, .navbar-collapse, .navbar-default .navbar-collapse
-    background: none
-    border: none
-    box-shadow: none
+	background: none
+	border: none
+	box-shadow: none
 
 .navbar-default
-    margin-bottom: 0
-    .navbar-toggle
-        height: 20px
-        width: 20px
-        display: inline-block
-        box-sizing: content-box
-        margin: 0
-        vertical-align: middle
+	margin-bottom: 0
+	.navbar-toggle
+		height: 20px
+		width: 20px
+		display: inline-block
+		box-sizing: content-box
+		margin: 0
+		vertical-align: middle
 
-        &, &:hover, &:active, &:focus
-            float: none
-            margin: 0
-            background: none
-            border: none
-            
-        &:not(.collapsed)
-            .icon-bar
-                +origin(center center)
-                margin: 0
-                &.middle
-                    opacity: 0
-                &.first
-                    +transform(translate3d(-50%, -50%, 0) rotate(45deg))
-                    margin: 0
-                &.last
-                    +transform(translate3d(-50%, -50%, 0) rotate(-45deg))
-                    margin: 0
+		&, &:hover, &:active, &:focus
+			float: none
+			margin: 0
+			background: none
+			border: none
 
+		&:not(.collapsed)
+			.icon-bar
+				+origin(center center)
+				margin: 0
+				&.middle
+					opacity: 0
+				&.first
+					+transform(translate3d(-50%, -50%, 0) rotate(45deg))
+					margin: 0
+				&.last
+					+transform(translate3d(-50%, -50%, 0) rotate(-45deg))
+					margin: 0
 
-        .icon-bar
-            background: $semidark-grey
-            height: 3px
-            border-radius: 0
-            position: absolute
-            margin: 0
-            left: 50%
-            top: 50%
-            +transform(translate3d(-50%, -50%, 0))
-            +trans
+		.icon-bar
+			background: $semidark-grey
+			height: 3px
+			border-radius: 0
+			position: absolute
+			margin: 0
+			left: 50%
+			top: 50%
+			+transform(translate3d(-50%, -50%, 0))
+			+trans
 
-            &.first
-                margin-top: -7px
+			&.first
+				margin-top: -7px
 
-            &.last
-                margin-top: 7px
+			&.last
+				margin-top: 7px
 
 .navbar-collapse
-    padding: 0
+	padding: 0
 
-    &.collapse
-        @media screen and (min-width: 768px)
-            display: inline-block !important
+	&.collapse
+		@media screen and (min-width: 768px)
+			display: inline-block !important
 
 .navbar
-    height: 80px
-    line-height: 80px
+	height: 80px
+	line-height: 80px
 
 .not-relative-pos
-    position: static
+	position: static
 
 .flex-middle
-    align-items: center
+	align-items: center
 
 .flex-end
-    align-items: flex-end
+	align-items: flex-end
 
 .cursor-pointer
-    cursor: pointer
+	cursor: pointer
 
 .no-lts
-    letter-spacing: 0
+	letter-spacing: 0
 
 .semi-title
-    @extend .--text-lightblack
-    @extend .fz14
-    text-transform: uppercase
-    @extend .ff-sfb
+	@extend .--text-lightblack
+	@extend .fz14
+	text-transform: uppercase
+	@extend .ff-sfb
 
-    &:not(.no-lts)
-        @extend .lts1
-    
-    &.grey
-        color: $semidark-grey
+	&:not(.no-lts)
+		@extend .lts1
+
+	&.grey
+		color: $semidark-grey
 
 .absolute-icon
-    position: relative
-    padding-left: 40px !important
-    & > [class*="icon-"].absolute
-        position: absolute
-        top: 50%
-        +transform(translateY(-50%))
-        left: 10px
+	position: relative
+	padding-left: 40px !important
+	& > [class*="icon-"].absolute
+		position: absolute
+		top: 50%
+		+transform(translateY(-50%))
+		left: 10px
 
-        &.left0
-            left: 0
+		&.left0
+			left: 0
 
 .last-child-no-mb
-    & > *:last-child
-        margin-bottom: 0
+	& > *:last-child
+		margin-bottom: 0
 
 .last-child-no-mr
-    & > *:last-child
-        margin-right: 0
-        
+	& > *:last-child
+		margin-right: 0
+
 .dot-separator
-    display: inline-block
-    vertical-align: middle
-    width: 5px
-    height: 5px
-    border-radius: 100%
-    background: #d5d5d5
+	display: inline-block
+	vertical-align: middle
+	width: 5px
+	height: 5px
+	border-radius: 100%
+	background: #d5d5d5
 
 .flex-wrap
-    flex-wrap: wrap
+	flex-wrap: wrap
 
 .round-image
-    border-radius: 100%
+	border-radius: 100%
 
 .bootstrap-select.btn-group .dropdown-toggle .caret
-    display: block
-    border: none
-    width: 8px
-    height: 8px
-    margin-top: -5px
-    right: 10px
-    top: 50%
-    border-right: 2px solid $light-grey
-    border-bottom: 2px solid $light-grey
-    +rotate(45deg)
+	display: block
+	border: none
+	width: 8px
+	height: 8px
+	margin-top: -5px
+	right: 10px
+	top: 50%
+	border-right: 2px solid $light-grey
+	border-bottom: 2px solid $light-grey
+	+rotate(45deg)
 
 .tdu
-    text-decoration: underline
+	text-decoration: underline
 
 .grey-underline-text
-    border-bottom: 2px solid $semidark-grey
+	border-bottom: 2px solid $semidark-grey
 
 .height100
-    height: 100%
+	height: 100%
 
 .height500
-    height: 500px
+	height: 500px
 
 .jspVerticalBar
-    width: 2px
-    background-color: transparent
+	width: 2px
+	background-color: transparent
 
 .jspTrack
-    background-color: transparent
+	background-color: transparent
 
 .jspDrag
-    background: $light-grey
-    right: -10px
+	background: $light-grey
+	right: -10px
 
-
+.panel
+	margin-bottom: 0
+	background-color: transparent
+	border: none
+	border-radius: 0
+	-webkit-box-shadow: none
+	box-shadow: none
 
 @media screen and (max-width: 767px)
-    .mobile-display-block
-        display: block
+	.mobile-display-block
+		display: block
 
-    .mobile-display-inline-block
-        display: inline-block
-        vertical-align: middle
+	.mobile-display-inline-block
+		display: inline-block
+		vertical-align: middle
 
-    .mobile-wa
-        width: auto
+	.mobile-wa
+		width: auto
 
 @media screen and (max-width: 992px) and (min-width: 768px)
-    .tab-display-block
-        display: block
+	.tab-display-block
+		display: block
 
-    .tab-display-inline-block
-        display: inline-block
-        vertical-align: middle
+	.tab-display-inline-block
+		display: inline-block
+		vertical-align: middle
 
-    .tab-wa
-        width: auto
+	.tab-wa
+		width: auto
