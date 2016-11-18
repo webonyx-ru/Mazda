@@ -1,5 +1,6 @@
 @import "vars"
 @import "mixins/mixins"
+@import "mixins/retina_sprites"
 
 .popups-btn-panel
 	width: 350px
@@ -428,12 +429,6 @@
 	position: relative
 	+trans()
 
-.modal-lg-nav__icon
-	position: absolute
-	top: 50%
-	left: 50%
-	transform: translate(-50%, -50%)
-
 .modal-lg-nav__link-text
 	width: calc(100% - 40px)
 	font-size: 14px
@@ -458,6 +453,22 @@
 .modal-lg__b-content-img
 	width: 100%
 	height: auto
+
+
+
+.icon-arrows
+	+sprite(arrows, "retina", "abs_middle")
+.icon-check
+	+sprite(check, "retina", "abs_middle")
+.icon-road
+	+sprite(road, "retina", "abs_middle")
+.icon-rouble
+	+sprite(rouble, "retina", "abs_middle")
+.icon-umbrella
+	+sprite(umbrella, "retina", "abs_middle")
+.icon-wrench
+	+sprite(wrench, "retina", "abs_middle")
+
 
 
 .modal-dialog
