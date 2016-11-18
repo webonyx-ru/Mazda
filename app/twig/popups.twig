@@ -530,16 +530,16 @@
                             <div class="modal-lg__header text-uppercase ff-sfb lts1">
                                 Специальная<br> программа Mazda Next
                             </div>
-                            <ul class="modal-lg-nav">
-                                <li class="modal-lg-nav__item">
-                                    <a class="modal-lg-nav__link text-uppercase ff-sfb" href="#tried-auto" data-toggle="collapse" data-parent="#accordion">
+                            <ul class="modal-lg-nav" id="accordion" role="tablist" aria-multiselectable="true">
+                                <li class="modal-lg-nav__item" role="tab" id="modal-lg-nav__item-one">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb" href="#tried-auto" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="tried-auto">
                                         <div class="modal-lg-nav__circle hidden-xs">
                                             <img class="modal-lg-nav__icon" src="images/icons/check.png">
                                         </div>
                                         <div class="modal-lg-nav__link-text">Только проверенные автомобили</div>
                                         <div class="modal-lg-nav__arrow hidden-sm"></div>
                                     </a>
-                                    <div class="panel-collapse collapse in" id="tried-auto">
+                                    <div class="panel-collapse collapse in" id="tried-auto" role="tabpanel" aria-labelledby="modal-lg-nav__item-one">
                                         <div class="modal-lg__b-content">
                                             <div class="ff-os fz14 mb35">
                                                 <p class="mb0">Для участия в программе допускаются автомобили не старше 5 лет и с пробегом не более 100 000 км. Предлагаемые автомобили проходят тщательную проверку, что гарантирует прозрачность истории предыдущего владения и эксплуатации.</p>
@@ -548,15 +548,15 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="modal-lg-nav__item">
-                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#complex-tech-training" data-toggle="collapse" data-parent="#accordion">
+                                <li class="modal-lg-nav__item" role="tab" id="modal-lg-nav__item-two">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#complex-tech-training" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="complex-tech-training">
                                         <div class="modal-lg-nav__circle hidden-xs">
                                             <img class="modal-lg-nav__icon" src="images/icons/wrench.png">
                                         </div>
                                         <div class="modal-lg-nav__link-text">Комплексная техническая подготовка</div>
                                         <div class="modal-lg-nav__arrow hidden-sm"></div>
                                     </a>
-                                    <div class="panel-collapse collapse" id="complex-tech-training">
+                                    <div class="panel-collapse collapse" id="complex-tech-training" role="tabpanel" aria-labelledby="modal-lg-nav__item-two">
                                         <div class="modal-lg__b-content">
                                             <div class="ff-os fz14 mb35">
                                                 <p class="mb25">Обязательное условие программы — полная диагностика предлагаемого автомобиля.</p>
@@ -566,15 +566,15 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="modal-lg-nav__item">
-                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#after-sales-support" data-toggle="collapse" data-parent="#accordion">
+                                <li class="modal-lg-nav__item" role="tab" id="modal-lg-nav__item-three">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#after-sales-support" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="after-sales-support">
                                         <div class="modal-lg-nav__circle hidden-xs">
                                             <img class="modal-lg-nav__icon" src="images/icons/umbrella.png">
                                         </div>
                                         <div class="modal-lg-nav__link-text">Послегарантийная сервисная поддержка</div>
                                         <div class="modal-lg-nav__arrow hidden-sm"></div>
                                     </a>
-                                    <div class="panel-collapse collapse" id="after-sales-support">
+                                    <div class="panel-collapse collapse" id="after-sales-support" role="tabpanel" aria-labelledby="modal-lg-nav__item-three">
                                         <div class="modal-lg__b-content">
                                             <div class="ff-os fz14 mb35">
                                                 <p class="mb0">С программой Mazda NEXT вы получаете не только качественный автомобиль, но и послегарантийную сервисную поддержку. Послегарантийная сервисная поддержка сроком на 1 год, либо 30 000 км пробега — максимальная надежность и уверенность при покупке автомобиля с пробегом, техническая поддержка автомобиля, ремонт и замена его неисправных деталей. Условия обслуживания уточняйте у вашего официального дилера.</p>
@@ -583,15 +583,15 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="modal-lg-nav__item">
-                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#mobility-guarantee" data-toggle="collapse" data-parent="#accordion">
+                                <li class="modal-lg-nav__item" role="tab" id="modal-lg-nav__item-four">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#mobility-guarantee" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="mobility-guarantee">
                                         <div class="modal-lg-nav__circle hidden-xs">
                                             <img class="modal-lg-nav__icon" src="images/icons/road.png">
                                         </div>
                                         <div class="modal-lg-nav__link-text">Гарантия мобильности</div>
                                         <div class="modal-lg-nav__arrow hidden-sm"></div>
                                     </a>
-                                    <div class="panel-collapse collapse" id="mobility-guarantee">
+                                    <div class="panel-collapse collapse" id="mobility-guarantee" role="tabpanel" aria-labelledby="modal-lg-nav__item-four">
                                         <div class="modal-lg__b-content">
                                             <div class="ff-os fz14 mb35">
                                                 <p class="mb0">На дороге никто не застрахован, но мы позаботились о Вашем спокойствии. Клиент, купивший автомобиль по программе Mazda NEXT, 24 часа в сутки 365 дней в году может воспользоваться услугой по запуску двигателя от внешнего источника, замене колеса на запасное, подвозу топлива. В случае возникновения непредвиденной поломки на дороге или ДТП, автомобиль будет доставлен к ближайший дилерский центр Mazda. Во время ремонта Вам может быть предложен подменный автомобиль, такси до дома/работы, гостиница, либо билеты на поезд/самолет для продолжения путешествия, чтобы максимально сохранить Вашу мобильность.</p>
@@ -600,15 +600,15 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="modal-lg-nav__item">
-                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#credit-and-insurance" data-toggle="collapse" data-parent="#accordion">
+                                <li class="modal-lg-nav__item" role="tab" id="modal-lg-nav__item-five">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#credit-and-insurance" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="credit-and-insurance">
                                         <div class="modal-lg-nav__circle hidden-xs">
                                             <img class="modal-lg-nav__icon" src="images/icons/rouble.png">
                                         </div>
                                         <div class="modal-lg-nav__link-text">Специальные условия: Кредит и Страхование</div>
                                         <div class="modal-lg-nav__arrow hidden-sm"></div>
                                     </a>
-                                    <div class="panel-collapse collapse" id="credit-and-insurance">
+                                    <div class="panel-collapse collapse" id="credit-and-insurance" role="tabpanel" aria-labelledby="modal-lg-nav__item-five">
                                         <div class="modal-lg__b-content">
                                             <div class="ff-os fz14 mb35">
                                                 <p class="mb0 mb25">C фирменной программой Mazda NEXT мечты о собственном автомобиле могут стать реальностью уже сегодня. Для этого мы максимально упростили условия кредитования для сертифицированных автомобилей Mazda с пробегом, а так же разработали выгодную программу страхования КАСКО.</p>
@@ -638,15 +638,15 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="modal-lg-nav__item">
-                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#mazda-trade-in" data-toggle="collapse" data-parent="#accordion">
+                                <li class="modal-lg-nav__item" role="tab" id="modal-lg-nav__item-six">
+                                    <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#mazda-trade-in" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="mazda-trade-in">
                                         <div class="modal-lg-nav__circle hidden-xs">
                                             <img class="modal-lg-nav__icon" src="images/icons/arrows.png">
                                         </div>
                                         <div class="modal-lg-nav__link-text">Mazda Трейд-ин</div>
                                         <div class="modal-lg-nav__arrow hidden-sm"></div>
                                     </a>
-                                    <div class="panel-collapse collapse" id="mazda-trade-in">
+                                    <div class="panel-collapse collapse" id="mazda-trade-in" role="tabpanel" aria-labelledby="modal-lg-nav__item-six">
                                         <div class="modal-lg__b-content">
                                             <div class="ff-os fz14 mb35">
                                                 <p class="mb0">Все автомобили программы Mazda NEXT могут быть приобретены по схеме трейд-ин. Дилер-участник программы может принять ваш автомобиль в зачет стоимости приобретаемого автомобиля Mazda NEXT. Практика подобных обменов с доплатой популярна во всем мире. Трейд-ин — максимально быстрый и безопасный способ продажи и приобретения автомобиля.</p>
@@ -664,3 +664,50 @@
     </div>
 </section>
 {% endblock %}
+
+
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Collapsible Group Item #1
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Collapsible Group Item #2
+                </a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Collapsible Group Item #3
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+</div>
