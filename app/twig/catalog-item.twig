@@ -21,7 +21,7 @@
 				</div>
 				<div class="visible-sm visible-xs clearfix"></div>
 				<div class="content-area__left-side col-xs-12 col-md-9">
-					<div class="content-area__item mb35">
+					<div class="content-area__item mb35 mobile--mb0">
 						<div class="block-title text-uppercase">Продажа Mazda 3 в Москве</div>
 						<div class="content-area__container display-flex flex-wrap">
 							<div class="col-sm-8 col-xs-12 owl-carousel__parent-element">
@@ -106,7 +106,7 @@
 					<div class="content-area__item mb35">
 						<div class="content-area__container white-bg">
 							<div class="content-area__section text-center">
-								<ul class="catalog-item__tabs-header dib ff-sfb clean-element mb35">
+								<ul class="catalog-item__tabs-header dib ff-sfb clean-element mb35 hidden-xs">
 									<li class="catalog-item__tabs-item dib active">
 										<a href="#catalog-tab1" class="catalog-item__tabs-link dib --text-grey --hover-text-black"
 											 data-toggle="tab">Описание</a>
@@ -124,8 +124,11 @@
 											 data-toggle="tab">Обзоры</a>
 									</li>
 								</ul>
-								<div class="catalog-item__tabs-content tab-content text-left">
-									<div class="catalog-item__tabs-content tab-content text-left">
+								<div class="catalog-item__tabs-content text-left">
+									<div class="catalog-item__tabs-content tab-content text-left mobile-arrordion" data-mobile-accordion="parent">
+										<div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+											Описание
+										</div>
 										<div id="catalog-tab1" class="tab-pane active in fade">
 											<div class="catalog-item__seller-comment mb35">
 												<div
@@ -196,12 +199,21 @@
 												</div>
 											</div>
 										</div>
+										<div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+											Характеристики
+										</div>
 										<div id="catalog-tab2" class="tab-pane fade">
 											{% include 'widgets/auto-model__characters-tab.twig' %}
+										</div>
+										<div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+											Комментарии
 										</div>
 										<div id="catalog-tab3" class="tab-pane fade">
 											{% include 'widgets/auto-model__comments-tab.twig' %}
 											{% include 'widgets/pagination.twig' %}
+										</div>
+										<div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+											Обзоры
 										</div>
 										<div id="catalog-tab4" class="tab-pane fade">
 											{% include 'widgets/auto-model__reviews-tab.twig' %}

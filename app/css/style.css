@@ -591,6 +591,10 @@ body, html {
   right: 35px;
 }
 
+.main-page__news-grid [class*="col-"].main-page__news-grid-item__big {
+  padding-top: 1px;
+}
+
 .content-block__tab-menu-item {
   position: relative;
 }

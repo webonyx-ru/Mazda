@@ -1,7 +1,7 @@
 @import vars
 @import mixins/mixins
 
-@media screen and (max-width: 992px)
+@media screen and (max-width: 991px)
     .main-page__news-grid-item
         &.main-page__news-grid-item__big
             border-right: none
@@ -419,3 +419,51 @@
         position: absolute
         left: 0
         top: 0
+
+    .main-page__news-grid-item__big
+        padding-top: 0
+
+    .mobile-arrordion
+        & > .tab-pane
+            display: none
+            opacity: 1
+            padding: 20px 0
+
+            &.mobile-active
+                display: block
+        
+    .accordion-header
+        position: relative
+
+        &:after
+            display: block
+            content: ''
+            position: absolute
+            width: 8px
+            height: 8px
+            border-bottom: 2px solid #c5c5c5
+            border-right: 2px solid #c5c5c5
+            top: 50%
+            right: 20px
+            margin-top: -4px
+            +transform(rotate(45deg))
+            +trans
+
+        &.mobile-active
+            color: $light-black
+
+            &:after
+                +transform(rotate(-135deg))
+            
+    .accordion-header
+        text-align: left
+        margin-left: -20px
+        margin-right: -20px
+        padding: 20px
+        border-top: 1px solid #c5c5c5
+
+        &.active
+            color: $light-black
+
+    .mobile-arrordion
+        margin-bottom: -20px

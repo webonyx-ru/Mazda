@@ -232,6 +232,28 @@ $(function () {
     });
 });
 
+$(function () {
+    var accordion = {};
+    accordion.parent = $('[data-mobile-accordion="parent"]');
+    accordion.header = accordion.parent.find('.accordion-header');
+
+
+    accordion.toggle = function (current, siblings) {
+        siblings.removeClass('mobile-active');
+        current.addClass('mobile-active');
+        current.next('.tab-pane').addClass('mobile-active')
+    };
+
+    accordion.header.on('click', function (e) {
+        e.preventDefault();
+
+        var current = $(this);
+        var siblings = current.siblings();
+
+        accordion.toggle(current, siblings);
+    });
+});
+
 function viewport() {
     var e = window, a = 'inner';
     if (!('innerWidth' in window )) {

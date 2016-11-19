@@ -100,7 +100,7 @@
 							</div>
 						</div>
 						<div class="content-area__tabs text-center">
-							<ul class="catalog-item__tabs-header dib ff-sfb clean-element mb35">
+							<ul class="catalog-item__tabs-header dib ff-sfb clean-element mb35 hidden-xs">
 								<li class="catalog-item__tabs-item dib active">
 									<a href="#dealers-tab1" class="catalog-item__tabs-link dib --text-grey --hover-text-black"
 										 data-toggle="tab" aria-expanded="true">Контакты</a>
@@ -122,7 +122,10 @@
 										 data-toggle="tab">Отзывы</a>
 								</li>
 							</ul>
-							<div class="tab-content">
+							<div class="tab-content mobile-arrordion" data-mobile-accordion="parent">
+								<div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+									Контакты
+								</div>
 								<div class="tab-pane fade in active text-left" id="dealers-tab1">
 									<div class="display-flex space-between flex-end mb35 mobile-display-block">
 										<div class="mobile--mb20">
@@ -197,12 +200,18 @@
 									</div>
 									{% include 'widgets/map-widget.twig' %}
 								</div>
+								<div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+									услуи
+								</div>
 								<div class="tab-pane fade text-left" id="dealers-tab2">
 									{% include 'widgets/b-services.twig' %}
 								</div>
+								<div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+									объявления
+								</div>
 								<div class="tab-pane fade text-left owl-carousel__parent-element" id="dealers-tab3">
 									<div class="display-flex space-between flex-middle mb10 mobile-display-block">
-										<div class="semi-title mobile--mb10">объявления компании</div>
+										<div class="semi-title mobile--mb10 hidden-xs">объявления компании</div>
 										<div>
 											<ul class="clean-element content-block__tab-menu-listing dib fz0 lts1 mr30 mobile-no-mr mobile-small-tab-selectors mobile-display-flex space-between flex-wrap">
 												<li class="content-block__tab-menu-item dib">
@@ -275,6 +284,9 @@
 										</div>
 									</div>
 								</div>
+								<div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+									акции
+								</div>
 								<div class="tab-pane fade text-left owl-carousel__parent-element" id="dealers-tab4">
 									<div class="display-flex space-between flex-middle mb10 mobile-display-block">
 										<div class="semi-title mobile--mb10">объявления компании</div>
@@ -298,6 +310,9 @@
 											</a>
 										</p>
 									</div>
+								</div>
+								<div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+									отзывы
 								</div>
 								<div class="tab-pane fade text-left" id="dealers-tab5">
 									<div class="text-right mb15">

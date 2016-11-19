@@ -97,7 +97,7 @@
                             </div>
 
                             <div class="content-area__tabs text-center">
-                                <ul class="catalog-item__tabs-header dib ff-sfb clean-element mb35">
+                                <ul class="catalog-item__tabs-header dib ff-sfb clean-element mb35 hidden-xs">
                                     <li class="catalog-item__tabs-item dib">
                                         <a href="#dealers-tab1"
                                            class="catalog-item__tabs-link dib --text-grey --hover-text-black"
@@ -124,9 +124,15 @@
                                            data-toggle="tab">Вакансии</a>
                                     </li>
                                 </ul>
-                                <div class="tab-content">
+                                <div class="tab-content mobile-arrordion" data-mobile-accordion="parent">
+                                    <div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+                                        Компании
+                                    </div>
                                     <div class="tab-pane fade text-left" id="dealers-tab1">
                                         {% include 'widgets/map-widget.twig' with {"height": "height500"} %}
+                                    </div>
+                                    <div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+                                        Акции
                                     </div>
                                     <div class="tab-pane fade text-left owl-carousel__parent-element" id="dealers-tab2">
                                         <div class="display-flex space-between flex-middle mb10">
@@ -154,8 +160,14 @@
                                             </p>
                                         </div>
                                     </div>
+                                    <div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+                                        Услуги
+                                    </div>
                                     <div class="tab-pane fade text-left" id="dealers-tab3">
                                         {% include 'widgets/b-services.twig' %}
+                                    </div>
+                                    <div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+                                        Марки
                                     </div>
                                     <div class="tab-pane fade text-left" id="dealers-tab4">
                                         <div class="models-logo__units row display-flex space-between">
@@ -196,10 +208,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="accordion-header grey text-uppercase visible-xs semi-title --hover-text-black">
+                                        Вакансии
+                                    </div>
                                     <div class="tab-pane fade text-left active in" id="dealers-tab5">
                                         <form class="mb20" action="#">
-                                            <div class="row holding-vacancy">
-                                                <div class="col-md-4">
+                                            <div class="row holding-vacancy display-flex flex-wrap last-child-no-mb">
+                                                <div class="col-md-4 col-sm-6 col-xs-12 mobile--mb15 tab-mb15">
                                                     <p class="holding-vacancy__field-title --text-lightblack">
                                                         Регион:</p>
                                                     <div>
@@ -217,7 +232,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 col-sm-6 col-xs-12 mobile--mb15 tab-mb15">
                                                     <p class="holding-vacancy__field-title --text-lightblack">
                                                         Категория:</p>
                                                     <div>
@@ -235,7 +250,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-3 col-sm-6 col-xs-12 mobile--mb15">
                                                     <p class="holding-vacancy__field-title --text-lightblack">Зарплата (&#x20bd;):</p>
                                                     <div class="double-inputs">
                                                         <div class="col-xs-6">
@@ -246,7 +261,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-2">
+                                                <div class="col-md-2 col-sm-6 col-xs-12 mobile--mb15">
                                                     <p class="holding-vacancy__field-title --text-lightblack">Опыт
                                                         работы:</p>
                                                     <div class="double-inputs">
