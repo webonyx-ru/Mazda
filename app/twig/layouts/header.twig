@@ -1,73 +1,138 @@
 <header class="main-header posr clearfix">
-	<div class="header__white-plate white-bg fz0 clearfix text-right clearfix">
-		<div class="container">
-			<div class="mobile-display-flex space-between">
-				<div class="dib mr40">
-					<div class="dropdown cities-dropdown lts1 fz14">
-                        <span class="grey-color ff-sfb dib"><i class="icon-location_pin dib"></i>  <span
-															class="hidden-xs">Ваш город:</span></span>
-						<span class="cities-dropdown-button dib ff-sfb">Москва</span>
-					</div>
-				</div>
-				<div class="dib"><a href="#" class="empty-button text-uppercase fz14">Вход</a></div>
-			</div>
-		</div>
-	</div>
-	<div class="header__black-plate posr clearfix">
-		<div class="container">
-			<div class="row">
-				<div class="header-logo__colomn col-sm-4 col-xs-6">
-					<div class="logo-area fz0">
-						<a href="#" class="logo-square b-logo__club text-uppercase ff-sfb white-color text-center">
-							<span class="dib fz14">АВТОКЛУБ ЛЮБИТЕЛЕЙ МАЗДА</span>
-						</a>
-						<a href="#" class="logo-square b-logo__mazda text-center">
-							<img src="images/logo-mazda.png" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="col-sm-8 col-xs-6 not-relative-pos text-right">
-					<nav class="navbar navbar-default not-relative-pos">
-						<button type="button" class="navbar-toggle collapsed visible-xs-inline-block" data-toggle="collapse"
-										data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar first"></span>
-							<span class="icon-bar middle"></span>
-							<span class="icon-bar last"></span>
-						</button>
-						<div class="header-menu text-uppercase ff-sfb collapse navbar-collapse"
-								 id="bs-example-navbar-collapse-1">
-							<ul class="header-menu__listing clean-element dib mr40">
-								<li class="header-menu__item dib">
-									<a href="#" class="header-menu__link">Компании</a>
-								</li>
-								<li class="header-menu__item dib">
-									<a href="#" class="header-menu__link">Социум</a>
-								</li>
-								<li class="header-menu__item dib">
-									<a href="#" class="header-menu__link" data-call-submenu="automobile">Автомобили</a>
+    <div class="header__white-plate white-bg fz0 clearfix text-right clearfix">
+        <div class="container">
+            <div class="mobile-display-flex space-between">
+                <div class="dib mr40">
+                    <div class="dropdown cities-dropdown lts1 fz14">
+                        <span class="grey-color ff-sfb dib">
+                            <i class="icon-location_pin dib"></i>
+                            <span class="hidden-xs">Ваш город:</span>
+                        </span>
+                        <span class="cities-dropdown-button dib ff-sfb">Москва</span>
+                    </div>
+                </div>
+                {% if header != 'logged' %}
+                    <div class="dib">
+                        <a href="#" class="empty-button text-uppercase fz14">Вход</a>
+                    </div>
+                {% else %}
+                    <div class="dib mr40">
+                        <a href="#" class="--text-grey posr header-notification">
+                            <i class="icon-favorite fz18"></i>
+                            <span class="header-notification__count">3</span>
+                        </a>
+                        {# TODO заменить иконку звонка#}
+                    </div>
+                    <div class="dib posr">
+                        <a href="#header-profile-menu" class="empty-button" data-toggle="collapse">
+                            <div class="header-avatar__wrapper dib mr10 fz0">
+                                <img class="header-avatar full-width dib" src="http://placehold.it/22x22" alt="">
+                            </div>1
+                            <span class="dib fz14 mr10 lts1">street_racer7</span>
+                            <i class="icon-down_arrow fz10 trans"></i>
+                        </a>
+                        <div id="header-profile-menu" class="header-profile__menu collapse text-left">
+                            <ul class="header-profile__menu-listing clean-element">
+                                <li class="header-profile__menu-item">
+                                    <a href="#" class="header-profile__menu-link semi-title grey --hover-text-black fz14">
+                                        моя страница
+                                    </a>
+                                </li>
+                                <li class="header-profile__menu-item">
+                                    <a href="#" class="header-profile__menu-link semi-title grey --hover-text-black fz14">
+                                        мои объявления
+                                    </a>
+                                </li>
+                                <li class="header-profile__menu-item">
+                                    <a href="#" class="header-profile__menu-link semi-title grey --hover-text-black fz14">
+                                        мои сообщения
+                                    </a>
+                                </li>
+                                <li class="header-profile__menu-item">
+                                    <a href="#" class="header-profile__menu-link semi-title grey --hover-text-black fz14">
+                                        мои компании
+                                    </a>
+                                </li>
+                                <li class="header-profile__menu-item">
+                                    <a href="#" class="header-profile__menu-link semi-title grey --hover-text-black fz14">
+                                        Избранные
+                                    </a>
+                                </li>
+                                <li class="header-profile__menu-item">
+                                    <a href="#" class="header-profile__menu-link semi-title grey --hover-text-black fz14">
+                                        Настройки
+                                    </a>
+                                </li>
+                                <li class="header-profile__menu-item">
+                                    <a href="#" class="header-profile__menu-link semi-title grey --hover-text-black fz14">
+                                        Выход
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        {# TODO заменить иконку звонка#}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="header__black-plate posr clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="header-logo__colomn col-sm-4 col-xs-6">
+                    <div class="logo-area fz0">
+                        <a href="#" class="logo-square b-logo__club text-uppercase ff-sfb white-color text-center">
+                            <span class="dib fz14">АВТОКЛУБ ЛЮБИТЕЛЕЙ МАЗДА</span>
+                        </a>
+                        <a href="#" class="logo-square b-logo__mazda text-center">
+                            <img src="images/logo-mazda.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-xs-6 not-relative-pos text-right">
+                    <nav class="navbar navbar-default not-relative-pos">
+                        <button type="button" class="navbar-toggle collapsed visible-xs-inline-block"
+                                data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar first"></span>
+                            <span class="icon-bar middle"></span>
+                            <span class="icon-bar last"></span>
+                        </button>
+                        <div class="header-menu text-uppercase ff-sfb collapse navbar-collapse"
+                             id="bs-example-navbar-collapse-1">
+                            <ul class="header-menu__listing clean-element dib mr40">
+                                <li class="header-menu__item dib">
+                                    <a href="#" class="header-menu__link">Компании</a>
+                                </li>
+                                <li class="header-menu__item dib">
+                                    <a href="#" class="header-menu__link">Социум</a>
+                                </li>
+                                <li class="header-menu__item dib">
+                                    <a href="#" class="header-menu__link" data-call-submenu="automobile">Автомобили</a>
 
-									<div class="header-submenu white-bg ff-os fz16 custom-hidden" data-submenu="automobile">
-										<div class="container">
-											<div class="row text-center">
-												<div class="col-sm-4 col-sm-offset-2 col-xs-6 submenu-section__border-right">
-													<a href="#" class="header-submenu__link">Каталог авто</a>
-												</div>
-												<div class="col-sm-4 text-center col-xs-6">
-													<a href="#" class="header-submenu__link">Объявления</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-							<div class="dib header-forum-link">
-								<a href="#" class="empty-button hover-red white text-uppercase big-button">Форум</a>
-							</div>
-						</div>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div>
+                                    <div class="header-submenu white-bg ff-os fz16 custom-hidden"
+                                         data-submenu="automobile">
+                                        <div class="container">
+                                            <div class="row text-center">
+                                                <div class="col-sm-4 col-sm-offset-2 col-xs-6 submenu-section__border-right">
+                                                    <a href="#" class="header-submenu__link">Каталог авто</a>
+                                                </div>
+                                                <div class="col-sm-4 text-center col-xs-6">
+                                                    <a href="#" class="header-submenu__link">Объявления</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="dib header-forum-link">
+                                <a href="#" class="empty-button hover-red white text-uppercase big-button">Форум</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>

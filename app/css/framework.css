@@ -271,7 +271,7 @@ p:last-child {
   width: 100%;
 }
 
-.empty-button, .filled-button {
+.empty-button:focus, .filled-button:focus, .empty-button, .filled-button {
   padding: 0 15px;
   line-height: 26px;
   border: 2px solid #999999;
@@ -297,9 +297,16 @@ p:last-child {
 .empty-button.thin, .thin.filled-button {
   border-width: 1px;
 }
-.empty-button:hover, .filled-button:hover {
+.empty-button:hover, .filled-button:hover, .empty-button[aria-expanded="true"], [aria-expanded="true"].filled-button {
   background: #999999;
   color: #fff;
+}
+.empty-button[aria-expanded="true"] .icon-down_arrow, [aria-expanded="true"].filled-button .icon-down_arrow {
+  transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
 }
 .empty-button.white, .white.filled-button {
   color: #fff;

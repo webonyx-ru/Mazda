@@ -81,27 +81,43 @@ doc.ready(function () {
             e.preventDefault()
         });
     });
+    
+    $('.auto-slider.owl-carousel').each(function () {
+        $(this).owlCarousel({
+            thumbs: true,
+            items: 1,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        })
+    });
 
     $('[data-js-hide]').on('click', function (e) {
         $(this).closest('[data-js-hide-block]').hide();
         e.preventDefault();
     });
 
-    $('[data-jsp]').jScrollPane();
+    $(window).on('load', function () {
+        $('[data-jsp]').jScrollPane();
+    });
 
     $(window).resize(function () {
-        var throttleTimeout;
+
         $('[data-jsp]').each(function () {
             var api = $(this).data('jsp');
-            if (!throttleTimeout) {
-                throttleTimeout = setTimeout(
-                    function () {
-                        api.reinitialise();
-                        throttleTimeout = null;
-                    },
-                    100
-                );
-            }
+            clearTimeout(throttleTimeout);
+            var throttleTimeout;
+            // if (!throttleTimeout) {
+            throttleTimeout = setTimeout(
+                function () {
+                    api.reinitialise();
+                    // cleanTimeout(throttleTimeout);
+                },
+                200
+            );
+            // }
         })
     });
 

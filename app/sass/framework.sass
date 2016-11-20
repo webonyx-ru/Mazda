@@ -219,20 +219,21 @@ p
     width: 100%
 
 .empty-button
-    padding: 0 15px
-    line-height: 26px
-    border: 2px solid $semidark-grey
-    color: $semidark-grey
-    border-radius: 3px
-    font-family: $sfb
-    display: inline-block
-    text-decoration: none
-    vertical-align: middle
-    white-space: nowrap
-    text-overflow: ellipsis
-    overflow: hidden
-    max-width: 100%
-    +trans
+    &:focus, &
+        padding: 0 15px
+        line-height: 26px
+        border: 2px solid $semidark-grey
+        color: $semidark-grey
+        border-radius: 3px
+        font-family: $sfb
+        display: inline-block
+        text-decoration: none
+        vertical-align: middle
+        white-space: nowrap
+        text-overflow: ellipsis
+        overflow: hidden
+        max-width: 100%
+        +trans
 
     &.red-border
         border-color: #dd0000
@@ -240,9 +241,13 @@ p
     &.thin
         border-width: 1px
     
-    &:hover
+    &:hover, &[aria-expanded="true"]
         background: $semidark-grey
         color: $white
+
+    &[aria-expanded="true"]
+        .icon-down_arrow
+            +transform(rotate(-180deg))
 
     &.white
         color: $white

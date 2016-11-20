@@ -546,4 +546,8 @@
   .mobile-arrordion {
     margin-bottom: -20px;
   }
+
+  .auto-slider .owl-thumbs {
+    display: none;
+  }
 }

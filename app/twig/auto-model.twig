@@ -12,7 +12,7 @@
 						<div class="content-area__container display-flex flex-wrap">
 							<div class="col-sm-8 col-xs-12 tab-content">
 								{% for i in 1..10 %}
-									<div class="tab-pane owl-carousel__parent-element fade {% if i == 1 %} active in{% endif %}"
+									<div class="tab-pane fade {% if i == 1 %} active in{% endif %}"
 											 id="auto-image-slider{{ i }}">
 										{% include 'widgets/auto-slider.twig' %}
 									</div>
