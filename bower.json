@@ -7,6 +7,7 @@
     "bootstrap": "^3.3.7",
     "bootstrap-select": "^1.11.2",
     "owl.carousel": "2",
-    "jScrollPane": "jscrollpane#^2.0.23"
+    "jScrollPane": "jscrollpane#^2.0.23",
+    "owl.carousel2.thumbs": "^0.1.7"
   }
 }

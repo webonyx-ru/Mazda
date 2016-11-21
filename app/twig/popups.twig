@@ -1,662 +1,755 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Попапы</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Попапы</title>
 
-    <!-- Stylesheets -->
-    {% include "layouts/stylesheets.twig" %}
-
-    {% include "layouts/scripts.twig" %}
+	<!-- Stylesheets -->
+	{% include "layouts/stylesheets.twig" %}
 </head>
 
-{% block content %}
-    <section class="pt40 mb18 hidden-xs">
-        <div class="text-center">
-            <a href="#" class="logo-square b-logo__club text-uppercase ff-sfb white-color text-center mt0">
-                <span class="dib fz14">АВТОКЛУБ ЛЮБИТЕЛЕЙ MAZDA</span>
-            </a>
-            <a href="#" class="logo-square b-logo__mazda text-center mt0">
-                <img src="images/logo-mazda.png" alt="" title="">
-            </a>
-        </div>
-    </section>
+<body>
 
-    <section class="pt15 mb-15">
-    <!-- Button trigger modal -->
-    <div class="text-center">
-        <button class="empty-button hover-red big-button text-uppercase lts1 mb20" data-toggle="modal" data-target="#modal-window-md">
-            Средний попап
-        </button>
-        <button class="empty-button hover-red big-button text-uppercase lts1 mb20" data-toggle="modal" data-target=".bs-example-modal-sm">
-            Маленький попап
-        </button>
-        <button class="empty-button hover-red big-button text-uppercase lts1 mb20" data-toggle="modal" data-target=".bs-example-modal-lg">
-            Большой попап
-        </button>
-    </div>
-    </section>
+<section class="pt40 mb18 hidden-xs">
+	<div class="text-center">
+		<a href="#" class="logo-square b-logo__club text-uppercase ff-sfb white-color text-center mt0">
+			<span class="dib fz14">АВТОКЛУБ ЛЮБИТЕЛЕЙ MAZDA</span>
+		</a>
+		<a href="#" class="logo-square b-logo__mazda text-center mt0">
+			<img src="images/logo-mazda.png" alt="" title="">
+		</a>
+	</div>
+</section>
 
-    <!-- Modal -->
-    <div class="modal fade" id="modal-window-md" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="popups-btn-panel">
-            <div class="mb20">
-                <a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab" href="#modal-authorisation">Авторизация</a>
-                <a class="empty-button hover-red big-button text-center text-uppercase lts1 w100" data-toggle="tab" href="#modal-authorisation-error">Авторизация-ошибка</a>
-            </div>
-            <div class="mb20">
-                <a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab" href="#modal-registry">Регистрация</a>
-                <a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab" href="#modal-registry-perfectly">Регистрация-всё ок</a>
-                <a class="empty-button hover-red big-button text-center text-uppercase lts1 w100" data-toggle="tab" href="#modal-registry-errors">Регистрация-ошибки</a>
-            </div>
-            <div class="mb20">
-                <a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab" href="#modal-pass-recovery">Восстановление</a>
-                <a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab" href="#modal-pass-recovery-error">Восстановление-ошибка</a>
-                <a class="empty-button hover-red big-button text-center text-uppercase lts1 w100" data-toggle="tab" href="#modal-pass-recovery-back">Восстановление-назад</a>
-            </div>
-        </div>
-        <div class="tab-content">
-            <div class="tab-pane fade in active" id="modal-authorisation">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header block-title text-uppercase hidden-xs">Авторизация пользователя</div>
-                        <div class="modal-body white-bg">
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                                <span class="line-gray-first"></span>
-                                <span class="line-gray-second"></span>
-                            </button>
-                            <form>
-                                <div class="form-group mb20">
-                                    <input type="text" class="entry-field ff-os w100" title="login-or-email" placeholder="Логин или email">
-                                    <div class="b-notification-message ff-os"></div>
-                                    <input type="password" class="entry-field ff-os w100" title="password" placeholder="Пароль">
-                                    <div class="b-notification-message text-right">
-                                        <a class="--text-grey hover-tdu ff-os fz14" href="#modal-pass-recovery" data-toggle="tab">Забыли пароль?</a>
-                                    </div>
-                                </div>
-                                <div class="b-inline-btn">
-                                    <div class="b-inline-btn__b-left">
-                                        <button type="submit" class="filled-button big-button text-uppercase hover-red full-width lts1">Войти</button>
-                                    </div>
-                                    <div class="b-inline-btn__b-right">
-                                        <a class="empty-button black-border text-uppercase lts2 big-button hover-red full-width text-center lts1" href="#modal-registry" data-toggle="tab">Регистрация</a>
-                                    </div>
-                                </div>
-                                <div class="b-notification-message text-center --text-red hidden-xs"></div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <p class="ff-os fz14 mb15">Вход через</p>
-                            <div class="text-center">
-                                <a class="square-gray-link text-center fz18 white-color" href="#">
-                                    <i class="icon-facebook"></i>
-                                </a>
-                                <a class="square-gray-link text-center fz18 white-color" href="#">
-                                    <i class="icon-google_plus"></i>
-                                </a>
-                                <a class="square-gray-link text-center fz18 white-color" href="#">
-                                    <i class="icon-twitter"></i>
-                                </a>
-                                <a class="square-gray-link text-center fz18 white-color" href="#">
-                                    <i class="icon-pinterest"></i>
-                                </a>
-                                <a class="square-gray-link text-center fz18 white-color" href="#">
-                                    <i class="icon-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="modal-authorisation-error">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header block-title text-uppercase hidden-xs">Авторизация пользователя</div>
-                        <div class="modal-body white-bg">
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                                <span class="line-gray-first"></span>
-                                <span class="line-gray-second"></span>
-                            </button>
-                            <form>
-                                <div class="form-group mb20">
-                                    <input type="text" class="entry-field border-red ff-os w100" title="login-or-email" placeholder="Логин или email">
-                                    <div class="b-notification-message ff-os"></div>
-                                    <input type="password" class="entry-field border-red ff-os w100" title="password" placeholder="Пароль">
-                                    <div class="b-notification-message text-right">
-                                        <a class="--text-grey hover-tdu ff-os fz14" href="#modal-pass-recovery" data-toggle="tab">Забыли пароль?</a>
-                                    </div>
-                                </div>
-                                <div class="b-inline-btn">
-                                    <div class="b-inline-btn__b-left">
-                                        <button type="submit" class="filled-button big-button text-uppercase hover-red full-width lts1">Войти</button>
-                                    </div>
-                                    <div class="b-inline-btn__b-right">
-                                        <a class="empty-button black-border text-uppercase lts2 big-button hover-red full-width text-center lts1" href="#modal-registry" data-toggle="tab">Регистрация</a>
-                                    </div>
-                                </div>
-                                <div class="b-notification-message text-center --text-red hidden-xs">Неверный логин или пароль</div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <p class="ff-os fz14 mb15">Вход через</p>
-                            <div class="text-center">
-                                <a class="square-gray-link text-center fz18 white-color" href="#">
-                                    <i class="icon-facebook"></i>
-                                </a>
-                                <a class="square-gray-link text-center fz18 white-color" href="#">
-                                    <i class="icon-google_plus"></i>
-                                </a>
-                                <a class="square-gray-link text-center fz18 white-color" href="#">
-                                    <i class="icon-twitter"></i>
-                                </a>
-                                <a class="square-gray-link text-center fz18 white-color" href="#">
-                                    <i class="icon-pinterest"></i>
-                                </a>
-                                <a class="square-gray-link text-center fz18 white-color" href="#">
-                                    <i class="icon-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="modal-registry">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
-                        <div class="modal-body white-bg">
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                                <span class="line-gray-first"></span>
-                                <span class="line-gray-second"></span>
-                            </button>
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="entry-field ff-os w100" title="login" placeholder="Придумайте логин">
-                                    <div class="b-notification-message ff-os"></div>
-                                    <input type="text" class="entry-field ff-os w100" title="email" placeholder="Введите email адрес">
-                                    <div class="b-notification-message ff-os"></div>
-                                    <div class="entry-field posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
-                                        <div class="toggle-show-pass">
-                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                            <i class="icon-views fz20"></i>
-                                        </div>
-                                    </div>
-                                    <div class="b-notification-message ff-os"></div>
-                                    <div class="entry-field posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
-                                        <div class="toggle-show-pass">
-                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                            <i class="icon-views fz20"></i>
-                                        </div>
-                                    </div>
-                                    <div class="b-notification-message ff-os"></div>
-                                    <div class="fz0">
-                                        <div class="b-inline-inputs__b-left">
-                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
-                                        </div>
-                                        <div class="b-inline-inputs__b-right">
-                                            <input type="text" class="entry-field ff-os w100" title="code" placeholder="Введите код с картинки">
-                                        </div>
-                                    </div>
-                                    <div class="b-notification-message ff-os text-right mb20"></div>
-                                </div>
-                                <div class="b-delivery mb25">
-                                    <div class="ff-os --text-grey">
-                                        Получать интересную рассылку на email?
-                                    </div>
-                                    <div class="toggle-runner text-uppercase ff-os fz14">
-                                        <input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
-                                        <div class="toggle-runner__circle"></div>
-                                        <div class="toggle-runner__bg"></div>
-                                        <span class="toggle-runner__select-first">Нет</span>
-                                        <span class="toggle-runner__select-second">Да</span>
-                                    </div>
-                                </div>
-                                <div class="mb30">
-                                    <input type="checkbox" id="checkbox-agreement" class="clean-element dib">
-                                    <label for="checkbox-agreement" class="--text-grey fz13">Я принимаю условия</label>
-                                    <span class="fz13">пользовательского соглашения</span>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="filled-button big-button btn-inactive text-uppercase lts1">Зарегистрироваться</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="modal-registry-perfectly">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
-                        <div class="modal-body white-bg">
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                                <span class="line-gray-first"></span>
-                                <span class="line-gray-second"></span>
-                            </button>
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="entry-field border-green ff-os w100" title="login" placeholder="Придумайте логин">
-                                    <div class="b-notification-message ff-os"></div>
-                                    <input type="text" class="entry-field border-green ff-os w100" title="email" placeholder="Введите email адрес">
-                                    <div class="b-notification-message ff-os"></div>
-                                    <div class="entry-field border-green posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
-                                        <div class="toggle-show-pass">
-                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                            <i class="icon-views fz20"></i>
-                                        </div>
-                                    </div>
-                                    <div class="b-notification-message ff-os --text-lime">пароль надежный</div>
-                                    <div class="entry-field border-green posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
-                                        <div class="toggle-show-pass">
-                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                            <i class="icon-views fz20"></i>
-                                        </div>
-                                    </div>
-                                    <div class="b-notification-message ff-os --text-lime">пароль совпадает</div>
-                                    <div class="fz0">
-                                        <div class="b-inline-inputs__b-left">
-                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
-                                        </div>
-                                        <div class="b-inline-inputs__b-right">
-                                            <input type="text" class="entry-field border-green ff-os w100" title="code" placeholder="Введите код с картинки">
-                                        </div>
-                                    </div>
-                                    <div class="b-notification-message ff-os text-right mb20"></div>
-                                </div>
-                                <div class="b-delivery mb25">
-                                    <div class="ff-os --text-grey">
-                                        Получать интересную рассылку на email?
-                                    </div>
-                                    <div class="toggle-runner text-uppercase ff-os fz14">
-                                        <input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
-                                        <div class="toggle-runner__circle"></div>
-                                        <div class="toggle-runner__bg"></div>
-                                        <span class="toggle-runner__select-first">Нет</span>
-                                        <span class="toggle-runner__select-second">Да</span>
-                                    </div>
-                                </div>
-                                <div class="mb30">
-                                    <input type="checkbox" id="checkbox-agreement-2" class="clean-element dib">
-                                    <label for="checkbox-agreement-2" class="--text-grey fz13">Я принимаю условия</label>
-                                    <span class="fz13">пользовательского соглашения</span>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="filled-button big-button hover-red text-uppercase lts1">Зарегистрироваться</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="modal-registry-errors">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
-                        <div class="modal-body white-bg">
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                                <span class="line-gray-first"></span>
-                                <span class="line-gray-second"></span>
-                            </button>
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="entry-field border-red ff-os w100" title="login" placeholder="Придумайте логин">
-                                    <div class="b-notification-message ff-os --text-red">такой логин уже зарегистрирован</div>
-                                    <input type="text" class="entry-field border-red ff-os w100" title="email" placeholder="Введите email адрес">
-                                    <div class="b-notification-message ff-os --text-red">такой email уже зарегистрирован</div>
-                                    <div class="entry-field border-red posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
-                                        <div class="toggle-show-pass">
-                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                            <i class="icon-views fz20"></i>
-                                        </div>
-                                    </div>
-                                    <div class="b-notification-message ff-os --text-red">недопустимый пароль</div>
-                                    <div class="entry-field border-red posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
-                                        <div class="toggle-show-pass">
-                                            <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
-                                            <i class="icon-views fz20"></i>
-                                        </div>
-                                    </div>
-                                    <div class="b-notification-message ff-os --text-red">пароль не совпадает</div>
-                                    <div class="fz0">
-                                        <div class="b-inline-inputs__b-left">
-                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
-                                        </div>
-                                        <div class="b-inline-inputs__b-right">
-                                            <input type="text" class="entry-field border-red ff-os w100" title="code" placeholder="Введите код с картинки">
-                                        </div>
-                                    </div>
-                                    <div class="b-notification-message ff-os text-right --text-red mb20">неверный код безопасности</div>
-                                </div>
-                                <div class="b-delivery mb25">
-                                    <div class="ff-os --text-grey">
-                                        Получать интересную рассылку на email?
-                                    </div>
-                                    <div class="toggle-runner text-uppercase ff-os fz14">
-                                        <input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
-                                        <div class="toggle-runner__circle"></div>
-                                        <div class="toggle-runner__bg"></div>
-                                        <span class="toggle-runner__select-first">Нет</span>
-                                        <span class="toggle-runner__select-second">Да</span>
-                                    </div>
-                                </div>
-                                <div class="mb30">
-                                    <input type="checkbox" id="checkbox-agreement-3" class="clean-element dib">
-                                    <label for="checkbox-agreement-3" class="--text-grey fz13">Я принимаю условия</label>
-                                    <span class="fz13">пользовательского соглашения</span>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="filled-button big-button hover-red text-uppercase lts1">Зарегистрироваться</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="modal-pass-recovery">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
-                        <div class="modal-body white-bg text-center">
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                                <span class="line-gray-first"></span>
-                                <span class="line-gray-second"></span>
-                            </button>
-                            <form>
-                                <div class="form-group mb25">
-                                    <input type="text" class="entry-field ff-os w100 mb30" title="login" placeholder="Логин или email">
-                                    <div class="fz0">
-                                        <div class="b-inline-inputs__b-left">
-                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
-                                        </div>
-                                        <div class="b-inline-inputs__b-right">
-                                            <input type="text" class="entry-field ff-os w100" title="code" placeholder="Введите код с картинки">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="b-notification-message ff-os --text-red mb15"></div>
-                                <button type="submit" class="filled-button big-button btn-inactive text-uppercase lts1">Восстановить</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="modal-pass-recovery-error">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
-                        <div class="modal-body white-bg text-center">
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                                <span class="line-gray-first"></span>
-                                <span class="line-gray-second"></span>
-                            </button>
-                            <form>
-                                <div class="form-group mb25">
-                                    <input type="text" class="entry-field border-red ff-os w100 mb30" title="login" placeholder="Логин или email">
-                                    <div class="fz0">
-                                        <div class="b-inline-inputs__b-left">
-                                            <div class="entry-field captcha w100" style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
-                                        </div>
-                                        <div class="b-inline-inputs__b-right">
-                                            <input type="text" class="entry-field border-red ff-os w100" title="code" placeholder="Введите код с картинки">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="b-notification-message ff-os --text-red mb15">
-                                    Неверный код безопасности
-                                </div>
-                                <button type="submit" class="filled-button big-button hover-red text-uppercase lts1">Восстановить</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="modal-pass-recovery-back">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
-                        <div class="modal-body white-bg text-center">
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                                <span class="line-gray-first"></span>
-                                <span class="line-gray-second"></span>
-                            </button>
-                            <div class="pt30 mb90">
-                                <p class="mb0">Ссылка для восстановления пароля отправлена на указаный адрес электронной почты:</p>
-                                <a class="--text-grey hover-tdu" href="mailto:street_racer7@yandex.ru">street_racer7@yandex.ru</a>
-                            </div>
-                            <div class="popup-autorisation-back-btn-wrap">
-                                <a class="empty-button big-button black-border hover-red text-uppercase lts1" data-toggle="tab" href="#modal-authorisation">Назад к авторизации</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="pt15 mb-15">
+	<!-- Button trigger modal -->
+	<div class="text-center">
+		<button class="empty-button hover-red big-button text-uppercase lts1 mb20" data-toggle="modal"
+						data-target="#modal-window-md">
+			Средний попап
+		</button>
+		<button class="empty-button hover-red big-button text-uppercase lts1 mb20" data-toggle="modal"
+						data-target=".bs-example-modal-sm">
+			Маленький попап
+		</button>
+		<button class="empty-button hover-red big-button text-uppercase lts1 mb20" data-toggle="modal"
+						data-target=".bs-example-modal-lg">
+			Большой попап
+		</button>
+	</div>
+</section>
 
-    <!-- Small modal -->
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="popups-btn-panel">
-            <div class="mb20">
-                <a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab" href="#modal-processing">Обработка-заполнение</a>
-                <a class="empty-button hover-red big-button text-center text-uppercase lts1 w100" data-toggle="tab" href="#modal-processing-message">Обработка-оповещение</a>
-            </div>
-        </div>
-        <div class="tab-content">
-            <div class="tab-pane fade in active" id="modal-processing">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                        <div class="modal-body white-bg text-center">
-                            <div class="b-popup-text-box text-center mb40">
-                                <p class="text-uppercase ff-sfb lts2">Ваши данные отправлены на обработку</p>
-                                <p class="text-uppercase ff-os">По завершении обработки данных вы получите оповещение</p>
-                            </div>
-                            <div class="popup-processing-btn-wrap">
-                                <a href="#" class="filled-button big-button hover-red text-uppercase lts1" data-dismiss="modal">Ок</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="modal-processing-message">
-                <div class="modal-dialog modal-xs">
-                    <div class="modal-content">
-                        <div class="modal-body white-bg">
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                                <span class="line-gray-first"></span>
-                                <span class="line-gray-second"></span>
-                            </button>
-                            <form>
-                                <div class="form-group">
-                                    <div class="star-red mb20">
-                                        <input type="text" class="entry-field ff-os w100 " title="surname" placeholder="Фамилия">
-                                    </div>
-                                    <div class="star-red mb20">
-                                        <input type="text" class="entry-field ff-os w100 " title="name" placeholder="Имя">
-                                    </div>
-                                    <input type="text" class="entry-field ff-os w100 mb20" title="patronymic" placeholder="Отчество">
-                                    <div class="star-red">
-                                        <input type="text" class="entry-field ff-os w100" title="email" placeholder="Email адрес">
-                                    </div>
-                                    <div class="b-notification-message-sm ff-os"></div>
-                                    <div class="star-red">
-                                        <input type="text" class="entry-field ff-os w100" title="tel" placeholder="Мобильный телефон">
-                                    </div>
-                                    <div class="b-notification-message-sm ff-os"></div>
-                                    <div class="star-red mb20">
-                                        <input type="text" class="entry-field ff-os w100 " title="post" placeholder="Должность">
-                                    </div>
-                                    <textarea class="entry-field popup-textarea ff-os w100" title="comment" placeholder="Комментарий"></textarea>
-                                </div>
-                                <div class="star-red fz0 mb25">
-                                    <div class="b-inline-checkbox">
-                                        <input type="checkbox" id="checkbox-processing" class="clean-element pull-left">
-                                    </div>
-                                    <div class="b-inline-checkbox-label">
-                                        <label for="checkbox-processing" class="--text-grey fz13">Разрешить обработку</label><br>
-                                        <span class="fz13 --text-grey mb0">персональных данных</span>
-                                    </div>
-                                </div>
-                                <p class="ff-os fz12 --text-grey mb30"><span class="--text-red">*</span> - обязательные для заполнения поля</p>
-                                <div class="text-center">
-                                    <a href="#" class="filled-button big-button btn-inactive text-uppercase lts1 w100">Отправить</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- Modal -->
+<div class="modal fade" id="modal-window-md" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		 aria-hidden="true">
+	<div class="popups-btn-panel">
+		<div class="mb20">
+			<a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab"
+				 href="#modal-authorisation">Авторизация</a>
+			<a class="empty-button hover-red big-button text-center text-uppercase lts1 w100" data-toggle="tab"
+				 href="#modal-authorisation-error">Авторизация-ошибка</a>
+		</div>
+		<div class="mb20">
+			<a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab"
+				 href="#modal-registry">Регистрация</a>
+			<a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab"
+				 href="#modal-registry-perfectly">Регистрация-всё ок</a>
+			<a class="empty-button hover-red big-button text-center text-uppercase lts1 w100" data-toggle="tab"
+				 href="#modal-registry-errors">Регистрация-ошибки</a>
+		</div>
+		<div class="mb20">
+			<a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab"
+				 href="#modal-pass-recovery">Восстановление</a>
+			<a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab"
+				 href="#modal-pass-recovery-error">Восстановление-ошибка</a>
+			<a class="empty-button hover-red big-button text-center text-uppercase lts1 w100" data-toggle="tab"
+				 href="#modal-pass-recovery-back">Восстановление-назад</a>
+		</div>
+	</div>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="modal-authorisation">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header block-title text-uppercase hidden-xs">Авторизация пользователя</div>
+					<div class="modal-body white-bg">
+						<button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+							<span class="line-gray-first"></span>
+							<span class="line-gray-second"></span>
+						</button>
+						<form>
+							<div class="form-group mb20">
+								<input type="text" class="entry-field ff-os w100" title="login-or-email" placeholder="Логин или email">
+								<div class="b-notification-message ff-os"></div>
+								<input type="password" class="entry-field ff-os w100" title="password" placeholder="Пароль">
+								<div class="b-notification-message text-right">
+									<a class="--text-grey hover-tdu ff-os fz14" href="#modal-pass-recovery" data-toggle="tab">Забыли
+										пароль?</a>
+								</div>
+							</div>
+							<div class="b-inline-btn">
+								<div class="b-inline-btn__b-left">
+									<button type="submit" class="filled-button big-button text-uppercase hover-red full-width lts1">
+										Войти
+									</button>
+								</div>
+								<div class="b-inline-btn__b-right">
+									<a class="empty-button black-border text-uppercase lts2 big-button hover-red full-width text-center lts1"
+										 href="#modal-registry" data-toggle="tab">Регистрация</a>
+								</div>
+							</div>
+							<div class="b-notification-message text-center --text-red hidden-xs"></div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<p class="ff-os fz14 mb15">Вход через</p>
+						<div class="text-center">
+							<a class="square-gray-link text-center fz18 white-color" href="#">
+								<i class="icon-facebook"></i>
+							</a>
+							<a class="square-gray-link text-center fz18 white-color" href="#">
+								<i class="icon-google_plus"></i>
+							</a>
+							<a class="square-gray-link text-center fz18 white-color" href="#">
+								<i class="icon-twitter"></i>
+							</a>
+							<a class="square-gray-link text-center fz18 white-color" href="#">
+								<i class="icon-pinterest"></i>
+							</a>
+							<a class="square-gray-link text-center fz18 white-color" href="#">
+								<i class="icon-instagram"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="modal-authorisation-error">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header block-title text-uppercase hidden-xs">Авторизация пользователя</div>
+					<div class="modal-body white-bg">
+						<button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+							<span class="line-gray-first"></span>
+							<span class="line-gray-second"></span>
+						</button>
+						<form>
+							<div class="form-group mb20">
+								<input type="text" class="entry-field border-red ff-os w100" title="login-or-email"
+											 placeholder="Логин или email">
+								<div class="b-notification-message ff-os"></div>
+								<input type="password" class="entry-field border-red ff-os w100" title="password" placeholder="Пароль">
+								<div class="b-notification-message text-right">
+									<a class="--text-grey hover-tdu ff-os fz14" href="#modal-pass-recovery" data-toggle="tab">Забыли
+										пароль?</a>
+								</div>
+							</div>
+							<div class="b-inline-btn">
+								<div class="b-inline-btn__b-left">
+									<button type="submit" class="filled-button big-button text-uppercase hover-red full-width lts1">
+										Войти
+									</button>
+								</div>
+								<div class="b-inline-btn__b-right">
+									<a class="empty-button black-border text-uppercase lts2 big-button hover-red full-width text-center lts1"
+										 href="#modal-registry" data-toggle="tab">Регистрация</a>
+								</div>
+							</div>
+							<div class="b-notification-message text-center --text-red hidden-xs">Неверный логин или пароль</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<p class="ff-os fz14 mb15">Вход через</p>
+						<div class="text-center">
+							<a class="square-gray-link text-center fz18 white-color" href="#">
+								<i class="icon-facebook"></i>
+							</a>
+							<a class="square-gray-link text-center fz18 white-color" href="#">
+								<i class="icon-google_plus"></i>
+							</a>
+							<a class="square-gray-link text-center fz18 white-color" href="#">
+								<i class="icon-twitter"></i>
+							</a>
+							<a class="square-gray-link text-center fz18 white-color" href="#">
+								<i class="icon-pinterest"></i>
+							</a>
+							<a class="square-gray-link text-center fz18 white-color" href="#">
+								<i class="icon-instagram"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="modal-registry">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
+					<div class="modal-body white-bg">
+						<button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+							<span class="line-gray-first"></span>
+							<span class="line-gray-second"></span>
+						</button>
+						<form>
+							<div class="form-group">
+								<input type="text" class="entry-field ff-os w100" title="login" placeholder="Придумайте логин">
+								<div class="b-notification-message ff-os"></div>
+								<input type="text" class="entry-field ff-os w100" title="email" placeholder="Введите email адрес">
+								<div class="b-notification-message ff-os"></div>
+								<div class="entry-field posr">
+									<input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password"
+												 placeholder="Придумайте пароль">
+									<div class="toggle-show-pass">
+										<input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+										<i class="icon-views fz20"></i>
+									</div>
+								</div>
+								<div class="b-notification-message ff-os"></div>
+								<div class="entry-field posr">
+									<input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password"
+												 placeholder="Повторите пароль">
+									<div class="toggle-show-pass">
+										<input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+										<i class="icon-views fz20"></i>
+									</div>
+								</div>
+								<div class="b-notification-message ff-os"></div>
+								<div class="fz0">
+									<div class="b-inline-inputs__b-left">
+										<div class="entry-field captcha w100"
+												 style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
+									</div>
+									<div class="b-inline-inputs__b-right">
+										<input type="text" class="entry-field ff-os w100" title="code" placeholder="Введите код с картинки">
+									</div>
+								</div>
+								<div class="b-notification-message ff-os text-right mb20"></div>
+							</div>
+							<div class="b-delivery mb25">
+								<div class="ff-os --text-grey">
+									Получать интересную рассылку на email?
+								</div>
+								<div class="toggle-runner text-uppercase ff-os fz14">
+									<input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
+									<div class="toggle-runner__circle"></div>
+									<div class="toggle-runner__bg"></div>
+									<span class="toggle-runner__select-first">Нет</span>
+									<span class="toggle-runner__select-second">Да</span>
+								</div>
+							</div>
+							<div class="mb30">
+								<input type="checkbox" id="checkbox-agreement" class="clean-element dib">
+								<label for="checkbox-agreement" class="--text-grey fz13">Я принимаю условия</label>
+								<span class="fz13">пользовательского соглашения</span>
+							</div>
+							<div class="text-center">
+								<button type="submit" class="filled-button big-button btn-inactive text-uppercase lts1">
+									Зарегистрироваться
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="modal-registry-perfectly">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
+					<div class="modal-body white-bg">
+						<button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+							<span class="line-gray-first"></span>
+							<span class="line-gray-second"></span>
+						</button>
+						<form>
+							<div class="form-group">
+								<input type="text" class="entry-field border-green ff-os w100" title="login"
+											 placeholder="Придумайте логин">
+								<div class="b-notification-message ff-os"></div>
+								<input type="text" class="entry-field border-green ff-os w100" title="email"
+											 placeholder="Введите email адрес">
+								<div class="b-notification-message ff-os"></div>
+								<div class="entry-field border-green posr">
+									<input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password"
+												 placeholder="Придумайте пароль">
+									<div class="toggle-show-pass">
+										<input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+										<i class="icon-views fz20"></i>
+									</div>
+								</div>
+								<div class="b-notification-message ff-os --text-lime">пароль надежный</div>
+								<div class="entry-field border-green posr">
+									<input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password"
+												 placeholder="Повторите пароль">
+									<div class="toggle-show-pass">
+										<input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+										<i class="icon-views fz20"></i>
+									</div>
+								</div>
+								<div class="b-notification-message ff-os --text-lime">пароль совпадает</div>
+								<div class="fz0">
+									<div class="b-inline-inputs__b-left">
+										<div class="entry-field captcha w100"
+												 style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
+									</div>
+									<div class="b-inline-inputs__b-right">
+										<input type="text" class="entry-field border-green ff-os w100" title="code"
+													 placeholder="Введите код с картинки">
+									</div>
+								</div>
+								<div class="b-notification-message ff-os text-right mb20"></div>
+							</div>
+							<div class="b-delivery mb25">
+								<div class="ff-os --text-grey">
+									Получать интересную рассылку на email?
+								</div>
+								<div class="toggle-runner text-uppercase ff-os fz14">
+									<input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
+									<div class="toggle-runner__circle"></div>
+									<div class="toggle-runner__bg"></div>
+									<span class="toggle-runner__select-first">Нет</span>
+									<span class="toggle-runner__select-second">Да</span>
+								</div>
+							</div>
+							<div class="mb30">
+								<input type="checkbox" id="checkbox-agreement-2" class="clean-element dib">
+								<label for="checkbox-agreement-2" class="--text-grey fz13">Я принимаю условия</label>
+								<span class="fz13">пользовательского соглашения</span>
+							</div>
+							<div class="text-center">
+								<button type="submit" class="filled-button big-button hover-red text-uppercase lts1">
+									Зарегистрироваться
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="modal-registry-errors">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header block-title text-uppercase hidden-xs">Регистрация пользователя</div>
+					<div class="modal-body white-bg">
+						<button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+							<span class="line-gray-first"></span>
+							<span class="line-gray-second"></span>
+						</button>
+						<form>
+							<div class="form-group">
+								<input type="text" class="entry-field border-red ff-os w100" title="login"
+											 placeholder="Придумайте логин">
+								<div class="b-notification-message ff-os --text-red">такой логин уже зарегистрирован</div>
+								<input type="text" class="entry-field border-red ff-os w100" title="email"
+											 placeholder="Введите email адрес">
+								<div class="b-notification-message ff-os --text-red">такой email уже зарегистрирован</div>
+								<div class="entry-field border-red posr">
+									<input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password"
+												 placeholder="Придумайте пароль">
+									<div class="toggle-show-pass">
+										<input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+										<i class="icon-views fz20"></i>
+									</div>
+								</div>
+								<div class="b-notification-message ff-os --text-red">недопустимый пароль</div>
+								<div class="entry-field border-red posr">
+									<input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password"
+												 placeholder="Повторите пароль">
+									<div class="toggle-show-pass">
+										<input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
+										<i class="icon-views fz20"></i>
+									</div>
+								</div>
+								<div class="b-notification-message ff-os --text-red">пароль не совпадает</div>
+								<div class="fz0">
+									<div class="b-inline-inputs__b-left">
+										<div class="entry-field captcha w100"
+												 style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
+									</div>
+									<div class="b-inline-inputs__b-right">
+										<input type="text" class="entry-field border-red ff-os w100" title="code"
+													 placeholder="Введите код с картинки">
+									</div>
+								</div>
+								<div class="b-notification-message ff-os text-right --text-red mb20">неверный код безопасности</div>
+							</div>
+							<div class="b-delivery mb25">
+								<div class="ff-os --text-grey">
+									Получать интересную рассылку на email?
+								</div>
+								<div class="toggle-runner text-uppercase ff-os fz14">
+									<input type="checkbox" class="toggle-runner__checkbox" title="toggle-delivery">
+									<div class="toggle-runner__circle"></div>
+									<div class="toggle-runner__bg"></div>
+									<span class="toggle-runner__select-first">Нет</span>
+									<span class="toggle-runner__select-second">Да</span>
+								</div>
+							</div>
+							<div class="mb30">
+								<input type="checkbox" id="checkbox-agreement-3" class="clean-element dib">
+								<label for="checkbox-agreement-3" class="--text-grey fz13">Я принимаю условия</label>
+								<span class="fz13">пользовательского соглашения</span>
+							</div>
+							<div class="text-center">
+								<button type="submit" class="filled-button big-button hover-red text-uppercase lts1">
+									Зарегистрироваться
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="modal-pass-recovery">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
+					<div class="modal-body white-bg text-center">
+						<button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+							<span class="line-gray-first"></span>
+							<span class="line-gray-second"></span>
+						</button>
+						<form>
+							<div class="form-group mb25">
+								<input type="text" class="entry-field ff-os w100 mb30" title="login" placeholder="Логин или email">
+								<div class="fz0">
+									<div class="b-inline-inputs__b-left">
+										<div class="entry-field captcha w100"
+												 style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
+									</div>
+									<div class="b-inline-inputs__b-right">
+										<input type="text" class="entry-field ff-os w100" title="code" placeholder="Введите код с картинки">
+									</div>
+								</div>
+							</div>
+							<div class="b-notification-message ff-os --text-red mb15"></div>
+							<button type="submit" class="filled-button big-button btn-inactive text-uppercase lts1">Восстановить
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="modal-pass-recovery-error">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
+					<div class="modal-body white-bg text-center">
+						<button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+							<span class="line-gray-first"></span>
+							<span class="line-gray-second"></span>
+						</button>
+						<form>
+							<div class="form-group mb25">
+								<input type="text" class="entry-field border-red ff-os w100 mb30" title="login"
+											 placeholder="Логин или email">
+								<div class="fz0">
+									<div class="b-inline-inputs__b-left">
+										<div class="entry-field captcha w100"
+												 style="background: url('images/popups/captcha.jpg') no-repeat center center; background-size: auto 100%;"></div>
+									</div>
+									<div class="b-inline-inputs__b-right">
+										<input type="text" class="entry-field border-red ff-os w100" title="code"
+													 placeholder="Введите код с картинки">
+									</div>
+								</div>
+							</div>
+							<div class="b-notification-message ff-os --text-red mb15">
+								Неверный код безопасности
+							</div>
+							<button type="submit" class="filled-button big-button hover-red text-uppercase lts1">Восстановить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="modal-pass-recovery-back">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header block-title text-uppercase hidden-xs">Восстановление пароля</div>
+					<div class="modal-body white-bg text-center">
+						<button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+							<span class="line-gray-first"></span>
+							<span class="line-gray-second"></span>
+						</button>
+						<div class="pt30 mb90">
+							<p class="mb0">Ссылка для восстановления пароля отправлена на указаный адрес электронной почты:</p>
+							<a class="--text-grey hover-tdu" href="mailto:street_racer7@yandex.ru">street_racer7@yandex.ru</a>
+						</div>
+						<div class="popup-autorisation-back-btn-wrap">
+							<a class="empty-button big-button black-border hover-red text-uppercase lts1" data-toggle="tab"
+								 href="#modal-authorisation">Назад к авторизации</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-    <!-- Large modal -->
-    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body white-bg">
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
-                        <span class="line-gray-first"></span>
-                        <span class="line-gray-second"></span>
-                    </button>
-                    <div class="modal-lg__header text-uppercase ff-sfb lts1">
-                        Специальная<br> программа Mazda Next
-                    </div>
-                    <ul class="modal-lg-nav" id="accordion" role="tablist" aria-multiselectable="true">
-                        <li class="modal-lg-nav__item panel">
-                            <a class="modal-lg-nav__link text-uppercase ff-sfb" href="#tried-auto" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="tried-auto">
-                                <div class="modal-lg-nav__circle hidden-xs">
-                                    <i class="icon-check"></i>
-                                </div>
-                                <div class="modal-lg-nav__link-text">Только проверенные автомобили</div>
-                                <div class="modal-lg-nav__arrow hidden-sm"></div>
-                            </a>
-                            <div class="panel-collapse collapse in" id="tried-auto" role="tabpanel" aria-labelledby="modal-lg-nav__item-one">
-                                <div class="modal-lg__b-content" data-jsp>
-                                    <div class="ff-os fz14 mb35">
-                                        <p class="mb0">Для участия в программе допускаются автомобили не старше 5 лет и с пробегом не более 100 000 км. Предлагаемые автомобили проходят тщательную проверку, что гарантирует прозрачность истории предыдущего владения и эксплуатации.</p>
-                                    </div>
-                                    <img  class="modal-lg__b-content-img" src="images/popups/tried-auto.jpg" alt="" title="">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="modal-lg-nav__item panel">
-                            <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#complex-tech-training" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="complex-tech-training">
-                                <div class="modal-lg-nav__circle hidden-xs">
-                                    <i class="icon-wrench"></i>
-                                </div>
-                                <div class="modal-lg-nav__link-text">Комплексная техническая подготовка</div>
-                                <div class="modal-lg-nav__arrow hidden-sm"></div>
-                            </a>
-                            <div class="panel-collapse collapse" id="complex-tech-training" role="tabpanel" aria-labelledby="modal-lg-nav__item-two">
-                                <div class="modal-lg__b-content" data-jsp>
-                                    <div class="ff-os fz14 mb35">
-                                        <p class="mb25">Обязательное условие программы — полная диагностика предлагаемого автомобиля.</p>
-                                        <p class="mb0">Покупая автомобиль, вы можете быть уверены в работе всех узлов и агрегатов – официальные дилеры проводят тщательную предпродажную проверку и подготовку к эксплуатации по 70 пунктам. Автомобили программы проходят комплекс работ по восстановлению, в случае обнаружения неполадок используются только оригинальные запчасти и сертифицированное оборудование.</p>
-                                    </div>
-                                    <img  class="modal-lg__b-content-img" src="images/popups/complex-tech-training.jpg" alt="" title="">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="modal-lg-nav__item panel">
-                            <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#after-sales-support" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="after-sales-support">
-                                <div class="modal-lg-nav__circle hidden-xs">
-                                    <i class="icon-umbrella"></i>
-                                </div>
-                                <div class="modal-lg-nav__link-text">Послегарантийная сервисная поддержка</div>
-                                <div class="modal-lg-nav__arrow hidden-sm"></div>
-                            </a>
-                            <div class="panel-collapse collapse" id="after-sales-support" role="tabpanel" aria-labelledby="modal-lg-nav__item-three">
-                                <div class="modal-lg__b-content" data-jsp>
-                                    <div class="ff-os fz14 mb35">
-                                        <p class="mb0">С программой Mazda NEXT вы получаете не только качественный автомобиль, но и послегарантийную сервисную поддержку. Послегарантийная сервисная поддержка сроком на 1 год, либо 30 000 км пробега — максимальная надежность и уверенность при покупке автомобиля с пробегом, техническая поддержка автомобиля, ремонт и замена его неисправных деталей. Условия обслуживания уточняйте у вашего официального дилера.</p>
-                                    </div>
-                                    <img  class="modal-lg__b-content-img" src="images/popups/after-sales-support.jpg" alt="" title="">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="modal-lg-nav__item panel">
-                            <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#mobility-guarantee" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="mobility-guarantee">
-                                <div class="modal-lg-nav__circle hidden-xs">
-                                    <i class="icon-road"></i>
-                                </div>
-                                <div class="modal-lg-nav__link-text">Гарантия мобильности</div>
-                                <div class="modal-lg-nav__arrow hidden-sm"></div>
-                            </a>
-                            <div class="panel-collapse collapse" id="mobility-guarantee" role="tabpanel" aria-labelledby="modal-lg-nav__item-four">
-                                <div class="modal-lg__b-content" data-jsp>
-                                    <div class="ff-os fz14 mb35">
-                                        <p class="mb0">На дороге никто не застрахован, но мы позаботились о Вашем спокойствии. Клиент, купивший автомобиль по программе Mazda NEXT, 24 часа в сутки 365 дней в году может воспользоваться услугой по запуску двигателя от внешнего источника, замене колеса на запасное, подвозу топлива. В случае возникновения непредвиденной поломки на дороге или ДТП, автомобиль будет доставлен к ближайший дилерский центр Mazda. Во время ремонта Вам может быть предложен подменный автомобиль, такси до дома/работы, гостиница, либо билеты на поезд/самолет для продолжения путешествия, чтобы максимально сохранить Вашу мобильность.</p>
-                                    </div>
-                                    <img  class="modal-lg__b-content-img" src="images/popups/mobility-guarantee.jpg" alt="" title="">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="modal-lg-nav__item panel">
-                            <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#credit-and-insurance" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="credit-and-insurance">
-                                <div class="modal-lg-nav__circle hidden-xs">
-                                    <i class="icon-rouble"></i>
-                                </div>
-                                <div class="modal-lg-nav__link-text">Специальные условия: Кредит и Страхование</div>
-                                <div class="modal-lg-nav__arrow hidden-sm"></div>
-                            </a>
-                            <div class="panel-collapse collapse" id="credit-and-insurance" role="tabpanel" aria-labelledby="modal-lg-nav__item-five">
-                                <div class="modal-lg__b-content" data-jsp>
-                                    <div class="ff-os fz14 mb35">
-                                        <p class="mb0 mb25">C фирменной программой Mazda NEXT мечты о собственном автомобиле могут стать реальностью уже сегодня. Для этого мы максимально упростили условия кредитования для сертифицированных автомобилей Mazda с пробегом, а так же разработали выгодную программу страхования КАСКО.</p>
-                                        <p class="text-uppercase ff-sfb lts1 mb25">Mazda Кредит NEXT</p>
-                                        <p class="ff-sfb mb25">Это удобно</p>
-                                        <p class="mb25">Мы экономим ваше время, максимально упростив и сократив срок оформления кредита. </p>
-                                        <p class="mb25">- Срок рассмотрения кредитной заявки — 30 минут<br>
-                                            - Для оформления кредита достаточно только двух документов</p>
-                                        <p class="ff-sfb mb25">Это понятно</p>
-                                        <p class="mb25">Условия кредитования по нашей программе максимально прозрачны и понятны клиентам.</p>
-                                        <p class="mb25">- Валюта кредита — рубли РФ<br>
-                                        - Первоначальный взнос — от 20%<br>
-                                        - Максимальный срок кредита — 60 месяцев<br>
-                                        - Отсутствует мораторий на досрочное погашение кредита</p>
-                                        <p class="text-uppercase ff-sfb lts1 mb25">Mazda Страхование NEXT</p>
-                                        <p class="ff-sfb mb25">Это выгодно</p>
-                                        <p class="mb25">Оформляя страховой полис по программе, вы подбираете максимально удобные для вас условия страхования КАСКО.</p>
-                                        <p class="mb25">- Минимальный тариф, полностью покрывающий основные риски<br>
-                                        - Тариф КАСКО не зависит от возраста и стажа водителя<br>
-                                        - Продукт может быть включен в кредит по программе Mazda Кредит NEXT</p>
-                                        <p class="ff-sfb mb25">Это безопасно</p>
-                                        <p class="mb25">Программа страхования предоставлена одним из лидеров страхового рынка – СПАО «Ингосстрах».</p>
-                                        <p class="mb25">- Полное покрытие в случае угона или тотальной гибели а/м<br>
-                                        - Возмещение по риску «Ущерб» — 50 тысяч рублей</p>
-                                    </div>
-                                    <img  class="modal-lg__b-content-img" src="images/popups/credit-and-insurance.jpg" alt="" title="">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="modal-lg-nav__item panel">
-                            <a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#mazda-trade-in" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="mazda-trade-in">
-                                <div class="modal-lg-nav__circle hidden-xs">
-                                    <i class="icon-arrows"></i>
-                                </div>
-                                <div class="modal-lg-nav__link-text">Mazda Трейд-ин</div>
-                                <div class="modal-lg-nav__arrow hidden-sm"></div>
-                            </a>
-                            <div class="panel-collapse collapse" id="mazda-trade-in" role="tabpanel" aria-labelledby="modal-lg-nav__item-six">
-                                <div class="modal-lg__b-content" data-jsp>
-                                    <div class="ff-os fz14 mb35">
-                                        <p class="mb0">Все автомобили программы Mazda NEXT могут быть приобретены по схеме трейд-ин. Дилер-участник программы может принять ваш автомобиль в зачет стоимости приобретаемого автомобиля Mazda NEXT. Практика подобных обменов с доплатой популярна во всем мире. Трейд-ин — максимально быстрый и безопасный способ продажи и приобретения автомобиля.</p>
-                                    </div>
-                                    <img  class="modal-lg__b-content-img" src="images/popups/mazda-trade-in.jpg" alt="" title="">
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-{% endblock %}
+<!-- Small modal -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+		 aria-hidden="true">
+	<div class="popups-btn-panel">
+		<div class="mb20">
+			<a class="empty-button hover-red big-button text-center text-uppercase lts1 w100 mb10" data-toggle="tab"
+				 href="#modal-processing">Обработка-заполнение</a>
+			<a class="empty-button hover-red big-button text-center text-uppercase lts1 w100" data-toggle="tab"
+				 href="#modal-processing-message">Обработка-оповещение</a>
+		</div>
+	</div>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="modal-processing">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-body white-bg text-center">
+						<div class="b-popup-text-box text-center mb40">
+							<p class="text-uppercase ff-sfb lts2">Ваши данные отправлены на обработку</p>
+							<p class="text-uppercase ff-os">По завершении обработки данных вы получите оповещение</p>
+						</div>
+						<div class="popup-processing-btn-wrap">
+							<a href="#" class="filled-button big-button hover-red text-uppercase lts1" data-dismiss="modal">Ок</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="modal-processing-message">
+			<div class="modal-dialog modal-xs">
+				<div class="modal-content">
+					<div class="modal-body white-bg">
+						<button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+							<span class="line-gray-first"></span>
+							<span class="line-gray-second"></span>
+						</button>
+						<form>
+							<div class="form-group">
+								<div class="star-red mb20">
+									<input type="text" class="entry-field ff-os w100 " title="surname" placeholder="Фамилия">
+								</div>
+								<div class="star-red mb20">
+									<input type="text" class="entry-field ff-os w100 " title="name" placeholder="Имя">
+								</div>
+								<input type="text" class="entry-field ff-os w100 mb20" title="patronymic" placeholder="Отчество">
+								<div class="star-red">
+									<input type="text" class="entry-field ff-os w100" title="email" placeholder="Email адрес">
+								</div>
+								<div class="b-notification-message-sm ff-os"></div>
+								<div class="star-red">
+									<input type="text" class="entry-field ff-os w100" title="tel" placeholder="Мобильный телефон">
+								</div>
+								<div class="b-notification-message-sm ff-os"></div>
+								<div class="star-red mb20">
+									<input type="text" class="entry-field ff-os w100 " title="post" placeholder="Должность">
+								</div>
+								<textarea class="entry-field popup-textarea ff-os w100" title="comment"
+													placeholder="Комментарий"></textarea>
+							</div>
+							<div class="star-red fz0 mb25">
+								<div class="b-inline-checkbox">
+									<input type="checkbox" id="checkbox-processing" class="clean-element pull-left">
+								</div>
+								<div class="b-inline-checkbox-label">
+									<label for="checkbox-processing" class="--text-grey fz13">Разрешить обработку</label><br>
+									<span class="fz13 --text-grey mb0">персональных данных</span>
+								</div>
+							</div>
+							<p class="ff-os fz12 --text-grey mb30"><span class="--text-red">*</span> - обязательные для заполнения
+								поля</p>
+							<div class="text-center">
+								<a href="#" class="filled-button big-button btn-inactive text-uppercase lts1 w100">Отправить</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Large modal -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+		 aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-body white-bg">
+				<button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true">
+					<span class="line-gray-first"></span>
+					<span class="line-gray-second"></span>
+				</button>
+				<div class="modal-lg__header text-uppercase ff-sfb lts1">
+					Специальная<br> программа Mazda Next
+				</div>
+				<ul class="modal-lg-nav" id="accordion" role="tablist" aria-multiselectable="true">
+					<li class="modal-lg-nav__item panel">
+						<a class="modal-lg-nav__link text-uppercase ff-sfb" href="#tried-auto" data-toggle="collapse"
+							 data-parent="#accordion" aria-expanded="true" aria-controls="tried-auto">
+							<div class="modal-lg-nav__circle hidden-xs">
+								<i class="icon-check"></i>
+							</div>
+							<div class="modal-lg-nav__link-text">Только проверенные автомобили</div>
+							<div class="modal-lg-nav__arrow hidden-sm"></div>
+						</a>
+						<div class="panel-collapse collapse in" id="tried-auto" role="tabpanel"
+								 aria-labelledby="modal-lg-nav__item-one">
+							<div class="modal-lg__b-content" data-jspane>
+								<div class="ff-os fz14 mb35">
+									<p class="mb0">Для участия в программе допускаются автомобили не старше 5 лет и с пробегом не более
+										100 000 км. Предлагаемые автомобили проходят тщательную проверку, что гарантирует прозрачность
+										истории предыдущего владения и эксплуатации.</p>
+								</div>
+								<img class="modal-lg__b-content-img" src="images/popups/tried-auto.jpg" alt="" title="">
+							</div>
+						</div>
+					</li>
+					<li class="modal-lg-nav__item panel">
+						<a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#complex-tech-training"
+							 data-toggle="collapse" data-parent="#accordion" aria-expanded="false"
+							 aria-controls="complex-tech-training">
+							<div class="modal-lg-nav__circle hidden-xs">
+								<i class="icon-wrench"></i>
+							</div>
+							<div class="modal-lg-nav__link-text">Комплексная техническая подготовка</div>
+							<div class="modal-lg-nav__arrow hidden-sm"></div>
+						</a>
+						<div class="panel-collapse collapse" id="complex-tech-training" role="tabpanel"
+								 aria-labelledby="modal-lg-nav__item-two">
+							<div class="modal-lg__b-content" data-jspane>
+								<div class="ff-os fz14 mb35">
+									<p class="mb25">Обязательное условие программы — полная диагностика предлагаемого автомобиля.</p>
+									<p class="mb0">Покупая автомобиль, вы можете быть уверены в работе всех узлов и агрегатов –
+										официальные дилеры проводят тщательную предпродажную проверку и подготовку к эксплуатации по 70
+										пунктам. Автомобили программы проходят комплекс работ по восстановлению, в случае обнаружения
+										неполадок используются только оригинальные запчасти и сертифицированное оборудование.</p>
+								</div>
+								<img class="modal-lg__b-content-img" src="images/popups/complex-tech-training.jpg" alt="" title="">
+							</div>
+						</div>
+					</li>
+					<li class="modal-lg-nav__item panel">
+						<a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#after-sales-support"
+							 data-toggle="collapse" data-parent="#accordion" aria-expanded="false"
+							 aria-controls="after-sales-support">
+							<div class="modal-lg-nav__circle hidden-xs">
+								<i class="icon-umbrella"></i>
+							</div>
+							<div class="modal-lg-nav__link-text">Послегарантийная сервисная поддержка</div>
+							<div class="modal-lg-nav__arrow hidden-sm"></div>
+						</a>
+						<div class="panel-collapse collapse" id="after-sales-support" role="tabpanel"
+								 aria-labelledby="modal-lg-nav__item-three">
+							<div class="modal-lg__b-content" data-jspane>
+								<div class="ff-os fz14 mb35">
+									<p class="mb0">С программой Mazda NEXT вы получаете не только качественный автомобиль, но и
+										послегарантийную сервисную поддержку. Послегарантийная сервисная поддержка сроком на 1 год, либо 30
+										000 км пробега — максимальная надежность и уверенность при покупке автомобиля с пробегом,
+										техническая поддержка автомобиля, ремонт и замена его неисправных деталей. Условия обслуживания
+										уточняйте у вашего официального дилера.</p>
+								</div>
+								<img class="modal-lg__b-content-img" src="images/popups/after-sales-support.jpg" alt="" title="">
+							</div>
+						</div>
+					</li>
+					<li class="modal-lg-nav__item panel">
+						<a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#mobility-guarantee"
+							 data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="mobility-guarantee">
+							<div class="modal-lg-nav__circle hidden-xs">
+								<i class="icon-road"></i>
+							</div>
+							<div class="modal-lg-nav__link-text">Гарантия мобильности</div>
+							<div class="modal-lg-nav__arrow hidden-sm"></div>
+						</a>
+						<div class="panel-collapse collapse" id="mobility-guarantee" role="tabpanel"
+								 aria-labelledby="modal-lg-nav__item-four">
+							<div class="modal-lg__b-content" data-jspane>
+								<div class="ff-os fz14 mb35">
+									<p class="mb0">На дороге никто не застрахован, но мы позаботились о Вашем спокойствии. Клиент,
+										купивший автомобиль по программе Mazda NEXT, 24 часа в сутки 365 дней в году может воспользоваться
+										услугой по запуску двигателя от внешнего источника, замене колеса на запасное, подвозу топлива. В
+										случае возникновения непредвиденной поломки на дороге или ДТП, автомобиль будет доставлен к
+										ближайший дилерский центр Mazda. Во время ремонта Вам может быть предложен подменный автомобиль,
+										такси до дома/работы, гостиница, либо билеты на поезд/самолет для продолжения путешествия, чтобы
+										максимально сохранить Вашу мобильность.</p>
+								</div>
+								<img class="modal-lg__b-content-img" src="images/popups/mobility-guarantee.jpg" alt="" title="">
+							</div>
+						</div>
+					</li>
+					<li class="modal-lg-nav__item panel">
+						<a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#credit-and-insurance"
+							 data-toggle="collapse" data-parent="#accordion" aria-expanded="false"
+							 aria-controls="credit-and-insurance">
+							<div class="modal-lg-nav__circle hidden-xs">
+								<i class="icon-rouble"></i>
+							</div>
+							<div class="modal-lg-nav__link-text">Специальные условия: Кредит и Страхование</div>
+							<div class="modal-lg-nav__arrow hidden-sm"></div>
+						</a>
+						<div class="panel-collapse collapse" id="credit-and-insurance" role="tabpanel"
+								 aria-labelledby="modal-lg-nav__item-five">
+							<div class="modal-lg__b-content" data-jspane>
+								<div class="ff-os fz14 mb35">
+									<p class="mb0 mb25">C фирменной программой Mazda NEXT мечты о собственном автомобиле могут стать
+										реальностью уже сегодня. Для этого мы максимально упростили условия кредитования для
+										сертифицированных автомобилей Mazda с пробегом, а так же разработали выгодную программу страхования
+										КАСКО.</p>
+									<p class="text-uppercase ff-sfb lts1 mb25">Mazda Кредит NEXT</p>
+									<p class="ff-sfb mb25">Это удобно</p>
+									<p class="mb25">Мы экономим ваше время, максимально упростив и сократив срок оформления кредита. </p>
+									<p class="mb25">- Срок рассмотрения кредитной заявки — 30 минут<br>
+										- Для оформления кредита достаточно только двух документов</p>
+									<p class="ff-sfb mb25">Это понятно</p>
+									<p class="mb25">Условия кредитования по нашей программе максимально прозрачны и понятны клиентам.</p>
+									<p class="mb25">- Валюта кредита — рубли РФ<br>
+										- Первоначальный взнос — от 20%<br>
+										- Максимальный срок кредита — 60 месяцев<br>
+										- Отсутствует мораторий на досрочное погашение кредита</p>
+									<p class="text-uppercase ff-sfb lts1 mb25">Mazda Страхование NEXT</p>
+									<p class="ff-sfb mb25">Это выгодно</p>
+									<p class="mb25">Оформляя страховой полис по программе, вы подбираете максимально удобные для вас
+										условия страхования КАСКО.</p>
+									<p class="mb25">- Минимальный тариф, полностью покрывающий основные риски<br>
+										- Тариф КАСКО не зависит от возраста и стажа водителя<br>
+										- Продукт может быть включен в кредит по программе Mazda Кредит NEXT</p>
+									<p class="ff-sfb mb25">Это безопасно</p>
+									<p class="mb25">Программа страхования предоставлена одним из лидеров страхового рынка – СПАО
+										«Ингосстрах».</p>
+									<p class="mb25">- Полное покрытие в случае угона или тотальной гибели а/м<br>
+										- Возмещение по риску «Ущерб» — 50 тысяч рублей</p>
+								</div>
+								<img class="modal-lg__b-content-img" src="images/popups/credit-and-insurance.jpg" alt="" title="">
+							</div>
+						</div>
+					</li>
+					<li class="modal-lg-nav__item panel">
+						<a class="modal-lg-nav__link text-uppercase ff-sfb collapsed" href="#mazda-trade-in" data-toggle="collapse"
+							 data-parent="#accordion" aria-expanded="false" aria-controls="mazda-trade-in">
+							<div class="modal-lg-nav__circle hidden-xs">
+								<i class="icon-arrows"></i>
+							</div>
+							<div class="modal-lg-nav__link-text">Mazda Трейд-ин</div>
+							<div class="modal-lg-nav__arrow hidden-sm"></div>
+						</a>
+						<div class="panel-collapse collapse" id="mazda-trade-in" role="tabpanel"
+								 aria-labelledby="modal-lg-nav__item-six">
+							<div class="modal-lg__b-content" data-jspane>
+								<div class="ff-os fz14 mb35">
+									<p class="mb0">Все автомобили программы Mazda NEXT могут быть приобретены по схеме трейд-ин.
+										Дилер-участник программы может принять ваш автомобиль в зачет стоимости приобретаемого автомобиля
+										Mazda NEXT. Практика подобных обменов с доплатой популярна во всем мире. Трейд-ин — максимально
+										быстрый и безопасный способ продажи и приобретения автомобиля.</p>
+								</div>
+								<img class="modal-lg__b-content-img" src="images/popups/mazda-trade-in.jpg" alt="" title="">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% include "layouts/scripts.twig" %}
+</body>
