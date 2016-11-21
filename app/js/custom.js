@@ -94,10 +94,6 @@ doc.ready(function () {
         })
     });
 
-    $('#myModal').on('show.bs.modal', function (e) {
-        alert('modal show');
-    });
-
     $('[data-js-hide]').on('click', function (e) {
         $(this).closest('[data-js-hide-block]').hide();
         e.preventDefault();
