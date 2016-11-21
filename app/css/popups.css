@@ -207,7 +207,7 @@
   width: 65px;
   height: 28px;
   position: relative;
-  flex: 1 0 auto;
+  flex: 0 0 auto;
 }
 
 .toggle-runner__bg {
