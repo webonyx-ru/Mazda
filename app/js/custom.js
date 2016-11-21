@@ -94,32 +94,13 @@ doc.ready(function () {
         })
     });
 
+    $('#myModal').on('show.bs.modal', function (e) {
+        alert('modal show');
+    });
+
     $('[data-js-hide]').on('click', function (e) {
         $(this).closest('[data-js-hide-block]').hide();
         e.preventDefault();
-    });
-
-    $(window).on('load', function () {
-        $(window).resize();
-        $('[data-jsp]').jScrollPane();
-    });
-
-    $(window).resize(function () {
-
-        $('[data-jsp]').each(function () {
-            var api = $(this).data('jsp');
-            clearTimeout(throttleTimeout);
-            var throttleTimeout;
-            // if (!throttleTimeout) {
-            throttleTimeout = setTimeout(
-                function () {
-                    api.reinitialise();
-                    // cleanTimeout(throttleTimeout);
-                },
-                200
-            );
-            // }
-        })
     });
 
     $('.dealers-map__current-dealer-name').bind("DOMSubtreeModified", function () {
@@ -149,8 +130,7 @@ doc.ready(function () {
         var $el = $(this);
         if ($el.is(':checked')) {
             $el.closest('.entry-field').find('.input-password').attr('type', 'text')
-        }
-        else {
+        } else {
             $el.closest('.entry-field').find('.input-password').attr('type', 'password')
         }
     });
@@ -296,3 +276,35 @@ function viewport() {
     }
     return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
 }
+
+doc.on('show.bs.modal', function (e) {
+    $(window).resize();
+});
+
+doc.on('show.bs.collapse', function() {
+    $(window).resize();
+});
+
+$(window).resize(function () {
+
+    $('[data-jspane]').each(function () {
+        var api = $(this).data('jsp');
+        // clearTimeout(throttleTimeout);
+        var throttleTimeout;
+        // if (!throttleTimeout) {
+        throttleTimeout = setTimeout(
+            function () {
+                api.reinitialise();
+                // cleanTimeout(throttleTimeout);
+            },
+            200
+        );
+        // }
+    });
+
+});
+
+$(window).on('load', function () {
+    $('[data-jspane]').jScrollPane();
+    $(window).resize();
+});

@@ -256,7 +256,11 @@ button
     &.thin
         border-width: 1px
 
-    &:hover, &[aria-expanded="true"]
+    &:hover
+        background: $semidark-grey
+        color: $white
+
+    &.expanded-grey[aria-expanded="true"]
         background: $semidark-grey
         color: $white
 
