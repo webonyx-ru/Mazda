@@ -81,7 +81,7 @@ doc.ready(function () {
             e.preventDefault()
         });
     });
-    
+
     $('.auto-slider.owl-carousel').each(function () {
         $(this).owlCarousel({
             thumbs: true,
@@ -141,6 +141,16 @@ doc.ready(function () {
                 },
                 50
             );
+        }
+    });
+
+    $('.toggle-show-pass__checkbox').on('change', function() {
+        var $el = $(this);
+        if ($el.is(':checked')) {
+            $el.closest('.entry-field').find('.input-password').attr('type', 'text')
+        }
+        else {
+            $el.closest('.entry-field').find('.input-password').attr('type', 'password')
         }
     });
 

@@ -100,6 +100,9 @@ input
             &:after
                 +transform(scale(1))
 
+input[type="radio"], input[type="checkbox"]
+	margin-top: 0
+
 .custom-hidden
     display: none
 
@@ -119,6 +122,8 @@ p
 [class*="--text-red"], .--text-red
     color: #dd0000
 
+[class*="--text-lime"], .--text-lime
+	color: #5fbd37
 
 [class*="--text-lightgrey"], .--text-lightgrey
     color: $light-grey
@@ -159,6 +164,9 @@ p
 
 .fz12
     font-size: 12px
+
+.fz13
+	font-size: 13px
 
 .fz14
     font-size: 14px
@@ -217,6 +225,11 @@ p
 .db
     display: block
     width: 100%
+
+button
+	background: none
+	&:hover, &:focus, &:active
+		background: none
 
 .empty-button
     &:focus, &
@@ -347,6 +360,15 @@ p
 
 .mb40
     margin-bottom: 40px
+
+.mb70
+	margin-bottom: 70px
+
+.mb90
+	margin-bottom: 90px
+
+.w100
+	width: 100%
 
 .posr
     position: relative
@@ -550,6 +572,14 @@ p
 .jspDrag
     background: $light-grey
     right: -10px
+
+.panel
+    margin-bottom: 0
+    background-color: transparent
+    border: none
+    border-radius: 0
+    -webkit-box-shadow: none
+    box-shadow: none
 
 @media screen and (max-width: 992px) and (min-width: 768px)
     .tab-display-block
