@@ -290,7 +290,7 @@ button:hover, button:focus, button:active {
   background: none;
 }
 
-.empty-button, .filled-button {
+.empty-button:focus, .filled-button:focus, .empty-button, .filled-button {
   padding: 0 15px;
   line-height: 26px;
   border: 2px solid #999999;
@@ -316,9 +316,16 @@ button:hover, button:focus, button:active {
 .empty-button.thin, .thin.filled-button {
   border-width: 1px;
 }
-.empty-button:hover, .filled-button:hover {
+.empty-button:hover, .filled-button:hover, .empty-button[aria-expanded="true"], [aria-expanded="true"].filled-button {
   background: #999999;
   color: #fff;
+}
+.empty-button[aria-expanded="true"] .icon-down_arrow, [aria-expanded="true"].filled-button .icon-down_arrow {
+  transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
 }
 .empty-button.white, .white.filled-button {
   color: #fff;
@@ -343,6 +350,12 @@ button:hover, button:focus, button:active {
 .empty-button.small-paddings, .small-paddings.filled-button {
   padding-left: 10px;
   padding-right: 10px;
+}
+@media screen and (max-width: 767px) {
+  .empty-button.mobile-small-paddings, .mobile-small-paddings.filled-button {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .filled-button {
@@ -727,6 +740,24 @@ button:hover, button:focus, button:active {
   box-shadow: none;
 }
 
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .tab-display-block {
+    display: block;
+  }
+
+  .tab-display-inline-block {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .tab-wa {
+    width: auto;
+  }
+
+  .tab-mb15 {
+    margin-bottom: 15px;
+  }
+}
 @media screen and (max-width: 767px) {
   .mobile-display-block {
     display: block;
@@ -740,18 +771,52 @@ button:hover, button:focus, button:active {
   .mobile-wa {
     width: auto;
   }
-}
-@media screen and (max-width: 992px) and (min-width: 768px) {
-  .tab-display-block {
-    display: block;
+
+  .mobile-no-mr {
+    margin-right: 0;
   }
 
-  .tab-display-inline-block {
-    display: inline-block;
-    vertical-align: middle;
+  .mobile-no-lts {
+    letter-spacing: 0;
   }
 
-  .tab-wa {
-    width: auto;
+  .mobile-fz-12 {
+    font-size: 12px;
+  }
+
+  .mobile-fz-14 {
+    font-size: 14px;
+  }
+
+  .mobile--mb0 {
+    margin-bottom: 0;
+  }
+
+  .mobile--mb10 {
+    margin-bottom: 10px;
+  }
+
+  .mobile--mb15 {
+    margin-bottom: 15px;
+  }
+
+  .mobile--mb20 {
+    margin-bottom: 20px;
+  }
+
+  .mobile-text-center {
+    text-align: center;
+  }
+
+  .mobile-text-left {
+    text-align: left;
+  }
+
+  .mobile-text-right {
+    text-align: right;
+  }
+
+  .mobile-whs-normal {
+    white-space: normal;
   }
 }

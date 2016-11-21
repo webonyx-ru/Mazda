@@ -100,6 +100,7 @@ doc.ready(function () {
     });
 
     $(window).on('load', function () {
+        $(window).resize();
         $('[data-jsp]').jScrollPane();
     });
 

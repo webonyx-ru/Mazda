@@ -33,7 +33,7 @@ label
 a
     &:hover, &:active, &:focus
         text-decoration: none
-        
+
     &[class*="--text-grey"]
         &:not([class*='hover']):hover
             color: #fff
@@ -54,6 +54,7 @@ a
         left: 0
         right: 0
         opacity: 0
+
 input
     & + .jq-checkbox__div
         text-align: center
@@ -101,7 +102,7 @@ input
                 +transform(scale(1))
 
 input[type="radio"], input[type="checkbox"]
-	margin-top: 0
+    margin-top: 0
 
 .custom-hidden
     display: none
@@ -109,6 +110,7 @@ input[type="radio"], input[type="checkbox"]
 p
     &:last-child
         margin-bottom: 0
+
 .db
     display: block
 
@@ -123,7 +125,7 @@ p
     color: #dd0000
 
 [class*="--text-lime"], .--text-lime
-	color: #5fbd37
+    color: #5fbd37
 
 [class*="--text-lightgrey"], .--text-lightgrey
     color: $light-grey
@@ -136,7 +138,7 @@ p
 
 [class*="--text-red"], .--text-red
     color: #dd0000
-    
+
 [class*="--hover-text-black"], .--hover-text-black
     &:hover, &:active, &:focus
         color: $light-black
@@ -166,7 +168,7 @@ p
     font-size: 12px
 
 .fz13
-	font-size: 13px
+    font-size: 13px
 
 .fz14
     font-size: 14px
@@ -200,7 +202,7 @@ p
 
 .fz80
     font-size: 80px
-    
+
 .white-bg
     background: #fff
 
@@ -227,9 +229,9 @@ p
     width: 100%
 
 button
-	background: none
-	&:hover, &:focus, &:active
-		background: none
+    background: none
+    &:hover, &:focus, &:active
+        background: none
 
 .empty-button
     &:focus, &
@@ -253,7 +255,7 @@ button
 
     &.thin
         border-width: 1px
-    
+
     &:hover, &[aria-expanded="true"]
         background: $semidark-grey
         color: $white
@@ -362,13 +364,13 @@ button
     margin-bottom: 40px
 
 .mb70
-	margin-bottom: 70px
+    margin-bottom: 70px
 
 .mb90
-	margin-bottom: 90px
+    margin-bottom: 90px
 
 .w100
-	width: 100%
+    width: 100%
 
 .posr
     position: relative
@@ -396,7 +398,7 @@ button
 
 .lh12
     line-height: 1.2
-    
+
 *.hover-black__link-red-icon
     +trans
     [class*="icon-"]
@@ -413,7 +415,7 @@ button
     &:hover
         [class*='icon-']
             color: #000
-            
+
 .navbar-default, .navbar-collapse, .navbar-default .navbar-collapse
     background: none
     border: none
@@ -434,7 +436,7 @@ button
             margin: 0
             background: none
             border: none
-            
+
         &:not(.collapsed)
             .icon-bar
                 +origin(center center)
@@ -447,7 +449,6 @@ button
                 &.last
                     +transform(translate3d(-50%, -50%, 0) rotate(-45deg))
                     margin: 0
-
 
         .icon-bar
             background: $semidark-grey
@@ -500,7 +501,7 @@ button
 
     &:not(.no-lts)
         @extend .lts1
-    
+
     &.grey
         color: $semidark-grey
 
@@ -523,7 +524,7 @@ button
 .last-child-no-mr
     & > *:last-child
         margin-right: 0
-        
+
 .dot-separator
     display: inline-block
     vertical-align: middle
@@ -594,7 +595,6 @@ button
 
     .tab-mb15
         margin-bottom: 15px
-
 
 @media screen and (max-width: 767px)
     .mobile-display-block

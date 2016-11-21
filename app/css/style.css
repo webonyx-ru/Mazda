@@ -102,7 +102,7 @@ body, html {
   line-height: normal;
   width: auto;
 }
-.logo-square:hover {
+.logo-square:hover, .logo-square:active, .logo-square:focus {
   color: #fff;
 }
 
