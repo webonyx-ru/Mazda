@@ -90,7 +90,7 @@
                         </div>
                         <div class="modal-footer">
                             <p class="ff-os fz14 mb15">Вход через</p>
-                            <div class="text-center">
+                            <div class="fz0 text-center">
                                 <a class="square-gray-link text-center fz18 white-color" href="#">
                                     <i class="icon-facebook"></i>
                                 </a>
@@ -142,7 +142,7 @@
                         </div>
                         <div class="modal-footer">
                             <p class="ff-os fz14 mb15">Вход через</p>
-                            <div class="text-center">
+                            <div class="fz0 text-center">
                                 <a class="square-gray-link text-center fz18 white-color" href="#">
                                     <i class="icon-facebook"></i>
                                 </a>
@@ -179,7 +179,7 @@
                                     <input type="text" class="entry-field ff-os w100" title="email" placeholder="Введите email адрес">
                                     <div class="b-notification-message ff-os"></div>
                                     <div class="entry-field posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
+                                        <input type="password" class="entry-field input-password border-none ff-os w100" title="password" placeholder="Придумайте пароль">
                                         <div class="toggle-show-pass">
                                             <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
                                             <i class="icon-views fz20"></i>
@@ -187,7 +187,7 @@
                                     </div>
                                     <div class="b-notification-message ff-os"></div>
                                     <div class="entry-field posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
+                                        <input type="password" class="entry-field input-password border-none ff-os w100" title="password" placeholder="Повторите пароль">
                                         <div class="toggle-show-pass">
                                             <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
                                             <i class="icon-views fz20"></i>
@@ -245,7 +245,7 @@
                                     <input type="text" class="entry-field border-green ff-os w100" title="email" placeholder="Введите email адрес">
                                     <div class="b-notification-message ff-os"></div>
                                     <div class="entry-field border-green posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
+                                        <input type="password" class="entry-field input-password border-none ff-os w100" title="password" placeholder="Придумайте пароль">
                                         <div class="toggle-show-pass">
                                             <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
                                             <i class="icon-views fz20"></i>
@@ -253,7 +253,7 @@
                                     </div>
                                     <div class="b-notification-message ff-os --text-lime">пароль надежный</div>
                                     <div class="entry-field border-green posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
+                                        <input type="password" class="entry-field input-password border-none ff-os w100" title="password" placeholder="Повторите пароль">
                                         <div class="toggle-show-pass">
                                             <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
                                             <i class="icon-views fz20"></i>
@@ -311,7 +311,7 @@
                                     <input type="text" class="entry-field border-red ff-os w100" title="email" placeholder="Введите email адрес">
                                     <div class="b-notification-message ff-os --text-red">такой email уже зарегистрирован</div>
                                     <div class="entry-field border-red posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Придумайте пароль">
+                                        <input type="password" class="entry-field input-password border-none ff-os w100" title="password" placeholder="Придумайте пароль">
                                         <div class="toggle-show-pass">
                                             <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
                                             <i class="icon-views fz20"></i>
@@ -319,7 +319,7 @@
                                     </div>
                                     <div class="b-notification-message ff-os --text-red">недопустимый пароль</div>
                                     <div class="entry-field border-red posr">
-                                        <input type="password" class="entry-field input-password h38 border-none ff-os w100" title="password" placeholder="Повторите пароль">
+                                        <input type="password" class="entry-field input-password border-none ff-os w100" title="password" placeholder="Повторите пароль">
                                         <div class="toggle-show-pass">
                                             <input type="checkbox" class="toggle-show-pass__checkbox" title="show-password">
                                             <i class="icon-views fz20"></i>
@@ -496,13 +496,12 @@
                                     </div>
                                     <textarea class="entry-field popup-textarea ff-os w100" title="comment" placeholder="Комментарий"></textarea>
                                 </div>
-                                <div class="star-red fz0 mb25">
-                                    <div class="b-inline-checkbox">
-                                        <input type="checkbox" id="checkbox-processing" class="clean-element pull-left">
-                                    </div>
-                                    <div class="b-inline-checkbox-label">
-                                        <label for="checkbox-processing" class="--text-grey fz13">Разрешить обработку</label><br>
-                                        <span class="fz13 --text-grey mb0">персональных данных</span>
+                                <div class="star-red mb25">
+                                    <div class="display-flex">
+                                        <input type="checkbox" id="checkbox-processing" class="b-inline-checkbox clean-element pull-left">
+                                        <label for="checkbox-processing" class="--text-grey fz13">
+                                            Разрешить обработку<br> персональных данных
+                                        </label>
                                     </div>
                                 </div>
                                 <p class="ff-os fz12 --text-grey mb30"><span class="--text-red">*</span> - обязательные для заполнения поля</p>

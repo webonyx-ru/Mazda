@@ -190,6 +190,7 @@
   top: -1px
   right: -1px
   z-index: 20
+  +trans()
 
 .toggle-runner__checkbox
   width: 100%
@@ -230,13 +231,14 @@
 
 .square-gray-link
   display: inline-block
-  width: 30px
-  height: 30px
+  width: 32px
+  height: 32px
   background: #999999
   -webkit-border-radius: 3px
   -moz-border-radius: 3px
   border-radius: 3px
   margin-right: 20px
+  line-height: 28px
   color: #fff
   +trans()
   &:hover, &:focus, &:active
@@ -260,8 +262,9 @@
     max-width: 100%
     min-height: 85px
     padding: 10px
-  &.h38
+  &.input-password
     height: 38px
+    padding: 0 0
   &.border-none
     border: none
 
@@ -317,7 +320,7 @@
     padding: 0
 
 .b-inline-btn
-  margin-bottom: 10px
+  margin-bottom: 20px
   font-size: 0
 
 .b-inline-btn__b-left
@@ -335,15 +338,8 @@
   font-size: 14px
 
 .b-inline-checkbox
-  display: inline-block
-  vertical-align: top
   padding-top: 3px
   margin-right: 5px
-  font-size: 13px
-
-.b-inline-checkbox-label
-  display: inline-block
-  vertical-align: top
   font-size: 13px
 
 .b-delivery
