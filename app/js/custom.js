@@ -84,7 +84,6 @@ doc.ready(function () {
         e.preventDefault();
     });
 
-    $('[data-jsp]').jScrollPane();
 
     $('.dealers-map__current-dealer-name').bind("DOMSubtreeModified", function () {
         var header = $('.dealers-map__listing-header'),
@@ -118,5 +117,37 @@ doc.ready(function () {
             $el.closest('.entry-field').find('.input-password').attr('type', 'password')
         }
     });
+
+});
+
+$(window).on('load', function () {
+    $('[data-jsp]').jScrollPane();
+});
+
+$(function()
+{
+    $('[data-jsp]').each(
+        function()
+        {
+            var api = $(this).data('jsp');
+            var throttleTimeout;
+            $(window).bind(
+                'resize',
+                function()
+                {
+                    if (!throttleTimeout) {
+                        throttleTimeout = setTimeout(
+                            function()
+                            {
+                                api.reinitialise();
+                                throttleTimeout = null;
+                            },
+                            50
+                        );
+                    }
+                }
+            );
+        }
+    )
 
 });
