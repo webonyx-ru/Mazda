@@ -289,3 +289,35 @@ function viewport() {
     }
     return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
 }
+
+$(window).on('load', function () {
+    $('[data-jsp]').jScrollPane();
+});
+
+$(function()
+{
+    $('[data-jsp]').each(
+        function()
+        {
+            var api = $(this).data('jsp');
+            var throttleTimeout;
+            $(window).bind(
+                'resize',
+                function()
+                {
+                    if (!throttleTimeout) {
+                        throttleTimeout = setTimeout(
+                            function()
+                            {
+                                api.reinitialise();
+                                throttleTimeout = null;
+                            },
+                            50
+                        );
+                    }
+                }
+            );
+        }
+    )
+
+});
