@@ -49,26 +49,25 @@ doc.ready(function () {
 
         owl.each(function () {
             var items_num = parseInt($(this).attr("data-items"));
-
-            if (items_num > 0) {
-                $(this).owlCarousel({
-                    items: items_num,
-                    responsive: {
-                        0: {
-                            items: 1
-                        }
-                    }
-                });
-            } else {
+            console.log(items_num)
+            if (!items_num > 0) {
                 $(this).owlCarousel({
                     items: 3,
-                    margin: 0,
                     responsive: {
                         0: {
                             items: 1
                         },
                         768: {
                             items: 3
+                        }
+                    }
+                });
+            } else {
+                $(this).owlCarousel({
+                    items: items_num,
+                    responsive: {
+                        0: {
+                            items: 1
                         }
                     }
                 });
