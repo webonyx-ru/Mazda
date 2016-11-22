@@ -44,53 +44,53 @@ doc.ready(function () {
         var similar_next = $this.find('.custom-carouse__next');
         var similar_prev = $this.find('.custom-carouse__prev');
 
-        var owl = $this.find('.owl-carousel');
 
-        var items_num = parseInt(owl.attr("data-items"));
+        var owl = $this.find('.owl-carousel:eq(0)');
 
-        if (items_num > 0) {
-            owl.owlCarousel({
-                items: items_num,
-                responsive: {
-                    0: {
-                        items: items_num
+        owl.each(function () {
+            var items_num = parseInt($(this).attr("data-items"));
+
+            if (items_num > 0) {
+                $(this).owlCarousel({
+                    items: items_num,
+                    responsive: {
+                        0: {
+                            items: 1
+                        }
                     }
-                }
-            })
-        } else {
-            owl.owlCarousel({
-                items: 3,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    768: {
-                        items: 3
+                });
+            } else {
+                $(this).owlCarousel({
+                    items: 3,
+                    margin: 0,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        768: {
+                            items: 3
+                        }
                     }
-                }
+                });
+            }
+
+            similar_next.on('click', function (e) {
+                $(this).closest('.owl-carousel__parent-element').find('.owl-carousel:visible').trigger('next.owl.carousel');
+                e.preventDefault()
             });
-        }
 
-        similar_next.on('click', function (e) {
-            $(this).closest('.owl-carousel__parent-element').find('.owl-carousel:visible').trigger('next.owl.carousel');
-            e.preventDefault()
+            similar_prev.on('click', function (e) {
+                $(this).closest('.owl-carousel__parent-element').find('.owl-carousel:visible').trigger('prev.owl.carousel');
+                e.preventDefault()
+            });
         });
 
-        similar_prev.on('click', function (e) {
-            $(this).closest('.owl-carousel__parent-element').find('.owl-carousel:visible').trigger('prev.owl.carousel');
-            e.preventDefault()
-        });
     });
 
     $('.auto-slider.owl-carousel').each(function () {
         $(this).owlCarousel({
             thumbs: true,
-            items: 1,
-            responsive: {
-                0: {
-                    items: 1
-                }
-            }
+            items: 1
         })
     });
 
@@ -138,33 +138,15 @@ doc.ready(function () {
 
         news_grid.container = $('.main-page__news-grid, .mobile-owl-carousel__single');
         news_grid.owl = news_grid.container.find('>.row');
-        news_grid.owl_delaers = $('.main-page__rated-dealers > .row');
 
-        news_grid.owl_delaers.css({margin: 0}).addClass('owl-carousel').owlCarousel({
-            items: 3,
-            margin: 30,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 3
-                }
-            }
-        });
+        // console.log(news_grid.owl_delaers.attr('data'));
 
         $(window).bind('resize', function () {
             ww = viewport().width;
 
             if(ww < 768 && initialized != true) {
                 news_grid.owl.css({margin: 0}).addClass('owl-carousel').owlCarousel({
-                    items: 1,
-                    margin: 0,
-                    responsive: {
-                        0: {
-                            items: 1
-                        }
-                    }
+                    items: 1
                 });
 
                 initialized = true;
