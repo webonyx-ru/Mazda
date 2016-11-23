@@ -39,10 +39,10 @@ label {
 a:hover, a:active, a:focus {
   text-decoration: none;
 }
-a[class*="--text-grey"]:not([class*='hover']):hover {
+a[class*="-text-grey"]:not([class*='hover']):hover {
   color: #fff;
 }
-a[class*="--text-grey"].hover-tdu:hover, a[class*="--text-grey"].hover-tdu:active, a[class*="--text-grey"].hover-tdu:hover {
+a[class*="-text-grey"].hover-tdu:hover, a[class*="-text-grey"].hover-tdu:active, a[class*="-text-grey"].hover-tdu:hover {
   text-decoration: underline;
   color: #999999;
 }
@@ -138,35 +138,35 @@ p:last-child {
   vertical-align: middle;
 }
 
-[class*="--text-grey"], .--text-grey {
+a[class*="-text-grey"], *.-text-grey {
   color: #999999;
 }
 
-[class*="--text-red"], .--text-red {
+[class*="-text-red"], .-text-red {
   color: #dd0000;
 }
 
-[class*="--text-lime"], .--text-lime {
+[class*="-text-lime"], .-text-lime {
   color: #5fbd37;
 }
 
-[class*="--text-lightgrey"], .--text-lightgrey {
+[class*="-text-lightgrey"], .-text-lightgrey {
   color: #c5c5c5;
 }
 
-[class*="--text-lightblack"], .--text-lightblack, .semi-title {
+[class*="-text-lightblack"], .-text-lightblack, .semi-title {
   color: #191919;
 }
 
-[class*="--text-green"], .--text-green {
+[class*="-text-green"], .-text-green {
   color: #3fb750;
 }
 
-[class*="--text-red"], .--text-red {
+[class*="-text-red"], .-text-red {
   color: #dd0000;
 }
 
-[class*="--hover-text-black"]:hover, [class*="--hover-text-black"]:active, [class*="--hover-text-black"]:focus, .--hover-text-black:hover, .--hover-text-black:active, .--hover-text-black:focus {
+[class*="-hover-text-black"]:hover, [class*="-hover-text-black"]:active, [class*="-hover-text-black"]:focus, .-hover-text-black:hover, .-hover-text-black:active, .-hover-text-black:focus {
   color: #191919;
 }
 
