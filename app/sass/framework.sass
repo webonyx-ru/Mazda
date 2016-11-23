@@ -30,6 +30,9 @@ label
     margin: 0
     padding: 0
 
+.clear-both
+    clear: both
+
 a
     &:hover, &:active, &:focus
         text-decoration: none
@@ -234,21 +237,24 @@ button
         background: none
 
 .empty-button
-    &:focus, &
-        padding: 0 15px
-        line-height: 26px
+    padding: 0 15px
+    line-height: 26px
+    border: 2px solid $semidark-grey
+    color: $semidark-grey
+    border-radius: 3px
+    font-family: $sfb
+    display: inline-block
+    text-decoration: none
+    vertical-align: middle
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    max-width: 100%
+    +trans
+
+    &:focus
         border: 2px solid $semidark-grey
         color: $semidark-grey
-        border-radius: 3px
-        font-family: $sfb
-        display: inline-block
-        text-decoration: none
-        vertical-align: middle
-        white-space: nowrap
-        text-overflow: ellipsis
-        overflow: hidden
-        max-width: 100%
-        +trans
 
     &.red-border
         border-color: #dd0000
@@ -586,6 +592,9 @@ button
     -webkit-box-shadow: none
     box-shadow: none
 
+.bootstrap-select > select
+    display: none !important
+
 @media screen and (max-width: 992px) and (min-width: 768px)
     .tab-display-block
         display: block
@@ -634,6 +643,9 @@ button
 
     .mobile--mb20
         margin-bottom: 20px
+
+    .mobile--mr0
+        margin-right: 0
 
     .mobile-text-center
         text-align: center

@@ -36,6 +36,10 @@ label {
   padding: 0;
 }
 
+.clear-both {
+  clear: both;
+}
+
 a:hover, a:active, a:focus {
   text-decoration: none;
 }
@@ -290,7 +294,7 @@ button:hover, button:focus, button:active {
   background: none;
 }
 
-.empty-button:focus, .filled-button:focus, .empty-button, .filled-button {
+.empty-button, .filled-button {
   padding: 0 15px;
   line-height: 26px;
   border: 2px solid #999999;
@@ -309,6 +313,10 @@ button:hover, button:focus, button:active {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
+}
+.empty-button:focus, .filled-button:focus {
+  border: 2px solid #999999;
+  color: #999999;
 }
 .empty-button.red-border, .red-border.filled-button {
   border-color: #dd0000;
@@ -744,6 +752,10 @@ button:hover, button:focus, button:active {
   box-shadow: none;
 }
 
+.bootstrap-select > select {
+  display: none !important;
+}
+
 @media screen and (max-width: 992px) and (min-width: 768px) {
   .tab-display-block {
     display: block;
@@ -806,6 +818,10 @@ button:hover, button:focus, button:active {
 
   .mobile--mb20 {
     margin-bottom: 20px;
+  }
+
+  .mobile--mr0 {
+    margin-right: 0;
   }
 
   .mobile-text-center {

@@ -101,6 +101,8 @@ body, html
     color: $semidark-grey
     position: relative
     letter-spacing: 1px
+    display: block
+    line-height: normal
 
     @media screen and (max-width: 768px)
         display: inline-block
@@ -596,7 +598,8 @@ a.content-block__tab-menu-link
             bottom: 0
 
 .auto-catalog__listing
-    margin: 0 -1px
+    .row
+        margin: 0 -1px
 
 .auto-catalog__bottom-bar
     position: absolute
@@ -699,6 +702,9 @@ a.content-block__tab-menu-link
 
     &:not(:last-child)
         border-bottom: 1px solid #c5c5c5
+
+.catalog-item__reviews-content
+    width: calc(100% - 135px)
 
 .right-side__news-sub-title
     text-overflow: ellipsis
@@ -851,6 +857,17 @@ a.content-block__tab-menu-link
 
 .dealers-filter__elements-listing
     padding-left: 10px
+
+.dealers-filter__checkbox-label
+    position: relative
+    padding-left: 20px
+    min-height: 20px
+    display: block
+
+    .jq-checkbox
+        position: absolute
+        top: 3px
+        left: 0
 
 .models-logo__units
     flex-flow: row wrap
@@ -1241,6 +1258,18 @@ input
     margin-bottom: 20px
 
 .auto-slider
+    .owl-stage-outer
+        position: relative
+        &:before
+            margin-top: 62.3%
+            display: block
+            content: ''
+    .owl-stage
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
     .owl-thumb-item
         display: inline-block
         vertical-align: middle
@@ -1305,8 +1334,8 @@ input
 
 .header-notification__count
     position: absolute
-    top: -12px
-    right: -7px
+    top: -5px
+    right: -5px
     width: 12px
     height: 12px
     line-height: 12px

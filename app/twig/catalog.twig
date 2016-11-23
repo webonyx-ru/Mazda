@@ -43,9 +43,13 @@
 							</select>
 						</form>
 						<div class="content-area__section adv-grid__wrapper">
-							<div class="row adv-grid display-flex flex-wrap">
-								{% for i in 1..21 %}
-									{% include "elements/car-item.twig" %}
+							<div class="adv-grid">
+								{% for i in 1..7 %}
+									<div class="row display-flex space-between mobile-display-block">
+										{% for item in 1..3 %}
+											{% include "elements/car-item.twig" %}
+										{% endfor %}
+									</div>
 								{% endfor %}
 							</div>
 							{% include "widgets/pagination.twig" %}

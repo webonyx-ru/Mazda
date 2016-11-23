@@ -45,7 +45,7 @@ doc.ready(function () {
         var similar_prev = $this.find('.custom-carouse__prev');
 
 
-        var owl = $this.find('.owl-carousel:eq(0)');
+        var owl = $this.find('.owl-carousel');
 
         owl.each(function () {
             var items_num = parseInt($(this).attr("data-items"));
