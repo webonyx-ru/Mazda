@@ -1507,7 +1507,7 @@ input:checked + .holding-vacancy__check-quality {
   top: 100%;
   background: #fff;
   z-index: 10;
-  right: -10px;
+  right: 5px;
   box-shadow: 0 0 10px #ccc;
   min-width: 220px;
 }
@@ -1536,4 +1536,30 @@ input:checked + .holding-vacancy__check-quality {
   display: block;
   font-size: 10px;
   border-radius: 100%;
+}
+
+.header-profile__menu-notification {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #dd0000;
+  color: #fff;
+  line-height: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+.mobile-avatar-notif__detector {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #dd0000;
+  border-radius: 100%;
+  font-size: 0;
+  line-height: 0;
+  z-index: 5;
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 0 2px #fff;
 }

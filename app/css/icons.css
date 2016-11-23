@@ -5,6 +5,9 @@
   font-style: normal;
   display: inline-block;
   vertical-align: middle;
+}
+
+[class*="icon-"]:not([class*="glyphicon"]):not(.lh-auto) {
   line-height: 1;
 }
 
@@ -169,4 +172,82 @@
 }
 .icon-metro_indicator.green {
   background: #39b54a;
+}
+
+.icon-arrows {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 0;
+  height: 16px;
+  width: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8.5px;
+}
+
+.icon-check {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 -21px;
+  height: 14px;
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -7px;
+  margin-left: -8px;
+}
+
+.icon-road {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 -40px;
+  height: 15px;
+  width: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -7.5px;
+  margin-left: -8.5px;
+}
+
+.icon-rouble {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 -60px;
+  height: 14px;
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -7px;
+  margin-left: -6px;
+}
+
+.icon-umbrella {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 -79px;
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8.5px;
+  margin-left: -8.5px;
+}
+
+.icon-wrench {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 -101px;
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8.5px;
+  margin-left: -8.5px;
 }

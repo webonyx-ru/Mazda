@@ -1,4 +1,5 @@
-@import mixins/mixins
+@import "mixins/mixins"
+@import "mixins/retina_sprites"
 
 [class*="icon-"]:not([class*="glyphicon"]), .jq-checkbox__div
     font-family: "mazda-icons"
@@ -6,9 +7,11 @@
     font-style: normal
     display: inline-block
     vertical-align: middle
+
+[class*="icon-"]:not([class*="glyphicon"])
     &:not(.lh-auto)
         line-height: 1
-//font-size: 50px
+
 
 [class*="glyphicon-"]
     font-weight: normal
@@ -170,3 +173,22 @@
 
     &.green
         background: #39b54a
+
+
+.icon-arrows
+    +sprite(arrows, "retina", "abs_middle")
+
+.icon-check
+    +sprite(check, "retina", "abs_middle")
+
+.icon-road
+    +sprite(road, "retina", "abs_middle")
+
+.icon-rouble
+    +sprite(rouble, "retina", "abs_middle")
+
+.icon-umbrella
+    +sprite(umbrella, "retina", "abs_middle")
+
+.icon-wrench
+    +sprite(wrench, "retina", "abs_middle")

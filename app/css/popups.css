@@ -5,6 +5,9 @@
   font-style: normal;
   display: inline-block;
   vertical-align: middle;
+}
+
+[class*="icon-"]:not([class*="glyphicon"]):not(.lh-auto) {
   line-height: 1;
 }
 
@@ -169,6 +172,84 @@
 }
 .icon-metro_indicator.green {
   background: #39b54a;
+}
+
+.icon-arrows {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 0;
+  height: 16px;
+  width: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8.5px;
+}
+
+.icon-check {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 -21px;
+  height: 14px;
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -7px;
+  margin-left: -8px;
+}
+
+.icon-road {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 -40px;
+  height: 15px;
+  width: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -7.5px;
+  margin-left: -8.5px;
+}
+
+.icon-rouble {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 -60px;
+  height: 14px;
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -7px;
+  margin-left: -6px;
+}
+
+.icon-umbrella {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 -79px;
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8.5px;
+  margin-left: -8.5px;
+}
+
+.icon-wrench {
+  background-image: url('../images/icons-2x-s3069be39ef.png');
+  background-size: 17px auto;
+  background-position: 0 -101px;
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8.5px;
+  margin-left: -8.5px;
 }
 
 .popups-btn-panel {
@@ -498,6 +579,8 @@
 }
 .entry-field.popup-textarea {
   max-width: 100%;
+  min-width: 100%;
+  max-height: 500px;
   min-height: 85px;
   padding: 10px;
 }
@@ -727,8 +810,13 @@
   height: 345px;
   background: #fff;
 }
+.modal-lg__b-content .jspContainer {
+  width: 100% !important;
+  box-sizing: border-box;
+}
 .modal-lg__b-content .jspContainer .jspPane {
   padding-right: 20px !important;
+  width: 100% !important;
 }
 .modal-lg__b-content .jspContainer .jspVerticalBar {
   width: 4px;
@@ -752,84 +840,6 @@
   text-decoration: underline;
 }
 
-.icon-arrows {
-  background-image: url('../images/icons-2x-s3069be39ef.png');
-  background-size: 17px auto;
-  background-position: 0 0;
-  height: 16px;
-  width: 17px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -8px;
-  margin-left: -8.5px;
-}
-
-.icon-check {
-  background-image: url('../images/icons-2x-s3069be39ef.png');
-  background-size: 17px auto;
-  background-position: 0 -21px;
-  height: 14px;
-  width: 16px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -7px;
-  margin-left: -8px;
-}
-
-.icon-road {
-  background-image: url('../images/icons-2x-s3069be39ef.png');
-  background-size: 17px auto;
-  background-position: 0 -40px;
-  height: 15px;
-  width: 17px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -7.5px;
-  margin-left: -8.5px;
-}
-
-.icon-rouble {
-  background-image: url('../images/icons-2x-s3069be39ef.png');
-  background-size: 17px auto;
-  background-position: 0 -60px;
-  height: 14px;
-  width: 12px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -7px;
-  margin-left: -6px;
-}
-
-.icon-umbrella {
-  background-image: url('../images/icons-2x-s3069be39ef.png');
-  background-size: 17px auto;
-  background-position: 0 -79px;
-  height: 17px;
-  width: 17px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -8.5px;
-  margin-left: -8.5px;
-}
-
-.icon-wrench {
-  background-image: url('../images/icons-2x-s3069be39ef.png');
-  background-size: 17px auto;
-  background-position: 0 -101px;
-  height: 17px;
-  width: 17px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -8.5px;
-  margin-left: -8.5px;
-}
-
 @media screen and (max-width: 992px) {
   .modal-lg {
     width: 750px;
@@ -839,6 +849,20 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .modal-lg__b-content {
+    height: auto;
+  }
+  .modal-lg__b-content .jspContainer {
+    height: auto !important;
+  }
+  .modal-lg__b-content .jspContainer .jspPane {
+    padding-right: 0 !important;
+    position: static;
+  }
+  .modal-lg__b-content .jspContainer .jspVerticalBar {
+    display: none;
+  }
+
   .b-error-message {
     width: 290px;
   }
@@ -1016,10 +1040,6 @@
 
   .modal-lg-nav__link.collapsed .modal-lg-nav__arrow:before {
     transform: rotate(45deg);
-  }
-
-  .users-agreement-link {
-    padding-left: 18px;
   }
 
   .toggle-show-pass__checkbox:hover + i {
