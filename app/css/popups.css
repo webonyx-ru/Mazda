@@ -1021,4 +1021,11 @@
   .users-agreement-link {
     padding-left: 18px;
   }
+
+  .toggle-show-pass__checkbox:hover + i {
+    color: #d5d5d5;
+  }
+  .toggle-show-pass__checkbox:checked + i {
+    color: #000;
+  }
 }
