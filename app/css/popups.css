@@ -1,3 +1,176 @@
+@charset "UTF-8";
+[class*="icon-"]:not([class*="glyphicon"]), .jq-checkbox__div {
+  font-family: "mazda-icons";
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+[class*="glyphicon-"] {
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.icon-actions:before {
+  content: "";
+}
+
+.icon-car:before {
+  content: "";
+}
+
+.icon-checked-mark:before, .jq-checkbox__div:before {
+  content: "";
+}
+
+.icon-comment:before {
+  content: "";
+}
+
+.icon-double_arrow:before {
+  content: "";
+}
+
+.icon-down_arrow:before {
+  content: "";
+}
+
+.icon-email:before {
+  content: "";
+}
+
+.icon-favorite:before {
+  content: "";
+}
+
+.icon-insurance:before {
+  content: "";
+}
+
+.icon-leasing:before {
+  content: "";
+}
+
+.icon-favorite:before {
+  content: "";
+}
+
+.icon-left_arrow:before {
+  content: "";
+}
+
+.icon-like:before {
+  content: "";
+}
+
+.icon-location_pin:before {
+  content: "";
+}
+
+.icon-more:before {
+  content: "";
+}
+
+.icon-phone:before {
+  content: "";
+}
+
+.icon-plus:before {
+  content: "";
+}
+
+.icon-rate:before {
+  content: "";
+}
+
+.icon-remove:before {
+  content: "";
+}
+
+.icon-right_arrow:before {
+  content: "";
+}
+
+.icon-sale_car:before {
+  content: "";
+}
+
+.icon-service:before {
+  content: "";
+}
+
+.icon-settings:before {
+  content: "";
+}
+
+.icon-share:before {
+  content: "";
+}
+
+.icon-test_drive:before {
+  content: "";
+}
+
+.icon-ticket:before {
+  content: "";
+}
+
+.icon-up_arrow:before {
+  content: "";
+}
+
+.icon-views:before {
+  content: "";
+}
+
+.icon-wheel:before {
+  content: "";
+}
+
+.icon-google_plus:before {
+  content: "";
+}
+
+.icon-tumblr:before {
+  content: "";
+}
+
+.icon-instagram:before {
+  content: "";
+}
+
+.icon-pinterest:before {
+  content: "";
+}
+
+.icon-twitter:before {
+  content: "";
+}
+
+.icon-youtube:before {
+  content: "";
+}
+
+.icon-facebook:before {
+  content: "";
+}
+
+.icon-metro_indicator {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+}
+.icon-metro_indicator.green {
+  background: #39b54a;
+}
+
 .popups-btn-panel {
   width: 350px;
   height: 100%;
@@ -566,6 +739,19 @@
   height: auto;
 }
 
+.users-agreement-link {
+  display: inline-block;
+  color: #000;
+}
+.users-agreement-link:hover, .users-agreement-link:focus, .users-agreement-link:active {
+  color: #000;
+  text-decoration: underline;
+}
+.users-agreement-link:hover:visited:hover, .users-agreement-link:hover:visited:focus, .users-agreement-link:hover:visited:active, .users-agreement-link:focus:visited:hover, .users-agreement-link:focus:visited:focus, .users-agreement-link:focus:visited:active, .users-agreement-link:active:visited:hover, .users-agreement-link:active:visited:focus, .users-agreement-link:active:visited:active {
+  color: #000;
+  text-decoration: underline;
+}
+
 .icon-arrows {
   background-image: url('../images/icons-2x-s3069be39ef.png');
   background-size: 17px auto;
@@ -830,5 +1016,9 @@
 
   .modal-lg-nav__link.collapsed .modal-lg-nav__arrow:before {
     transform: rotate(45deg);
+  }
+
+  .users-agreement-link {
+    padding-left: 18px;
   }
 }
