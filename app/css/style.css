@@ -1472,7 +1472,7 @@ input:checked + .holding-vacancy__check-quality {
   right: 0;
   bottom: 0;
 }
-.auto-slider .owl-thumb-item {
+.auto-slider .owl-dot {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
@@ -1485,15 +1485,15 @@ input:checked + .holding-vacancy__check-quality {
   overflow: hidden;
   box-sizing: border-box;
 }
-.auto-slider .owl-thumb-item:not(:nth-child(8n)) {
+.auto-slider .owl-dot:not(:nth-child(8n)) {
   border-right: 1px solid #191919;
 }
-.auto-slider .owl-thumb-item img {
+.auto-slider .owl-dot img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.auto-slider .owl-thumb-item:after {
+.auto-slider .owl-dot:after {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -1510,10 +1510,10 @@ input:checked + .holding-vacancy__check-quality {
   background: #000;
   opacity: 0.8;
 }
-.auto-slider .owl-thumb-item.active:after {
+.auto-slider .owl-dot.active:after {
   opacity: 0;
 }
-.auto-slider .owl-thumbs {
+.auto-slider .owl-dots {
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid #191919;
@@ -1579,4 +1579,69 @@ input:checked + .holding-vacancy__check-quality {
   width: 8px;
   height: 8px;
   box-shadow: 0 0 0 2px #fff;
+}
+
+.companies-map__listing {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: auto;
+  width: 280px;
+  padding: 15px 20px;
+}
+
+.companies-map__units {
+  position: absolute;
+  top: 45px;
+  bottom: 45px;
+  left: 0;
+  right: 5px;
+}
+.companies-map__units .jspHorizontalBar {
+  display: none !important;
+}
+.companies-map__units .jspPane {
+  left: 0 !important;
+}
+
+.companies-map__item {
+  padding: 0 20px;
+  position: relative;
+}
+.companies-map__item:not(:last-child):after {
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  left: 20px;
+  right: 20px;
+  content: "";
+  background: #c5c5c5;
+  display: block;
+}
+.companies-map__item.active {
+  background: #f3f3f3;
+}
+.companies-map__item.active .companies-map__item-header {
+  color: #191919;
+}
+.companies-map__item.active .companies-map__item-content {
+  display: block;
+}
+
+.companies-map__item-content {
+  padding-bottom: 15px;
+}
+
+.companies-map__bottom {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  padding: 0 20px;
+}
+
+.companies-map__item-header {
+  padding: 15px 0;
+  cursor: pointer;
 }

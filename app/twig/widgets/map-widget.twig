@@ -6,6 +6,7 @@
 <div class="map-container posr">
 	<div id="dealers-map" {% if height == "height500" %} class="{{ height }}"{% endif %}></div>
 
+	{% if map_company_list != "true" %}
 	<div class="dealers-map__listing">
 		<div class="dealers-map__listing-header">
 			<div class="text-center mb15">
@@ -41,4 +42,32 @@
 			</a>
 		</div>
 	</div>
+	{% else %}
+		<div class="companies-map__listing white-bg">
+			<div class="companies-map__listing-header">
+				<div class="text-uppercase">Список компаний</div>
+			</div>
+
+			<div class="companies-map__units" data-jspane>
+				{% for i in 1..12 %}
+					<div class="companies-map__item">
+						<div class="companies-map__item-header lts1 semi-title grey text-center">
+							Независимость мазда
+						</div>
+						<div class="companies-map__item-content custom-hidden">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, fugiat?</p>
+							<p><a href="tel:+7 (496) 112 123 12" class="-text-lightblack -hover-text-black">+7 (496) 112 123 12</a></p>
+							<p class="text-right">
+								<a href="#" class="semi-title grey hover-black__link-red-icon"><span class="dib">Страница компании</span> <i class="icon-right_arrow"></i></a>
+							</p>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+
+			<div class="companies-map__bottom text-right">
+				Всего компаний: 12
+			</div>
+		</div>
+	{% endif %}
 </div>

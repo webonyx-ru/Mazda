@@ -570,4 +570,27 @@
     padding-left: 40px;
     padding-right: 40px;
   }
+
+  .companies-map__listing {
+    position: static;
+    height: auto;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .companies-map__units {
+    position: static;
+    height: 300px;
+  }
+
+  .companies-map__bottom {
+    position: static;
+    padding-top: 15px;
+  }
+
+  .companies-map__listing-header {
+    position: static;
+    padding: 0 20px 15px;
+  }
 }

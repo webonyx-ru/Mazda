@@ -1287,7 +1287,7 @@ input
         left: 0
         right: 0
         bottom: 0
-    .owl-thumb-item
+    .owl-dot
         display: inline-block
         vertical-align: middle
         margin: 0
@@ -1326,7 +1326,7 @@ input
                 opacity: 0
 
 
-    .owl-thumbs
+    .owl-dots
         display: flex
         flex-wrap: wrap
         border-top: 1px solid $light-black
@@ -1387,3 +1387,63 @@ input
     width: 8px
     height: 8px
     box-shadow: 0 0 0 2px #fff
+
+.companies-map__listing
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    background: rgba(#fff, 0.9)
+    overflow: auto
+    width: 280px
+    padding: 15px 20px
+
+.companies-map__units
+    position: absolute
+    top: 45px
+    bottom: 45px
+    left: 0
+    right: 5px
+
+    .jspHorizontalBar
+        display: none !important
+
+    .jspPane
+        left: 0 !important
+
+.companies-map__item
+    padding: 0 20px
+    position: relative
+
+    &:not(:last-child)
+        &:after
+            position: absolute
+            bottom: 0
+            height: 1px
+            left: 20px
+            right: 20px
+            content: ''
+            background: #c5c5c5
+            display: block
+        
+    &.active
+        background: #f3f3f3
+
+        .companies-map__item-header
+            color: $light-black
+
+        .companies-map__item-content
+            display: block
+
+.companies-map__item-content
+    padding-bottom: 15px
+
+.companies-map__bottom
+    position: absolute
+    bottom: 15px
+    right: 0
+    padding: 0 20px
+
+.companies-map__item-header
+    padding: 15px 0
+    cursor: pointer
