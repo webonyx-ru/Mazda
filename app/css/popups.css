@@ -19,148 +19,196 @@
   line-height: 1;
 }
 
-.icon-actions:before {
+.icon-checked-mark:before, .jq-checkbox__div:before {
   content: "";
 }
 
-.icon-car:before {
+.icon-actions:before {
   content: "";
 }
 
-.icon-checked-mark:before, .jq-checkbox__div:before {
+.icon-car:before {
   content: "";
 }
 
-.icon-comment:before {
-  content: "";
+.icon-checked-mark:before {
+  content: "";
 }
 
-.icon-double_arrow:before {
+.icon-comment:before {
   content: "";
 }
 
-.icon-down_arrow:before {
+.icon-double_arrow:before {
   content: "";
 }
 
-.icon-email:before {
+.icon-double_arrow_back:before {
   content: "";
 }
 
-.icon-favorite:before {
+.icon-down_arrow:before {
   content: "";
 }
 
-.icon-insurance:before {
+.icon-email:before {
   content: "";
 }
 
-.icon-leasing:before {
+.icon-facebook:before {
   content: "";
 }
 
 .icon-favorite:before {
-  content: "";
-}
-
-.icon-left_arrow:before {
   content: "";
 }
 
-.icon-like:before {
+.icon-forward-arrow:before {
   content: "";
 }
 
-.icon-location_pin:before {
+.icon-google_plus:before {
   content: "";
 }
 
-.icon-more:before {
-  content: "";
-}
-
-.icon-phone:before {
+.icon-instagram:before {
   content: "";
 }
 
-.icon-plus:before {
+.icon-insurance:before {
   content: "";
 }
 
-.icon-rate:before {
+.icon-leasing:before {
   content: "";
 }
 
-.icon-remove:before {
+.icon-left_arrow:before {
   content: "";
 }
 
-.icon-right_arrow:before {
+.icon-left-right:before {
   content: "";
 }
 
-.icon-sale_car:before {
+.icon-like:before {
   content: "";
 }
 
-.icon-service:before {
+.icon-location_pin:before {
   content: "";
 }
 
-.icon-settings:before {
+.icon-more:before {
   content: "";
 }
 
-.icon-share:before {
+.icon-none_avatar:before {
   content: "";
 }
 
-.icon-test_drive:before {
+.icon-notifications:before {
   content: "";
 }
 
-.icon-ticket:before {
+.icon-page_not_find_icon:before {
   content: "";
 }
 
-.icon-up_arrow:before {
+.icon-phone:before {
   content: "";
 }
 
-.icon-views:before {
+.icon-photo-camera:before {
   content: "";
 }
 
-.icon-wheel:before {
+.icon-pinterest:before {
   content: "";
 }
 
-.icon-google_plus:before {
+.icon-plus:before {
   content: "";
 }
 
-.icon-tumblr:before {
+.icon-rate:before {
   content: "";
 }
 
-.icon-instagram:before {
+.icon-remove:before {
   content: "";
 }
 
-.icon-pinterest:before {
+.icon-right_arrow:before {
   content: "";
 }
 
-.icon-twitter:before {
+.icon-road:before {
   content: "";
 }
 
-.icon-youtube:before {
+.icon-sale_car:before {
   content: "";
 }
 
-.icon-facebook:before {
+.icon-send:before {
   content: "";
+}
+
+.icon-service:before {
+  content: "";
+}
+
+.icon-settings:before {
+  content: "";
+}
+
+.icon-share:before {
+  content: "";
+}
+
+.icon-test_drive:before {
+  content: "";
+}
+
+.icon-ticket:before {
+  content: "";
+}
+
+.icon-tumblr:before {
+  content: "";
+}
+
+.icon-twitter:before {
+  content: "";
+}
+
+.icon-umbrella:before {
+  content: "";
+}
+
+.icon-up_arrow:before {
+  content: "";
+}
+
+.icon-views:before {
+  content: "";
+}
+
+.icon-wheel:before {
+  content: "";
+}
+
+.icon-wrench:before {
+  content: "";
+}
+
+.icon-youtube:before {
+  content: "";
+}
+
+.icon-zoom:before {
+  content: "";
 }
 
 .icon-metro_indicator {
@@ -172,19 +220,6 @@
 }
 .icon-metro_indicator.green {
   background: #39b54a;
-}
-
-.icon-arrows {
-  background-image: url('../images/icons-2x-s3069be39ef.png');
-  background-size: 17px auto;
-  background-position: 0 0;
-  height: 16px;
-  width: 17px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -8px;
-  margin-left: -8.5px;
 }
 
 .icon-check {
@@ -200,19 +235,6 @@
   margin-left: -8px;
 }
 
-.icon-road {
-  background-image: url('../images/icons-2x-s3069be39ef.png');
-  background-size: 17px auto;
-  background-position: 0 -40px;
-  height: 15px;
-  width: 17px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -7.5px;
-  margin-left: -8.5px;
-}
-
 .icon-rouble {
   background-image: url('../images/icons-2x-s3069be39ef.png');
   background-size: 17px auto;
@@ -224,32 +246,6 @@
   left: 50%;
   margin-top: -7px;
   margin-left: -6px;
-}
-
-.icon-umbrella {
-  background-image: url('../images/icons-2x-s3069be39ef.png');
-  background-size: 17px auto;
-  background-position: 0 -79px;
-  height: 17px;
-  width: 17px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -8.5px;
-  margin-left: -8.5px;
-}
-
-.icon-wrench {
-  background-image: url('../images/icons-2x-s3069be39ef.png');
-  background-size: 17px auto;
-  background-position: 0 -101px;
-  height: 17px;
-  width: 17px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -8.5px;
-  margin-left: -8.5px;
 }
 
 .popups-btn-panel {
@@ -432,29 +428,8 @@
   font-size: 0;
 }
 
-.toggle-show-pass__checkbox {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  border: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  cursor: pointer;
-}
-.toggle-show-pass__checkbox:hover + i {
-  color: #000;
-}
 .toggle-show-pass__checkbox:checked + i {
-  color: #000;
-}
-.toggle-show-pass__checkbox + i {
-  transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  -ms-transition: all 0.3s ease 0s;
+  color: #191919;
 }
 
 .toggle-runner {
@@ -776,12 +751,14 @@
 .modal-lg-nav__circle {
   width: 32px;
   height: 32px;
+  line-height: 32px;
   background: #191919;
   margin-right: 10px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
   position: relative;
+  font-size: 0;
   transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;

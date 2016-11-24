@@ -1,17 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ошибка 404!</title>
+{% extends 'layouts/app.twig' %}
 
-    <!-- Stylesheets -->
-    {% include "layouts/stylesheets.twig" %}
-
-    {% block header_scripts %}{% endblock %}
-</head>
+{% set cleanPage = "true" %}
 
 {% block content %}
 <section class="pt40 mb52 hidden-xs">
@@ -26,7 +15,7 @@
 </section>
 <section class="pt15 mb15">
     <div class="b-error-message white-bg text-center">
-        <div class="fz80 -text-red lhn mb25"><i class="icon-like"></i></div>
+        <div class="fz80 -text-red lhn mb25"><i class="icon-page_not_find_icon"></i></div>
         <p class="ff-sfb fz48 -text-red lhn lts2 mb3">404</p>
         <p class="text-uppercase ff-sfb fz24 lhn lts2 mb30">Ошибка</p>
         <p class="text-uppercase ff-sfb fz18 lhn lts2 mb10">Страница не найдена</p>

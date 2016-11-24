@@ -14,21 +14,23 @@
 </head>
 <body>
 <div class="site-wrap">
+
+	{% if cleanPage != "true" %}
 	<!-- Header block -->
 	{% include "header.twig" %}
 	<!-- Header block end -->
+	{% endif %}
 
 	<!-- Block content -->
 	{% block content %}{% endblock %}
 	<!-- Block content end -->
 
+	{% if cleanPage != "true" %}
 	<!-- Footer block -->
 	{% include "footer.twig" %}
 	<!-- Footer block end -->
+	{% endif %}
 </div>
-
-<!-- Popups -->
-{% include "popups.twig" %}
 
 <!-- Scripts -->
 {% include "scripts.twig" %}

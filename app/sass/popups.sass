@@ -145,21 +145,8 @@
     font-size: 0
 
 .toggle-show-pass__checkbox
-    width: 100%
-    height: 100%
-    padding: 0
-    border: none
-    position: absolute
-    top: 0
-    left: 0
-    opacity: 0
-    cursor: pointer
-    &:hover + i
-        color: #000
     &:checked + i
-        color: #000
-    + i
-        +trans()
+        color: $light-black
 
 .toggle-runner
     width: 65px
@@ -422,12 +409,14 @@
 .modal-lg-nav__circle
     width: 32px
     height: 32px
+    line-height: 32px
     background: #191919
     margin-right: 10px
     -webkit-border-radius: 50%
     -moz-border-radius: 50%
     border-radius: 50%
     position: relative
+    font-size: 0
     +trans()
 
 .modal-lg-nav__link-text

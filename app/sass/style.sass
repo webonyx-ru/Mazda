@@ -931,13 +931,30 @@ input
     height: 48px
     font-size: 0
     border-radius: 100%
-    background: url(../images/no-avatar.png) no-repeat center center
+    //background: url(../images/no-avatar.png) no-repeat center center
     background-size: cover
+
+.comments__avatar-wrapper
+    .icon-none_avatar
+        font-size: 48px
 
 .header-avatar__wrapper
     width: 22px
     height: 22px
     line-height: 0
+    position: relative
+    background: none
+    background: #fff
+
+    .icon-none_avatar
+        position: absolute
+        top: 0
+        left: 0
+
+.header-avatar
+    position: absolute
+    top: 0
+    left: 0
 
 .comments__avatar, .header-avatar
     border-radius: 100%
@@ -1044,7 +1061,7 @@ input
             display: inline-block
             vertical-align: middle
             line-height: 1
-            content: "\e91a"
+            content: "\e930"
             position: absolute
             top: 50%
             +transform(translateY(-50%))

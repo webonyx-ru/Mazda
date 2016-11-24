@@ -161,10 +161,6 @@
     position: static;
   }
 
-  .main-page__rated-dealers .owl-item > [class*="col-"] {
-    padding: 0;
-  }
-
   .content-block__tab-menu-listing {
     margin-right: 0;
   }

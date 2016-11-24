@@ -328,8 +328,20 @@ button:hover, button:focus, button:active {
   background: #999999;
   color: #fff;
 }
+.empty-button:hover .header-avatar__wrapper, .filled-button:hover .header-avatar__wrapper {
+  background: #999999;
+}
+.empty-button:hover .icon-none_avatar, .filled-button:hover .icon-none_avatar {
+  color: #fff;
+}
 .empty-button.expanded-grey[aria-expanded="true"], .expanded-grey[aria-expanded="true"].filled-button {
   background: #999999;
+  color: #fff;
+}
+.empty-button.expanded-grey[aria-expanded="true"] .header-avatar__wrapper, .expanded-grey[aria-expanded="true"].filled-button .header-avatar__wrapper {
+  background: #999999;
+}
+.empty-button.expanded-grey[aria-expanded="true"] .icon-none_avatar, .expanded-grey[aria-expanded="true"].filled-button .icon-none_avatar {
   color: #fff;
 }
 .empty-button[aria-expanded="true"] .icon-down_arrow, [aria-expanded="true"].filled-button .icon-down_arrow {
