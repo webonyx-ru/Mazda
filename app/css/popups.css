@@ -195,6 +195,10 @@
   content: "";
 }
 
+.icon-handshake:before {
+  content: "";
+}
+
 .icon-wheel:before {
   content: "";
 }
