@@ -49,7 +49,7 @@ doc.ready(function () {
 
         owl.each(function () {
             var items_num = parseInt($(this).attr("data-items"));
-            console.log(items_num)
+            // console.log(items_num)
             if (!items_num > 0) {
                 $(this).owlCarousel({
                     items: 3,
@@ -210,7 +210,7 @@ $(function () {
 
     // закрываем полные характеристики
     char.close = function () {
-        console.log('close');
+        // console.log('close');
         $(char.content_wrapper).fadeOut(300, function () {
             $(char.models_wrapper).fadeIn(300);
         });
