@@ -260,6 +260,13 @@ body, html {
   margin: 5px 15px 5px 0;
 }
 
+.bootstrap-select .btn-default {
+  background: #fff;
+}
+.bootstrap-select .btn-default:hover .caret {
+  border-color: #191919;
+}
+
 .content-area__section {
   padding: 20px;
 }
@@ -326,7 +333,7 @@ body, html {
 .bootstrap-select > .dropdown-toggle.bs-placeholder:hover,
 .bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
 .bootstrap-select > .dropdown-toggle.bs-placeholder:active {
-  color: #191919;
+  color: #ccc;
   font-family: SFUIText-Bold, sans-serif, arial;
 }
 
@@ -437,11 +444,11 @@ body, html {
   padding: 0;
 }
 .double-inputs [class*='col-']:first-child .form-control {
-  border-radius: 2px 0 0 2px;
+  border-radius: 3px 0 0 3px;
   border-right: 0;
 }
 .double-inputs [class*='col-']:last-child .form-control {
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 3px 3px 0;
 }
 
 .right-form__reset-button {
@@ -1308,9 +1315,6 @@ input:checked + .holding-vacancy__check-quality {
 }
 .main-page__news-grid-item:hover:after {
   background: rgba(0, 0, 0, 0.8);
-}
-.main-page__news-grid-item:hover [class*='icon-'] {
-  color: #dd0000;
 }
 .main-page__news-grid-item.small-grid-item .main-page__news-grid-bottom-line {
   bottom: 10px;

@@ -229,6 +229,14 @@ body, html
     .bootstrap-select
         margin: 5px 15px 5px 0
 
+.bootstrap-select
+    .btn-default
+        background: #fff
+
+        &:hover
+            .caret
+                border-color: #191919
+
 .content-area__section
     padding: 20px
 
@@ -286,7 +294,7 @@ body, html
 .bootstrap-select > .dropdown-toggle.bs-placeholder:hover,
 .bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
 .bootstrap-select > .dropdown-toggle.bs-placeholder:active
-    color: $light-black
+    color: #ccc
     font-family: $sfb
 
 .content-area__section
@@ -398,12 +406,12 @@ body, html
 
         &:first-child
             .form-control
-                border-radius: 2px 0 0 2px
+                border-radius: 3px 0 0 3px
                 border-right: 0
 
         &:last-child
             .form-control
-                border-radius: 0 2px 2px 0
+                border-radius: 0 3px 3px 0
 
 .right-form__reset-button
     letter-spacing: 1px
@@ -1141,9 +1149,6 @@ input
     &:hover
         &:after
             background: rgba(#000, 0.8)
-
-        [class*='icon-']
-            color: #dd0000
 
     &.small-grid-item
         .main-page__news-grid-bottom-line

@@ -24,6 +24,9 @@ h1, h2, h3, h4, h5, h6
 .ovh
     overflow: hidden
 
+.btn
+    border-radius: 3px
+
 label
     font-weight: normal
     cursor: pointer
@@ -57,6 +60,48 @@ a
         left: 0
         right: 0
         opacity: 0
+
+.bootstrap-select.btn-group .dropdown-menu
+    li
+        &:not(:last-child)
+            border-bottom: 1px solid #c5c5c5
+    &.inner
+        padding: 0 10px
+        overflow: hidden
+
+.btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default
+    &, &:focus, &:active, &:hover
+        background-color: #fff
+        outline: none
+        box-shadow: none
+
+.dropdown-menu
+    margin: 0
+    border-radius: 0
+    font-size: 16px
+    line-height: 38px
+    padding: 0
+
+    > li
+        > a
+            line-height: 38px
+            width: auto
+            padding: 0 12px
+            margin-left: -10px
+            margin-right: -10px
+            outline: none
+            display: block
+            
+            &:hover
+                background: #999999
+                color: #fff
+                box-shadow: 0 0 0 1px #999
+
+        &.selected
+            > a
+                background: #999
+                color: #fff
+                box-shadow: 0 0 0 1px #999
 
 input
     & + .jq-checkbox__div

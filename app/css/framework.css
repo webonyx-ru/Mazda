@@ -29,6 +29,10 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.btn {
+  border-radius: 3px;
+}
+
 label {
   font-weight: normal;
   cursor: pointer;
@@ -63,6 +67,47 @@ a[class*="-text-grey"].hover-tdu:hover, a[class*="-text-grey"].hover-tdu:active,
   left: 0;
   right: 0;
   opacity: 0;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid #c5c5c5;
+}
+.bootstrap-select.btn-group .dropdown-menu.inner {
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.btn-default:active, .btn-default:active:focus, .btn-default:active:active, .btn-default:active:hover, .btn-default.active, .btn-default.active:focus, .btn-default.active:active, .btn-default.active:hover, .open > .dropdown-toggle.btn-default, .open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:active, .open > .dropdown-toggle.btn-default:hover {
+  background-color: #fff;
+  outline: none;
+  box-shadow: none;
+}
+
+.dropdown-menu {
+  margin: 0;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 38px;
+  padding: 0;
+}
+.dropdown-menu > li > a {
+  line-height: 38px;
+  width: auto;
+  padding: 0 12px;
+  margin-left: -10px;
+  margin-right: -10px;
+  outline: none;
+  display: block;
+}
+.dropdown-menu > li > a:hover {
+  background: #999999;
+  color: #fff;
+  box-shadow: 0 0 0 1px #999;
+}
+.dropdown-menu > li.selected > a {
+  background: #999;
+  color: #fff;
+  box-shadow: 0 0 0 1px #999;
 }
 
 input + .jq-checkbox__div {

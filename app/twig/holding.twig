@@ -1,7 +1,8 @@
 {% extends "layouts/app.twig" %}
 
 {% block content %}
-    {% include "widgets/breadcrumbs.twig" with {'page': 'dealers'} %}
+    {#{% include "widgets/breadcrumbs.twig" with {'page': 'dealers'} %}#}
+    {% include "widgets/breadcrumbs.twig" %}
 
     <div class="content-area left-direction clearfix">
         <div class="container">
@@ -227,7 +228,7 @@
                                     </div>
                                     <div class="tab-pane fade text-left active in" id="dealers-tab5">
                                         <form class="mb20" action="#">
-                                            <div class="row holding-vacancy display-flex tab-display-block last-child-no-mb">
+                                            <div class="row holding-vacancy display-flex tab-display-block mobile-display-block last-child-no-mb">
                                                 <div class="col-md-3 col-sm-6 col-xs-12 mobile--mb15 tab-mb15">
                                                     <p class="holding-vacancy__field-title -text-lightblack">
                                                         Регион:</p>
