@@ -81,6 +81,8 @@ a
     font-size: 16px
     line-height: 38px
     padding: 0
+    //&.open
+        min-width: 100% !important
 
     > li
         > a
@@ -607,7 +609,7 @@ button
     border-radius: 100%
 
 .bootstrap-select.btn-group .dropdown-toggle .caret
-    display: block
+    display: inline-block
     border: none
     width: 8px
     height: 8px
@@ -617,6 +619,9 @@ button
     border-right: 2px solid $light-grey
     border-bottom: 2px solid $light-grey
     +rotate(45deg)
+
+.bootstrap-select.btn-group.fit-width .dropdown-toggle .caret
+    margin-top: -4px
 
 .tdu
     text-decoration: underline

@@ -9,7 +9,7 @@ doc.ready(function () {
 
     doc.on('click', '[data-call-submenu]', function (e) {
         var _this = $(this);
-        var bl = $('[data-submenu="' + _this.attr("data-call-submenu") + '"]');
+        var bl = _this.siblings('[data-submenu]');
 
         if (!_this.hasClass('active')) {
             _this.addClass('active');
@@ -17,6 +17,7 @@ doc.ready(function () {
         } else {
             _this.removeClass('active');
             bl.hide().removeClass('active');
+            $(['data-call-submenu'])
         }
 
 

@@ -754,7 +754,7 @@ button:hover, button:focus, button:active {
 }
 
 .bootstrap-select.btn-group .dropdown-toggle .caret {
-  display: block;
+  display: inline-block;
   border: none;
   width: 8px;
   height: 8px;
@@ -768,6 +768,10 @@ button:hover, button:focus, button:active {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
+}
+
+.bootstrap-select.btn-group.fit-width .dropdown-toggle .caret {
+  margin-top: -4px;
 }
 
 .tdu {
