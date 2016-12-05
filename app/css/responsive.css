@@ -189,6 +189,10 @@
     top: 10px;
   }
 
+  .submenu-section__border-right {
+    border-right: none;
+  }
+
   .main-page__news-grid-icons-values {
     font-size: 12px;
   }
@@ -338,14 +342,15 @@
     position: static;
     top: auto;
     left: auto;
-    background: #eee;
     font-size: 14px;
     padding: 10px 0;
     line-height: 2;
   }
 
   .header-submenu__link {
-    display: block;
+    display: inline-block;
+    text-transform: none;
+    font-size: 16px;
   }
 
   .header-menu__item .header-menu__link:after {
@@ -353,6 +358,11 @@
   }
   .header-menu__item .header-menu__link.active {
     color: #000;
+    border-color: transparent;
+    padding-bottom: 0;
+  }
+  .header-menu__item .header-menu__link.active:after {
+    display: none;
   }
 
   .catalog-item__comments-item {

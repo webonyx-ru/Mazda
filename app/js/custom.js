@@ -12,17 +12,31 @@ doc.ready(function () {
         var bl = _this.siblings('[data-submenu]');
 
         if (!_this.hasClass('active')) {
+            $('[data-call-submenu]').removeClass('active');
+            $('[data-submenu]').hide().removeClass('active');
             _this.addClass('active');
             bl.show().addClass('active');
+            menu_activated = true;
         } else {
             _this.removeClass('active');
             bl.hide().removeClass('active');
-            $(['data-call-submenu'])
+
+            menu_activated = false;
         }
-
-
-        menu_activated = true;
         e.preventDefault();
+    });
+
+    doc.on('click', function (e) {
+        if (menu_activated == false)
+            return false;
+        var target = $(e.target);
+        if(!target.hasClass('header-menu__link')
+            && target.closest('.header-menu__item').length < 1)
+        {
+            $('[data-call-submenu]').removeClass('active');
+            $('[data-submenu]').hide().removeClass('active');
+            menu_activated = false;
+        }
     });
 
     doc.on('click', '.js-show-all-params', function (e) {
