@@ -28,7 +28,7 @@ doc.ready(function () {
 
     doc.on('click', function (e) {
         if (menu_activated == false)
-            return false;
+            return;
         var target = $(e.target);
         if(!target.hasClass('header-menu__link')
             && target.closest('.header-menu__item').length < 1)
