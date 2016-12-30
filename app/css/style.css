@@ -490,6 +490,11 @@ body, html {
 .content-area__right-side-item:not(:last-child) {
   margin-bottom: 30px;
 }
+@media screen and (max-width: 992px) {
+  .content-area__right-side-item.mobile--mb0 {
+    margin-bottom: 0;
+  }
+}
 
 .right-side__news-item, .right-side__feedback-item {
   display: block;
