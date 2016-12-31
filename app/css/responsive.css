@@ -94,6 +94,37 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .js-dealers-filter__hidden-blocks-trigger {
+    cursor: pointer;
+  }
+  .js-dealers-filter__hidden-blocks-trigger.active .js-dealers-filter__text-hide {
+    display: block;
+  }
+  .js-dealers-filter__hidden-blocks-trigger.active .js-dealers-filter__text-show {
+    display: none;
+  }
+  .js-dealers-filter__hidden-blocks-trigger.active .icon-down_arrow {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+
+  .dealers-filter__form > .form-line {
+    float: none;
+    width: 100%;
+    clear: both;
+  }
+
+  .js-dealers-filter__hidden-xs-item {
+    display: none;
+  }
+
+  .dealers-filter__form.show-hidden-elements .dealers-filter__hidden-element {
+    display: block;
+  }
+
   .comments__textarea-container {
     width: 100%;
   }

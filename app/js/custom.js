@@ -204,6 +204,19 @@ doc.ready(function () {
             }
         });
     });
+
+    doc.on('click', '.js-dealers-filter__hidden-blocks-trigger', function () {
+        var $this = $(this);
+        var $parent = $this.closest('.js-dealers-filter__parent');
+
+        if(!$this.hasClass('active')) {
+            $this.addClass('active');
+            $parent.addClass('show-hidden-elements');
+        } else {
+            $this.removeClass('active');
+            $parent.removeClass('show-hidden-elements');
+        }
+    });
 });
 
 $(function () {

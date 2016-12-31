@@ -609,6 +609,10 @@ body, html {
   padding-top: 1px;
 }
 
+.js-dealers-catalog__hidden-blocks-trigger {
+  cursor: pointer;
+}
+
 .content-block__tab-menu-item {
   position: relative;
 }

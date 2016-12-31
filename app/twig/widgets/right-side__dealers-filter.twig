@@ -1,6 +1,6 @@
 <div class="block-title text-uppercase">Фильтр</div>
 <div class="right-side__news content-area__section white-bg">
-    <form action="#" class="dealers-filter__form last-child-no-mb">
+    <form action="#" class="js-dealers-filter__parent dealers-filter__form last-child-no-mb clearfix">
         <div class="form-line mb15">
             <p class="mb5 gli">Сортировать по:</p>
             <div>
@@ -17,7 +17,7 @@
                 </select>
             </div>
         </div>
-        <div class="form-line mb15">
+        <div class="js-dealers-filter__hidden-xs-item form-line mb15 dealers-filter__hidden-element">
             <p class="mb5">Территория:</p>
             <div>
                 <select class="selectpicker" data-width="100%" multiple title="Выберите из списка">
@@ -33,7 +33,7 @@
                 </select>
             </div>
         </div>
-        <div class="form-line mb15">
+        <div class="js-dealers-filter__hidden-xs-item form-line mb15 dealers-filter__hidden-element">
             <p class="mb5">Тип услуг:</p>
             <div>
                 <select class="selectpicker" data-width="100%" multiple title="Выберите из списка">
@@ -49,7 +49,7 @@
                 </select>
             </div>
         </div>
-        <div class="form-line mb15">
+        <div class="js-dealers-filter__hidden-xs-item form-line mb15 dealers-filter__hidden-element">
             <p class="mb5">Тип компании:</p>
             <ul class="clean-element dealers-filter__elements-listing last-child-no-mb">
                 <li class="dealers-filter__elements-item mb5">
@@ -63,14 +63,23 @@
                 </li>
             </ul>
         </div>
-        <div class="form-line mb15">
+        <div class="js-dealers-filter__hidden-xs-item form-line mb15 tab--mb0 mobile--mb15 dealers-filter__hidden-element">
             Найдено компаний <span class="ff-sfb -text-grey">37</span>
         </div>
-        <div class="text-right right-side__news-show-all">
+        <div class="js-dealers-filter__hidden-xs-item form-line mb15 tab--mb0 text-right right-side__news-show-all dealers-filter__hidden-element">
             <button type="reset" class="clean-element text-uppercase ff-sfb -text-grey hover-black__link-red-icon">
                 <span class="dib mr10 lts1">Сбросить настройки</span>
                 <span class="icon-remove fz10 dib icon-top-minus-1"></span>
             </button>
+        </div>
+        <div class="js-dealers-filter__hidden-blocks-trigger form-line text-right right-side__news-show-all visible-xs">
+            <div class="clean-element text-uppercase ff-sfb -text-grey hover-black__link-red-icon">
+                <div class="dib mr10 lts1">
+                    <span class="js-dealers-filter__text-show">Раскрыть список</span>
+                    <span class="js-dealers-filter__text-hide custom-hidden">Скрыть список</span>
+                </div>
+                <div class="icon-down_arrow fz10 dib"></div>
+            </div>
         </div>
     </form>
 </div>

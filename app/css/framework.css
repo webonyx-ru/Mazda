@@ -831,6 +831,10 @@ button:hover, button:focus, button:active {
     width: auto;
   }
 
+  .tab--mb0 {
+    margin-bottom: 0;
+  }
+
   .tab-mb15 {
     margin-bottom: 15px;
   }
